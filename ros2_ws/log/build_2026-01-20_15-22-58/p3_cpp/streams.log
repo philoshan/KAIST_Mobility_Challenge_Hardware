@@ -1,0 +1,25 @@
+[0.509s] Invoking command in '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/home/hy/Mobility_Challenge/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --build /home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp -- -j4 -l4
+[0.644s] [ 75%] Built target control_p3
+[0.644s] [100%] Built target main_p3
+[0.664s] Invoked command in '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/home/hy/Mobility_Challenge/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --build /home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp -- -j4 -l4
+[0.672s] Invoking command in '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/home/hy/Mobility_Challenge/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --install /home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp
+[0.688s] -- Install configuration: ""
+[0.689s] -- Execute custom install script
+[0.690s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/lib/p3_cpp/control_p3
+[0.694s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/lib/p3_cpp/main_p3
+[0.695s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/ament_index/resource_index/package_run_dependencies/p3_cpp
+[0.695s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/ament_index/resource_index/parent_prefix_path/p3_cpp
+[0.696s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.sh
+[0.696s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.dsv
+[0.696s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/environment/path.sh
+[0.696s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/environment/path.dsv
+[0.697s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.bash
+[0.697s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.sh
+[0.705s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.zsh
+[0.705s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.dsv
+[0.705s] -- Symlinking: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/package.dsv
+[0.718s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/ament_index/resource_index/packages/p3_cpp
+[0.719s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig.cmake
+[0.719s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig-version.cmake
+[0.719s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/package.xml
+[0.743s] Invoked command in '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/home/hy/Mobility_Challenge/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --install /home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp

@@ -1,0 +1,328 @@
+[0.000000] (-) TimerEvent: {}
+[0.000609] (cav_controller) JobQueued: {'identifier': 'cav_controller', 'dependencies': OrderedDict()}
+[0.001183] (p3_cpp) JobQueued: {'identifier': 'p3_cpp', 'dependencies': OrderedDict()}
+[0.001489] (simulator_launch) JobQueued: {'identifier': 'simulator_launch', 'dependencies': OrderedDict()}
+[0.001731] (cav_controller) JobStarted: {'identifier': 'cav_controller'}
+[0.022529] (p3_cpp) JobStarted: {'identifier': 'p3_cpp'}
+[0.035651] (simulator_launch) JobStarted: {'identifier': 'simulator_launch'}
+[0.099503] (-) TimerEvent: {}
+[0.200296] (-) TimerEvent: {}
+[0.300941] (-) TimerEvent: {}
+[0.401574] (-) TimerEvent: {}
+[0.509623] (-) TimerEvent: {}
+[0.525725] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'cmake'}
+[0.527585] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_AGENT_PID', '1918'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1823'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/install:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('JOURNAL_STREAM', '8:57121'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/HY:@/tmp/.ICE-unix/1953,unix/HY:/tmp/.ICE-unix/1953'), ('INVOCATION_ID', '7b145016630b443a8218e09c02108ab0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0982a768_d179_4bc4_865e_7419700bf014'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/install/cav_controller:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/build/cav_controller:/home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[0.538652] (simulator_launch) JobProgress: {'identifier': 'simulator_launch', 'progress': 'cmake'}
+[0.540187] (simulator_launch) JobProgress: {'identifier': 'simulator_launch', 'progress': 'build'}
+[0.541801] (simulator_launch) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch', '--', '-j4', '-l4'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_AGENT_PID', '1918'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1823'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/install:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('JOURNAL_STREAM', '8:57121'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/HY:@/tmp/.ICE-unix/1953,unix/HY:/tmp/.ICE-unix/1953'), ('INVOCATION_ID', '7b145016630b443a8218e09c02108ab0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0982a768_d179_4bc4_865e_7419700bf014'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/install/cav_controller:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/build/cav_controller:/home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[0.564272] (p3_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.609801] (-) TimerEvent: {}
+[0.622836] (p3_cpp) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.634031] (simulator_launch) CommandEnded: {'returncode': 0}
+[0.635892] (simulator_launch) JobProgress: {'identifier': 'simulator_launch', 'progress': 'install'}
+[0.662625] (simulator_launch) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_AGENT_PID', '1918'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1823'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/install:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('JOURNAL_STREAM', '8:57121'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/HY:@/tmp/.ICE-unix/1953,unix/HY:/tmp/.ICE-unix/1953'), ('INVOCATION_ID', '7b145016630b443a8218e09c02108ab0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0982a768_d179_4bc4_865e_7419700bf014'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/install/cav_controller:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/build/cav_controller:/home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[0.688495] (simulator_launch) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.689651] (simulator_launch) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.690967] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/launch/simulator_launch.py\n'}
+[0.691748] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/ament_index/resource_index/package_run_dependencies/simulator_launch\n'}
+[0.692455] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/ament_index/resource_index/parent_prefix_path/simulator_launch\n'}
+[0.693126] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.sh\n'}
+[0.693639] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.dsv\n'}
+[0.694173] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/path.sh\n'}
+[0.694712] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/path.dsv\n'}
+[0.695266] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.bash\n'}
+[0.695782] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.sh\n'}
+[0.696284] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.zsh\n'}
+[0.696786] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.dsv\n'}
+[0.697189] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/package.dsv\n'}
+[0.709957] (-) TimerEvent: {}
+[0.718100] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/ament_index/resource_index/packages/simulator_launch\n'}
+[0.719315] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig.cmake\n'}
+[0.720105] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig-version.cmake\n'}
+[0.721817] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/package.xml\n'}
+[0.726143] (simulator_launch) CommandEnded: {'returncode': 0}
+[0.765219] (simulator_launch) JobEnded: {'identifier': 'simulator_launch', 'rc': 0}
+[0.810106] (-) TimerEvent: {}
+[0.910722] (-) TimerEvent: {}
+[1.005707] (p3_cpp) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.010805] (-) TimerEvent: {}
+[1.020483] (p3_cpp) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.081927] (p3_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.088378] (p3_cpp) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.110906] (-) TimerEvent: {}
+[1.211477] (-) TimerEvent: {}
+[1.294356] (cav_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller/build', '--no-deps', 'symlink_data'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'hy', 'SSH_AGENT_PID': '1918', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/hy', 'OLDPWD': '/home/hy/Mobility_Challenge/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1823', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/hy/Mobility_Challenge/install:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'hy', 'JOURNAL_STREAM': '8:57121', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'hy', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/HY:@/tmp/.ICE-unix/1953,unix/HY:/tmp/.ICE-unix/1953', 'INVOCATION_ID': '7b145016630b443a8218e09c02108ab0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/0982a768_d179_4bc4_865e_7419700bf014', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.77', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/install/cav_controller:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:/home/hy/Mobility_Challenge/build/cav_controller:/home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node'}, 'shell': False}
+[1.298594] (p3_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.311559] (-) TimerEvent: {}
+[1.396339] (p3_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.399261] (p3_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.411647] (-) TimerEvent: {}
+[1.512144] (-) TimerEvent: {}
+[1.612745] (-) TimerEvent: {}
+[1.675924] (p3_cpp) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.712882] (-) TimerEvent: {}
+[1.753991] (cav_controller) StdoutLine: {'line': b'running develop\n'}
+[1.813055] (-) TimerEvent: {}
+[1.820821] (p3_cpp) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.822572] (p3_cpp) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.822819] (p3_cpp) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.823023] (p3_cpp) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.824575] (p3_cpp) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.824845] (p3_cpp) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.825390] (p3_cpp) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.826890] (p3_cpp) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.827112] (p3_cpp) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.827613] (p3_cpp) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.838385] (p3_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.858827] (p3_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[1.867951] (p3_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp\n'}
+[1.881447] (p3_cpp) CommandEnded: {'returncode': 0}
+[1.882788] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'build'}
+[1.883405] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp', '--', '-j4', '-l4'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_AGENT_PID', '1918'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1823'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/install:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('JOURNAL_STREAM', '8:57121'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/HY:@/tmp/.ICE-unix/1953,unix/HY:/tmp/.ICE-unix/1953'), ('INVOCATION_ID', '7b145016630b443a8218e09c02108ab0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0982a768_d179_4bc4_865e_7419700bf014'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/install/cav_controller:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/build/cav_controller:/home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/install/simulator_launch:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[1.913276] (-) TimerEvent: {}
+[1.969735] (p3_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target control_p3\x1b[0m\n'}
+[1.970283] (p3_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target main_p3\x1b[0m\n'}
+[1.994088] (cav_controller) StdoutLine: {'line': b'running egg_info\n'}
+[1.994591] (cav_controller) StdoutLine: {'line': b'writing cav_controller.egg-info/PKG-INFO\n'}
+[1.994946] (cav_controller) StdoutLine: {'line': b'writing dependency_links to cav_controller.egg-info/dependency_links.txt\n'}
+[1.995321] (cav_controller) StdoutLine: {'line': b'writing entry points to cav_controller.egg-info/entry_points.txt\n'}
+[1.995664] (cav_controller) StdoutLine: {'line': b'writing requirements to cav_controller.egg-info/requires.txt\n'}
+[1.996026] (cav_controller) StdoutLine: {'line': b'writing top-level names to cav_controller.egg-info/top_level.txt\n'}
+[2.013343] (-) TimerEvent: {}
+[2.060052] (cav_controller) StdoutLine: {'line': b"reading manifest file 'cav_controller.egg-info/SOURCES.txt'\n"}
+[2.061604] (cav_controller) StdoutLine: {'line': b"writing manifest file 'cav_controller.egg-info/SOURCES.txt'\n"}
+[2.064483] (cav_controller) StdoutLine: {'line': b'running build_ext\n'}
+[2.065174] (cav_controller) StdoutLine: {'line': b'Creating /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages/cav-controller.egg-link (link to .)\n'}
+[2.067091] (cav_controller) StdoutLine: {'line': b'Installing echo_pose script to /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/cav_controller\n'}
+[2.067538] (cav_controller) StdoutLine: {'line': b'Installing p1_drive script to /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/cav_controller\n'}
+[2.067863] (cav_controller) StdoutLine: {'line': b'Installing run_drive script to /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/cav_controller\n'}
+[2.068358] (cav_controller) StdoutLine: {'line': b'\n'}
+[2.068530] (cav_controller) StdoutLine: {'line': b'Installed /home/hy/Mobility_Challenge/ros2_ws/build/cav_controller\n'}
+[2.068742] (cav_controller) StdoutLine: {'line': b'running symlink_data\n'}
+[2.105589] (p3_cpp) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/main_p3.dir/src/main_p3.cpp.o\x1b[0m\n'}
+[2.106280] (p3_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/control_p3.dir/src/control_p3.cpp.o\x1b[0m\n'}
+[2.113569] (-) TimerEvent: {}
+[2.145420] (cav_controller) CommandEnded: {'returncode': 0}
+[2.164574] (cav_controller) JobEnded: {'identifier': 'cav_controller', 'rc': 0}
+[2.213746] (-) TimerEvent: {}
+[2.314437] (-) TimerEvent: {}
+[2.415143] (-) TimerEvent: {}
+[2.515910] (-) TimerEvent: {}
+[2.616635] (-) TimerEvent: {}
+[2.717328] (-) TimerEvent: {}
+[2.818013] (-) TimerEvent: {}
+[2.918716] (-) TimerEvent: {}
+[3.019469] (-) TimerEvent: {}
+[3.120189] (-) TimerEvent: {}
+[3.220921] (-) TimerEvent: {}
+[3.321621] (-) TimerEvent: {}
+[3.422344] (-) TimerEvent: {}
+[3.523073] (-) TimerEvent: {}
+[3.623817] (-) TimerEvent: {}
+[3.724508] (-) TimerEvent: {}
+[3.825207] (-) TimerEvent: {}
+[3.925929] (-) TimerEvent: {}
+[4.026642] (-) TimerEvent: {}
+[4.127386] (-) TimerEvent: {}
+[4.228092] (-) TimerEvent: {}
+[4.328809] (-) TimerEvent: {}
+[4.429545] (-) TimerEvent: {}
+[4.530264] (-) TimerEvent: {}
+[4.630989] (-) TimerEvent: {}
+[4.731722] (-) TimerEvent: {}
+[4.832427] (-) TimerEvent: {}
+[4.933150] (-) TimerEvent: {}
+[5.033886] (-) TimerEvent: {}
+[5.134642] (-) TimerEvent: {}
+[5.235400] (-) TimerEvent: {}
+[5.336138] (-) TimerEvent: {}
+[5.436856] (-) TimerEvent: {}
+[5.537659] (-) TimerEvent: {}
+[5.638403] (-) TimerEvent: {}
+[5.739128] (-) TimerEvent: {}
+[5.839875] (-) TimerEvent: {}
+[5.940601] (-) TimerEvent: {}
+[6.041333] (-) TimerEvent: {}
+[6.142063] (-) TimerEvent: {}
+[6.242778] (-) TimerEvent: {}
+[6.343505] (-) TimerEvent: {}
+[6.444213] (-) TimerEvent: {}
+[6.544919] (-) TimerEvent: {}
+[6.645638] (-) TimerEvent: {}
+[6.746359] (-) TimerEvent: {}
+[6.847054] (-) TimerEvent: {}
+[6.947792] (-) TimerEvent: {}
+[7.048511] (-) TimerEvent: {}
+[7.149232] (-) TimerEvent: {}
+[7.249951] (-) TimerEvent: {}
+[7.350662] (-) TimerEvent: {}
+[7.451414] (-) TimerEvent: {}
+[7.552140] (-) TimerEvent: {}
+[7.652889] (-) TimerEvent: {}
+[7.753590] (-) TimerEvent: {}
+[7.854303] (-) TimerEvent: {}
+[7.955023] (-) TimerEvent: {}
+[8.055739] (-) TimerEvent: {}
+[8.156452] (-) TimerEvent: {}
+[8.257173] (-) TimerEvent: {}
+[8.357894] (-) TimerEvent: {}
+[8.458612] (-) TimerEvent: {}
+[8.559336] (-) TimerEvent: {}
+[8.660070] (-) TimerEvent: {}
+[8.760808] (-) TimerEvent: {}
+[8.861544] (-) TimerEvent: {}
+[8.962272] (-) TimerEvent: {}
+[9.063019] (-) TimerEvent: {}
+[9.163767] (-) TimerEvent: {}
+[9.264496] (-) TimerEvent: {}
+[9.365238] (-) TimerEvent: {}
+[9.465947] (-) TimerEvent: {}
+[9.566659] (-) TimerEvent: {}
+[9.667385] (-) TimerEvent: {}
+[9.768123] (-) TimerEvent: {}
+[9.868831] (-) TimerEvent: {}
+[9.969546] (-) TimerEvent: {}
+[10.070286] (-) TimerEvent: {}
+[10.171003] (-) TimerEvent: {}
+[10.271744] (-) TimerEvent: {}
+[10.372472] (-) TimerEvent: {}
+[10.473192] (-) TimerEvent: {}
+[10.573922] (-) TimerEvent: {}
+[10.674637] (-) TimerEvent: {}
+[10.775382] (-) TimerEvent: {}
+[10.876134] (-) TimerEvent: {}
+[10.976841] (-) TimerEvent: {}
+[11.077571] (-) TimerEvent: {}
+[11.178296] (-) TimerEvent: {}
+[11.279020] (-) TimerEvent: {}
+[11.379763] (-) TimerEvent: {}
+[11.480490] (-) TimerEvent: {}
+[11.581226] (-) TimerEvent: {}
+[11.682018] (-) TimerEvent: {}
+[11.782732] (-) TimerEvent: {}
+[11.883457] (-) TimerEvent: {}
+[11.984254] (-) TimerEvent: {}
+[12.084998] (-) TimerEvent: {}
+[12.185726] (-) TimerEvent: {}
+[12.286450] (-) TimerEvent: {}
+[12.387171] (-) TimerEvent: {}
+[12.487866] (-) TimerEvent: {}
+[12.588798] (-) TimerEvent: {}
+[12.689536] (-) TimerEvent: {}
+[12.790261] (-) TimerEvent: {}
+[12.890994] (-) TimerEvent: {}
+[12.991728] (-) TimerEvent: {}
+[13.092432] (-) TimerEvent: {}
+[13.193155] (-) TimerEvent: {}
+[13.293902] (-) TimerEvent: {}
+[13.394700] (-) TimerEvent: {}
+[13.495658] (-) TimerEvent: {}
+[13.596433] (-) TimerEvent: {}
+[13.697125] (-) TimerEvent: {}
+[13.797872] (-) TimerEvent: {}
+[13.898574] (-) TimerEvent: {}
+[13.999277] (-) TimerEvent: {}
+[14.099977] (-) TimerEvent: {}
+[14.200687] (-) TimerEvent: {}
+[14.301394] (-) TimerEvent: {}
+[14.402095] (-) TimerEvent: {}
+[14.502817] (-) TimerEvent: {}
+[14.603545] (-) TimerEvent: {}
+[14.704239] (-) TimerEvent: {}
+[14.804951] (-) TimerEvent: {}
+[14.905645] (-) TimerEvent: {}
+[15.006327] (-) TimerEvent: {}
+[15.107006] (-) TimerEvent: {}
+[15.207712] (-) TimerEvent: {}
+[15.308397] (-) TimerEvent: {}
+[15.409082] (-) TimerEvent: {}
+[15.509760] (-) TimerEvent: {}
+[15.610516] (-) TimerEvent: {}
+[15.711228] (-) TimerEvent: {}
+[15.811905] (-) TimerEvent: {}
+[15.912600] (-) TimerEvent: {}
+[16.013273] (-) TimerEvent: {}
+[16.113956] (-) TimerEvent: {}
+[16.214641] (-) TimerEvent: {}
+[16.315322] (-) TimerEvent: {}
+[16.416006] (-) TimerEvent: {}
+[16.516710] (-) TimerEvent: {}
+[16.617403] (-) TimerEvent: {}
+[16.718098] (-) TimerEvent: {}
+[16.818793] (-) TimerEvent: {}
+[16.919519] (-) TimerEvent: {}
+[17.020197] (-) TimerEvent: {}
+[17.120896] (-) TimerEvent: {}
+[17.221581] (-) TimerEvent: {}
+[17.322265] (-) TimerEvent: {}
+[17.422961] (-) TimerEvent: {}
+[17.523676] (-) TimerEvent: {}
+[17.624337] (-) TimerEvent: {}
+[17.724992] (-) TimerEvent: {}
+[17.825695] (-) TimerEvent: {}
+[17.926395] (-) TimerEvent: {}
+[18.027100] (-) TimerEvent: {}
+[18.127814] (-) TimerEvent: {}
+[18.228514] (-) TimerEvent: {}
+[18.329204] (-) TimerEvent: {}
+[18.429896] (-) TimerEvent: {}
+[18.530570] (-) TimerEvent: {}
+[18.631273] (-) TimerEvent: {}
+[18.731944] (-) TimerEvent: {}
+[18.832633] (-) TimerEvent: {}
+[18.933330] (-) TimerEvent: {}
+[19.034020] (-) TimerEvent: {}
+[19.134696] (-) TimerEvent: {}
+[19.235415] (-) TimerEvent: {}
+[19.336105] (-) TimerEvent: {}
+[19.436795] (-) TimerEvent: {}
+[19.537491] (-) TimerEvent: {}
+[19.638167] (-) TimerEvent: {}
+[19.738845] (-) TimerEvent: {}
+[19.839557] (-) TimerEvent: {}
+[19.940263] (-) TimerEvent: {}
+[20.041000] (-) TimerEvent: {}
+[20.141689] (-) TimerEvent: {}
+[20.242378] (-) TimerEvent: {}
+[20.343077] (-) TimerEvent: {}
+[20.443784] (-) TimerEvent: {}
+[20.544472] (-) TimerEvent: {}
+[20.645150] (-) TimerEvent: {}
+[20.745833] (-) TimerEvent: {}
+[20.846556] (-) TimerEvent: {}
+[20.947537] (-) TimerEvent: {}
+[21.048270] (-) TimerEvent: {}
+[21.148992] (-) TimerEvent: {}
+[21.249753] (-) TimerEvent: {}
+[21.350492] (-) TimerEvent: {}
+[21.383832] (p3_cpp) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable main_p3\x1b[0m\n'}
+[21.450686] (-) TimerEvent: {}
+[21.544629] (p3_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable control_p3\x1b[0m\n'}
+[21.550865] (-) TimerEvent: {}
+[21.651711] (-) TimerEvent: {}
+[21.752475] (-) TimerEvent: {}
+[21.853265] (-) TimerEvent: {}
+[21.954024] (-) TimerEvent: {}
+[22.054755] (-) TimerEvent: {}
+[22.155495] (-) TimerEvent: {}
+[22.230114] (p3_cpp) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/main_p3.dir/src/main_p3.cpp.o: in function `rclcpp::create_subscription_factory<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::_Bind<void (RealStanleyDriver::*(RealStanleyDriver*, std::_Placeholder<1>))(std::shared_ptr<geometry_msgs::msg::PoseStamped_<std::allocator<void> > >)>, std::allocator<void>, geometry_msgs::msg::PoseStamped_<std::allocator<void> >, rclcpp::Subscription<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<void>, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<void> > >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<void> > >(std::_Bind<void (RealStanleyDriver::*(RealStanleyDriver*, std::_Placeholder<1>))(std::shared_ptr<geometry_msgs::msg::PoseStamped_<std::allocator<void> > >)>&&, rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> > const&, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<void> >::SharedPtr, std::shared_ptr<rclcpp::topic_statistics::SubscriptionTopicStatistics<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >)::{lambda(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&)#1}::operator()(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&) const':\n"}
+[22.230674] (p3_cpp) StderrLine: {'line': b"main_p3.cpp:(.text._ZZN6rclcpp27create_subscription_factoryIN13geometry_msgs3msg12PoseStamped_ISaIvEEESt5_BindIFM17RealStanleyDriverFvSt10shared_ptrIS5_EEPS7_St12_PlaceholderILi1EEEES4_S5_NS_12SubscriptionIS5_S4_NS_23message_memory_strategy21MessageMemoryStrategyIS5_S4_EEEESK_EENS_19SubscriptionFactoryEOT0_RKNS_32SubscriptionOptionsWithAllocatorIT1_EENT4_9SharedPtrES8_INS_16topic_statistics27SubscriptionTopicStatisticsIT2_EEEENKUlPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSEE_clES13_S1B_S1E_[_ZZN6rclcpp27create_subscription_factoryIN13geometry_msgs3msg12PoseStamped_ISaIvEEESt5_BindIFM17RealStanleyDriverFvSt10shared_ptrIS5_EEPS7_St12_PlaceholderILi1EEEES4_S5_NS_12SubscriptionIS5_S4_NS_23message_memory_strategy21MessageMemoryStrategyIS5_S4_EEEESK_EENS_19SubscriptionFactoryEOT0_RKNS_32SubscriptionOptionsWithAllocatorIT1_EENT4_9SharedPtrES8_INS_16topic_statistics27SubscriptionTopicStatisticsIT2_EEEENKUlPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSEE_clES13_S1B_S1E_]+0x34): undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<geometry_msgs::msg::PoseStamped_<std::allocator<void> > >()'\n"}
+[22.231006] (p3_cpp) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/main_p3.dir/src/main_p3.cpp.o: in function `rclcpp::Publisher<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> >::Publisher(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&, rclcpp::PublisherOptionsWithAllocator<std::allocator<void> > const&)':\n"}
+[22.231280] (p3_cpp) StderrLine: {'line': b"main_p3.cpp:(.text._ZN6rclcpp9PublisherIN13geometry_msgs3msg6Twist_ISaIvEEES4_EC2EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE[_ZN6rclcpp9PublisherIN13geometry_msgs3msg6Twist_ISaIvEEES4_EC5EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE]+0x3c): undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<geometry_msgs::msg::Twist_<std::allocator<void> > >()'\n"}
+[22.231457] (p3_cpp) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[22.234342] (p3_cpp) StderrLine: {'line': b'make[2]: *** [CMakeFiles/main_p3.dir/build.make:131: main_p3] Error 1\n'}
+[22.234904] (p3_cpp) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/main_p3.dir/all] Error 2\n'}
+[22.235170] (p3_cpp) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[22.255629] (-) TimerEvent: {}
+[22.345379] (p3_cpp) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/control_p3.dir/src/control_p3.cpp.o: in function `rclcpp::create_subscription_factory<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::_Bind<void (StanleyTrackerNode::*(StanleyTrackerNode*, std::_Placeholder<1>))(std::shared_ptr<geometry_msgs::msg::PoseStamped_<std::allocator<void> > >)>, std::allocator<void>, geometry_msgs::msg::PoseStamped_<std::allocator<void> >, rclcpp::Subscription<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<void>, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<void> > >, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<void> > >(std::_Bind<void (StanleyTrackerNode::*(StanleyTrackerNode*, std::_Placeholder<1>))(std::shared_ptr<geometry_msgs::msg::PoseStamped_<std::allocator<void> > >)>&&, rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> > const&, rclcpp::message_memory_strategy::MessageMemoryStrategy<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<void> >::SharedPtr, std::shared_ptr<rclcpp::topic_statistics::SubscriptionTopicStatistics<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >)::{lambda(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&)#1}::operator()(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&) const':\n"}
+[22.345896] (p3_cpp) StderrLine: {'line': b"control_p3.cpp:(.text._ZZN6rclcpp27create_subscription_factoryIN13geometry_msgs3msg12PoseStamped_ISaIvEEESt5_BindIFM18StanleyTrackerNodeFvSt10shared_ptrIS5_EEPS7_St12_PlaceholderILi1EEEES4_S5_NS_12SubscriptionIS5_S4_NS_23message_memory_strategy21MessageMemoryStrategyIS5_S4_EEEESK_EENS_19SubscriptionFactoryEOT0_RKNS_32SubscriptionOptionsWithAllocatorIT1_EENT4_9SharedPtrES8_INS_16topic_statistics27SubscriptionTopicStatisticsIT2_EEEENKUlPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSEE_clES13_S1B_S1E_[_ZZN6rclcpp27create_subscription_factoryIN13geometry_msgs3msg12PoseStamped_ISaIvEEESt5_BindIFM18StanleyTrackerNodeFvSt10shared_ptrIS5_EEPS7_St12_PlaceholderILi1EEEES4_S5_NS_12SubscriptionIS5_S4_NS_23message_memory_strategy21MessageMemoryStrategyIS5_S4_EEEESK_EENS_19SubscriptionFactoryEOT0_RKNS_32SubscriptionOptionsWithAllocatorIT1_EENT4_9SharedPtrES8_INS_16topic_statistics27SubscriptionTopicStatisticsIT2_EEEENKUlPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSEE_clES13_S1B_S1E_]+0x34): undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<geometry_msgs::msg::PoseStamped_<std::allocator<void> > >()'\n"}
+[22.346198] (p3_cpp) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/control_p3.dir/src/control_p3.cpp.o: in function `rclcpp::Publisher<geometry_msgs::msg::Twist_<std::allocator<void> >, std::allocator<void> >::Publisher(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&, rclcpp::PublisherOptionsWithAllocator<std::allocator<void> > const&)':\n"}
+[22.346370] (p3_cpp) StderrLine: {'line': b"control_p3.cpp:(.text._ZN6rclcpp9PublisherIN13geometry_msgs3msg6Twist_ISaIvEEES4_EC2EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE[_ZN6rclcpp9PublisherIN13geometry_msgs3msg6Twist_ISaIvEEES4_EC5EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE]+0x3c): undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<geometry_msgs::msg::Twist_<std::allocator<void> > >()'\n"}
+[22.346530] (p3_cpp) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[22.349539] (p3_cpp) StderrLine: {'line': b'make[2]: *** [CMakeFiles/control_p3.dir/build.make:131: control_p3] Error 1\n'}
+[22.350151] (p3_cpp) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control_p3.dir/all] Error 2\n'}
+[22.350737] (p3_cpp) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[22.355407] (p3_cpp) CommandEnded: {'returncode': 2}
+[22.356810] (-) TimerEvent: {}
+[22.374457] (p3_cpp) JobEnded: {'identifier': 'p3_cpp', 'rc': 2}
+[22.385916] (-) EventReactorShutdown: {}
