@@ -1,0 +1,35 @@
+running egg_info
+creating ../../../build/cav_controller/cav_controller.egg-info
+writing ../../../build/cav_controller/cav_controller.egg-info/PKG-INFO
+writing dependency_links to ../../../build/cav_controller/cav_controller.egg-info/dependency_links.txt
+writing entry points to ../../../build/cav_controller/cav_controller.egg-info/entry_points.txt
+writing requirements to ../../../build/cav_controller/cav_controller.egg-info/requires.txt
+writing top-level names to ../../../build/cav_controller/cav_controller.egg-info/top_level.txt
+writing manifest file '../../../build/cav_controller/cav_controller.egg-info/SOURCES.txt'
+reading manifest file '../../../build/cav_controller/cav_controller.egg-info/SOURCES.txt'
+writing manifest file '../../../build/cav_controller/cav_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/hy/Mobility_Challenge/build/cav_controller/build
+creating /home/hy/Mobility_Challenge/build/cav_controller/build/lib
+creating /home/hy/Mobility_Challenge/build/cav_controller/build/lib/cav_controller
+copying cav_controller/Problem_1.py -> /home/hy/Mobility_Challenge/build/cav_controller/build/lib/cav_controller
+copying cav_controller/__init__.py -> /home/hy/Mobility_Challenge/build/cav_controller/build/lib/cav_controller
+running install
+running install_lib
+creating /home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages/cav_controller
+copying /home/hy/Mobility_Challenge/build/cav_controller/build/lib/cav_controller/Problem_1.py -> /home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages/cav_controller
+copying /home/hy/Mobility_Challenge/build/cav_controller/build/lib/cav_controller/__init__.py -> /home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages/cav_controller
+byte-compiling /home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages/cav_controller/Problem_1.py to Problem_1.cpython-38.pyc
+byte-compiling /home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages/cav_controller/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/hy/Mobility_Challenge/install/cav_controller/share/ament_index
+creating /home/hy/Mobility_Challenge/install/cav_controller/share/ament_index/resource_index
+creating /home/hy/Mobility_Challenge/install/cav_controller/share/ament_index/resource_index/packages
+copying resource/cav_controller -> /home/hy/Mobility_Challenge/install/cav_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller
+running install_egg_info
+Copying ../../../build/cav_controller/cav_controller.egg-info to /home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages/cav_controller-0.0.0-py3.8.egg-info
+running install_scripts
+Installing Problem_1 script to /home/hy/Mobility_Challenge/install/cav_controller/lib/cav_controller
+writing list of installed files to '/home/hy/Mobility_Challenge/build/cav_controller/install.log'

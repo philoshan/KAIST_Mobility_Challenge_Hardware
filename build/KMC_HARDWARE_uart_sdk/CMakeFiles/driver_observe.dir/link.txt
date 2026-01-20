@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o  -o driver_observe  libKMC_HARDWARE_uart.a -lpthread 

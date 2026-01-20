@@ -1,0 +1,45 @@
+[0.594s] Invoking command in '/home/hy/Mobility_Challenge/build/simulator_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/hy/Mobility_Challenge/ros2_ws/src/simulator_launch -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/install/simulator_launch
+[0.749s] -- The C compiler identification is GNU 9.4.0
+[0.865s] -- The CXX compiler identification is GNU 9.4.0
+[0.874s] -- Check for working C compiler: /usr/bin/cc
+[1.034s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.035s] -- Detecting C compiler ABI info
+[1.183s] -- Detecting C compiler ABI info - done
+[1.203s] -- Detecting C compile features
+[1.204s] -- Detecting C compile features - done
+[1.208s] -- Check for working CXX compiler: /usr/bin/c++
+[1.388s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.393s] -- Detecting CXX compiler ABI info
+[1.709s] -- Detecting CXX compiler ABI info - done
+[1.760s] -- Detecting CXX compile features
+[1.762s] -- Detecting CXX compile features - done
+[1.774s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.876s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.877s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.449s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.777s] -- Configuring done
+[2.781s] -- Generating done
+[2.785s] -- Build files have been written to: /home/hy/Mobility_Challenge/build/simulator_launch
+[2.800s] Invoked command in '/home/hy/Mobility_Challenge/build/simulator_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/hy/Mobility_Challenge/ros2_ws/src/simulator_launch -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/install/simulator_launch
+[2.803s] Invoking command in '/home/hy/Mobility_Challenge/build/simulator_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/hy/Mobility_Challenge/build/simulator_launch -- -j4 -l4
+[2.896s] Invoked command in '/home/hy/Mobility_Challenge/build/simulator_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/hy/Mobility_Challenge/build/simulator_launch -- -j4 -l4
+[2.933s] Invoking command in '/home/hy/Mobility_Challenge/build/simulator_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/hy/Mobility_Challenge/build/simulator_launch
+[2.963s] -- Install configuration: ""
+[2.964s] -- Execute custom install script
+[2.966s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/launch/simulator_launch.py
+[2.988s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/ament_index/resource_index/package_run_dependencies/simulator_launch
+[3.014s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/ament_index/resource_index/parent_prefix_path/simulator_launch
+[3.040s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.sh
+[3.062s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.dsv
+[3.088s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/environment/path.sh
+[3.110s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/environment/path.dsv
+[3.133s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/local_setup.bash
+[3.156s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/local_setup.sh
+[3.179s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/local_setup.zsh
+[3.202s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/local_setup.dsv
+[3.226s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.dsv
+[3.249s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/ament_index/resource_index/packages/simulator_launch
+[3.273s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig.cmake
+[3.295s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig-version.cmake
+[3.320s] -- Symlinking: /home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.xml
+[3.351s] Invoked command in '/home/hy/Mobility_Challenge/build/simulator_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/hy/Mobility_Challenge/build/simulator_launch

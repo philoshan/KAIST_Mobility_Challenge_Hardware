@@ -1,0 +1,1 @@
+/home/hy/Mobility_Challenge/build/simulator_launch/ament_cmake_environment_hooks/local_setup.sh

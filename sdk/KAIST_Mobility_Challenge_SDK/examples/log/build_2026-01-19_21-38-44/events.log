@@ -1,0 +1,338 @@
+[0.000000] (-) TimerEvent: {}
+[0.000420] (kmc_hardware_driver_node) JobQueued: {'identifier': 'kmc_hardware_driver_node', 'dependencies': OrderedDict()}
+[0.001161] (kmc_hardware_driver_node) JobStarted: {'identifier': 'kmc_hardware_driver_node'}
+[0.021148] (kmc_hardware_driver_node) JobProgress: {'identifier': 'kmc_hardware_driver_node', 'progress': 'cmake'}
+[0.022285] (kmc_hardware_driver_node) Command: {'cmd': ['/usr/bin/cmake', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node'], 'cwd': '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/build/kmc_hardware_driver_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_AGENT_PID', '1920'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1825'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/install:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('JOURNAL_STREAM', '8:55130'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/HY:@/tmp/.ICE-unix/1955,unix/HY:/tmp/.ICE-unix/1955'), ('INVOCATION_ID', '5bd68b8f231d4affabf89e3f595c1957'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d3c30626_d757_4cd7_b582_7967ab1cf945'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/build/kmc_hardware_driver_node'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy')]), 'shell': False}
+[0.099586] (-) TimerEvent: {}
+[0.140136] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.199765] (-) TimerEvent: {}
+[0.255804] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.266440] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.299950] (-) TimerEvent: {}
+[0.400648] (-) TimerEvent: {}
+[0.406731] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.408606] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.500834] (-) TimerEvent: {}
+[0.548523] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.572738] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.573366] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.578174] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.600986] (-) TimerEvent: {}
+[0.701598] (-) TimerEvent: {}
+[0.732935] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.738586] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.801785] (-) TimerEvent: {}
+[0.902471] (-) TimerEvent: {}
+[0.920262] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.941368] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.942269] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.946669] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.997552] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.998127] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.002586] (-) TimerEvent: {}
+[1.103134] (-) TimerEvent: {}
+[1.203820] (-) TimerEvent: {}
+[1.304528] (-) TimerEvent: {}
+[1.383795] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.404713] (-) TimerEvent: {}
+[1.425768] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.504993] (-) TimerEvent: {}
+[1.509274] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.521498] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.605136] (-) TimerEvent: {}
+[1.648092] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.690393] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.705235] (-) TimerEvent: {}
+[1.805782] (-) TimerEvent: {}
+[1.820663] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.905936] (-) TimerEvent: {}
+[1.924177] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.926938] (kmc_hardware_driver_node) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.928860] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.006118] (-) TimerEvent: {}
+[2.077814] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.078510] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.106301] (-) TimerEvent: {}
+[2.206973] (-) TimerEvent: {}
+[2.225842] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[2.226576] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[2.307158] (-) TimerEvent: {}
+[2.353573] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[2.354299] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[2.407339] (-) TimerEvent: {}
+[2.497605] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[2.500057] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.507422] (-) TimerEvent: {}
+[2.607945] (-) TimerEvent: {}
+[2.708630] (-) TimerEvent: {}
+[2.801624] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[2.808763] (-) TimerEvent: {}
+[2.909401] (-) TimerEvent: {}
+[3.010054] (-) TimerEvent: {}
+[3.021791] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.064455] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Generating done\n'}
+[3.083587] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Build files have been written to: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/build/kmc_hardware_driver_node\n'}
+[3.101028] (kmc_hardware_driver_node) CommandEnded: {'returncode': 0}
+[3.102499] (kmc_hardware_driver_node) JobProgress: {'identifier': 'kmc_hardware_driver_node', 'progress': 'build'}
+[3.103937] (kmc_hardware_driver_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/build/kmc_hardware_driver_node', '--', '-j4', '-l4'], 'cwd': '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/build/kmc_hardware_driver_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_AGENT_PID', '1920'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1825'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/install:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('JOURNAL_STREAM', '8:55130'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/HY:@/tmp/.ICE-unix/1955,unix/HY:/tmp/.ICE-unix/1955'), ('INVOCATION_ID', '5bd68b8f231d4affabf89e3f595c1957'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d3c30626_d757_4cd7_b582_7967ab1cf945'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/build/kmc_hardware_driver_node'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy')]), 'shell': False}
+[3.110164] (-) TimerEvent: {}
+[3.190584] (kmc_hardware_driver_node) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target KMC_HARDWARE_uart\x1b[0m\n'}
+[3.210370] (-) TimerEvent: {}
+[3.213525] (kmc_hardware_driver_node) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object kmc_hardware_uart_sdk/CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o\x1b[0m\n'}
+[3.214016] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object kmc_hardware_uart_sdk/CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o\x1b[0m\n'}
+[3.218270] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object kmc_hardware_uart_sdk/CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o\x1b[0m\n'}
+[3.310563] (-) TimerEvent: {}
+[3.411451] (-) TimerEvent: {}
+[3.512189] (-) TimerEvent: {}
+[3.613071] (-) TimerEvent: {}
+[3.713922] (-) TimerEvent: {}
+[3.814721] (-) TimerEvent: {}
+[3.915691] (-) TimerEvent: {}
+[4.016467] (-) TimerEvent: {}
+[4.117765] (-) TimerEvent: {}
+[4.218481] (-) TimerEvent: {}
+[4.319303] (-) TimerEvent: {}
+[4.420054] (-) TimerEvent: {}
+[4.520820] (-) TimerEvent: {}
+[4.621679] (-) TimerEvent: {}
+[4.722503] (-) TimerEvent: {}
+[4.823264] (-) TimerEvent: {}
+[4.923960] (-) TimerEvent: {}
+[5.024800] (-) TimerEvent: {}
+[5.125472] (-) TimerEvent: {}
+[5.226139] (-) TimerEvent: {}
+[5.326816] (-) TimerEvent: {}
+[5.427510] (-) TimerEvent: {}
+[5.528221] (-) TimerEvent: {}
+[5.628893] (-) TimerEvent: {}
+[5.729504] (-) TimerEvent: {}
+[5.830236] (-) TimerEvent: {}
+[5.885365] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX static library libKMC_HARDWARE_uart.a\x1b[0m\n'}
+[5.930418] (-) TimerEvent: {}
+[5.978967] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 33%] Built target KMC_HARDWARE_uart\n'}
+[5.999564] (kmc_hardware_driver_node) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target kmc_hardware_high_rate_control_node\x1b[0m\n'}
+[6.000174] (kmc_hardware_driver_node) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target kmc_hardware_driver_read_allstate_node\x1b[0m\n'}
+[6.000460] (kmc_hardware_driver_node) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target kmc_hardware_driver_observe_node\x1b[0m\n'}
+[6.000909] (kmc_hardware_driver_node) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target kmc_hardware_driver_demo_node\x1b[0m\n'}
+[6.030589] (-) TimerEvent: {}
+[6.082896] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/kmc_hardware_high_rate_control_node.dir/src/high_rate_control_node.cpp.o\x1b[0m\n'}
+[6.087203] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/kmc_hardware_driver_observe_node.dir/src/driver_observe_node.cpp.o\x1b[0m\n'}
+[6.096021] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/kmc_hardware_driver_demo_node.dir/src/driver_demo_node.cpp.o\x1b[0m\n'}
+[6.130784] (-) TimerEvent: {}
+[6.144010] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/kmc_hardware_driver_read_allstate_node.dir/src/driver_read_allstate_node.cpp.o\x1b[0m\n'}
+[6.230982] (-) TimerEvent: {}
+[6.331685] (-) TimerEvent: {}
+[6.432393] (-) TimerEvent: {}
+[6.533134] (-) TimerEvent: {}
+[6.633882] (-) TimerEvent: {}
+[6.734608] (-) TimerEvent: {}
+[6.835335] (-) TimerEvent: {}
+[6.936074] (-) TimerEvent: {}
+[7.036822] (-) TimerEvent: {}
+[7.137598] (-) TimerEvent: {}
+[7.238349] (-) TimerEvent: {}
+[7.339089] (-) TimerEvent: {}
+[7.439836] (-) TimerEvent: {}
+[7.540567] (-) TimerEvent: {}
+[7.641308] (-) TimerEvent: {}
+[7.742059] (-) TimerEvent: {}
+[7.842779] (-) TimerEvent: {}
+[7.943518] (-) TimerEvent: {}
+[8.044230] (-) TimerEvent: {}
+[8.144997] (-) TimerEvent: {}
+[8.245732] (-) TimerEvent: {}
+[8.346485] (-) TimerEvent: {}
+[8.447213] (-) TimerEvent: {}
+[8.547944] (-) TimerEvent: {}
+[8.648668] (-) TimerEvent: {}
+[8.749413] (-) TimerEvent: {}
+[8.850136] (-) TimerEvent: {}
+[8.950862] (-) TimerEvent: {}
+[9.051585] (-) TimerEvent: {}
+[9.152305] (-) TimerEvent: {}
+[9.253059] (-) TimerEvent: {}
+[9.353759] (-) TimerEvent: {}
+[9.454482] (-) TimerEvent: {}
+[9.555207] (-) TimerEvent: {}
+[9.655944] (-) TimerEvent: {}
+[9.756688] (-) TimerEvent: {}
+[9.857447] (-) TimerEvent: {}
+[9.958164] (-) TimerEvent: {}
+[10.058877] (-) TimerEvent: {}
+[10.159607] (-) TimerEvent: {}
+[10.260332] (-) TimerEvent: {}
+[10.361079] (-) TimerEvent: {}
+[10.461780] (-) TimerEvent: {}
+[10.562488] (-) TimerEvent: {}
+[10.663465] (-) TimerEvent: {}
+[10.764198] (-) TimerEvent: {}
+[10.864978] (-) TimerEvent: {}
+[10.965713] (-) TimerEvent: {}
+[11.066446] (-) TimerEvent: {}
+[11.167158] (-) TimerEvent: {}
+[11.267887] (-) TimerEvent: {}
+[11.368609] (-) TimerEvent: {}
+[11.469366] (-) TimerEvent: {}
+[11.570110] (-) TimerEvent: {}
+[11.670854] (-) TimerEvent: {}
+[11.771584] (-) TimerEvent: {}
+[11.872312] (-) TimerEvent: {}
+[11.973039] (-) TimerEvent: {}
+[12.073763] (-) TimerEvent: {}
+[12.174489] (-) TimerEvent: {}
+[12.275241] (-) TimerEvent: {}
+[12.376016] (-) TimerEvent: {}
+[12.476736] (-) TimerEvent: {}
+[12.577491] (-) TimerEvent: {}
+[12.678218] (-) TimerEvent: {}
+[12.778968] (-) TimerEvent: {}
+[12.879702] (-) TimerEvent: {}
+[12.980430] (-) TimerEvent: {}
+[13.081155] (-) TimerEvent: {}
+[13.181883] (-) TimerEvent: {}
+[13.282633] (-) TimerEvent: {}
+[13.383386] (-) TimerEvent: {}
+[13.484105] (-) TimerEvent: {}
+[13.584830] (-) TimerEvent: {}
+[13.685587] (-) TimerEvent: {}
+[13.786346] (-) TimerEvent: {}
+[13.887096] (-) TimerEvent: {}
+[13.987836] (-) TimerEvent: {}
+[14.088572] (-) TimerEvent: {}
+[14.189307] (-) TimerEvent: {}
+[14.290041] (-) TimerEvent: {}
+[14.390769] (-) TimerEvent: {}
+[14.491506] (-) TimerEvent: {}
+[14.592253] (-) TimerEvent: {}
+[14.693002] (-) TimerEvent: {}
+[14.793725] (-) TimerEvent: {}
+[14.894455] (-) TimerEvent: {}
+[14.995216] (-) TimerEvent: {}
+[15.095976] (-) TimerEvent: {}
+[15.196698] (-) TimerEvent: {}
+[15.297454] (-) TimerEvent: {}
+[15.398244] (-) TimerEvent: {}
+[15.499000] (-) TimerEvent: {}
+[15.599730] (-) TimerEvent: {}
+[15.700444] (-) TimerEvent: {}
+[15.801158] (-) TimerEvent: {}
+[15.901854] (-) TimerEvent: {}
+[16.002549] (-) TimerEvent: {}
+[16.103257] (-) TimerEvent: {}
+[16.203970] (-) TimerEvent: {}
+[16.304683] (-) TimerEvent: {}
+[16.405396] (-) TimerEvent: {}
+[16.506089] (-) TimerEvent: {}
+[16.607083] (-) TimerEvent: {}
+[16.707786] (-) TimerEvent: {}
+[16.808473] (-) TimerEvent: {}
+[16.909196] (-) TimerEvent: {}
+[17.009890] (-) TimerEvent: {}
+[17.110579] (-) TimerEvent: {}
+[17.211279] (-) TimerEvent: {}
+[17.312017] (-) TimerEvent: {}
+[17.412749] (-) TimerEvent: {}
+[17.513472] (-) TimerEvent: {}
+[17.614176] (-) TimerEvent: {}
+[17.714866] (-) TimerEvent: {}
+[17.815575] (-) TimerEvent: {}
+[17.916287] (-) TimerEvent: {}
+[18.017005] (-) TimerEvent: {}
+[18.117707] (-) TimerEvent: {}
+[18.218438] (-) TimerEvent: {}
+[18.319154] (-) TimerEvent: {}
+[18.419861] (-) TimerEvent: {}
+[18.520576] (-) TimerEvent: {}
+[18.621297] (-) TimerEvent: {}
+[18.721999] (-) TimerEvent: {}
+[18.822695] (-) TimerEvent: {}
+[18.923389] (-) TimerEvent: {}
+[19.024095] (-) TimerEvent: {}
+[19.124803] (-) TimerEvent: {}
+[19.225522] (-) TimerEvent: {}
+[19.326228] (-) TimerEvent: {}
+[19.426922] (-) TimerEvent: {}
+[19.527609] (-) TimerEvent: {}
+[19.628308] (-) TimerEvent: {}
+[19.729026] (-) TimerEvent: {}
+[19.829714] (-) TimerEvent: {}
+[19.930452] (-) TimerEvent: {}
+[20.031158] (-) TimerEvent: {}
+[20.131880] (-) TimerEvent: {}
+[20.232597] (-) TimerEvent: {}
+[20.333307] (-) TimerEvent: {}
+[20.434032] (-) TimerEvent: {}
+[20.534736] (-) TimerEvent: {}
+[20.635447] (-) TimerEvent: {}
+[20.736143] (-) TimerEvent: {}
+[20.836847] (-) TimerEvent: {}
+[20.937591] (-) TimerEvent: {}
+[21.038338] (-) TimerEvent: {}
+[21.048130] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable kmc_hardware_driver_read_allstate_node\x1b[0m\n'}
+[21.138559] (-) TimerEvent: {}
+[21.239397] (-) TimerEvent: {}
+[21.340206] (-) TimerEvent: {}
+[21.441004] (-) TimerEvent: {}
+[21.450967] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable kmc_hardware_driver_demo_node\x1b[0m\n'}
+[21.461105] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX executable kmc_hardware_driver_observe_node\x1b[0m\n'}
+[21.541144] (-) TimerEvent: {}
+[21.641843] (-) TimerEvent: {}
+[21.742848] (-) TimerEvent: {}
+[21.843612] (-) TimerEvent: {}
+[21.886906] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 91%] Built target kmc_hardware_driver_read_allstate_node\n'}
+[21.943816] (-) TimerEvent: {}
+[22.044496] (-) TimerEvent: {}
+[22.145152] (-) TimerEvent: {}
+[22.155568] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 91%] Built target kmc_hardware_driver_demo_node\n'}
+[22.245336] (-) TimerEvent: {}
+[22.332342] (kmc_hardware_driver_node) StdoutLine: {'line': b'[ 91%] Built target kmc_hardware_driver_observe_node\n'}
+[22.345472] (-) TimerEvent: {}
+[22.446140] (-) TimerEvent: {}
+[22.546812] (-) TimerEvent: {}
+[22.647476] (-) TimerEvent: {}
+[22.748240] (-) TimerEvent: {}
+[22.849011] (-) TimerEvent: {}
+[22.949711] (-) TimerEvent: {}
+[23.050565] (-) TimerEvent: {}
+[23.103731] (kmc_hardware_driver_node) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable kmc_hardware_high_rate_control_node\x1b[0m\n'}
+[23.150741] (-) TimerEvent: {}
+[23.251434] (-) TimerEvent: {}
+[23.352157] (-) TimerEvent: {}
+[23.452858] (-) TimerEvent: {}
+[23.553574] (-) TimerEvent: {}
+[23.654372] (-) TimerEvent: {}
+[23.730072] (kmc_hardware_driver_node) StdoutLine: {'line': b'[100%] Built target kmc_hardware_high_rate_control_node\n'}
+[23.754480] (-) TimerEvent: {}
+[23.757028] (kmc_hardware_driver_node) CommandEnded: {'returncode': 0}
+[23.758984] (kmc_hardware_driver_node) JobProgress: {'identifier': 'kmc_hardware_driver_node', 'progress': 'install'}
+[23.783496] (kmc_hardware_driver_node) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/build/kmc_hardware_driver_node'], 'cwd': '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/build/kmc_hardware_driver_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_AGENT_PID', '1920'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1825'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/install:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('JOURNAL_STREAM', '8:55130'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/HY:@/tmp/.ICE-unix/1955,unix/HY:/tmp/.ICE-unix/1955'), ('INVOCATION_ID', '5bd68b8f231d4affabf89e3f595c1957'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d3c30626_d757_4cd7_b582_7967ab1cf945'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/build/kmc_hardware_driver_node'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/opt/ros/foxy')]), 'shell': False}
+[23.807666] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.808597] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[23.809969] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/web/index.html\n'}
+[23.829272] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_hardware_driver_demo_node\n'}
+[23.846943] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_hardware_driver_observe_node\n'}
+[23.854562] (-) TimerEvent: {}
+[23.864759] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_hardware_driver_read_allstate_node\n'}
+[23.883484] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_hardware_high_rate_control_node\n'}
+[23.904261] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/ament_index/resource_index/package_run_dependencies/kmc_hardware_driver_node\n'}
+[23.923210] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/ament_index/resource_index/parent_prefix_path/kmc_hardware_driver_node\n'}
+[23.942368] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/environment/ament_prefix_path.sh\n'}
+[23.954685] (-) TimerEvent: {}
+[23.960723] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/environment/ament_prefix_path.dsv\n'}
+[23.979370] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/environment/path.sh\n'}
+[23.999465] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/environment/path.dsv\n'}
+[24.018218] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/local_setup.bash\n'}
+[24.036614] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/local_setup.sh\n'}
+[24.054840] (-) TimerEvent: {}
+[24.055500] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/local_setup.zsh\n'}
+[24.073207] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/local_setup.dsv\n'}
+[24.095777] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/package.dsv\n'}
+[24.116954] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/ament_index/resource_index/packages/kmc_hardware_driver_node\n'}
+[24.135809] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/cmake/kmc_hardware_driver_nodeConfig.cmake\n'}
+[24.154984] (-) TimerEvent: {}
+[24.155657] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/cmake/kmc_hardware_driver_nodeConfig-version.cmake\n'}
+[24.177636] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/package.xml\n'}
+[24.195843] (kmc_hardware_driver_node) StdoutLine: {'line': b'-- Installing: /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_web_joystick_node\n'}
+[24.201975] (kmc_hardware_driver_node) CommandEnded: {'returncode': 0}
+[24.244415] (kmc_hardware_driver_node) JobEnded: {'identifier': 'kmc_hardware_driver_node', 'rc': 0}
+[24.245976] (-) EventReactorShutdown: {}

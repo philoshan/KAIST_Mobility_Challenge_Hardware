@@ -1,0 +1,307 @@
+[0.398s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.399s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa1b381c0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa1b381c0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa1b38940>)
+[0.719s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.719s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.720s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.720s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.720s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.720s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.720s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/hy/Mobility_Challenge'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.721s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.722s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.745s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore_ament_install'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_pkg']
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_pkg'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_meta']
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_meta'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ros']
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ros'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['cmake', 'python']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'cmake'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['python_setup_py']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python_setup_py'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) by extensions ['ignore', 'ignore_ament_install']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) by extension 'ignore'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) ignored
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) by extensions ['ignore', 'ignore_ament_install']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) by extension 'ignore'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) ignored
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) by extensions ['ignore', 'ignore_ament_install']
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) by extension 'ignore'
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) ignored
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore'
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore_ament_install'
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_pkg']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_pkg'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_meta']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_meta'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ros']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ros'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['cmake', 'python']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'cmake'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['python_setup_py']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python_setup_py'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/cav_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/cav_controller) by extension 'ignore'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/cav_controller) by extension 'ignore_ament_install'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/cav_controller) by extensions ['colcon_pkg']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/cav_controller) by extension 'colcon_pkg'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/cav_controller) by extensions ['colcon_meta']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/cav_controller) by extension 'colcon_meta'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/cav_controller) by extensions ['ros']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/cav_controller) by extension 'ros'
+[0.761s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/cav_controller' with type 'ros.ament_python' and name 'cav_controller'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/simulator_launch) by extensions ['ignore', 'ignore_ament_install']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/simulator_launch) by extension 'ignore'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/simulator_launch) by extension 'ignore_ament_install'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/simulator_launch) by extensions ['colcon_pkg']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/simulator_launch) by extension 'colcon_pkg'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/simulator_launch) by extensions ['colcon_meta']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/simulator_launch) by extension 'colcon_meta'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/simulator_launch) by extensions ['ros']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/simulator_launch) by extension 'ros'
+[0.764s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/simulator_launch' with type 'ros.ament_cmake' and name 'simulator_launch'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extensions ['ignore', 'ignore_ament_install']
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extension 'ignore'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extension 'ignore_ament_install'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extensions ['colcon_pkg']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extension 'colcon_pkg'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extensions ['colcon_meta']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extension 'colcon_meta'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extensions ['ros']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extension 'ros'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extensions ['cmake', 'python']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extension 'cmake'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extension 'python'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extensions ['python_setup_py']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(sdk) by extension 'python_setup_py'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extensions ['ignore', 'ignore_ament_install']
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extension 'ignore'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extension 'ignore_ament_install'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extensions ['colcon_pkg']
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extension 'colcon_pkg'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extensions ['colcon_meta']
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extension 'colcon_meta'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extensions ['ros']
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extension 'ros'
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extensions ['cmake', 'python']
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extension 'cmake'
+[0.803s] Level 1:colcon.colcon_core.package_identification:_identify(sdk/KAIST_Mobility_Challenge_SDK) by extension 'python'
+[0.804s] DEBUG:colcon.colcon_core.package_identification:Package 'sdk/KAIST_Mobility_Challenge_SDK' with type 'cmake' and name 'KMC_HARDWARE_uart_sdk'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extensions ['ignore', 'ignore_ament_install']
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extension 'ignore'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extension 'ignore_ament_install'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extensions ['colcon_pkg']
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extension 'colcon_pkg'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extensions ['colcon_meta']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extension 'colcon_meta'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extensions ['ros']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extension 'ros'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extensions ['cmake', 'python']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extension 'cmake'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extension 'python'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extensions ['python_setup_py']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(tool) by extension 'python_setup_py'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extensions ['ignore', 'ignore_ament_install']
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extension 'ignore'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extension 'ignore_ament_install'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extensions ['colcon_pkg']
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extension 'colcon_pkg'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extensions ['colcon_meta']
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extension 'colcon_meta'
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extensions ['ros']
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extension 'ros'
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extensions ['cmake', 'python']
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extension 'cmake'
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extension 'python'
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extensions ['python_setup_py']
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(tool/waypoint) by extension 'python_setup_py'
+[0.807s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.808s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.808s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.808s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.808s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.843s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.843s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.847s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install
+[0.848s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 174 installed packages in /opt/ros/foxy
+[0.851s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.924s] Level 5:colcon.colcon_core.verb:set package 'KMC_HARDWARE_uart_sdk' build argument 'cmake_args' from command line to 'None'
+[0.925s] Level 5:colcon.colcon_core.verb:set package 'KMC_HARDWARE_uart_sdk' build argument 'cmake_target' from command line to 'None'
+[0.925s] Level 5:colcon.colcon_core.verb:set package 'KMC_HARDWARE_uart_sdk' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.925s] Level 5:colcon.colcon_core.verb:set package 'KMC_HARDWARE_uart_sdk' build argument 'cmake_clean_cache' from command line to 'False'
+[0.925s] Level 5:colcon.colcon_core.verb:set package 'KMC_HARDWARE_uart_sdk' build argument 'cmake_clean_first' from command line to 'False'
+[0.925s] Level 5:colcon.colcon_core.verb:set package 'KMC_HARDWARE_uart_sdk' build argument 'cmake_force_configure' from command line to 'False'
+[0.925s] Level 5:colcon.colcon_core.verb:set package 'KMC_HARDWARE_uart_sdk' build argument 'ament_cmake_args' from command line to 'None'
+[0.925s] Level 5:colcon.colcon_core.verb:set package 'KMC_HARDWARE_uart_sdk' build argument 'catkin_cmake_args' from command line to 'None'
+[0.925s] Level 5:colcon.colcon_core.verb:set package 'KMC_HARDWARE_uart_sdk' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.925s] DEBUG:colcon.colcon_core.verb:Building package 'KMC_HARDWARE_uart_sdk' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk', 'merge_install': False, 'path': '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK', 'symlink_install': True, 'test_result_base': None}
+[0.926s] Level 5:colcon.colcon_core.verb:set package 'cav_controller' build argument 'cmake_args' from command line to 'None'
+[0.926s] Level 5:colcon.colcon_core.verb:set package 'cav_controller' build argument 'cmake_target' from command line to 'None'
+[0.926s] Level 5:colcon.colcon_core.verb:set package 'cav_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.926s] Level 5:colcon.colcon_core.verb:set package 'cav_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.926s] Level 5:colcon.colcon_core.verb:set package 'cav_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.926s] Level 5:colcon.colcon_core.verb:set package 'cav_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.926s] Level 5:colcon.colcon_core.verb:set package 'cav_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.926s] Level 5:colcon.colcon_core.verb:set package 'cav_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.926s] Level 5:colcon.colcon_core.verb:set package 'cav_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.927s] DEBUG:colcon.colcon_core.verb:Building package 'cav_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hy/Mobility_Challenge/build/cav_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hy/Mobility_Challenge/install/cav_controller', 'merge_install': False, 'path': '/home/hy/Mobility_Challenge/ros2_ws/src/cav_controller', 'symlink_install': True, 'test_result_base': None}
+[0.927s] Level 5:colcon.colcon_core.verb:set package 'simulator_launch' build argument 'cmake_args' from command line to 'None'
+[0.927s] Level 5:colcon.colcon_core.verb:set package 'simulator_launch' build argument 'cmake_target' from command line to 'None'
+[0.927s] Level 5:colcon.colcon_core.verb:set package 'simulator_launch' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.927s] Level 5:colcon.colcon_core.verb:set package 'simulator_launch' build argument 'cmake_clean_cache' from command line to 'False'
+[0.928s] Level 5:colcon.colcon_core.verb:set package 'simulator_launch' build argument 'cmake_clean_first' from command line to 'False'
+[0.928s] Level 5:colcon.colcon_core.verb:set package 'simulator_launch' build argument 'cmake_force_configure' from command line to 'False'
+[0.928s] Level 5:colcon.colcon_core.verb:set package 'simulator_launch' build argument 'ament_cmake_args' from command line to 'None'
+[0.928s] Level 5:colcon.colcon_core.verb:set package 'simulator_launch' build argument 'catkin_cmake_args' from command line to 'None'
+[0.928s] Level 5:colcon.colcon_core.verb:set package 'simulator_launch' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.928s] DEBUG:colcon.colcon_core.verb:Building package 'simulator_launch' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hy/Mobility_Challenge/build/simulator_launch', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hy/Mobility_Challenge/install/simulator_launch', 'merge_install': False, 'path': '/home/hy/Mobility_Challenge/ros2_ws/src/simulator_launch', 'symlink_install': True, 'test_result_base': None}
+[0.928s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.930s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.931s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK'
+[0.935s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.936s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.936s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.948s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/hy/Mobility_Challenge/ros2_ws/src/cav_controller' with build type 'ament_python'
+[0.949s] Level 1:colcon.colcon_core.shell:create_environment_hook('cav_controller', 'ament_prefix_path')
+[0.950s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/hook/ament_prefix_path.ps1'
+[0.952s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/hook/ament_prefix_path.dsv'
+[0.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/hook/ament_prefix_path.sh'
+[0.955s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.955s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.965s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hy/Mobility_Challenge/ros2_ws/src/simulator_launch' with build type 'ament_cmake'
+[0.966s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hy/Mobility_Challenge/ros2_ws/src/simulator_launch'
+[0.967s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.967s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.984s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk': /usr/bin/cmake /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK -DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk
+[1.516s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/hy/Mobility_Challenge/ros2_ws/src/cav_controller'
+[1.517s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.517s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.560s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hy/Mobility_Challenge/build/simulator_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/hy/Mobility_Challenge/ros2_ws/src/simulator_launch -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/install/simulator_launch
+[2.326s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk' returned '0': /usr/bin/cmake /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK -DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk
+[2.335s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk': /usr/bin/cmake --build /home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk -- -j4 -l4
+[2.363s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/hy/Mobility_Challenge/install/cav_controller/share/ament_index/resource_index/packages/cav_controller
+[2.363s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/package.xml
+[2.364s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/hy/Mobility_Challenge/install/cav_controller/lib/cav_controller/Problem_1
+[2.367s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hy/Mobility_Challenge/build/cav_controller': PYTHONPATH=/home/hy/Mobility_Challenge/build/cav_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hy/Mobility_Challenge/build/cav_controller/build --no-deps symlink_data --force
+[3.563s] Level 1:colcon.colcon_core.shell:create_environment_hook('cav_controller', 'pythonpath_develop')
+[3.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/build/cav_controller/share/cav_controller/hook/pythonpath_develop.ps1'
+[3.566s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hy/Mobility_Challenge/build/cav_controller/share/cav_controller/hook/pythonpath_develop.dsv'
+[3.568s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/build/cav_controller/share/cav_controller/hook/pythonpath_develop.sh'
+[3.572s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hy/Mobility_Challenge/build/cav_controller' returned '0': PYTHONPATH=/home/hy/Mobility_Challenge/build/cav_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hy/Mobility_Challenge/build/cav_controller/build --no-deps symlink_data --force
+[3.576s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/cav_controller' for CMake module files
+[3.577s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/cav_controller' for CMake config files
+[3.579s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/cav_controller/lib'
+[3.579s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/cav_controller/bin'
+[3.579s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/cav_controller/lib/pkgconfig/cav_controller.pc'
+[3.580s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages'
+[3.580s] Level 1:colcon.colcon_core.shell:create_environment_hook('cav_controller', 'pythonpath')
+[3.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/hook/pythonpath.ps1'
+[3.582s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/hook/pythonpath.dsv'
+[3.595s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/hook/pythonpath.sh'
+[3.598s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/cav_controller/bin'
+[3.598s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cav_controller)
+[3.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/package.ps1'
+[3.614s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/package.dsv'
+[3.616s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/package.sh'
+[3.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/package.bash'
+[3.620s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller/package.zsh'
+[3.622s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hy/Mobility_Challenge/install/cav_controller/share/colcon-core/packages/cav_controller)
+[3.766s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hy/Mobility_Challenge/build/simulator_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/hy/Mobility_Challenge/ros2_ws/src/simulator_launch -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/install/simulator_launch
+[3.768s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hy/Mobility_Challenge/build/simulator_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/hy/Mobility_Challenge/build/simulator_launch -- -j4 -l4
+[3.861s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hy/Mobility_Challenge/build/simulator_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/hy/Mobility_Challenge/build/simulator_launch -- -j4 -l4
+[3.899s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hy/Mobility_Challenge/build/simulator_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/hy/Mobility_Challenge/build/simulator_launch
+[4.314s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulator_launch)
+[4.315s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch' for CMake module files
+[4.316s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hy/Mobility_Challenge/build/simulator_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/hy/Mobility_Challenge/build/simulator_launch
+[4.317s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch' for CMake config files
+[4.318s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator_launch', 'cmake_prefix_path')
+[4.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/hook/cmake_prefix_path.ps1'
+[4.321s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/hook/cmake_prefix_path.dsv'
+[4.322s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/hook/cmake_prefix_path.sh'
+[4.324s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch/bin'
+[4.324s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch/lib/pkgconfig/simulator_launch.pc'
+[4.325s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch/lib/python3.8/site-packages'
+[4.326s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch/bin'
+[4.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.ps1'
+[4.329s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.dsv'
+[4.330s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.sh'
+[4.333s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.bash'
+[4.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.zsh'
+[4.336s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hy/Mobility_Challenge/install/simulator_launch/share/colcon-core/packages/simulator_launch)
+[4.338s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulator_launch)
+[4.339s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch' for CMake module files
+[4.340s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch' for CMake config files
+[4.341s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator_launch', 'cmake_prefix_path')
+[4.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/hook/cmake_prefix_path.ps1'
+[4.343s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/hook/cmake_prefix_path.dsv'
+[4.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/hook/cmake_prefix_path.sh'
+[4.347s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch/bin'
+[4.347s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch/lib/pkgconfig/simulator_launch.pc'
+[4.348s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch/lib/python3.8/site-packages'
+[4.349s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/simulator_launch/bin'
+[4.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.ps1'
+[4.352s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.dsv'
+[4.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.sh'
+[4.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.bash'
+[4.357s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/simulator_launch/share/simulator_launch/package.zsh'
+[4.358s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hy/Mobility_Challenge/install/simulator_launch/share/colcon-core/packages/simulator_launch)
+[9.596s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk' returned '0': /usr/bin/cmake --build /home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk -- -j4 -l4
+[9.597s] WARNING:colcon.colcon_cmake.task.cmake.build:Could not run installation step for package 'KMC_HARDWARE_uart_sdk' because it has no 'install' target
+[9.598s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(KMC_HARDWARE_uart_sdk)
+[9.598s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk' for CMake module files
+[9.600s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk' for CMake config files
+[9.601s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/bin'
+[9.601s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/lib/pkgconfig/KMC_HARDWARE_uart_sdk.pc'
+[9.602s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/lib/python3.8/site-packages'
+[9.602s] Level 1:colcon.colcon_core.environment:checking '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/bin'
+[9.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/share/KMC_HARDWARE_uart_sdk/package.ps1'
+[9.605s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/share/KMC_HARDWARE_uart_sdk/package.dsv'
+[9.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/share/KMC_HARDWARE_uart_sdk/package.sh'
+[9.607s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/share/KMC_HARDWARE_uart_sdk/package.bash'
+[9.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/share/KMC_HARDWARE_uart_sdk/package.zsh'
+[9.610s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk/share/colcon-core/packages/KMC_HARDWARE_uart_sdk)
+[9.610s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.611s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.612s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.612s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.626s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.627s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.627s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.670s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.671s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hy/Mobility_Challenge/install/local_setup.ps1'
+[9.673s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hy/Mobility_Challenge/install/_local_setup_util_ps1.py'
+[9.676s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hy/Mobility_Challenge/install/setup.ps1'
+[9.679s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hy/Mobility_Challenge/install/local_setup.sh'
+[9.680s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hy/Mobility_Challenge/install/_local_setup_util_sh.py'
+[9.681s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hy/Mobility_Challenge/install/setup.sh'
+[9.684s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hy/Mobility_Challenge/install/local_setup.bash'
+[9.685s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hy/Mobility_Challenge/install/setup.bash'
+[9.687s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hy/Mobility_Challenge/install/local_setup.zsh'
+[9.688s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hy/Mobility_Challenge/install/setup.zsh'

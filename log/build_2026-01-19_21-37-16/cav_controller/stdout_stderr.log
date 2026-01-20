@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing cav_controller.egg-info/PKG-INFO
+writing dependency_links to cav_controller.egg-info/dependency_links.txt
+writing entry points to cav_controller.egg-info/entry_points.txt
+writing requirements to cav_controller.egg-info/requires.txt
+writing top-level names to cav_controller.egg-info/top_level.txt
+reading manifest file 'cav_controller.egg-info/SOURCES.txt'
+writing manifest file 'cav_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages/site.py
+Creating /home/hy/Mobility_Challenge/install/cav_controller/lib/python3.8/site-packages/cav-controller.egg-link (link to .)
+Installing echo_pose script to /home/hy/Mobility_Challenge/install/cav_controller/lib/cav_controller
+Installing run_drive script to /home/hy/Mobility_Challenge/install/cav_controller/lib/cav_controller
+
+Installed /home/hy/Mobility_Challenge/build/cav_controller
+running symlink_data
+symbolically linking /home/hy/Mobility_Challenge/build/cav_controller/resource/cav_controller -> /home/hy/Mobility_Challenge/install/cav_controller/share/ament_index/resource_index/packages
+symbolically linking /home/hy/Mobility_Challenge/build/cav_controller/package.xml -> /home/hy/Mobility_Challenge/install/cav_controller/share/cav_controller
