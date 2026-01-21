@@ -1,5 +1,5 @@
 name: bridge_role_01
-from_domain: 25  # [주의] 대회 당일 실제 차량 도메인 번호로 수정 필수!
+from_domain: 27  # [주의] 대회 당일 실제 차량 도메인 번호로 수정 필수!
 to_domain: 100
 topics:
   - topic_name: /Ego_pose

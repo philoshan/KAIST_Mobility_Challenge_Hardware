@@ -1,0 +1,1 @@
+/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge/ament_cmake_environment_hooks/pythonpath.sh

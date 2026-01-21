@@ -1,0 +1,1 @@
+/home/hy/Mobility_Challenge/ros2_ws/src/domain_bridge/msg/CompressedMsg.msg

@@ -313,11 +313,8 @@ message(STATUS "Execute custom install script")
 # install("TARGETS" "control_p3" "main_p3" "DESTINATION" "lib/p3_cpp")
 include("/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(DIRECTORY "launch" "DESTINATION" "share/p3_cpp")
-ament_cmake_symlink_install_directory("/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp" DIRECTORY "launch" "DESTINATION" "share/p3_cpp")
-
-# install(DIRECTORY "tool" "DESTINATION" "share/p3_cpp")
-ament_cmake_symlink_install_directory("/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp" DIRECTORY "tool" "DESTINATION" "share/p3_cpp")
+# install(DIRECTORY "launch" "tool" "config" "DESTINATION" "share/p3_cpp")
+ament_cmake_symlink_install_directory("/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp" DIRECTORY "launch" "tool" "config" "DESTINATION" "share/p3_cpp")
 
 # install(FILES "/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/p3_cpp" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp" FILES "/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/p3_cpp" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge/rosidl_generator_py/domain_bridge/libdomain_bridge__python.so" "TARGETS" "domain_bridge__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

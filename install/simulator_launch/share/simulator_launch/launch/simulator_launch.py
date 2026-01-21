@@ -1,1 +1,0 @@
-/home/hy/Mobility_Challenge/ros2_ws/src/simulator_launch/launch/simulator_launch.py

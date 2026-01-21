@@ -1,4 +1,0 @@
-[console_scripts]
-echo_pose = cav_controller.echo_pose:main
-run_drive = cav_controller.drive_test:main
-
