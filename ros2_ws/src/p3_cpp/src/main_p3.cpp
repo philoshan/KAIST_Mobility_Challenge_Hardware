@@ -1,300 +1,598 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
-#include <geometry_msgs/msg/twist.hpp> // [변경] Accel -> Twist
-#include <std_msgs/msg/bool.hpp> 
+#include <std_msgs/msg/bool.hpp>
 #include <std_msgs/msg/float32.hpp> 
-
-#include <fstream>
-#include <sstream>
 #include <vector>
-#include <cmath>
 #include <string>
+#include <unordered_map>
+#include <cmath>
 #include <algorithm>
-#include <limits>
+#include <iostream>
+#include <map>
+#include <deque> 
 
-using std::placeholders::_1;
+using namespace std::chrono_literals;
 
-struct Point {
-    double x;
-    double y;
+// 2D 벡터 연산 및 OBB(Oriented Bounding Box) 충돌 감지를 위한 네임스페이스
+namespace Geo {
+    struct Vec2 {
+        double x, y;
+        Vec2 operator+(const Vec2& o) const { return {x + o.x, y + o.y}; }
+        Vec2 operator-(const Vec2& o) const { return {x - o.x, y - o.y}; }
+        double dot(const Vec2& o) const { return x * o.x + y * o.y; }
+        double dist_Sq() const { return x*x + y*y; }
+    };
+
+    bool check_obb_intersection(const std::vector<Vec2>& box1, const std::vector<Vec2>& box2) {
+        auto get_axes = [](const std::vector<Vec2>& b) {
+            return std::vector<Vec2>{
+                {b[1].x - b[0].x, b[1].y - b[0].y},
+                {b[1].x - b[2].x, b[1].y - b[2].y}
+            };
+        };
+        std::vector<Vec2> axes = get_axes(box1);
+        auto axes2 = get_axes(box2);
+        axes.insert(axes.end(), axes2.begin(), axes2.end());
+
+        for (const auto& axis : axes) {
+            double min1 = 1e9, max1 = -1e9;
+            double min2 = 1e9, max2 = -1e9;
+            for (const auto& p : box1) {
+                double proj = p.dot(axis);
+                min1 = std::min(min1, proj); max1 = std::max(max1, proj);
+            }
+            for (const auto& p : box2) {
+                double proj = p.dot(axis);
+                min2 = std::min(min2, proj); max2 = std::max(max2, proj);
+            }
+            if (max1 < min2 || max2 < min1) return false;
+        }
+        return true;
+    }
+}
+
+// 차량 구조체
+struct Vehicle {
+    std::string id;
+    bool is_cav;
+    Geo::Vec2 pos{0.0, 0.0};
+    double z = 0.0;
+    bool active = false;
+    bool is_stopped = false; 
+    bool forced_stop = false; 
+    std::string stop_cause = ""; 
+    bool has_entered_roundabout = false; 
+
+    // HV 속도 계산용
+    Geo::Vec2 last_pos{0.0, 0.0};
+    rclcpp::Time last_time;
+
+    // ROS
+    rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_stop;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_change_way;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_is_roundabout;
+    rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_hv_vel;
 };
 
-class RealStanleyDriver : public rclcpp::Node
-{
+class MainTrafficController : public rclcpp::Node {
 public:
-    RealStanleyDriver()
-    : Node("real_stanley_driver")
-    {
-        // QoS 설정: SensorData (Best Effort, Volatile)
-        auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
-        qos_profile.best_effort();
-        qos_profile.durability_volatile();
+    MainTrafficController() : Node("main_traffic_controller") {
+        // [설정] 차량 크기 및 패딩 (실제 환경에 맞춰 튜닝 가능)
+        car_info = {0.17, 0.16, 0.075, 0.075};
+        front_padding_ = 0.8;
+        side_padding_ = 0.8;
 
-        // [파라미터 설정] 요청하신 코드 원본 값 그대로 유지
-        this->declare_parameter("original_way_path", "tool/cav1p3.csv");
-        this->declare_parameter("inside_way_path", "tool/cav1p3_inside.csv");
-        
-        this->declare_parameter("k_gain", 2.0);          // 원본 유지
-        this->declare_parameter("max_steer", 0.7);       // 원본 유지
-        this->declare_parameter("target_speed", 2.0);    // 원본 유지
-        this->declare_parameter("center_to_front", 0.17);// 원본 유지
-        this->declare_parameter("wheelbase", 0.33);      // 원본 유지
-        this->declare_parameter("steer_gain", 1.0);      // 원본 유지
-        this->declare_parameter("forward_step", 15);     // 원본 유지
-        
-        this->declare_parameter("warmup_steps", 10);     // 원본 유지
+        approach_range_sq_ = 2.5 * 2.5;
 
-        // 파라미터 로드
-        original_csv_path_ = this->get_parameter("original_way_path").as_string();
-        inside_csv_path_ = this->get_parameter("inside_way_path").as_string();
-        
-        k_gain_ = this->get_parameter("k_gain").as_double();
-        max_steer_ = this->get_parameter("max_steer").as_double();
-        target_speed_ = this->get_parameter("target_speed").as_double();
-        center_to_front_ = this->get_parameter("center_to_front").as_double();
-        wheelbase_ = this->get_parameter("wheelbase").as_double();
-        steer_gain_ = this->get_parameter("steer_gain").as_double();
-        forward_step_ = this->get_parameter("forward_step").as_int(); 
-        warmup_steps_target_ = this->get_parameter("warmup_steps").as_int();
+        // 사지교차로
+        fourway_center_ = {-2.333, 0.0};
+        fourway_len_ = 2.0;
+        fourway_app_r_sq_ = 1.5 * 1.5;
+        fourway_box_half_len_ = fourway_len_ / 2.0;
 
-        // 경로 파일 로딩
-        load_waypoints(original_csv_path_, waypoints_original_);
-        load_waypoints(inside_csv_path_, waypoints_inside_);
-        
-        current_waypoints_ = &waypoints_original_;
-        is_inside_path_active_ = false;
+        // 회전교차로
+        round_center_ = {1.667, 0.0};
+        round_app_r_sq_ = 1.8 * 1.8;
+        round_radius_ = 1.4;
 
-        // Subscriber: /Ego_pose
-        sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
-            "/Ego_pose", qos_profile, std::bind(&RealStanleyDriver::pose_callback, this, _1));
-        
-        // Publisher: [변경] /Accel -> /cmd_vel (Twist)
-        // 하드웨어 제어를 위해 메시지 타입만 변경
-        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
+        // 삼지교차로
+        threeway_box_x_min_ = -3.7; threeway_box_x_max_ = -1.2;
+        threeway_1_y_min_ = 1.0;    threeway_1_y_max_ = 3.0;
+        threeway_2_y_min_ = -3.0;   threeway_2_y_max_ = -1.0;
 
-        // 기타 제어 토픽들 (원본 유지)
-        sub_stop_cmd_ = this->create_subscription<std_msgs::msg::Bool>(
-            "cmd_stop", qos_profile, 
-            [this](const std_msgs::msg::Bool::SharedPtr msg) {
-                this->stop_signal_ = msg->data; 
-                if (this->stop_signal_) this->publish_stop_command();
-            });
+        // 타이머 설정
+        tmr_discovery_ = create_wall_timer(
+            1000ms, std::bind(&MainTrafficController::discover_vehicles, this));
+        tmr_control_ = create_wall_timer(
+            20ms, std::bind(&MainTrafficController::control_loop, this));
 
-        sub_change_way_ = this->create_subscription<std_msgs::msg::Bool>(
-            "change_waypoint", qos_profile,
-            std::bind(&RealStanleyDriver::callback_change_waypoint, this, _1));
-
-        sub_hv_vel_ = this->create_subscription<std_msgs::msg::Float32>(
-            "hv_vel", qos_profile,
-            [this](const std_msgs::msg::Float32::SharedPtr msg) { this->hv_vel_ = msg->data; });
-
-        sub_is_roundabout_ = this->create_subscription<std_msgs::msg::Bool>(
-            "is_roundabout", qos_profile,
-            [this](const std_msgs::msg::Bool::SharedPtr msg) { this->is_roundabout_ = msg->data; });
-            
-        RCLCPP_INFO(this->get_logger(), "Real Driver Started. Speed: %.2f, WB: %.2f", target_speed_, wheelbase_);
+        RCLCPP_INFO(get_logger(), "=== Central Traffic Controller Started on PC ===");
+        RCLCPP_INFO(get_logger(), "Waiting for vehicles (CAV_xx / HV_xx) on network...");
     }
 
 private:
-    void load_waypoints(const std::string& path, std::vector<Point>& target_vector) {
-        std::ifstream file(path);
-        if (!file.is_open()) {
-            RCLCPP_ERROR(this->get_logger(), "Failed to open CSV file: %s", path.c_str());
-            return;
+    rclcpp::TimerBase::SharedPtr tmr_discovery_, tmr_control_;
+    std::unordered_map<std::string, Vehicle> vehicles_;
+    std::map<std::string, std::string> conflict_info_;
+
+    std::deque<double> hv_vel_buffer_;
+    const int vel_buffer_size_ = 10;
+
+    std::vector<double> car_info;
+    double front_padding_, side_padding_, approach_range_sq_;
+    Geo::Vec2 fourway_center_;
+    double fourway_len_, fourway_app_r_sq_, fourway_box_half_len_;
+    Geo::Vec2 round_center_;
+    double round_app_r_sq_, round_radius_;
+    double threeway_box_x_min_, threeway_box_x_max_, threeway_1_y_min_, threeway_1_y_max_, threeway_2_y_min_, threeway_2_y_max_;
+
+    void update_conflict_status(const std::string& stopped_cav, const std::string& cause_vehicle) {
+        if (conflict_info_.count(stopped_cav) && conflict_info_[stopped_cav] == cause_vehicle) return; 
+        conflict_info_[stopped_cav] = cause_vehicle;
+        // 로그 추가 (디버깅용)
+        RCLCPP_INFO(get_logger(), "[STOP] %s stopped by %s", stopped_cav.c_str(), cause_vehicle.c_str());
+    }
+
+    void clear_conflict_status(const std::string& stopped_cav) {
+        if (conflict_info_.count(stopped_cav)) {
+            RCLCPP_INFO(get_logger(), "[GO] %s released", stopped_cav.c_str());
+            conflict_info_.erase(stopped_cav);
         }
-        std::string line;
-        std::getline(file, line); 
-        target_vector.clear();
-        while (std::getline(file, line)) {
-            std::stringstream ss(line);
-            std::string cell;
-            std::vector<std::string> row;
-            while (std::getline(ss, cell, ',')) row.push_back(cell);
-            if (row.size() >= 2) {
-                try {
-                    Point p = {std::stod(row[0]), std::stod(row[1])};
-                    target_vector.push_back(p);
-                } catch (...) { continue; }
+    }
+
+    bool is_approaching(const Vehicle& spot, const Geo::Vec2& target_pos) {
+        Geo::Vec2 vec = target_pos - spot.pos;
+        return vec.dot({std::cos(spot.z), std::sin(spot.z)}) > 0;
+    }
+
+    std::vector<Geo::Vec2> get_vehicle_corners(const Vehicle& v, double front_ext, double side_pad) {
+        double front = car_info[0] + front_ext;
+        double rear = car_info[1];
+        double left = car_info[2] + side_pad;
+        double right = car_info[3] + side_pad;
+        std::vector<Geo::Vec2> locals = {{front, left}, {front, -right}, {-rear, -right}, {-rear, left}};
+        std::vector<Geo::Vec2> world_corners;
+        double c = std::cos(v.z), s = std::sin(v.z);
+        for (const auto& p : locals) {
+            world_corners.push_back({
+                v.pos.x + (p.x * c - p.y * s),
+                v.pos.y + (p.x * s + p.y * c)
+            });
+        }
+        return world_corners;
+    }
+
+    void discover_vehicles() {
+        auto topic_map = this->get_topic_names_and_types();
+        for (const auto& [name, types] : topic_map) {
+            if (name.empty() || name[0] != '/') continue;
+            std::string id = "";
+            bool is_cav = false;
+            
+            // 토픽 이름 파싱 (/CAV_01/Ego_pose 또는 /HV_01/Ego_pose 등)
+            // 주의: 차량이 본인의 Pose를 정확히 이 이름 패턴으로 쏘고 있어야 함
+            if (name.find("/Ego_pose") == std::string::npos) continue;
+
+            // 네임스페이스 추출 로직 (간단화)
+            size_t start = 1; 
+            size_t end = name.find("/Ego_pose");
+            std::string ns = name.substr(start, end - start); // ex) CAV_01
+
+            if (ns.find("CAV_") != std::string::npos) {
+                id = ns; is_cav = true;
+            } else if (ns.find("HV_") != std::string::npos) {
+                id = ns; is_cav = false;
+            } else {
+                continue;
+            }
+
+            if (!id.empty() && !vehicles_.count(id)) {
+                register_vehicle(id, name, is_cav);
             }
         }
-        RCLCPP_INFO(this->get_logger(), "Loaded %zu waypoints from %s", target_vector.size(), path.c_str());
     }
 
-    void callback_change_waypoint(const std_msgs::msg::Bool::SharedPtr msg) {
-        if (msg->data && !is_inside_path_active_ && !waypoints_inside_.empty()) {
-            is_inside_path_active_ = true;
-            current_waypoints_ = &waypoints_inside_;
-        } 
-    }
+    void register_vehicle(const std::string& id, const std::string& topic, bool is_cav) {
+        Vehicle v; v.id = id; v.is_cav = is_cav;
+        v.last_time = this->now();
 
-    double normalize_angle(double angle) {
-        while (angle > M_PI) angle -= 2.0 * M_PI;
-        while (angle < -M_PI) angle += 2.0 * M_PI;
-        return angle;
-    }
+        // QoS: 무선 네트워크 환경을 고려하여 Best Effort 설정
+        rclcpp::QoS qos(10);
+        qos.best_effort();
+        qos.durability_volatile();
 
-    // [변경] Twist 메시지로 정지
-    void publish_stop_command() {
-        auto stop_msg = geometry_msgs::msg::Twist();
-        stop_msg.linear.x = 0.0;  
-        stop_msg.angular.z = 0.0; 
-        pub_cmd_vel_->publish(stop_msg);
-    }
+        v.sub = create_subscription<geometry_msgs::msg::PoseStamped>(
+            topic, qos,
+            [this, id](const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
+                if (vehicles_.count(id)) {
+                    Vehicle& veh = vehicles_[id];
+                    
+                    double prev_x = veh.last_pos.x;
+                    double prev_y = veh.last_pos.y;
+                    rclcpp::Time prev_time = veh.last_time;
 
-    void pose_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
-        // 1. 초기 웜업
-        if (current_warmup_count_ < warmup_steps_target_) {
-            current_warmup_count_++;
-            publish_stop_command();
-            return;
+                    veh.pos = {msg->pose.position.x, msg->pose.position.y};
+                    veh.z = msg->pose.orientation.z; 
+                    veh.active = true;
+                    
+                    veh.last_pos = veh.pos;
+                    veh.last_time = msg->header.stamp;
+
+                    // HV 속도 계산
+                    if (id == "HV_19") {
+                        double dt = (veh.last_time - prev_time).seconds();
+                        // [안전장치] dt가 0이거나 너무 작으면 계산 스킵 (Div by Zero 방지)
+                        if (dt > 0.001) { 
+                            double dx = veh.pos.x - prev_x;
+                            double dy = veh.pos.y - prev_y;
+                            double dist = std::hypot(dx, dy);
+                            double vel = dist / dt;
+
+                            hv_vel_buffer_.push_back(vel);
+                            if (hv_vel_buffer_.size() > vel_buffer_size_) {
+                                hv_vel_buffer_.pop_front();
+                            }
+
+                            double sum = 0.0;
+                            for (double val : hv_vel_buffer_) sum += val;
+                            double avg_vel = sum / hv_vel_buffer_.size();
+
+                            std_msgs::msg::Float32 vel_msg;
+                            vel_msg.data = static_cast<float>(avg_vel - 0.05);
+                            
+                            for (auto& [target_id, target_v] : vehicles_) {
+                                if (target_v.is_cav && target_v.active && target_v.pub_hv_vel) {
+                                    target_v.pub_hv_vel->publish(vel_msg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        );
+
+        if (is_cav) {
+            v.pub_stop = create_publisher<std_msgs::msg::Bool>("/" + id + "/cmd_stop", qos);
+            v.pub_change_way = create_publisher<std_msgs::msg::Bool>("/" + id + "/change_waypoint", qos);
+            v.pub_is_roundabout = create_publisher<std_msgs::msg::Bool>("/" + id + "/is_roundabout", qos);
+            v.pub_hv_vel = create_publisher<std_msgs::msg::Float32>("/" + id + "/hv_vel", qos);
         }
+        vehicles_[id] = std::move(v);
+        RCLCPP_INFO(get_logger(), "New Vehicle Registered: %s (Topic: %s)", id.c_str(), topic.c_str());
+    }
 
-        // 2. 비상 정지
-        if (stop_signal_) {
-            publish_stop_command();
-            return; 
+    bool is_in_threeway_zone(const Geo::Vec2& pos) {
+        return (pos.x >= threeway_box_x_min_ && pos.x <= threeway_box_x_max_) &&
+               ((pos.y >= threeway_1_y_min_ && pos.y <= threeway_1_y_max_) ||
+                (pos.y >= threeway_2_y_min_ && pos.y <= threeway_2_y_max_));
+    }
+
+    bool check_threeway_conflict(const Vehicle& my_cav, const std::string& tid, bool is_next_lane, bool is_full, std::string& temp_log) {
+        if (tid == "CAV_03" || tid == "CAV_04") {
+            if (my_cav.id == "CAV_01" && is_next_lane) {
+                temp_log = "threeway_NEXT_LANE";
+                return true;
+            } else if (my_cav.id == "CAV_02" && is_full && !is_next_lane) {
+                temp_log = "threeway_VERTICAL";
+                return true;
+            }
         }
+        return false;
+    }
 
-        if (current_waypoints_->empty()) return;
+    bool is_in_fourway_zone(const Vehicle& v){ return (v.pos - fourway_center_).dist_Sq() <= fourway_app_r_sq_; }
 
-        // --- Stanley Logic ---
+    bool check_fourway_conflict(bool is_front, bool is_next_lane, std::string& temp_log) {
+        if (is_front && !is_next_lane) {
+            temp_log = "4WAY_FRONT";
+            return true;
+        }
+        return false;
+    }
 
-        // 1. 차량 상태 추출 (z값 직접 사용 - 파이썬 테스트 결과 반영)
-        double center_x = msg->pose.position.x;
-        double center_y = msg->pose.position.y;
-        double current_yaw = msg->pose.orientation.z;
+    bool check_fourway_rect_split(const Vehicle& my_cav) {
+        double x_min = fourway_center_.x - fourway_box_half_len_;
+        double x_max = fourway_center_.x + fourway_box_half_len_;
+        double y_min = fourway_center_.y - fourway_box_half_len_;
+        double y_max = fourway_center_.y + fourway_box_half_len_;
 
-        // 2. 전륜 위치 계산
-        double front_x = center_x + center_to_front_ * std::cos(current_yaw);
-        double front_y = center_y + center_to_front_ * std::sin(current_yaw);
+        bool i_am_inside = (my_cav.pos.x >= x_min && my_cav.pos.x <= x_max &&
+                            my_cav.pos.y >= y_min && my_cav.pos.y <= y_max);
+        if (i_am_inside) return false;
+        if ((my_cav.pos - fourway_center_).dist_Sq() > fourway_app_r_sq_) return false;
+        if (!is_approaching(my_cav, fourway_center_)) return false;
+        
+        bool am_i_top = (my_cav.pos.y > fourway_center_.y); 
+        bool am_i_right = (my_cav.pos.x > fourway_center_.x); 
 
-        // 3. Nearest Waypoint Search
-        int nearest_idx = -1;
-        double min_dist = std::numeric_limits<double>::max();
-
-        for (size_t i = 0; i < current_waypoints_->size(); ++i) {
-            double dx = front_x - (*current_waypoints_)[i].x;
-            double dy = front_y - (*current_waypoints_)[i].y;
-            double dist = std::hypot(dx, dy);
-            if (dist < min_dist) {
-                min_dist = dist;
-                nearest_idx = i;
+        if (my_cav.id == "CAV_01" || my_cav.id == "CAV_02") {
+            std::string tid = (my_cav.id == "CAV_01") ? "CAV_02" : "CAV_01"; 
+            if (vehicles_.count(tid) && vehicles_.at(tid).active) {
+                const auto& target = vehicles_.at(tid);
+                bool target_inside = (target.pos.x >= x_min && target.pos.x <= x_max &&
+                                      target.pos.y >= y_min && target.pos.y <= y_max);
+                if (target_inside) {
+                    bool target_is_right = (target.pos.x > fourway_center_.x);
+                    bool target_approaching = is_approaching(target, fourway_center_);
+                    
+                    if (my_cav.id == "CAV_01"){
+                        if (am_i_top && !target_is_right && target_approaching) return true;
+                        else if (!am_i_top && target_is_right && target_approaching) return true;
+                    }
+                    else{
+                        bool target_is_top = (target.pos.y > fourway_center_.y);
+                        if(!am_i_right && !target_is_top && target_approaching) return true;
+                        else if (am_i_right && target_is_right && target_approaching) return true;
+                    }
+                }
+            }
+            if (my_cav.id == "CAV_01" || my_cav.id == "CAV_02") {
+                auto is_target_in_box = [&](const std::string& tid) {
+                    if (vehicles_.count(tid) && vehicles_.at(tid).active) {
+                        const auto& tv = vehicles_.at(tid);
+                        return (tv.pos.x >= x_min && tv.pos.x <= x_max &&
+                                tv.pos.y >= y_min && tv.pos.y <= y_max);
+                    }
+                    return false;
+                };
+                if (is_target_in_box("CAV_03")) {
+                    if (my_cav.id == "CAV_01" && am_i_top) return true;
+                    if (my_cav.id == "CAV_02" && !am_i_right) return true;
+                }
+                if (is_target_in_box("CAV_04")) {
+                    if (my_cav.id == "CAV_01" && !am_i_top) return true;
+                    if (my_cav.id == "CAV_02" && am_i_right) return true;
+                }
             }
         }
 
-        // 4. 경로 복귀 로직
-        if (is_inside_path_active_) {
-            if (nearest_idx >= (int)current_waypoints_->size() - 5) { 
-                is_inside_path_active_ = false;
-                current_waypoints_ = &waypoints_original_;
-                return; 
+        int count_top = 0, count_bottom = 0;
+        for (const auto& [id, v] : vehicles_) {
+            if (!v.active) continue;
+            if (v.pos.x >= x_min && v.pos.x <= x_max &&
+                v.pos.y >= y_min && v.pos.y <= y_max) {
+                if (v.pos.y > fourway_center_.y) count_top++;
+                else count_bottom++;
             }
         }
-
-        // 5. CTE 계산
-        int next_nearest_idx = (nearest_idx + 1) % current_waypoints_->size();
-        if (is_inside_path_active_ && next_nearest_idx == 0) next_nearest_idx = nearest_idx;
-
-        double map_x = (*current_waypoints_)[nearest_idx].x;
-        double map_y = (*current_waypoints_)[nearest_idx].y;
-        double next_map_x = (*current_waypoints_)[next_nearest_idx].x;
-        double next_map_y = (*current_waypoints_)[next_nearest_idx].y;
-
-        double path_dx = next_map_x - map_x;
-        double path_dy = next_map_y - map_y;
-        double path_len = std::hypot(path_dx, path_dy);
-        if (path_len < 1e-6) path_len = 1e-6;
-
-        double dx = front_x - map_x;
-        double dy = front_y - map_y;
-        double cross_product = dx * path_dy - dy * path_dx; 
-        double cte = cross_product / path_len;
-
-        // 6. Heading Error 계산
-        int target_idx = (nearest_idx + forward_step_) % current_waypoints_->size();
-        
-        if (is_inside_path_active_ && (nearest_idx + forward_step_) >= (int)current_waypoints_->size()) {
-            target_idx = current_waypoints_->size() - 1;
-        }
-
-        int next_target_idx = (target_idx + 1) % current_waypoints_->size();
-        if (is_inside_path_active_ && next_target_idx == 0) next_target_idx = target_idx; 
-        
-        double target_dx = (*current_waypoints_)[next_target_idx].x - (*current_waypoints_)[target_idx].x;
-        double target_dy = (*current_waypoints_)[next_target_idx].y - (*current_waypoints_)[target_idx].y;
-        
-        if (std::hypot(target_dx, target_dy) < 1e-6 && target_idx > 0) {
-             target_dx = (*current_waypoints_)[target_idx].x - (*current_waypoints_)[target_idx-1].x;
-             target_dy = (*current_waypoints_)[target_idx].y - (*current_waypoints_)[target_idx-1].y;
-        }
-
-        double path_yaw = std::atan2(target_dy, target_dx);
-        double heading_error = normalize_angle(path_yaw - current_yaw);
-
-        // 7. 속도 결정
-        double final_speed = target_speed_;
-        if (is_roundabout_) final_speed = std::max((double)hv_vel_, 0.0);
-
-        // 8. Stanley Control Law
-        double v_clamped = std::max(final_speed, 0.1); 
-        double cte_correction = std::atan2(k_gain_ * cte, v_clamped);
-
-        double steer_angle = heading_error + cte_correction; 
-        steer_angle = normalize_angle(steer_angle);
-        steer_angle *= steer_gain_;
-        steer_angle = std::max(-max_steer_, std::min(max_steer_, steer_angle));
-
-        // 9. 최종 발행 [변경] Accel -> Twist
-        // Hardware interface expects Twist msg
-        auto msg_out = geometry_msgs::msg::Twist();
-        
-        // 각속도 계산 (omega = v / L * tan(delta))
-        double yaw_rate = (final_speed / wheelbase_) * std::tan(steer_angle);
-
-        msg_out.linear.x = final_speed;
-        msg_out.angular.z = yaw_rate;
-
-        pub_cmd_vel_->publish(msg_out);
+        return am_i_top ? (count_top >= 2) : (count_bottom >= 2);
     }
 
-    rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub_pose_;
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_cmd_vel_; // [변경]
-    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_stop_cmd_;
-    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_change_way_;
-    
-    rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_hv_vel_;
-    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_is_roundabout_;
+    bool is_in_round_zone(const Vehicle& v){ return (v.pos - round_center_).dist_Sq() <= round_app_r_sq_; }
 
-    bool stop_signal_ = false;
-    
-    std::vector<Point> waypoints_original_;
-    std::vector<Point> waypoints_inside_;
-    std::vector<Point>* current_waypoints_; 
+    int count_cavs_in_roundabout() {
+        int count = 0;
+        double r_sq = round_radius_ * round_radius_;
+        for (const auto& [id, v] : vehicles_) {
+            if (v.is_cav && v.active &&
+                (v.pos - round_center_).dist_Sq() <= r_sq) count++;
+        }
+        return count;
+    }
 
-    std::string original_csv_path_;
-    std::string inside_csv_path_;
-    
-    double k_gain_;
-    double max_steer_;
-    double target_speed_;
-    double center_to_front_;
-    double wheelbase_;
-    double steer_gain_;
-    int forward_step_;
+    bool check_roundabout(const Vehicle& my_cav) {
+        double dist_sq = (my_cav.pos - round_center_).dist_Sq();
+        double r_sq = round_radius_ * round_radius_;
+        if (dist_sq > round_app_r_sq_ || dist_sq <= r_sq || !is_approaching(my_cav, round_center_))
+            return false;
 
-    int warmup_steps_target_;
-    int current_warmup_count_ = 0;
+        int cavs_inside = count_cavs_in_roundabout();
+        if (cavs_inside >= 2) return true;
 
-    bool is_inside_path_active_ = false; 
+        auto is_blocked_by_hv_check = [&](const Vehicle& v) -> bool {
+            double default_check_left = 2.1 / round_radius_;
+            double default_check_right = 0.4 / round_radius_;
+            if (v.is_stopped && v.stop_cause == "ROUND_YIELD") default_check_left += 0.5;
+            double v_angle = std::atan2(v.pos.y - round_center_.y, v.pos.x - round_center_.x);
 
-    float hv_vel_ = 0.0f;
-    bool is_roundabout_ = false;
+            for (const auto& [tid, target] : vehicles_) {
+                if (tid == v.id || !target.active || target.is_cav) continue;
+                if ((target.pos - round_center_).dist_Sq() <= r_sq){
+                    double t_angle = std::atan2(target.pos.y - round_center_.y, target.pos.x - round_center_.x);
+                    double diff = t_angle - v_angle;
+                    while (diff > M_PI) diff -= 2.0 * M_PI;
+                    while (diff < -M_PI) diff += 2.0 * M_PI;
+                    if ((diff > 0 && diff < default_check_right) ||
+                        (diff <= 0 && diff > -default_check_left)) return true;
+                }
+            }
+            return false;
+        };
+
+        if (is_blocked_by_hv_check(my_cav)) return true;
+
+        for (const auto& [tid, target] : vehicles_) {
+            if (tid == my_cav.id || !target.is_cav || !target.active) continue;
+            bool is_pair = ((my_cav.id == "CAV_01" && tid == "CAV_04") ||
+                            (my_cav.id == "CAV_04" && tid == "CAV_01") ||
+                            (my_cav.id == "CAV_02" && tid == "CAV_03") ||
+                            (my_cav.id == "CAV_03" && tid == "CAV_02"));
+            double t_dist_sq = (target.pos - round_center_).dist_Sq();
+            if (t_dist_sq > round_app_r_sq_ || t_dist_sq <= r_sq || !is_approaching(target, round_center_)) continue;
+            if (is_blocked_by_hv_check(target)) continue;
+            if (is_pair) continue;
+            if (t_dist_sq < dist_sq - 0.01) return true;
+            if (std::abs(t_dist_sq - dist_sq) <= 0.01 && tid < my_cav.id) return true;
+        }
+        return false;
+    }
+
+    void process_roundabout_path_decision(Vehicle& my_cav, const std::string& zone, const std::string& my_id) {
+        double dist_sq = (my_cav.pos - round_center_).dist_Sq();
+        if (dist_sq <= round_app_r_sq_ * 1.1 &&
+            dist_sq > (round_radius_ * round_radius_) &&
+            !my_cav.has_entered_roundabout) {
+
+            bool go_inside = false;
+            if (my_cav.id == "CAV_01" && vehicles_.count("CAV_04") && vehicles_["CAV_04"].active &&
+                (vehicles_["CAV_04"].pos - round_center_).dist_Sq() <= 2.5*2.5) {
+                go_inside = true;
+            }
+            else if (my_cav.id == "CAV_02" && vehicles_.count("CAV_03") && vehicles_["CAV_03"].active &&
+                     (vehicles_["CAV_03"].pos - round_center_).dist_Sq() <= 2.5*2.5) {
+                go_inside = true;
+            }
+            
+            std_msgs::msg::Bool way_msg;
+            way_msg.data = go_inside;
+            my_cav.pub_change_way->publish(way_msg);
+            my_cav.has_entered_roundabout = true;
+        }
+    }
+
+    bool is_in_danger_zone(const Vehicle& v) {
+        if ((v.pos - round_center_).dist_Sq() <= round_app_r_sq_) return true;
+        if ((v.pos - fourway_center_).dist_Sq() <= fourway_app_r_sq_) return true;
+        if (is_in_threeway_zone(v.pos)) return true;
+        return false;
+    }
+
+    bool is_parallel(const Vehicle& my_cav, const Vehicle& target){
+        double dz = my_cav.z - target.z;
+        while (dz > M_PI) dz -= 2.0 * M_PI;
+        while (dz < -M_PI) dz += 2.0 * M_PI;
+        dz = std::abs(dz);
+        return (dz < 0.40) || (dz > (M_PI - 0.40));
+    }
+
+    bool is_conflict(const Vehicle& my_cav, std::string& conflict_id, std::string& log_msg, bool& deadlock_override) {
+        double dist_to_round = (my_cav.pos - round_center_).dist_Sq(); 
+        if (dist_to_round <= (round_radius_* round_radius_) && !is_approaching(my_cav, round_center_)) return false;
+
+        for (const auto& [tid, target] : vehicles_) {
+            if (tid == my_cav.id || !target.active) continue;
+            if ((my_cav.pos - target.pos).dist_Sq() > approach_range_sq_) continue;
+
+            auto target_box = get_vehicle_corners(target, 0.0, 0.0);
+            auto full_box = get_vehicle_corners(my_cav, front_padding_, side_padding_);
+            auto front_box = get_vehicle_corners(my_cav, front_padding_, 0.1);
+
+            bool is_full = Geo::check_obb_intersection(full_box, target_box);
+            bool is_front = Geo::check_obb_intersection(front_box, target_box);
+
+            double vehicle_width = car_info[2] + car_info[3];
+            double dx = target.pos.x - my_cav.pos.x;
+            double dy = target.pos.y - my_cav.pos.y;
+            double side_dist = std::abs(-std::sin(my_cav.z) * dx + std::cos(my_cav.z) * dy);
+            bool is_parallel_result = is_parallel(my_cav, target);
+            bool is_next_lane = is_parallel_result && (side_dist > vehicle_width * 1.2) && (side_dist < vehicle_width * 5.0);
+
+            bool collision_detected = false;
+            std::string temp_log = "";
+
+            if (is_in_threeway_zone(my_cav.pos)) {
+                collision_detected = check_threeway_conflict(my_cav, tid, is_next_lane, is_full, temp_log);
+            }  
+            else if (is_in_fourway_zone(my_cav)) {
+                collision_detected = check_fourway_conflict(is_front, is_next_lane, temp_log);
+            }
+
+            if (collision_detected) {
+                if (conflict_info_.count(tid) && conflict_info_[tid] == my_cav.id) {
+                    deadlock_override = true;
+                    continue;
+                } else {
+                    conflict_id = tid;
+                    log_msg = temp_log;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    void handle_safe_zone_recovery(Vehicle& my_cav, const std::string& my_id) {
+        if (my_cav.is_stopped) {
+            std_msgs::msg::Bool msg; msg.data = false; my_cav.pub_stop->publish(msg);
+            my_cav.is_stopped = false;
+            my_cav.stop_cause.clear();
+            clear_conflict_status(my_id);
+        } else {
+            std_msgs::msg::Bool msg; msg.data = false; my_cav.pub_stop->publish(msg);
+        }
+    }
+
+    void control_loop() {
+        if (vehicles_.empty()) return;
+
+        for (auto& [my_id, my_cav] : vehicles_) {
+            if (!my_cav.is_cav || !my_cav.active) continue;
+
+            double dist_from_center = std::sqrt((my_cav.pos - round_center_).dist_Sq());
+            bool inside_roundabout = (dist_from_center <= round_radius_);
+            if (my_cav.pub_is_roundabout) {
+                std_msgs::msg::Bool round_msg;
+                round_msg.data = inside_roundabout;
+                my_cav.pub_is_roundabout->publish(round_msg);
+            }
+
+            if (!is_in_danger_zone(my_cav)) {
+                handle_safe_zone_recovery(my_cav, my_id);
+                continue;
+            }
+
+            bool my_cav_stop = false;
+            std::string cause_id = "NONE";
+            std::string log_msg = "";
+            bool deadlock_active = false;
+            std::string zone = is_in_threeway_zone(my_cav.pos) ? "threeway" :
+                               (is_in_fourway_zone(my_cav) ? "4WAY" : "ROUND");
+
+            if (my_cav.forced_stop) {
+                my_cav_stop = true; cause_id = my_cav.stop_cause; log_msg = "FORCED";
+            }
+            else {
+                if (is_conflict(my_cav, cause_id, log_msg, deadlock_active)) {
+                    my_cav_stop = true;
+                }
+                else {
+                    if (zone == "4WAY") {
+                        if (check_fourway_rect_split(my_cav)) {
+                            my_cav_stop = true; cause_id = "4WAY_BLOCK"; log_msg = "4WAY_FULL";
+                        }
+                    }
+                    else if (zone == "ROUND") {
+                        if (check_roundabout(my_cav)) {
+                            my_cav_stop = true; cause_id = "ROUND_YIELD"; log_msg = "ROUND_YIELD";
+                            my_cav.has_entered_roundabout = false;
+                        } 
+                        else {
+                            process_roundabout_path_decision(my_cav, zone, my_id);
+                        }
+                    } else {
+                        my_cav.has_entered_roundabout = false;
+                    }
+                }
+            }
+
+            if (!my_cav_stop) {
+                clear_conflict_status(my_id);
+            }
+
+            if (my_cav.is_stopped != my_cav_stop) {
+                if (my_cav_stop) update_conflict_status(my_id, cause_id);
+            } else if (my_cav_stop) {
+                update_conflict_status(my_id, cause_id);
+            }
+
+            my_cav.is_stopped = my_cav_stop;
+            if (my_cav_stop && my_cav.stop_cause.empty()) {
+                my_cav.stop_cause = cause_id;
+            } else if (!my_cav_stop) {
+                my_cav.stop_cause.clear();
+            }
+
+            if (my_cav.pub_stop) {
+                std_msgs::msg::Bool msg; msg.data = my_cav_stop; my_cav.pub_stop->publish(msg);
+            }
+        }
+    }
 };
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char * argv[]) {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<RealStanleyDriver>());
+    rclcpp::spin(std::make_shared<MainTrafficController>());
     rclcpp::shutdown();
     return 0;
 }

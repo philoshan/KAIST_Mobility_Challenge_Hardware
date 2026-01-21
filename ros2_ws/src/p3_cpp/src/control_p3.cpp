@@ -64,7 +64,7 @@ public:
 
         // Subscriber (기존과 동일)
         sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
-            "/Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
+            "Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
         // [변경] Publisher: /Accel -> /cmd_vel (Twist 타입)
         pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", qos_profile);

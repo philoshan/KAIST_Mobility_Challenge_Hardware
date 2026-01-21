@@ -16,11 +16,9 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED) #
 
 add_executable(control_p3 src/control_p3.cpp)
-# 여기에 geometry_msgs를 꼭 넣어줘야 'PoseStamped' 등을 인식합니다.
 ament_target_dependencies(control_p3 rclcpp std_msgs geometry_msgs)
 
 add_executable(main_p3 src/main_p3.cpp)
-# 여기도 마찬가지로 geometry_msgs 추가!
 ament_target_dependencies(main_p3 rclcpp std_msgs geometry_msgs)
 
 
