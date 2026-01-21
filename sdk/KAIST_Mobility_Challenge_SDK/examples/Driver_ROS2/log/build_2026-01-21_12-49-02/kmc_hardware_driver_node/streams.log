@@ -1,0 +1,90 @@
+[0.021s] Invoking command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node
+[0.130s] -- The C compiler identification is GNU 9.4.0
+[0.228s] -- The CXX compiler identification is GNU 9.4.0
+[0.237s] -- Check for working C compiler: /usr/bin/cc
+[0.367s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.369s] -- Detecting C compiler ABI info
+[0.506s] -- Detecting C compiler ABI info - done
+[0.535s] -- Detecting C compile features
+[0.535s] -- Detecting C compile features - done
+[0.540s] -- Check for working CXX compiler: /usr/bin/c++
+[0.688s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.690s] -- Detecting CXX compiler ABI info
+[0.841s] -- Detecting CXX compiler ABI info - done
+[0.870s] -- Detecting CXX compile features
+[0.871s] -- Detecting CXX compile features - done
+[0.875s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.923s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.923s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.302s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.349s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.431s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.443s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.592s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.649s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.799s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.905s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.907s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.909s] -- Looking for pthread.h
+[2.048s] -- Looking for pthread.h - found
+[2.048s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.193s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.193s] -- Looking for pthread_create in pthreads
+[2.317s] -- Looking for pthread_create in pthreads - not found
+[2.318s] -- Looking for pthread_create in pthread
+[2.456s] -- Looking for pthread_create in pthread - found
+[2.459s] -- Found Threads: TRUE  
+[2.759s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[2.969s] -- Configuring done
+[3.012s] -- Generating done
+[3.032s] -- Build files have been written to: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node
+[3.050s] Invoked command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node
+[3.056s] Invoking command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node -- -j4 -l4
+[3.137s] [35m[1mScanning dependencies of target KMC_HARDWARE_uart[0m
+[3.158s] [ 25%] [32mBuilding CXX object kmc_hardware_uart_sdk/CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o[0m
+[3.159s] [ 25%] [32mBuilding CXX object kmc_hardware_uart_sdk/CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o[0m
+[3.159s] [ 25%] [32mBuilding CXX object kmc_hardware_uart_sdk/CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o[0m
+[5.853s] [ 33%] [32m[1mLinking CXX static library libKMC_HARDWARE_uart.a[0m
+[5.941s] [ 33%] Built target KMC_HARDWARE_uart
+[5.961s] [35m[1mScanning dependencies of target kmc_hardware_high_rate_control_node[0m
+[5.962s] [35m[1mScanning dependencies of target kmc_hardware_driver_read_allstate_node[0m
+[5.962s] [35m[1mScanning dependencies of target kmc_hardware_driver_demo_node[0m
+[5.962s] [35m[1mScanning dependencies of target kmc_hardware_driver_observe_node[0m
+[6.047s] [ 50%] [32mBuilding CXX object CMakeFiles/kmc_hardware_driver_observe_node.dir/src/driver_observe_node.cpp.o[0m
+[6.048s] [ 50%] [32mBuilding CXX object CMakeFiles/kmc_hardware_driver_demo_node.dir/src/driver_demo_node.cpp.o[0m
+[6.051s] [ 58%] [32mBuilding CXX object CMakeFiles/kmc_hardware_driver_read_allstate_node.dir/src/driver_read_allstate_node.cpp.o[0m
+[6.115s] [ 66%] [32mBuilding CXX object CMakeFiles/kmc_hardware_high_rate_control_node.dir/src/high_rate_control_node.cpp.o[0m
+[20.385s] [ 75%] [32m[1mLinking CXX executable kmc_hardware_driver_demo_node[0m
+[21.110s] [ 75%] Built target kmc_hardware_driver_demo_node
+[21.209s] [ 83%] [32m[1mLinking CXX executable kmc_hardware_driver_observe_node[0m
+[21.297s] [ 91%] [32m[1mLinking CXX executable kmc_hardware_driver_read_allstate_node[0m
+[21.918s] [ 91%] Built target kmc_hardware_driver_observe_node
+[21.963s] [ 91%] Built target kmc_hardware_driver_read_allstate_node
+[22.426s] [100%] [32m[1mLinking CXX executable kmc_hardware_high_rate_control_node[0m
+[23.045s] [100%] Built target kmc_hardware_high_rate_control_node
+[23.069s] Invoked command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node -- -j4 -l4
+[23.100s] Invoking command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node
+[23.119s] -- Install configuration: ""
+[23.119s] -- Execute custom install script
+[23.121s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/web/index.html
+[23.140s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_hardware_driver_demo_node
+[23.158s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_hardware_driver_observe_node
+[23.176s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_hardware_driver_read_allstate_node
+[23.195s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_hardware_high_rate_control_node
+[23.214s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/ament_index/resource_index/package_run_dependencies/kmc_hardware_driver_node
+[23.234s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/ament_index/resource_index/parent_prefix_path/kmc_hardware_driver_node
+[23.253s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/environment/ament_prefix_path.sh
+[23.273s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/environment/ament_prefix_path.dsv
+[23.292s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/environment/path.sh
+[23.312s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/environment/path.dsv
+[23.331s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/local_setup.bash
+[23.350s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/local_setup.sh
+[23.369s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/local_setup.zsh
+[23.387s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/local_setup.dsv
+[23.406s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/package.dsv
+[23.425s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/ament_index/resource_index/packages/kmc_hardware_driver_node
+[23.444s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/cmake/kmc_hardware_driver_nodeConfig.cmake
+[23.462s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/cmake/kmc_hardware_driver_nodeConfig-version.cmake
+[23.481s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/share/kmc_hardware_driver_node/package.xml
+[23.500s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node/lib/kmc_hardware_driver_node/kmc_web_joystick_node
+[23.507s] Invoked command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/build/kmc_hardware_driver_node

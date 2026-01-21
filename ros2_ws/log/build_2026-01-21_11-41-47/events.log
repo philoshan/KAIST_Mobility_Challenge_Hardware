@@ -1,0 +1,347 @@
+[0.000000] (-) TimerEvent: {}
+[0.000653] (-) JobUnselected: {'identifier': 'cav_controller'}
+[0.001209] (-) JobUnselected: {'identifier': 'simulator_launch'}
+[0.001535] (p3_cpp) JobQueued: {'identifier': 'p3_cpp', 'dependencies': OrderedDict()}
+[0.001816] (p3_cpp) JobStarted: {'identifier': 'p3_cpp'}
+[0.021471] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'cmake'}
+[0.023027] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'build'}
+[0.024554] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp', '--', '-j4', '-l4'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 8143 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws'), ('TERM_PROGRAM_VERSION', '1.108.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-0f0bd8a4-9e56-4523-8588-719ebbff18b9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 8143 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp:/opt/ros/foxy')]), 'shell': False}
+[0.099373] (-) TimerEvent: {}
+[0.116238] (p3_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target control_p3\x1b[0m\n'}
+[0.151017] (p3_cpp) StdoutLine: {'line': b'[ 50%] Built target main_p3\n'}
+[0.170817] (p3_cpp) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/control_p3.dir/src/control_p3.cpp.o\x1b[0m\n'}
+[0.199532] (-) TimerEvent: {}
+[0.300222] (-) TimerEvent: {}
+[0.400908] (-) TimerEvent: {}
+[0.501623] (-) TimerEvent: {}
+[0.602342] (-) TimerEvent: {}
+[0.703076] (-) TimerEvent: {}
+[0.803820] (-) TimerEvent: {}
+[0.904526] (-) TimerEvent: {}
+[1.005240] (-) TimerEvent: {}
+[1.105981] (-) TimerEvent: {}
+[1.206699] (-) TimerEvent: {}
+[1.307387] (-) TimerEvent: {}
+[1.408115] (-) TimerEvent: {}
+[1.508855] (-) TimerEvent: {}
+[1.609566] (-) TimerEvent: {}
+[1.710293] (-) TimerEvent: {}
+[1.811003] (-) TimerEvent: {}
+[1.911715] (-) TimerEvent: {}
+[2.012445] (-) TimerEvent: {}
+[2.113163] (-) TimerEvent: {}
+[2.213888] (-) TimerEvent: {}
+[2.314581] (-) TimerEvent: {}
+[2.415278] (-) TimerEvent: {}
+[2.516001] (-) TimerEvent: {}
+[2.616723] (-) TimerEvent: {}
+[2.717439] (-) TimerEvent: {}
+[2.818151] (-) TimerEvent: {}
+[2.918861] (-) TimerEvent: {}
+[3.019573] (-) TimerEvent: {}
+[3.120317] (-) TimerEvent: {}
+[3.221042] (-) TimerEvent: {}
+[3.321750] (-) TimerEvent: {}
+[3.422460] (-) TimerEvent: {}
+[3.523173] (-) TimerEvent: {}
+[3.623908] (-) TimerEvent: {}
+[3.724627] (-) TimerEvent: {}
+[3.825326] (-) TimerEvent: {}
+[3.926019] (-) TimerEvent: {}
+[4.026717] (-) TimerEvent: {}
+[4.127421] (-) TimerEvent: {}
+[4.228174] (-) TimerEvent: {}
+[4.328900] (-) TimerEvent: {}
+[4.429607] (-) TimerEvent: {}
+[4.530332] (-) TimerEvent: {}
+[4.631041] (-) TimerEvent: {}
+[4.731773] (-) TimerEvent: {}
+[4.832496] (-) TimerEvent: {}
+[4.933218] (-) TimerEvent: {}
+[5.033967] (-) TimerEvent: {}
+[5.134646] (-) TimerEvent: {}
+[5.235351] (-) TimerEvent: {}
+[5.336070] (-) TimerEvent: {}
+[5.436780] (-) TimerEvent: {}
+[5.537486] (-) TimerEvent: {}
+[5.638188] (-) TimerEvent: {}
+[5.738901] (-) TimerEvent: {}
+[5.839599] (-) TimerEvent: {}
+[5.940331] (-) TimerEvent: {}
+[6.041010] (-) TimerEvent: {}
+[6.141704] (-) TimerEvent: {}
+[6.242379] (-) TimerEvent: {}
+[6.343054] (-) TimerEvent: {}
+[6.443797] (-) TimerEvent: {}
+[6.544503] (-) TimerEvent: {}
+[6.645198] (-) TimerEvent: {}
+[6.745899] (-) TimerEvent: {}
+[6.846627] (-) TimerEvent: {}
+[6.947337] (-) TimerEvent: {}
+[7.048061] (-) TimerEvent: {}
+[7.148756] (-) TimerEvent: {}
+[7.249460] (-) TimerEvent: {}
+[7.350163] (-) TimerEvent: {}
+[7.450883] (-) TimerEvent: {}
+[7.551613] (-) TimerEvent: {}
+[7.652351] (-) TimerEvent: {}
+[7.753068] (-) TimerEvent: {}
+[7.853799] (-) TimerEvent: {}
+[7.954522] (-) TimerEvent: {}
+[8.055224] (-) TimerEvent: {}
+[8.155908] (-) TimerEvent: {}
+[8.256640] (-) TimerEvent: {}
+[8.357346] (-) TimerEvent: {}
+[8.458077] (-) TimerEvent: {}
+[8.558808] (-) TimerEvent: {}
+[8.659522] (-) TimerEvent: {}
+[8.760274] (-) TimerEvent: {}
+[8.860986] (-) TimerEvent: {}
+[8.961666] (-) TimerEvent: {}
+[9.062304] (-) TimerEvent: {}
+[9.162929] (-) TimerEvent: {}
+[9.263554] (-) TimerEvent: {}
+[9.364356] (-) TimerEvent: {}
+[9.465692] (-) TimerEvent: {}
+[9.566398] (-) TimerEvent: {}
+[9.667094] (-) TimerEvent: {}
+[9.767819] (-) TimerEvent: {}
+[9.868499] (-) TimerEvent: {}
+[9.969207] (-) TimerEvent: {}
+[10.069915] (-) TimerEvent: {}
+[10.170622] (-) TimerEvent: {}
+[10.271479] (-) TimerEvent: {}
+[10.372208] (-) TimerEvent: {}
+[10.472910] (-) TimerEvent: {}
+[10.573618] (-) TimerEvent: {}
+[10.674316] (-) TimerEvent: {}
+[10.775045] (-) TimerEvent: {}
+[10.875834] (-) TimerEvent: {}
+[10.976570] (-) TimerEvent: {}
+[11.077632] (-) TimerEvent: {}
+[11.178308] (-) TimerEvent: {}
+[11.278985] (-) TimerEvent: {}
+[11.379647] (-) TimerEvent: {}
+[11.480357] (-) TimerEvent: {}
+[11.581037] (-) TimerEvent: {}
+[11.681874] (-) TimerEvent: {}
+[11.782535] (-) TimerEvent: {}
+[11.883213] (-) TimerEvent: {}
+[11.983887] (-) TimerEvent: {}
+[12.084557] (-) TimerEvent: {}
+[12.185229] (-) TimerEvent: {}
+[12.285894] (-) TimerEvent: {}
+[12.386562] (-) TimerEvent: {}
+[12.487240] (-) TimerEvent: {}
+[12.587910] (-) TimerEvent: {}
+[12.688590] (-) TimerEvent: {}
+[12.789269] (-) TimerEvent: {}
+[12.889950] (-) TimerEvent: {}
+[12.990617] (-) TimerEvent: {}
+[13.091490] (-) TimerEvent: {}
+[13.192180] (-) TimerEvent: {}
+[13.292851] (-) TimerEvent: {}
+[13.393526] (-) TimerEvent: {}
+[13.494217] (-) TimerEvent: {}
+[13.594886] (-) TimerEvent: {}
+[13.695557] (-) TimerEvent: {}
+[13.796261] (-) TimerEvent: {}
+[13.896922] (-) TimerEvent: {}
+[13.997588] (-) TimerEvent: {}
+[14.098267] (-) TimerEvent: {}
+[14.198926] (-) TimerEvent: {}
+[14.299591] (-) TimerEvent: {}
+[14.400276] (-) TimerEvent: {}
+[14.500963] (-) TimerEvent: {}
+[14.601692] (-) TimerEvent: {}
+[14.702361] (-) TimerEvent: {}
+[14.803034] (-) TimerEvent: {}
+[14.903722] (-) TimerEvent: {}
+[15.004425] (-) TimerEvent: {}
+[15.105101] (-) TimerEvent: {}
+[15.205792] (-) TimerEvent: {}
+[15.306485] (-) TimerEvent: {}
+[15.407128] (-) TimerEvent: {}
+[15.507826] (-) TimerEvent: {}
+[15.608488] (-) TimerEvent: {}
+[15.709165] (-) TimerEvent: {}
+[15.809835] (-) TimerEvent: {}
+[15.910517] (-) TimerEvent: {}
+[16.011337] (-) TimerEvent: {}
+[16.112049] (-) TimerEvent: {}
+[16.212725] (-) TimerEvent: {}
+[16.313384] (-) TimerEvent: {}
+[16.414063] (-) TimerEvent: {}
+[16.514718] (-) TimerEvent: {}
+[16.615400] (-) TimerEvent: {}
+[16.716102] (-) TimerEvent: {}
+[16.816768] (-) TimerEvent: {}
+[16.917448] (-) TimerEvent: {}
+[17.018122] (-) TimerEvent: {}
+[17.118783] (-) TimerEvent: {}
+[17.219478] (-) TimerEvent: {}
+[17.320191] (-) TimerEvent: {}
+[17.420872] (-) TimerEvent: {}
+[17.521706] (-) TimerEvent: {}
+[17.622393] (-) TimerEvent: {}
+[17.723082] (-) TimerEvent: {}
+[17.823781] (-) TimerEvent: {}
+[17.924450] (-) TimerEvent: {}
+[18.025159] (-) TimerEvent: {}
+[18.125852] (-) TimerEvent: {}
+[18.226554] (-) TimerEvent: {}
+[18.327233] (-) TimerEvent: {}
+[18.427996] (-) TimerEvent: {}
+[18.528723] (-) TimerEvent: {}
+[18.598312] (p3_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable control_p3\x1b[0m\n'}
+[18.628902] (-) TimerEvent: {}
+[18.729572] (-) TimerEvent: {}
+[18.830317] (-) TimerEvent: {}
+[18.931055] (-) TimerEvent: {}
+[19.031784] (-) TimerEvent: {}
+[19.132461] (-) TimerEvent: {}
+[19.233176] (-) TimerEvent: {}
+[19.333848] (-) TimerEvent: {}
+[19.356434] (p3_cpp) StdoutLine: {'line': b'[100%] Built target control_p3\n'}
+[19.381768] (p3_cpp) CommandEnded: {'returncode': 0}
+[19.383688] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'install'}
+[19.407688] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 8143 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws'), ('TERM_PROGRAM_VERSION', '1.108.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-0f0bd8a4-9e56-4523-8588-719ebbff18b9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 8143 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp:/opt/ros/foxy')]), 'shell': False}
+[19.430826] (p3_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.431499] (p3_cpp) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/lib/p3_cpp/control_p3\n'}
+[19.433921] (-) TimerEvent: {}
+[19.440194] (p3_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/lib/p3_cpp/control_p3" to ""\n'}
+[19.440692] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/lib/p3_cpp/main_p3\n'}
+[19.441185] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/launch\n'}
+[19.441593] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/launch/server_launch.py\n'}
+[19.442123] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/launch/cav_launch.py\n'}
+[19.443035] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool\n'}
+[19.443551] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav04p3_inside.csv\n'}
+[19.443909] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/csv_to_json.py\n'}
+[19.444424] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav02p3_inside.csv\n'}
+[19.444839] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/Readme.md\n'}
+[19.445230] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav03p3_inside.csv\n'}
+[19.445738] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav02p3.csv\n'}
+[19.446037] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav01p3_inside.csv\n'}
+[19.446377] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav03p3.csv\n'}
+[19.446628] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav01p3.csv\n'}
+[19.446862] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav1p1.csv\n'}
+[19.447083] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/node_info.png\n'}
+[19.447420] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/p1_2.csv\n'}
+[19.447585] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint\n'}
+[19.447735] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/42_8.csv\n'}
+[19.447928] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/60_46.csv\n'}
+[19.448131] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/49_55.csv\n'}
+[19.448378] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/50_54.csv\n'}
+[19.448553] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/38_48.csv\n'}
+[19.448701] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/16_61.csv\n'}
+[19.448841] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/63_39.csv\n'}
+[19.448977] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/2_4.csv\n'}
+[19.449111] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/25_36.csv\n'}
+[19.449244] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/5_8.csv\n'}
+[19.449375] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/41_43.csv\n'}
+[19.449508] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/28_31.csv\n'}
+[19.449641] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/46_40.csv\n'}
+[19.449807] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/6_44.csv\n'}
+[19.449945] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/39_40.csv\n'}
+[19.450079] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/5_45.csv\n'}
+[19.450213] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/37_38.csv\n'}
+[19.450345] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/56_59.csv\n'}
+[19.450476] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/41_42.csv\n'}
+[19.450607] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/43_9.csv\n'}
+[19.450738] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/27_30.csv\n'}
+[19.450870] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/24_37.csv\n'}
+[19.451000] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/29_2.csv\n'}
+[19.451685] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/6_9.csv\n'}
+[19.452413] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/18_21.csv\n'}
+[19.452944] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/13_14.csv\n'}
+[19.453298] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/22_25.csv\n'}
+[19.455868] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/25_28.csv\n'}
+[19.456362] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/16_19.csv\n'}
+[19.456955] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/62_35.csv\n'}
+[19.457258] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/8_57.csv\n'}
+[19.457771] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/47_41.csv\n'}
+[19.458120] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/51_46.csv\n'}
+[19.458612] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/27_31.csv\n'}
+[19.459050] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/56_52.csv\n'}
+[19.459821] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/19_22.csv\n'}
+[19.460182] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/63_34.csv\n'}
+[19.460631] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/58_19.csv\n'}
+[19.461462] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/62_38.csv\n'}
+[19.461963] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/28_32.csv\n'}
+[19.462763] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/59_18.csv\n'}
+[19.463264] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/38_41.csv\n'}
+[19.463732] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/31_1.csv\n'}
+[19.464133] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/22_50.csv\n'}
+[19.464560] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/61_47.csv\n'}
+[19.465266] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/60_52.csv\n'}
+[19.465877] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/24_27.csv\n'}
+[19.466336] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/3_33.csv\n'}
+[19.466775] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/12_15.csv\n'}
+[19.467184] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/53_25.csv\n'}
+[19.467467] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/3_6.csv\n'}
+[19.467833] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/44_63.csv\n'}
+[19.468229] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/32_5.csv\n'}
+[19.468624] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/48_53.csv\n'}
+[19.468914] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/37_39.csv\n'}
+[19.469332] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/4_7.csv\n'}
+[19.471369] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/38_49.csv\n'}
+[19.471840] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/50_48.csv\n'}
+[19.472282] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/57_47.csv\n'}
+[19.472629] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/51_55.csv\n'}
+[19.472908] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/35_28.csv\n'}
+[19.473219] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/8_11.csv\n'}
+[19.473530] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/49_59.csv\n'}
+[19.473831] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/1_3.csv\n'}
+[19.474130] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/26_29.csv\n'}
+[19.474478] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/21_51.csv\n'}
+[19.474791] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/36_38.csv\n'}
+[19.475274] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/3_7.csv\n'}
+[19.475576] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/30_1.csv\n'}
+[19.475851] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/15_18.csv\n'}
+[19.476113] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/10_13.csv\n'}
+[19.476350] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/52_24.csv\n'}
+[19.476571] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/39_49.csv\n'}
+[19.476819] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/40_63.csv\n'}
+[19.477079] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/20_23.csv\n'}
+[19.477332] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/21_24.csv\n'}
+[19.477575] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/7_10.csv\n'}
+[19.478901] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/41_62.csv\n'}
+[19.480238] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/57_53.csv\n'}
+[19.480541] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/48_58.csv\n'}
+[19.480856] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/46_41.csv\n'}
+[19.481556] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/54_11.csv\n'}
+[19.482343] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/33_31.csv\n'}
+[19.482637] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/11_16.csv\n'}
+[19.483239] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/7_9.csv\n'}
+[19.484398] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/40_43.csv\n'}
+[19.484695] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/23_26.csv\n'}
+[19.485733] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/55_12.csv\n'}
+[19.486418] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/15_60.csv\n'}
+[19.486971] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/9_12.csv\n'}
+[19.488451] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/14_17.csv\n'}
+[19.489571] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/61_54.csv\n'}
+[19.491135] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/9_56.csv\n'}
+[19.491448] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/45_62.csv\n'}
+[19.491647] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/34_27.csv\n'}
+[19.492105] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/17_20.csv\n'}
+[19.492503] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav04p3.csv\n'}
+[19.493456] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/p1_1.csv\n'}
+[19.493743] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/path_generator.py\n'}
+[19.494020] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/ament_index/resource_index/package_run_dependencies/p3_cpp\n'}
+[19.494642] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/ament_index/resource_index/parent_prefix_path/p3_cpp\n'}
+[19.496017] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.sh\n'}
+[19.496346] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.dsv\n'}
+[19.496946] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/environment/path.sh\n'}
+[19.498228] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/environment/path.dsv\n'}
+[19.498494] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.bash\n'}
+[19.498746] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.sh\n'}
+[19.499494] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.zsh\n'}
+[19.500938] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.dsv\n'}
+[19.501306] (p3_cpp) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/package.dsv\n'}
+[19.502070] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/ament_index/resource_index/packages/p3_cpp\n'}
+[19.502346] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig.cmake\n'}
+[19.502724] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig-version.cmake\n'}
+[19.503014] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/package.xml\n'}
+[19.503515] (p3_cpp) CommandEnded: {'returncode': 0}
+[19.518003] (p3_cpp) JobEnded: {'identifier': 'p3_cpp', 'rc': 0}
+[19.519668] (-) EventReactorShutdown: {}

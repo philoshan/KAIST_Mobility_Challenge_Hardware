@@ -1,8 +1,8 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
-#include <geometry_msgs/msg/twist.hpp> // [변경] Accel -> Twist
-#include <std_msgs/msg/bool.hpp> 
-#include <std_msgs/msg/float32.hpp> 
+#include <geometry_msgs/msg/twist.hpp>
+#include <std_msgs/msg/bool.hpp>
+#include <std_msgs/msg/float32.hpp>
 
 #include <fstream>
 #include <sstream>
@@ -25,17 +25,17 @@ public:
     StanleyTrackerNode()
     : Node("stanley_tracker_node")
     {
-        // QoS 설정
+        // [수정 1] QoS 설정을 참고 코드와 100% 동일하게 변경 (가장 안전)
         auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
         qos_profile.best_effort();
         qos_profile.durability_volatile();
 
-        // 파라미터 설정 (기존과 동일)
-        this->declare_parameter("original_way_path", "tool/cav1p3.csv");
-        this->declare_parameter("inside_way_path", "tool/cav1p3_inside.csv");
-        this->declare_parameter("k_gain", 2.0);
+        // 파라미터 설정
+        this->declare_parameter("original_way_path", "tool/cav01p3.csv");
+        this->declare_parameter("inside_way_path", "tool/cav01p3_inside.csv");
+        this->declare_parameter("k_gain", 0.9);
         this->declare_parameter("max_steer", 0.7);       
-        this->declare_parameter("target_speed", 2.0);    
+        this->declare_parameter("target_speed", 0.5);    
         this->declare_parameter("center_to_front", 0.17);
         this->declare_parameter("wheelbase", 0.33);      
         this->declare_parameter("steer_gain", 1.0);
@@ -62,13 +62,17 @@ public:
         current_waypoints_ = &waypoints_original_;
         is_inside_path_active_ = false;
 
-        // Subscriber (기존과 동일)
+        // [수정 2] 토픽 이름에서 슬래시('/') 제거 -> "Ego_pose"
+        // 이제 Launch 파일의 remappings가 정상 작동합니다.
         sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
-            "/Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
+            "Ego_pose", 
+            qos_profile, 
+            std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
-        // [변경] Publisher: /Accel -> /cmd_vel (Twist 타입)
-        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", qos_profile);
+        // [수정 3] Publisher도 슬래시 제거 -> "cmd_vel"
+        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", qos_profile);
 
+        // 나머지 토픽들도 상대 경로("name")로 두는 것이 원칙상 좋습니다.
         sub_stop_cmd_ = this->create_subscription<std_msgs::msg::Bool>(
             "cmd_stop", qos_profile, 
             [this](const std_msgs::msg::Bool::SharedPtr msg) {
@@ -127,7 +131,6 @@ private:
         return angle;
     }
 
-    // [변경] 정지 명령 발행 함수 (Twist 사용)
     void publish_stop_command() {
         auto stop_msg = geometry_msgs::msg::Twist();
         stop_msg.linear.x = 0.0;  
@@ -157,7 +160,7 @@ private:
             return;
         }
 
-        // --- Stanley Logic (기존 유지) ---
+        // --- Stanley Logic ---
         double center_x = msg->pose.position.x;
         double center_y = msg->pose.position.y;
         double current_yaw = msg->pose.orientation.z;
@@ -234,7 +237,6 @@ private:
         steer_angle *= steer_gain_;
         steer_angle = std::max(-max_steer_, std::min(max_steer_, steer_angle));
 
-        // [변경] Twist 메시지 생성 및 발행
         auto msg_out = geometry_msgs::msg::Twist();
         double yaw_rate = (final_speed / wheelbase_) * std::tan(steer_angle);
 
@@ -245,7 +247,6 @@ private:
     }
 
     rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub_pose_;
-    // [변경] Publisher 타입 변경
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_cmd_vel_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_stop_cmd_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_change_way_;
