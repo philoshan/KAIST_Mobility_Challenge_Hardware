@@ -1,0 +1,27 @@
+[1.699s] Invoking command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/build/cav_controller': PYTHONPATH=/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/build/cav_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/build/cav_controller/build --no-deps symlink_data
+[2.246s] running develop
+[2.564s] running egg_info
+[2.565s] creating cav_controller.egg-info
+[2.565s] writing cav_controller.egg-info/PKG-INFO
+[2.566s] writing dependency_links to cav_controller.egg-info/dependency_links.txt
+[2.567s] writing entry points to cav_controller.egg-info/entry_points.txt
+[2.568s] writing requirements to cav_controller.egg-info/requires.txt
+[2.568s] writing top-level names to cav_controller.egg-info/top_level.txt
+[2.575s] writing manifest file 'cav_controller.egg-info/SOURCES.txt'
+[2.641s] reading manifest file 'cav_controller.egg-info/SOURCES.txt'
+[2.642s] writing manifest file 'cav_controller.egg-info/SOURCES.txt'
+[2.721s] running build_ext
+[2.721s] Creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/lib/python3.8/site-packages/site.py
+[2.727s] Creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/lib/python3.8/site-packages/cav-controller.egg-link (link to .)
+[2.729s] Installing echo_pose script to /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/lib/cav_controller
+[2.731s] Installing p1_drive script to /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/lib/cav_controller
+[2.732s] Installing run_drive script to /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/lib/cav_controller
+[2.734s] 
+[2.734s] Installed /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/build/cav_controller
+[2.735s] running symlink_data
+[2.735s] creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/share/ament_index
+[2.736s] creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/share/ament_index/resource_index
+[2.736s] creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/share/ament_index/resource_index/packages
+[2.737s] symbolically linking /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/build/cav_controller/resource/cav_controller -> /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/share/ament_index/resource_index/packages
+[2.738s] symbolically linking /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/build/cav_controller/package.xml -> /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/share/cav_controller
+[2.835s] Invoked command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/build/cav_controller' returned '0': PYTHONPATH=/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/build/cav_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/install/cav_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/build/cav_controller/build --no-deps symlink_data
