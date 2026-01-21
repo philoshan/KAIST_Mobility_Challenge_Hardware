@@ -1,6 +1,6 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
-#include <geometry_msgs/msg/twist.hpp> // [변경] Accel -> Twist
+#include <geometry_msgs/msg/twist.hpp> 
 #include <std_msgs/msg/bool.hpp> 
 #include <std_msgs/msg/float32.hpp> 
 
@@ -30,7 +30,7 @@ public:
         qos_profile.best_effort();
         qos_profile.durability_volatile();
 
-        // 파라미터 설정 (기존과 동일)
+        // 파라미터 설정
         this->declare_parameter("original_way_path", "tool/cav1p3.csv");
         this->declare_parameter("inside_way_path", "tool/cav1p3_inside.csv");
         this->declare_parameter("k_gain", 2.0);
@@ -62,13 +62,18 @@ public:
         current_waypoints_ = &waypoints_original_;
         is_inside_path_active_ = false;
 
-        // Subscriber (기존과 동일)
+        // [중요] Subscriber: 위치 정보
+        // 하드웨어 드라이버가 쏘는 이름(Ego_pose)을 그대로 받습니다.
+        // 브릿지는 이 데이터를 퍼서 관제탑으로 보냅니다.
         sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
             "Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
-        // [변경] Publisher: /Accel -> /cmd_vel (Twist 타입)
-        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", qos_profile);
+        // [중요] Publisher: 속도/조향 명령
+        // 하드웨어 드라이버가 받는 이름(cmd_vel)으로 쏩니다.
+        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", qos_profile);
 
+        // [중요] 관제탑 명령 수신 (브릿지 통과)
+        // 브릿지 설정에서 /CAV_XX/cmd_stop -> /cmd_stop 으로 리매핑해서 줘야 함
         sub_stop_cmd_ = this->create_subscription<std_msgs::msg::Bool>(
             "cmd_stop", qos_profile, 
             [this](const std_msgs::msg::Bool::SharedPtr msg) {
@@ -76,17 +81,24 @@ public:
                 if (this->stop_signal_) this->publish_stop_command();
             });
 
+        // 내부 로직용 (브릿지 안 탐, 로컬 판단)
         sub_change_way_ = this->create_subscription<std_msgs::msg::Bool>(
             "change_waypoint", qos_profile,
             std::bind(&StanleyTrackerNode::callback_change_waypoint, this, _1));
 
+        // [중요] 관제탑 정보 수신 (브릿지 통과)
+        // 관제탑(Main)이 쏘는 /CAV_XX/hv_vel -> 브릿지가 /hv_vel 로 리매핑해서 줘야 함
         sub_hv_vel_ = this->create_subscription<std_msgs::msg::Float32>(
             "hv_vel", qos_profile,
             [this](const std_msgs::msg::Float32::SharedPtr msg) { this->hv_vel_ = msg->data; });
 
+        // [중요] 관제탑 정보 수신 (브릿지 통과)
+        // 관제탑(Main)이 쏘는 /CAV_XX/is_roundabout -> 브릿지가 /is_roundabout 로 리매핑해서 줘야 함
         sub_is_roundabout_ = this->create_subscription<std_msgs::msg::Bool>(
             "is_roundabout", qos_profile,
             [this](const std_msgs::msg::Bool::SharedPtr msg) { this->is_roundabout_ = msg->data; });
+            
+        RCLCPP_INFO(this->get_logger(), "Stanley Tracker Node Initialized.");
     }
 
 private:
@@ -118,6 +130,7 @@ private:
         if (msg->data && !is_inside_path_active_ && !waypoints_inside_.empty()) {
             is_inside_path_active_ = true;
             current_waypoints_ = &waypoints_inside_;
+            RCLCPP_INFO(this->get_logger(), "Switched to INSIDE path.");
         } 
     }
 
@@ -127,7 +140,6 @@ private:
         return angle;
     }
 
-    // [변경] 정지 명령 발행 함수 (Twist 사용)
     void publish_stop_command() {
         auto stop_msg = geometry_msgs::msg::Twist();
         stop_msg.linear.x = 0.0;  
@@ -139,7 +151,7 @@ private:
         // 1. 초기 웜업
         if (current_warmup_count_ < warmup_steps_target_) {
             current_warmup_count_++;
-            publish_stop_command();
+            publish_stop_command(); 
             if (current_warmup_count_ % 10 == 0 || current_warmup_count_ == 1) {
                 RCLCPP_INFO(this->get_logger(), "Initial Warming up... (%d/%d)", current_warmup_count_, warmup_steps_target_);
             }
@@ -157,7 +169,7 @@ private:
             return;
         }
 
-        // --- Stanley Logic (기존 유지) ---
+        // --- Stanley Logic ---
         double center_x = msg->pose.position.x;
         double center_y = msg->pose.position.y;
         double current_yaw = msg->pose.orientation.z;
@@ -182,6 +194,7 @@ private:
             if (nearest_idx >= (int)current_waypoints_->size() - 5) { 
                 is_inside_path_active_ = false;
                 current_waypoints_ = &waypoints_original_;
+                RCLCPP_INFO(this->get_logger(), "Finished INSIDE path. Returned to ORIGINAL path.");
                 return; 
             }
         }
@@ -234,18 +247,19 @@ private:
         steer_angle *= steer_gain_;
         steer_angle = std::max(-max_steer_, std::min(max_steer_, steer_angle));
 
-        // [변경] Twist 메시지 생성 및 발행
+        // [최종 메시지]
         auto msg_out = geometry_msgs::msg::Twist();
+        
+        // 기존 코드 유지 (Yaw Rate 계산)
         double yaw_rate = (final_speed / wheelbase_) * std::tan(steer_angle);
 
         msg_out.linear.x = final_speed;
-        msg_out.angular.z = yaw_rate;
+        msg_out.angular.z = yaw_rate; // 조향각이 아닌 Yaw Rate로 출력 (기존 유지)
 
         pub_cmd_vel_->publish(msg_out);
     }
 
     rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub_pose_;
-    // [변경] Publisher 타입 변경
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_cmd_vel_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_stop_cmd_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_change_way_;

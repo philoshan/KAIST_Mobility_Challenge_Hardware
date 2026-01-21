@@ -1,0 +1,20 @@
+name: bridge_role_04
+from_domain: 3   # [주의] 대회 당일 실제 차량 도메인 번호로 수정 필수!
+to_domain: 100
+topics:
+  - topic_name: /Ego_pose
+    type: geometry_msgs/msg/PoseStamped
+    remap_to: /CAV_04/Ego_pose
+    direction: from_source
+  - topic_name: /CAV_04/cmd_stop
+    type: std_msgs/msg/Bool
+    remap_to: /cmd_stop
+    direction: to_source
+  - topic_name: /CAV_04/hv_vel
+    type: std_msgs/msg/Float32
+    remap_to: /hv_vel
+    direction: to_source
+  - topic_name: /CAV_04/is_roundabout
+    type: std_msgs/msg/Bool
+    remap_to: /is_roundabout
+    direction: to_source

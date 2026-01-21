@@ -13,7 +13,9 @@
 
 using namespace std::chrono_literals;
 
-// 2D 벡터 연산 및 OBB(Oriented Bounding Box) 충돌 감지를 위한 네임스페이스
+// ==========================================
+// [Geo] 2D 벡터 연산 및 충돌 감지 로직
+// ==========================================
 namespace Geo {
     struct Vec2 {
         double x, y;
@@ -23,6 +25,7 @@ namespace Geo {
         double dist_Sq() const { return x*x + y*y; }
     };
 
+    // OBB (Oriented Bounding Box) 충돌 검사
     bool check_obb_intersection(const std::vector<Vec2>& box1, const std::vector<Vec2>& box2) {
         auto get_axes = [](const std::vector<Vec2>& b) {
             return std::vector<Vec2>{
@@ -51,7 +54,9 @@ namespace Geo {
     }
 }
 
-// 차량 구조체
+// ==========================================
+// [Vehicle] 차량 상태 관리 구조체
+// ==========================================
 struct Vehicle {
     std::string id;
     bool is_cav;
@@ -63,11 +68,11 @@ struct Vehicle {
     std::string stop_cause = ""; 
     bool has_entered_roundabout = false; 
 
-    // HV 속도 계산용
+    // HV 속도 추정용
     Geo::Vec2 last_pos{0.0, 0.0};
     rclcpp::Time last_time;
 
-    // ROS
+    // ROS Interface
     rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_stop;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_change_way;
@@ -75,40 +80,45 @@ struct Vehicle {
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_hv_vel;
 };
 
+// ==========================================
+// [Main Node] 중앙 관제 컨트롤러 (Domain 100)
+// ==========================================
 class MainTrafficController : public rclcpp::Node {
 public:
     MainTrafficController() : Node("main_traffic_controller") {
-        // [설정] 차량 크기 및 패딩 (실제 환경에 맞춰 튜닝 가능)
+        // [설정] 차량 크기 (전장, 전폭 고려)
         car_info = {0.17, 0.16, 0.075, 0.075};
         front_padding_ = 0.8;
         side_padding_ = 0.8;
-
         approach_range_sq_ = 2.5 * 2.5;
 
-        // 사지교차로
+        // 사지교차로 영역
         fourway_center_ = {-2.333, 0.0};
         fourway_len_ = 2.0;
         fourway_app_r_sq_ = 1.5 * 1.5;
         fourway_box_half_len_ = fourway_len_ / 2.0;
 
-        // 회전교차로
+        // 회전교차로 영역
         round_center_ = {1.667, 0.0};
         round_app_r_sq_ = 1.8 * 1.8;
         round_radius_ = 1.4;
 
-        // 삼지교차로
+        // 삼지교차로 영역
         threeway_box_x_min_ = -3.7; threeway_box_x_max_ = -1.2;
         threeway_1_y_min_ = 1.0;    threeway_1_y_max_ = 3.0;
         threeway_2_y_min_ = -3.0;   threeway_2_y_max_ = -1.0;
 
         // 타이머 설정
+        // 1. 차량 발견 (1초마다 새로운 토픽 스캔)
         tmr_discovery_ = create_wall_timer(
             1000ms, std::bind(&MainTrafficController::discover_vehicles, this));
+        
+        // 2. 제어 루프 (20ms = 50Hz)
         tmr_control_ = create_wall_timer(
             20ms, std::bind(&MainTrafficController::control_loop, this));
 
-        RCLCPP_INFO(get_logger(), "=== Central Traffic Controller Started on PC ===");
-        RCLCPP_INFO(get_logger(), "Waiting for vehicles (CAV_xx / HV_xx) on network...");
+        RCLCPP_INFO(get_logger(), "=== Central Traffic Controller Started (Domain 100) ===");
+        RCLCPP_INFO(get_logger(), "Waiting for Bridged Topics (e.g., /CAV_01/Ego_pose)...");
     }
 
 private:
@@ -127,10 +137,128 @@ private:
     double round_app_r_sq_, round_radius_;
     double threeway_box_x_min_, threeway_box_x_max_, threeway_1_y_min_, threeway_1_y_max_, threeway_2_y_min_, threeway_2_y_max_;
 
+    // ==========================================
+    // [Discovery] 차량 자동 감지 로직 (브릿지 대응)
+    // ==========================================
+    void discover_vehicles() {
+        auto topic_map = this->get_topic_names_and_types();
+        for (const auto& [name, types] : topic_map) {
+            // 올바른 토픽 형식인지 확인 (반드시 /Ego_pose로 끝나야 함)
+            if (name.length() < 9 || name.find("/Ego_pose") == std::string::npos) continue;
+
+            // 파싱 로직: "/CAV_01/Ego_pose" -> "CAV_01" 추출
+            // 1. 뒤쪽 "/Ego_pose" 제거
+            size_t suffix_pos = name.find("/Ego_pose");
+            if (suffix_pos == 0) continue; // 네임스페이스가 없는 경우 (/Ego_pose) -> 무시
+
+            std::string ns_part = name.substr(0, suffix_pos); // "/CAV_01"
+            
+            // 2. 앞쪽 "/" 제거
+            if (ns_part.front() == '/') {
+                ns_part.erase(0, 1); // "CAV_01"
+            }
+
+            // 3. ID 유효성 검사 (CAV_ 또는 HV_로 시작해야 함)
+            std::string id = ns_part;
+            bool is_cav = false;
+
+            if (id.find("CAV_") != std::string::npos) {
+                is_cav = true;
+            } else if (id.find("HV_") != std::string::npos) {
+                is_cav = false;
+            } else {
+                continue; // 엉뚱한 이름이면 패스
+            }
+
+            // 4. 신규 차량이면 등록
+            if (!id.empty() && !vehicles_.count(id)) {
+                register_vehicle(id, name, is_cav);
+            }
+        }
+    }
+
+    void register_vehicle(const std::string& id, const std::string& topic_name, bool is_cav) {
+        Vehicle v; 
+        v.id = id; 
+        v.is_cav = is_cav;
+        v.last_time = this->now();
+
+        // QoS: 무선 통신(브릿지) 환경을 고려하여 Best Effort 사용
+        rclcpp::QoS qos(10);
+        qos.best_effort();
+        qos.durability_volatile();
+
+        // 구독 (Subscriber): 브릿지에서 넘어온 위치 정보 수신
+        v.sub = create_subscription<geometry_msgs::msg::PoseStamped>(
+            topic_name, qos,
+            [this, id](const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
+                if (vehicles_.count(id)) {
+                    Vehicle& veh = vehicles_[id];
+                    
+                    double prev_x = veh.last_pos.x;
+                    double prev_y = veh.last_pos.y;
+                    rclcpp::Time prev_time = veh.last_time;
+
+                    veh.pos = {msg->pose.position.x, msg->pose.position.y};
+                    veh.z = msg->pose.orientation.z; 
+                    veh.active = true;
+                    
+                    veh.last_pos = veh.pos;
+                    veh.last_time = msg->header.stamp;
+
+                    // HV 차량 속도 계산 (HV_19 등)
+                    if (id.find("HV_") != std::string::npos) {
+                        double dt = (veh.last_time - prev_time).seconds();
+                        if (dt > 0.001) { 
+                            double dx = veh.pos.x - prev_x;
+                            double dy = veh.pos.y - prev_y;
+                            double dist = std::hypot(dx, dy);
+                            double vel = dist / dt;
+
+                            hv_vel_buffer_.push_back(vel);
+                            if (hv_vel_buffer_.size() > vel_buffer_size_) {
+                                hv_vel_buffer_.pop_front();
+                            }
+                            // 평균 속도 계산 후 전파
+                            double sum = 0.0;
+                            for (double val : hv_vel_buffer_) sum += val;
+                            double avg_vel = sum / hv_vel_buffer_.size();
+
+                            std_msgs::msg::Float32 vel_msg;
+                            vel_msg.data = static_cast<float>(avg_vel - 0.05); // 약간 보수적으로 잡음
+                            
+                            // 모든 CAV에게 HV 속도 정보 공유
+                            for (auto& [target_id, target_v] : vehicles_) {
+                                if (target_v.is_cav && target_v.active && target_v.pub_hv_vel) {
+                                    target_v.pub_hv_vel->publish(vel_msg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        );
+
+        // 발행 (Publisher): 브릿지로 보낼 명령
+        // Topic 이름: /CAV_XX/cmd_stop (도메인 브릿지가 이걸 잡아서 차량의 /cmd_stop으로 쏴줌)
+        if (is_cav) {
+            std::string base_topic = "/" + id; // ex: /CAV_01
+            v.pub_stop = create_publisher<std_msgs::msg::Bool>(base_topic + "/cmd_stop", qos);
+            v.pub_change_way = create_publisher<std_msgs::msg::Bool>(base_topic + "/change_waypoint", qos);
+            v.pub_is_roundabout = create_publisher<std_msgs::msg::Bool>(base_topic + "/is_roundabout", qos);
+            v.pub_hv_vel = create_publisher<std_msgs::msg::Float32>(base_topic + "/hv_vel", qos);
+        }
+        
+        vehicles_[id] = std::move(v);
+        RCLCPP_INFO(get_logger(), "New Vehicle Registered: %s (Sub: %s)", id.c_str(), topic_name.c_str());
+    }
+
+    // ==========================================
+    // [Logic] 충돌 및 우선순위 판단 로직
+    // ==========================================
     void update_conflict_status(const std::string& stopped_cav, const std::string& cause_vehicle) {
         if (conflict_info_.count(stopped_cav) && conflict_info_[stopped_cav] == cause_vehicle) return; 
         conflict_info_[stopped_cav] = cause_vehicle;
-        // 로그 추가 (디버깅용)
         RCLCPP_INFO(get_logger(), "[STOP] %s stopped by %s", stopped_cav.c_str(), cause_vehicle.c_str());
     }
 
@@ -161,105 +289,6 @@ private:
             });
         }
         return world_corners;
-    }
-
-    void discover_vehicles() {
-        auto topic_map = this->get_topic_names_and_types();
-        for (const auto& [name, types] : topic_map) {
-            if (name.empty() || name[0] != '/') continue;
-            std::string id = "";
-            bool is_cav = false;
-            
-            // 토픽 이름 파싱 (/CAV_01/Ego_pose 또는 /HV_01/Ego_pose 등)
-            // 주의: 차량이 본인의 Pose를 정확히 이 이름 패턴으로 쏘고 있어야 함
-            if (name.find("/Ego_pose") == std::string::npos) continue;
-
-            // 네임스페이스 추출 로직 (간단화)
-            size_t start = 1; 
-            size_t end = name.find("/Ego_pose");
-            std::string ns = name.substr(start, end - start); // ex) CAV_01
-
-            if (ns.find("CAV_") != std::string::npos) {
-                id = ns; is_cav = true;
-            } else if (ns.find("HV_") != std::string::npos) {
-                id = ns; is_cav = false;
-            } else {
-                continue;
-            }
-
-            if (!id.empty() && !vehicles_.count(id)) {
-                register_vehicle(id, name, is_cav);
-            }
-        }
-    }
-
-    void register_vehicle(const std::string& id, const std::string& topic, bool is_cav) {
-        Vehicle v; v.id = id; v.is_cav = is_cav;
-        v.last_time = this->now();
-
-        // QoS: 무선 네트워크 환경을 고려하여 Best Effort 설정
-        rclcpp::QoS qos(10);
-        qos.best_effort();
-        qos.durability_volatile();
-
-        v.sub = create_subscription<geometry_msgs::msg::PoseStamped>(
-            topic, qos,
-            [this, id](const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
-                if (vehicles_.count(id)) {
-                    Vehicle& veh = vehicles_[id];
-                    
-                    double prev_x = veh.last_pos.x;
-                    double prev_y = veh.last_pos.y;
-                    rclcpp::Time prev_time = veh.last_time;
-
-                    veh.pos = {msg->pose.position.x, msg->pose.position.y};
-                    veh.z = msg->pose.orientation.z; 
-                    veh.active = true;
-                    
-                    veh.last_pos = veh.pos;
-                    veh.last_time = msg->header.stamp;
-
-                    // HV 속도 계산
-                    if (id == "HV_19") {
-                        double dt = (veh.last_time - prev_time).seconds();
-                        // [안전장치] dt가 0이거나 너무 작으면 계산 스킵 (Div by Zero 방지)
-                        if (dt > 0.001) { 
-                            double dx = veh.pos.x - prev_x;
-                            double dy = veh.pos.y - prev_y;
-                            double dist = std::hypot(dx, dy);
-                            double vel = dist / dt;
-
-                            hv_vel_buffer_.push_back(vel);
-                            if (hv_vel_buffer_.size() > vel_buffer_size_) {
-                                hv_vel_buffer_.pop_front();
-                            }
-
-                            double sum = 0.0;
-                            for (double val : hv_vel_buffer_) sum += val;
-                            double avg_vel = sum / hv_vel_buffer_.size();
-
-                            std_msgs::msg::Float32 vel_msg;
-                            vel_msg.data = static_cast<float>(avg_vel - 0.05);
-                            
-                            for (auto& [target_id, target_v] : vehicles_) {
-                                if (target_v.is_cav && target_v.active && target_v.pub_hv_vel) {
-                                    target_v.pub_hv_vel->publish(vel_msg);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        );
-
-        if (is_cav) {
-            v.pub_stop = create_publisher<std_msgs::msg::Bool>("/" + id + "/cmd_stop", qos);
-            v.pub_change_way = create_publisher<std_msgs::msg::Bool>("/" + id + "/change_waypoint", qos);
-            v.pub_is_roundabout = create_publisher<std_msgs::msg::Bool>("/" + id + "/is_roundabout", qos);
-            v.pub_hv_vel = create_publisher<std_msgs::msg::Float32>("/" + id + "/hv_vel", qos);
-        }
-        vehicles_[id] = std::move(v);
-        RCLCPP_INFO(get_logger(), "New Vehicle Registered: %s (Topic: %s)", id.c_str(), topic.c_str());
     }
 
     bool is_in_threeway_zone(const Geo::Vec2& pos) {
@@ -327,23 +356,22 @@ private:
                     }
                 }
             }
-            if (my_cav.id == "CAV_01" || my_cav.id == "CAV_02") {
-                auto is_target_in_box = [&](const std::string& tid) {
-                    if (vehicles_.count(tid) && vehicles_.at(tid).active) {
-                        const auto& tv = vehicles_.at(tid);
-                        return (tv.pos.x >= x_min && tv.pos.x <= x_max &&
-                                tv.pos.y >= y_min && tv.pos.y <= y_max);
-                    }
-                    return false;
-                };
-                if (is_target_in_box("CAV_03")) {
-                    if (my_cav.id == "CAV_01" && am_i_top) return true;
-                    if (my_cav.id == "CAV_02" && !am_i_right) return true;
+            // HV 간섭 체크
+            auto is_target_in_box = [&](const std::string& tid) {
+                if (vehicles_.count(tid) && vehicles_.at(tid).active) {
+                    const auto& tv = vehicles_.at(tid);
+                    return (tv.pos.x >= x_min && tv.pos.x <= x_max &&
+                            tv.pos.y >= y_min && tv.pos.y <= y_max);
                 }
-                if (is_target_in_box("CAV_04")) {
-                    if (my_cav.id == "CAV_01" && !am_i_top) return true;
-                    if (my_cav.id == "CAV_02" && am_i_right) return true;
-                }
+                return false;
+            };
+            if (is_target_in_box("CAV_03")) {
+                if (my_cav.id == "CAV_01" && am_i_top) return true;
+                if (my_cav.id == "CAV_02" && !am_i_right) return true;
+            }
+            if (is_target_in_box("CAV_04")) {
+                if (my_cav.id == "CAV_01" && !am_i_top) return true;
+                if (my_cav.id == "CAV_02" && am_i_right) return true;
             }
         }
 
@@ -509,6 +537,7 @@ private:
             my_cav.stop_cause.clear();
             clear_conflict_status(my_id);
         } else {
+            // [Safety] 평시에도 false를 지속적으로 보내줌
             std_msgs::msg::Bool msg; msg.data = false; my_cav.pub_stop->publish(msg);
         }
     }
