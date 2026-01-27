@@ -1,0 +1,44 @@
+name: bridge_cav_02
+topics:
+  # ==========================================
+  # [상행] 차량(Domain 2) -> 관제탑(Domain 100)
+  # 내 위치를 관제탑에 보고
+  # ==========================================
+  - topic: /Ego_pose
+    type: geometry_msgs/msg/PoseStamped
+    from_domain: 2
+    to_domain: 100
+    remap: /CAV_01/Ego_pose
+
+  # ==========================================
+  # [하행] 관제탑(Domain 100) -> 차량(Domain 2)
+  # 관제탑의 명령을 수신
+  # ==========================================
+  
+  # 1. 정지 명령
+  - topic: /CAV_02/cmd_stop
+    type: std_msgs/msg/Bool
+    from_domain: 100
+    to_domain: 2
+    remap: /cmd_stop
+
+  # 2. 경로 변경 (회전교차로 진입)
+  - topic: /CAV_02/change_waypoint
+    type: std_msgs/msg/Bool
+    from_domain: 100
+    to_domain: 2
+    remap: /change_waypoint
+
+  # 3. 회전교차로 인식 정보
+  - topic: /CAV_02/is_roundabout
+    type: std_msgs/msg/Bool
+    from_domain: 100
+    to_domain: 2
+    remap: /is_roundabout
+
+  # 4. 선행 차량(HV) 속도 정보
+  - topic: /CAV_02/hv_vel
+    type: std_msgs/msg/Float32
+    from_domain: 100
+    to_domain: 2
+    remap: /hv_vel

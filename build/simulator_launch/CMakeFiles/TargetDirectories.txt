@@ -1,9 +1,0 @@
-/home/hy/Mobility_Challenge/build/simulator_launch/CMakeFiles/install/strip.dir
-/home/hy/Mobility_Challenge/build/simulator_launch/CMakeFiles/install/local.dir
-/home/hy/Mobility_Challenge/build/simulator_launch/CMakeFiles/install.dir
-/home/hy/Mobility_Challenge/build/simulator_launch/CMakeFiles/list_install_components.dir
-/home/hy/Mobility_Challenge/build/simulator_launch/CMakeFiles/rebuild_cache.dir
-/home/hy/Mobility_Challenge/build/simulator_launch/CMakeFiles/edit_cache.dir
-/home/hy/Mobility_Challenge/build/simulator_launch/CMakeFiles/test.dir
-/home/hy/Mobility_Challenge/build/simulator_launch/CMakeFiles/simulator_launch_uninstall.dir
-/home/hy/Mobility_Challenge/build/simulator_launch/CMakeFiles/uninstall.dir

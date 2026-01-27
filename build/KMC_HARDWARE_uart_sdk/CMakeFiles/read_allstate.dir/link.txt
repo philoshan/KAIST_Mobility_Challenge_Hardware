@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/read_allstate.dir/examples/UartClient_Advanced/read_allstate.cpp.o  -o read_allstate  libKMC_HARDWARE_uart.a -lpthread 

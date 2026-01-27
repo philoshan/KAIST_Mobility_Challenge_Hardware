@@ -1,0 +1,213 @@
+[0.011s] Invoking command in '/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chan/Mobility_Challenge_Simulator/install/hy_drive:/home/chan/Mobility_Challenge_Simulator/install/control_py:/opt/ros/foxy /usr/bin/cmake /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp
+[0.274s] -- The C compiler identification is GNU 9.4.0
+[0.537s] -- The CXX compiler identification is GNU 9.4.0
+[0.664s] -- Check for working C compiler: /usr/bin/cc
+[0.781s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.783s] -- Detecting C compiler ABI info
+[0.890s] -- Detecting C compiler ABI info - done
+[0.898s] -- Detecting C compile features
+[0.899s] -- Detecting C compile features - done
+[0.902s] -- Check for working CXX compiler: /usr/bin/c++
+[1.062s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.062s] -- Detecting CXX compiler ABI info
+[1.190s] -- Detecting CXX compiler ABI info - done
+[1.197s] -- Detecting CXX compile features
+[1.197s] -- Detecting CXX compile features - done
+[1.216s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.242s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.242s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.351s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.386s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.577s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.586s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.560s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[3.428s] -- Found FastRTPS: /opt/ros/foxy/include  
+[5.060s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.123s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[5.126s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.128s] -- Looking for pthread.h
+[5.248s] -- Looking for pthread.h - found
+[5.248s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.359s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[5.359s] -- Looking for pthread_create in pthreads
+[5.461s] -- Looking for pthread_create in pthreads - not found
+[5.461s] -- Looking for pthread_create in pthread
+[5.571s] -- Looking for pthread_create in pthread - found
+[5.572s] -- Found Threads: TRUE  
+[5.701s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[5.734s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[5.800s] -- Added test 'copyright' to check source files copyright and LICENSE
+[5.803s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.803s] -- Configured cppcheck include dirs: 
+[5.803s] -- Configured cppcheck exclude dirs and/or files: 
+[5.805s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[5.806s] -- Configured cpplint exclude dirs and/or files: 
+[5.806s] -- Added test 'flake8' to check Python code syntax and style conventions
+[5.807s] -- Added test 'lint_cmake' to check CMake code style
+[5.808s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[5.811s] -- Added test 'uncrustify' to check C / C++ code style
+[5.811s] -- Configured uncrustify additional arguments: 
+[5.812s] -- Added test 'xmllint' to check XML markup files
+[5.814s] -- Configuring done
+[5.823s] -- Generating done
+[5.828s] -- Build files have been written to: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp
+[5.833s] Invoked command in '/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chan/Mobility_Challenge_Simulator/install/hy_drive:/home/chan/Mobility_Challenge_Simulator/install/control_py:/opt/ros/foxy /usr/bin/cmake /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp
+[5.836s] Invoking command in '/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chan/Mobility_Challenge_Simulator/install/hy_drive:/home/chan/Mobility_Challenge_Simulator/install/control_py:/opt/ros/foxy /usr/bin/cmake --build /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp -- -j20 -l20
+[5.862s] [35m[1mScanning dependencies of target main_p3[0m
+[5.863s] [35m[1mScanning dependencies of target control_p3[0m
+[5.958s] [ 50%] [32mBuilding CXX object CMakeFiles/control_p3.dir/src/control_p3.cpp.o[0m
+[5.958s] [ 50%] [32mBuilding CXX object CMakeFiles/main_p3.dir/src/main_p3.cpp.o[0m
+[6.990s] [01m[K/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:[m[K In lambda function:
+[6.990s] [01m[K/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:225:55:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kconst int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[6.990s]   225 |                             if ([01;35m[Khv_vel_buffer_.size() > vel_buffer_size_[m[K) {
+[6.990s]       |                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[7.011s] [01m[K/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:[m[K In member function ‘[01m[Kvoid MainTrafficController::process_roundabout_path_decision(Vehicle&, const string&, const string&)[m[K’:
+[7.011s] [01m[K/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:451:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kzone[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[7.011s]   451 |     void process_roundabout_path_decision(Vehicle& my_cav, [01;35m[Kconst std::string& zone[m[K, const std::string& my_id) {
+[7.011s]       |                                                            [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[7.011s] [01m[K/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:451:104:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmy_id[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[7.011s]   451 |     void process_roundabout_path_decision(Vehicle& my_cav, const std::string& zone, [01;35m[Kconst std::string& my_id[m[K) {
+[7.011s]       |                                                                                     [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[9.951s] [ 75%] [32m[1mLinking CXX executable main_p3[0m
+[10.244s] [ 75%] Built target main_p3
+[11.186s] [100%] [32m[1mLinking CXX executable control_p3[0m
+[11.455s] [100%] Built target control_p3
+[11.466s] Invoked command in '/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chan/Mobility_Challenge_Simulator/install/hy_drive:/home/chan/Mobility_Challenge_Simulator/install/control_py:/opt/ros/foxy /usr/bin/cmake --build /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp -- -j20 -l20
+[11.474s] Invoking command in '/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chan/Mobility_Challenge_Simulator/install/hy_drive:/home/chan/Mobility_Challenge_Simulator/install/control_py:/opt/ros/foxy /usr/bin/cmake --install /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp
+[11.480s] -- Install configuration: ""
+[11.480s] -- Execute custom install script
+[11.480s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/lib/p3_cpp/control_p3
+[11.487s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/lib/p3_cpp/main_p3
+[11.493s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/launch/cav_launch.py
+[11.499s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/launch/server_launch.py
+[11.506s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/Readme.md
+[11.512s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav01p3.csv
+[11.519s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav01p3_inside.csv
+[11.524s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav02p3.csv
+[11.530s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav02p3_inside.csv
+[11.536s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav03p3.csv
+[11.541s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav03p3_inside.csv
+[11.548s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav04p3.csv
+[11.555s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav04p3_inside.csv
+[11.561s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav1p1.csv
+[11.568s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/csv_to_json.py
+[11.574s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/node_info.png
+[11.580s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/p1_1.csv
+[11.586s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/p1_2.csv
+[11.591s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/path_generator.py
+[11.597s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/10_13.csv
+[11.603s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/11_16.csv
+[11.608s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/12_15.csv
+[11.615s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/13_14.csv
+[11.621s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/14_17.csv
+[11.626s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/15_18.csv
+[11.632s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/15_60.csv
+[11.638s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/16_19.csv
+[11.644s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/16_61.csv
+[11.651s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/17_20.csv
+[11.658s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/18_21.csv
+[11.665s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/19_22.csv
+[11.671s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/1_3.csv
+[11.677s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/20_23.csv
+[11.683s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/21_24.csv
+[11.689s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/21_51.csv
+[11.696s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/22_25.csv
+[11.702s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/22_50.csv
+[11.709s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/23_26.csv
+[11.714s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/24_27.csv
+[11.721s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/24_37.csv
+[11.726s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/25_28.csv
+[11.732s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/25_36.csv
+[11.738s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/26_29.csv
+[11.744s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/27_30.csv
+[11.750s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/27_31.csv
+[11.757s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/28_31.csv
+[11.763s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/28_32.csv
+[11.769s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/29_2.csv
+[11.775s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/2_4.csv
+[11.781s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/30_1.csv
+[11.787s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/31_1.csv
+[11.793s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/32_5.csv
+[11.808s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/33_31.csv
+[11.814s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/34_27.csv
+[11.820s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/35_28.csv
+[11.826s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/36_38.csv
+[11.832s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/37_38.csv
+[11.838s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/37_39.csv
+[11.843s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/38_41.csv
+[11.850s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/38_48.csv
+[11.856s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/38_49.csv
+[11.863s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/39_40.csv
+[11.869s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/39_49.csv
+[11.876s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/3_33.csv
+[11.881s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/3_6.csv
+[11.887s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/3_7.csv
+[11.893s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/40_43.csv
+[11.899s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/40_63.csv
+[11.905s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/41_42.csv
+[11.912s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/41_43.csv
+[11.917s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/41_62.csv
+[11.923s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/42_8.csv
+[11.929s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/43_9.csv
+[11.935s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/44_63.csv
+[11.941s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/45_62.csv
+[11.947s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/46_40.csv
+[11.954s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/46_41.csv
+[11.961s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/47_41.csv
+[11.967s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/48_53.csv
+[11.973s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/48_58.csv
+[11.978s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/49_55.csv
+[11.984s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/49_59.csv
+[11.990s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/4_7.csv
+[11.995s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/50_48.csv
+[12.001s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/50_54.csv
+[12.008s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/51_46.csv
+[12.014s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/51_55.csv
+[12.019s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/52_24.csv
+[12.025s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/53_25.csv
+[12.031s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/54_11.csv
+[12.037s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/55_12.csv
+[12.043s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/56_52.csv
+[12.049s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/56_59.csv
+[12.056s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/57_47.csv
+[12.062s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/57_53.csv
+[12.068s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/58_19.csv
+[12.074s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/59_18.csv
+[12.079s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/5_45.csv
+[12.085s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/5_8.csv
+[12.092s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/60_46.csv
+[12.099s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/60_52.csv
+[12.105s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/61_47.csv
+[12.112s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/61_54.csv
+[12.119s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/62_35.csv
+[12.125s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/62_38.csv
+[12.131s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/63_34.csv
+[12.137s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/63_39.csv
+[12.143s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/6_44.csv
+[12.150s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/6_9.csv
+[12.157s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/7_10.csv
+[12.163s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/7_9.csv
+[12.169s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/8_11.csv
+[12.175s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/8_57.csv
+[12.181s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/9_12.csv
+[12.187s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/9_56.csv
+[12.193s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge01.yaml
+[12.198s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge02.yaml
+[12.204s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge03.yaml
+[12.211s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge04.yaml
+[12.217s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/ament_index/resource_index/package_run_dependencies/p3_cpp
+[12.223s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/ament_index/resource_index/parent_prefix_path/p3_cpp
+[12.229s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.sh
+[12.235s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.dsv
+[12.241s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/environment/path.sh
+[12.247s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/environment/path.dsv
+[12.254s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.bash
+[12.260s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.sh
+[12.266s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.zsh
+[12.272s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.dsv
+[12.278s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/package.dsv
+[12.284s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/ament_index/resource_index/packages/p3_cpp
+[12.290s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig.cmake
+[12.295s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig-version.cmake
+[12.301s] -- Symlinking: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/package.xml
+[12.310s] Invoked command in '/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chan/Mobility_Challenge_Simulator/install/hy_drive:/home/chan/Mobility_Challenge_Simulator/install/control_py:/opt/ros/foxy /usr/bin/cmake --install /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp

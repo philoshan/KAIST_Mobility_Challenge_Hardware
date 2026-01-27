@@ -1,1 +1,1 @@
-/opt/ros/foxy
+/home/chan/Mobility_Challenge_Simulator/install/simulator_launch:/home/chan/Mobility_Challenge_Simulator/install/simulator:/home/chan/Mobility_Challenge_Simulator/install/hv_handler:/home/chan/Mobility_Challenge_Simulator/install/communication_manager:/home/chan/Mobility_Challenge_Simulator/install/scene_srv:/home/chan/Mobility_Challenge_Simulator/install/hy_drive:/home/chan/Mobility_Challenge_Simulator/install/domain_bridge:/home/chan/Mobility_Challenge_Simulator/install/control_py:/home/chan/Mobility_Challenge_Simulator/install/control_cmake:/opt/ros/foxy

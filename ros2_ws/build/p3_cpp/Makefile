@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp
+CMAKE_SOURCE_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp
+CMAKE_BINARY_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

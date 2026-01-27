@@ -1,4 +1,0 @@
-Invoking command in '/home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk': /usr/bin/cmake /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK -DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk
-Invoked command in '/home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk' returned '0': /usr/bin/cmake /home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK -DCMAKE_INSTALL_PREFIX=/home/hy/Mobility_Challenge/install/KMC_HARDWARE_uart_sdk
-Invoking command in '/home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk': /usr/bin/cmake --build /home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk -- -j4 -l4
-Invoked command in '/home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk' returned '0': /usr/bin/cmake --build /home/hy/Mobility_Challenge/build/KMC_HARDWARE_uart_sdk -- -j4 -l4

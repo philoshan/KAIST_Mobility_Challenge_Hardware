@@ -30,9 +30,9 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-# [수정 완료] launch 폴더와 함께 'tool' 폴더도 설치합니다.
-# 이제 빌드하면 install/share/p3_cpp/tool 안에 CSV 파일이 생깁니다.
-install(DIRECTORY launch tool
+# [수정 완료] launch, tool 폴더와 함께 'config' 폴더도 반드시 설치해야 합니다!
+# 그래야 launch 파일이 config/bridge_xx.yaml 파일을 찾을 수 있습니다.
+install(DIRECTORY launch tool config
   DESTINATION share/${PROJECT_NAME}
 )
 

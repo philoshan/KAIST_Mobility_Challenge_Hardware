@@ -1,2 +1,0 @@
-/usr/bin/ar qc libKMC_HARDWARE_uart.a  CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o
-/usr/bin/ranlib libKMC_HARDWARE_uart.a
