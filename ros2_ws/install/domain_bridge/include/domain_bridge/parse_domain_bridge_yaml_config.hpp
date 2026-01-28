@@ -1,1 +1,0 @@
-/home/hy/Mobility_Challenge/ros2_ws/src/domain_bridge/include/domain_bridge/parse_domain_bridge_yaml_config.hpp

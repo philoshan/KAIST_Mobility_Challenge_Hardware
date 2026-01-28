@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge/libdomain_bridge__rosidl_typesupport_fastrtps_cpp.so" "TARGETS" "domain_bridge__rosidl_typesupport_fastrtps_cpp" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

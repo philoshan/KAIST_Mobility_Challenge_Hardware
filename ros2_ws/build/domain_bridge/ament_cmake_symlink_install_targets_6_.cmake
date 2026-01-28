@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge/domain_bridge" "TARGETS" "domain_bridge_exec" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/domain_bridge")
