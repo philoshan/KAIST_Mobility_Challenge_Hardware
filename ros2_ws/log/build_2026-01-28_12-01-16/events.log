@@ -1,0 +1,114 @@
+[0.000000] (-) TimerEvent: {}
+[0.003814] (-) JobUnselected: {'identifier': 'cav_controller'}
+[0.003935] (-) JobUnselected: {'identifier': 'domain_bridge'}
+[0.004002] (-) JobUnselected: {'identifier': 'simulator_launch'}
+[0.004057] (p3_cpp) JobQueued: {'identifier': 'p3_cpp', 'dependencies': OrderedDict()}
+[0.004124] (p3_cpp) JobStarted: {'identifier': 'p3_cpp'}
+[0.022004] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'cmake'}
+[0.023642] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'build'}
+[0.025210] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp', '--', '-j4', '-l4'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-6d19dc4e-ca5a-4506-98ac-6f5b0ec98256.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '100'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp:/opt/ros/foxy')]), 'shell': False}
+[0.099411] (-) TimerEvent: {}
+[0.121467] (p3_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target main_p3\x1b[0m\n'}
+[0.156492] (p3_cpp) StdoutLine: {'line': b'[ 50%] Built target control_p3\n'}
+[0.185519] (p3_cpp) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/main_p3.dir/src/main_p3.cpp.o\x1b[0m\n'}
+[0.199603] (-) TimerEvent: {}
+[0.300419] (-) TimerEvent: {}
+[0.401137] (-) TimerEvent: {}
+[0.501849] (-) TimerEvent: {}
+[0.602557] (-) TimerEvent: {}
+[0.703322] (-) TimerEvent: {}
+[0.804104] (-) TimerEvent: {}
+[0.905338] (-) TimerEvent: {}
+[1.006108] (-) TimerEvent: {}
+[1.107263] (-) TimerEvent: {}
+[1.208499] (-) TimerEvent: {}
+[1.309247] (-) TimerEvent: {}
+[1.409991] (-) TimerEvent: {}
+[1.510826] (-) TimerEvent: {}
+[1.611746] (-) TimerEvent: {}
+[1.712440] (-) TimerEvent: {}
+[1.813165] (-) TimerEvent: {}
+[1.914171] (-) TimerEvent: {}
+[2.015337] (-) TimerEvent: {}
+[2.116073] (-) TimerEvent: {}
+[2.216881] (-) TimerEvent: {}
+[2.317728] (-) TimerEvent: {}
+[2.418499] (-) TimerEvent: {}
+[2.519439] (-) TimerEvent: {}
+[2.620648] (-) TimerEvent: {}
+[2.721358] (-) TimerEvent: {}
+[2.822051] (-) TimerEvent: {}
+[2.922901] (-) TimerEvent: {}
+[3.023730] (-) TimerEvent: {}
+[3.124470] (-) TimerEvent: {}
+[3.225218] (-) TimerEvent: {}
+[3.325960] (-) TimerEvent: {}
+[3.426957] (-) TimerEvent: {}
+[3.527774] (-) TimerEvent: {}
+[3.628492] (-) TimerEvent: {}
+[3.698689] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[3.699374] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:225:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kstd::deque<double>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[3.699674] (p3_cpp) StderrLine: {'line': b'  225 |                             if (\x1b[01;35m\x1b[Khv_vel_buffer_.size() > vel_buffer_size_\x1b[m\x1b[K) hv_vel_buffer_.pop_front();\n'}
+[3.699888] (p3_cpp) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.728647] (-) TimerEvent: {}
+[3.775816] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainTrafficController::process_roundabout_path_decision(Vehicle&, const string&, const string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.776629] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:407:79:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kzone\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[3.776829] (p3_cpp) StderrLine: {'line': b'  407 |     void process_roundabout_path_decision(Vehicle& my_cav, \x1b[01;35m\x1b[Kconst std::string& zone\x1b[m\x1b[K, const std::string& my_id) {\n'}
+[3.776999] (p3_cpp) StderrLine: {'line': b'      |                                                            \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[3.777165] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:407:104:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmy_id\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[3.777320] (p3_cpp) StderrLine: {'line': b'  407 | ess_roundabout_path_decision(Vehicle& my_cav, const std::string& zone, \x1b[01;35m\x1b[Kconst std::string& my_id\x1b[m\x1b[K) {\n'}
+[3.777469] (p3_cpp) StderrLine: {'line': b'      |                                                                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[3.777616] (p3_cpp) StderrLine: {'line': b'\n'}
+[3.795047] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainTrafficController::control_loop()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.795850] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:508:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khandle_safe_zone_recovery\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.796076] (p3_cpp) StderrLine: {'line': b'  508 |                 \x1b[01;31m\x1b[Khandle_safe_zone_recovery\x1b[m\x1b[K(my_cav, my_id);\n'}
+[3.796242] (p3_cpp) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.828798] (-) TimerEvent: {}
+[3.929572] (-) TimerEvent: {}
+[4.030549] (-) TimerEvent: {}
+[4.131302] (-) TimerEvent: {}
+[4.232043] (-) TimerEvent: {}
+[4.332826] (-) TimerEvent: {}
+[4.433640] (-) TimerEvent: {}
+[4.534748] (-) TimerEvent: {}
+[4.635566] (-) TimerEvent: {}
+[4.736281] (-) TimerEvent: {}
+[4.837054] (-) TimerEvent: {}
+[4.938148] (-) TimerEvent: {}
+[5.038965] (-) TimerEvent: {}
+[5.139896] (-) TimerEvent: {}
+[5.240914] (-) TimerEvent: {}
+[5.341932] (-) TimerEvent: {}
+[5.442932] (-) TimerEvent: {}
+[5.543645] (-) TimerEvent: {}
+[5.644358] (-) TimerEvent: {}
+[5.745280] (-) TimerEvent: {}
+[5.846429] (-) TimerEvent: {}
+[5.947405] (-) TimerEvent: {}
+[6.048530] (-) TimerEvent: {}
+[6.149232] (-) TimerEvent: {}
+[6.250173] (-) TimerEvent: {}
+[6.351196] (-) TimerEvent: {}
+[6.452381] (-) TimerEvent: {}
+[6.553097] (-) TimerEvent: {}
+[6.653852] (-) TimerEvent: {}
+[6.754560] (-) TimerEvent: {}
+[6.855548] (-) TimerEvent: {}
+[6.956252] (-) TimerEvent: {}
+[7.057033] (-) TimerEvent: {}
+[7.157725] (-) TimerEvent: {}
+[7.258848] (-) TimerEvent: {}
+[7.360320] (-) TimerEvent: {}
+[7.461382] (-) TimerEvent: {}
+[7.562100] (-) TimerEvent: {}
+[7.663180] (-) TimerEvent: {}
+[7.764230] (-) TimerEvent: {}
+[7.865206] (-) TimerEvent: {}
+[7.966386] (-) TimerEvent: {}
+[8.067871] (-) TimerEvent: {}
+[8.092596] (p3_cpp) StderrLine: {'line': b'make[2]: *** [CMakeFiles/main_p3.dir/build.make:63: CMakeFiles/main_p3.dir/src/main_p3.cpp.o] Error 1\n'}
+[8.093435] (p3_cpp) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/main_p3.dir/all] Error 2\n'}
+[8.093832] (p3_cpp) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[8.098813] (p3_cpp) CommandEnded: {'returncode': 2}
+[8.125242] (p3_cpp) JobEnded: {'identifier': 'p3_cpp', 'rc': 2}
+[8.136425] (-) EventReactorShutdown: {}

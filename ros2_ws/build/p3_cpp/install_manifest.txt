@@ -113,10 +113,10 @@
 /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav04p3.csv
 /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/p1_1.csv
 /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/tool/path_generator.py
-/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge01.yaml
-/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge04.yaml
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge_04.yaml
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge_07.yaml
 /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge_06.yaml
-/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge07.yaml
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/config/bridge_01.yaml
 /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/ament_index/resource_index/package_run_dependencies/p3_cpp
 /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/ament_index/resource_index/parent_prefix_path/p3_cpp
 /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.sh

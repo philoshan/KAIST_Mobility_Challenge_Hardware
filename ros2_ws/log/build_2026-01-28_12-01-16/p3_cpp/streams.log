@@ -1,0 +1,24 @@
+[0.028s] Invoking command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp -- -j4 -l4
+[0.118s] [35m[1mScanning dependencies of target main_p3[0m
+[0.153s] [ 50%] Built target control_p3
+[0.182s] [ 75%] [32mBuilding CXX object CMakeFiles/main_p3.dir/src/main_p3.cpp.o[0m
+[3.695s] [01m[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:[m[K In lambda function:
+[3.695s] [01m[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:225:55:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kconst int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[3.696s]   225 |                             if ([01;35m[Khv_vel_buffer_.size() > vel_buffer_size_[m[K) hv_vel_buffer_.pop_front();
+[3.696s]       |                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[3.772s] [01m[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:[m[K In member function ‘[01m[Kvoid MainTrafficController::process_roundabout_path_decision(Vehicle&, const string&, const string&)[m[K’:
+[3.773s] [01m[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:407:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kzone[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.773s]   407 |     void process_roundabout_path_decision(Vehicle& my_cav, [01;35m[Kconst std::string& zone[m[K, const std::string& my_id) {
+[3.773s]       |                                                            [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[3.773s] [01m[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:407:104:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmy_id[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.773s]   407 | ess_roundabout_path_decision(Vehicle& my_cav, const std::string& zone, [01;35m[Kconst std::string& my_id[m[K) {
+[3.773s]       |                                                                        [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[3.774s] 
+[3.792s] [01m[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:[m[K In member function ‘[01m[Kvoid MainTrafficController::control_loop()[m[K’:
+[3.792s] [01m[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:508:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_safe_zone_recovery[m[K’ was not declared in this scope
+[3.792s]   508 |                 [01;31m[Khandle_safe_zone_recovery[m[K(my_cav, my_id);
+[3.792s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[8.089s] make[2]: *** [CMakeFiles/main_p3.dir/build.make:63: CMakeFiles/main_p3.dir/src/main_p3.cpp.o] Error 1
+[8.090s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/main_p3.dir/all] Error 2
+[8.090s] make: *** [Makefile:141: all] Error 2
+[8.095s] Invoked command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp -- -j4 -l4

@@ -5,24 +5,13 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
+#include <unordered_set>
 #include <cmath>
 #include <algorithm>
 #include <iostream>
 #include <map>
 #include <deque> 
 
-using namespace std::chrono_literals;
-
-// [추가] 쿼터니언 -> 오일러(Yaw) 변환 함수 (표준 ROS2 대응)
-inline double quaternion_to_yaw(double x, double y, double z, double w) {
-    double siny_cosp = 2.0 * (w * z + x * y);
-    double cosy_cosp = 1.0 - 2.0 * (y * y + z * z);
-    return std::atan2(siny_cosp, cosy_cosp);
-}
-
-// ==========================================
-// [Geo] 2D 벡터 연산 및 충돌 감지 로직
-// ==========================================
 namespace Geo {
     struct Vec2 {
         double x, y;
@@ -60,9 +49,6 @@ namespace Geo {
     }
 }
 
-// ==========================================
-// [Vehicle] 차량 상태 관리 구조체
-// ==========================================
 struct Vehicle {
     std::string id;
     bool is_cav;
@@ -74,11 +60,11 @@ struct Vehicle {
     std::string stop_cause = ""; 
     bool has_entered_roundabout = false; 
 
-    // HV 속도 추정용
+    // hv 속도
     Geo::Vec2 last_pos{0.0, 0.0};
     rclcpp::Time last_time;
 
-    // ROS Interface
+    // ROS
     rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_stop;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_change_way;
@@ -86,43 +72,38 @@ struct Vehicle {
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_hv_vel;
 };
 
-// ==========================================
-// [Main Node] 중앙 관제 컨트롤러 (Domain 100)
-// ==========================================
 class MainTrafficController : public rclcpp::Node {
 public:
     MainTrafficController() : Node("main_traffic_controller") {
-        // [설정] 차량 크기 (전장, 전폭 고려)
         car_info = {0.17, 0.16, 0.075, 0.075};
         front_padding_ = 0.8;
         side_padding_ = 0.8;
         approach_range_sq_ = 2.5 * 2.5;
 
-        // 사지교차로 영역
+        // 사지교차로
         fourway_center_ = {-2.333, 0.0};
         fourway_len_ = 2.0;
         fourway_app_r_sq_ = 1.5 * 1.5;
         fourway_box_half_len_ = fourway_len_ / 2.0;
 
-        // 회전교차로 영역
+        // 회전교차로
         round_center_ = {1.667, 0.0};
         round_app_r_sq_ = 1.8 * 1.8;
         round_radius_ = 1.4;
 
-        // 삼지교차로 영역
+        // 삼지교차로
         threeway_box_x_min_ = -3.7; threeway_box_x_max_ = -1.2;
         threeway_1_y_min_ = 1.0;    threeway_1_y_max_ = 3.0;
         threeway_2_y_min_ = -3.0;   threeway_2_y_max_ = -1.0;
 
-        // 타이머 설정
         tmr_discovery_ = create_wall_timer(
-            1000ms, std::bind(&MainTrafficController::discover_vehicles, this));
-        
+            std::chrono::seconds(1),
+            std::bind(&MainTrafficController::discover_vehicles, this));
         tmr_control_ = create_wall_timer(
-            20ms, std::bind(&MainTrafficController::control_loop, this));
+            std::chrono::milliseconds(20),
+            std::bind(&MainTrafficController::control_loop, this));
 
-        RCLCPP_INFO(get_logger(), "=== Central Traffic Controller Started (Domain 100) ===");
-        RCLCPP_INFO(get_logger(), "Waiting for Bridged Topics (e.g., /CAV_01/Ego_pose)...");
+        RCLCPP_INFO(get_logger(), "Controller Started: IDs Swapped (2->4, 3->6, 4->7)");
     }
 
 private:
@@ -141,133 +122,13 @@ private:
     double round_app_r_sq_, round_radius_;
     double threeway_box_x_min_, threeway_box_x_max_, threeway_1_y_min_, threeway_1_y_max_, threeway_2_y_min_, threeway_2_y_max_;
 
-    // ==========================================
-    // [Discovery] 차량 자동 감지 로직
-    // ==========================================
-    void discover_vehicles() {
-        auto topic_map = this->get_topic_names_and_types();
-        for (const auto& [name, types] : topic_map) {
-            if (name.length() < 9 || name.find("/Ego_pose") == std::string::npos) continue;
-
-            size_t suffix_pos = name.find("/Ego_pose");
-            if (suffix_pos == 0) continue;
-
-            std::string ns_part = name.substr(0, suffix_pos); 
-            if (ns_part.front() == '/') {
-                ns_part.erase(0, 1);
-            }
-
-            std::string id = ns_part;
-            bool is_cav = false;
-
-            if (id.find("CAV_") != std::string::npos) {
-                is_cav = true;
-            } else if (id.find("HV_") != std::string::npos) {
-                is_cav = false;
-            } else {
-                continue;
-            }
-
-            if (!id.empty() && !vehicles_.count(id)) {
-                register_vehicle(id, name, is_cav);
-            }
-        }
-    }
-
-    void register_vehicle(const std::string& id, const std::string& topic_name, bool is_cav) {
-        Vehicle v; 
-        v.id = id; 
-        v.is_cav = is_cav;
-        v.last_time = this->now();
-
-        rclcpp::QoS qos(10);
-        qos.best_effort();
-        qos.durability_volatile();
-
-        v.sub = create_subscription<geometry_msgs::msg::PoseStamped>(
-            topic_name, qos,
-            [this, id](const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
-                if (vehicles_.count(id)) {
-                    Vehicle& veh = vehicles_[id];
-                    
-                    double prev_x = veh.last_pos.x;
-                    double prev_y = veh.last_pos.y;
-                    rclcpp::Time prev_time = veh.last_time;
-
-                    veh.pos = {msg->pose.position.x, msg->pose.position.y};
-                    
-                    // [핵심 수정 1] 쿼터니언 -> Yaw 변환 (표준화)
-                    // 시뮬레이터가 Euler를 Z에 보내주는 비표준 동작에 의존하면 위험합니다.
-                    // 표준 쿼터니언 변환 공식을 사용하여 안전하게 Yaw를 추출합니다.
-                    veh.z = quaternion_to_yaw(
-                        msg->pose.orientation.x,
-                        msg->pose.orientation.y,
-                        msg->pose.orientation.z,
-                        msg->pose.orientation.w
-                    );
-
-                    veh.active = true;
-                    veh.last_pos = veh.pos;
-                    veh.last_time = msg->header.stamp;
-
-                    // [핵심 수정 2] HV 속도 계산 안전장치
-                    // 여러 HV가 있을 때 데이터 간섭을 막기 위해 HV_19만 처리하도록 필터링 권장
-                    // 만약 모든 HV를 다룬다면 이 if문을 'if (id.find("HV_") ...)'로 되돌리세요.
-                    if (id == "HV_19") { 
-                        double dt = (veh.last_time - prev_time).seconds();
-                        if (dt > 0.001 && dt < 1.0) { 
-                            double dx = veh.pos.x - prev_x;
-                            double dy = veh.pos.y - prev_y;
-                            double dist = std::hypot(dx, dy);
-                            double vel = dist / dt;
-
-                            hv_vel_buffer_.push_back(vel);
-                            if (hv_vel_buffer_.size() > vel_buffer_size_) {
-                                hv_vel_buffer_.pop_front();
-                            }
-
-                            double sum = 0.0;
-                            for (double val : hv_vel_buffer_) sum += val;
-                            double avg_vel = sum / hv_vel_buffer_.size();
-
-                            std_msgs::msg::Float32 vel_msg;
-                            vel_msg.data = static_cast<float>(std::max(0.0, avg_vel - 0.05)); 
-                            
-                            for (auto& [target_id, target_v] : vehicles_) {
-                                if (target_v.is_cav && target_v.active && target_v.pub_hv_vel) {
-                                    target_v.pub_hv_vel->publish(vel_msg);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        );
-
-        if (is_cav) {
-            std::string base_topic = "/" + id; 
-            v.pub_stop = create_publisher<std_msgs::msg::Bool>(base_topic + "/cmd_stop", qos);
-            v.pub_change_way = create_publisher<std_msgs::msg::Bool>(base_topic + "/change_waypoint", qos);
-            v.pub_is_roundabout = create_publisher<std_msgs::msg::Bool>(base_topic + "/is_roundabout", qos);
-            v.pub_hv_vel = create_publisher<std_msgs::msg::Float32>(base_topic + "/hv_vel", qos);
-        }
-        
-        vehicles_[id] = std::move(v);
-        RCLCPP_INFO(get_logger(), "New Vehicle Registered: %s", id.c_str());
-    }
-
-    // ==========================================
-    // [Logic] 충돌 판단 로직 (시뮬레이션 검증본 유지)
-    // ==========================================
     void update_conflict_status(const std::string& stopped_cav, const std::string& cause_vehicle) {
         if (conflict_info_.count(stopped_cav) && conflict_info_[stopped_cav] == cause_vehicle) return; 
         conflict_info_[stopped_cav] = cause_vehicle;
-        RCLCPP_INFO(get_logger(), "[STOP] %s stopped by %s", stopped_cav.c_str(), cause_vehicle.c_str());
     }
 
     void clear_conflict_status(const std::string& stopped_cav) {
         if (conflict_info_.count(stopped_cav)) {
-            RCLCPP_INFO(get_logger(), "[GO] %s released", stopped_cav.c_str());
             conflict_info_.erase(stopped_cav);
         }
     }
@@ -294,18 +155,114 @@ private:
         return world_corners;
     }
 
+    // [수정] Discovery Logic: 길이 제한 제거 및 CAV_06 등 인식 가능하게 변경
+    void discover_vehicles() {
+        auto topic_map = this->get_topic_names_and_types();
+        for (const auto& [name, types] : topic_map) {
+            if (name.empty() || name[0] != '/') continue;
+            
+            // 길이 제한 제거 (필수)
+            
+            std::string id = "";
+            bool is_cav = false;
+
+            size_t cav_pos = name.find("CAV_");
+            size_t hv_pos = name.find("HV_");
+
+            if (cav_pos != std::string::npos) {
+                // CAV_XX 추출
+                if (cav_pos + 6 <= name.size()) {
+                    id = name.substr(cav_pos, 6);
+                    is_cav = true;
+                }
+            } 
+            else if (hv_pos != std::string::npos) {
+                // HV_XX 추출
+                if (hv_pos + 5 <= name.size()) {
+                    id = name.substr(hv_pos, 5);
+                    is_cav = false;
+                }
+            }
+
+            if (!id.empty() && !vehicles_.count(id)) {
+                // PoseStamped 확인 (안전장치)
+                bool is_pose = false;
+                for(const auto& t : types) {
+                    if(t.find("PoseStamped") != std::string::npos) { is_pose = true; break; }
+                }
+                if(is_pose) register_vehicle(id, name, is_cav);
+            }
+        }
+    }
+
+    void register_vehicle(const std::string& id, const std::string& topic, bool is_cav) {
+        Vehicle v; v.id = id; v.is_cav = is_cav;
+        v.last_time = this->now();
+
+        v.sub = create_subscription<geometry_msgs::msg::PoseStamped>(
+            topic, rclcpp::SensorDataQoS(),
+            [this, id](const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
+                if (vehicles_.count(id)) {
+                    Vehicle& veh = vehicles_[id];
+                    double prev_x = veh.last_pos.x;
+                    double prev_y = veh.last_pos.y;
+                    rclcpp::Time prev_time = veh.last_time;
+
+                    veh.pos = {msg->pose.position.x, msg->pose.position.y};
+                    veh.z = msg->pose.orientation.z; 
+                    veh.active = true;
+                    veh.last_pos = veh.pos;
+                    veh.last_time = msg->header.stamp;
+
+                    if (id == "HV_19") { 
+                        double dt = (veh.last_time - prev_time).seconds();
+                        if (dt > 0.001) { 
+                            double dx = veh.pos.x - prev_x;
+                            double dy = veh.pos.y - prev_y;
+                            double dist = std::hypot(dx, dy);
+                            double vel = dist / dt;
+                            hv_vel_buffer_.push_back(vel);
+                            if (hv_vel_buffer_.size() > vel_buffer_size_) hv_vel_buffer_.pop_front();
+                            double sum = 0.0;
+                            for (double val : hv_vel_buffer_) sum += val;
+                            double avg_vel = sum / hv_vel_buffer_.size();
+                            std_msgs::msg::Float32 vel_msg;
+                            vel_msg.data = static_cast<float>(std::max(0.0, avg_vel - 0.05)); 
+                            for (auto& [target_id, target_v] : vehicles_) {
+                                if (target_v.is_cav && target_v.active && target_v.pub_hv_vel) {
+                                    target_v.pub_hv_vel->publish(vel_msg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        );
+
+        if (is_cav) {
+            std::string prefix = "/" + id;
+            v.pub_stop = create_publisher<std_msgs::msg::Bool>(prefix + "/cmd_stop", rclcpp::SensorDataQoS());
+            v.pub_change_way = create_publisher<std_msgs::msg::Bool>(prefix + "/change_waypoint", rclcpp::SensorDataQoS());
+            v.pub_is_roundabout = create_publisher<std_msgs::msg::Bool>(prefix + "/is_roundabout", rclcpp::SensorDataQoS());
+            v.pub_hv_vel = create_publisher<std_msgs::msg::Float32>(prefix + "/hv_vel", rclcpp::SensorDataQoS());
+        }
+        vehicles_[id] = std::move(v);
+        RCLCPP_INFO(get_logger(), "Registered Vehicle: %s", id.c_str());
+    }
+
     bool is_in_threeway_zone(const Geo::Vec2& pos) {
         return (pos.x >= threeway_box_x_min_ && pos.x <= threeway_box_x_max_) &&
                ((pos.y >= threeway_1_y_min_ && pos.y <= threeway_1_y_max_) ||
                 (pos.y >= threeway_2_y_min_ && pos.y <= threeway_2_y_max_));
     }
 
+    // [수정] ID Swap: 3->6, 4->7, 2->4
     bool check_threeway_conflict(const Vehicle& my_cav, const std::string& tid, bool is_next_lane, bool is_full, std::string& temp_log) {
-        if (tid == "CAV_03" || tid == "CAV_04") {
+        if (tid == "CAV_06" || tid == "CAV_07") { // (구: 03, 04) -> (신: 06, 07)
             if (my_cav.id == "CAV_01" && is_next_lane) {
                 temp_log = "threeway_NEXT_LANE";
                 return true;
-            } else if (my_cav.id == "CAV_02" && is_full && !is_next_lane) {
+            } else if (my_cav.id == "CAV_04" && is_full && !is_next_lane) { // (구: 02) -> (신: 04)
                 temp_log = "threeway_VERTICAL";
                 return true;
             }
@@ -323,14 +280,14 @@ private:
         return false;
     }
 
+    // [수정] ID Swap: 2->4, 3->6, 4->7
     bool check_fourway_rect_split(const Vehicle& my_cav) {
         double x_min = fourway_center_.x - fourway_box_half_len_;
         double x_max = fourway_center_.x + fourway_box_half_len_;
         double y_min = fourway_center_.y - fourway_box_half_len_;
         double y_max = fourway_center_.y + fourway_box_half_len_;
 
-        bool i_am_inside = (my_cav.pos.x >= x_min && my_cav.pos.x <= x_max &&
-                            my_cav.pos.y >= y_min && my_cav.pos.y <= y_max);
+        bool i_am_inside = (my_cav.pos.x >= x_min && my_cav.pos.x <= x_max && my_cav.pos.y >= y_min && my_cav.pos.y <= y_max);
         if (i_am_inside) return false;
         if ((my_cav.pos - fourway_center_).dist_Sq() > fourway_app_r_sq_) return false;
         if (!is_approaching(my_cav, fourway_center_)) return false;
@@ -338,12 +295,11 @@ private:
         bool am_i_top = (my_cav.pos.y > fourway_center_.y); 
         bool am_i_right = (my_cav.pos.x > fourway_center_.x); 
 
-        if (my_cav.id == "CAV_01" || my_cav.id == "CAV_02") {
-            std::string tid = (my_cav.id == "CAV_01") ? "CAV_02" : "CAV_01"; 
+        if (my_cav.id == "CAV_01" || my_cav.id == "CAV_04") { // (구: 02 -> 신: 04)
+            std::string tid = (my_cav.id == "CAV_01") ? "CAV_04" : "CAV_01"; // (구: 02 -> 신: 04)
             if (vehicles_.count(tid) && vehicles_.at(tid).active) {
                 const auto& target = vehicles_.at(tid);
-                bool target_inside = (target.pos.x >= x_min && target.pos.x <= x_max &&
-                                      target.pos.y >= y_min && target.pos.y <= y_max);
+                bool target_inside = (target.pos.x >= x_min && target.pos.x <= x_max && target.pos.y >= y_min && target.pos.y <= y_max);
                 if (target_inside) {
                     bool target_is_right = (target.pos.x > fourway_center_.x);
                     bool target_approaching = is_approaching(target, fourway_center_);
@@ -362,26 +318,26 @@ private:
             auto is_target_in_box = [&](const std::string& tid) {
                 if (vehicles_.count(tid) && vehicles_.at(tid).active) {
                     const auto& tv = vehicles_.at(tid);
-                    return (tv.pos.x >= x_min && tv.pos.x <= x_max &&
-                            tv.pos.y >= y_min && tv.pos.y <= y_max);
+                    return (tv.pos.x >= x_min && tv.pos.x <= x_max && tv.pos.y >= y_min && tv.pos.y <= y_max);
                 }
                 return false;
             };
-            if (is_target_in_box("CAV_03")) {
+            
+            // (구: 03 -> 신: 06), (구: 04 -> 신: 07)
+            if (is_target_in_box("CAV_06")) {
                 if (my_cav.id == "CAV_01" && am_i_top) return true;
-                if (my_cav.id == "CAV_02" && !am_i_right) return true;
+                if (my_cav.id == "CAV_04" && !am_i_right) return true;
             }
-            if (is_target_in_box("CAV_04")) {
+            if (is_target_in_box("CAV_07")) {
                 if (my_cav.id == "CAV_01" && !am_i_top) return true;
-                if (my_cav.id == "CAV_02" && am_i_right) return true;
+                if (my_cav.id == "CAV_04" && am_i_right) return true;
             }
         }
 
         int count_top = 0, count_bottom = 0;
         for (const auto& [id, v] : vehicles_) {
             if (!v.active) continue;
-            if (v.pos.x >= x_min && v.pos.x <= x_max &&
-                v.pos.y >= y_min && v.pos.y <= y_max) {
+            if (v.pos.x >= x_min && v.pos.x <= x_max && v.pos.y >= y_min && v.pos.y <= y_max) {
                 if (v.pos.y > fourway_center_.y) count_top++;
                 else count_bottom++;
             }
@@ -395,17 +351,16 @@ private:
         int count = 0;
         double r_sq = round_radius_ * round_radius_;
         for (const auto& [id, v] : vehicles_) {
-            if (v.is_cav && v.active &&
-                (v.pos - round_center_).dist_Sq() <= r_sq) count++;
+            if (v.is_cav && v.active && (v.pos - round_center_).dist_Sq() <= r_sq) count++;
         }
         return count;
     }
 
+    // [수정] ID Swap 적용
     bool check_roundabout(const Vehicle& my_cav) {
         double dist_sq = (my_cav.pos - round_center_).dist_Sq();
         double r_sq = round_radius_ * round_radius_;
-        if (dist_sq > round_app_r_sq_ || dist_sq <= r_sq || !is_approaching(my_cav, round_center_))
-            return false;
+        if (dist_sq > round_app_r_sq_ || dist_sq <= r_sq || !is_approaching(my_cav, round_center_)) return false;
 
         int cavs_inside = count_cavs_in_roundabout();
         if (cavs_inside >= 2) return true;
@@ -423,8 +378,7 @@ private:
                     double diff = t_angle - v_angle;
                     while (diff > M_PI) diff -= 2.0 * M_PI;
                     while (diff < -M_PI) diff += 2.0 * M_PI;
-                    if ((diff > 0 && diff < default_check_right) ||
-                        (diff <= 0 && diff > -default_check_left)) return true;
+                    if ((diff > 0 && diff < default_check_right) || (diff <= 0 && diff > -default_check_left)) return true;
                 }
             }
             return false;
@@ -434,10 +388,11 @@ private:
 
         for (const auto& [tid, target] : vehicles_) {
             if (tid == my_cav.id || !target.is_cav || !target.active) continue;
-            bool is_pair = ((my_cav.id == "CAV_01" && tid == "CAV_04") ||
-                            (my_cav.id == "CAV_04" && tid == "CAV_01") ||
-                            (my_cav.id == "CAV_02" && tid == "CAV_03") ||
-                            (my_cav.id == "CAV_03" && tid == "CAV_02"));
+            // [수정] Pair Logic: 2->4, 3->6, 4->7
+            bool is_pair = ((my_cav.id == "CAV_01" && tid == "CAV_07") ||
+                            (my_cav.id == "CAV_07" && tid == "CAV_01") ||
+                            (my_cav.id == "CAV_04" && tid == "CAV_06") ||
+                            (my_cav.id == "CAV_06" && tid == "CAV_04"));
             double t_dist_sq = (target.pos - round_center_).dist_Sq();
             if (t_dist_sq > round_app_r_sq_ || t_dist_sq <= r_sq || !is_approaching(target, round_center_)) continue;
             if (is_blocked_by_hv_check(target)) continue;
@@ -448,19 +403,22 @@ private:
         return false;
     }
 
+    // [수정] ID Swap 적용
     void process_roundabout_path_decision(Vehicle& my_cav, const std::string& zone, const std::string& my_id) {
         double dist_sq = (my_cav.pos - round_center_).dist_Sq();
-        if (dist_sq <= round_app_r_sq_ * 1.1 &&
-            dist_sq > (round_radius_ * round_radius_) &&
-            !my_cav.has_entered_roundabout) {
-
+        if (dist_sq <= round_app_r_sq_ * 1.1 && dist_sq > (round_radius_ * round_radius_) && !my_cav.has_entered_roundabout) {
             bool go_inside = false;
-            if (my_cav.id == "CAV_01" && vehicles_.count("CAV_04") && vehicles_["CAV_04"].active &&
-                (vehicles_["CAV_04"].pos - round_center_).dist_Sq() <= 2.5*2.5) {
+            // 2->4, 3->6, 4->7
+            if (my_cav.id == "CAV_01" &&
+                vehicles_.count("CAV_07") &&
+                vehicles_["CAV_07"].active &&
+                (vehicles_["CAV_07"].pos - round_center_).dist_Sq() <= 2.5*2.5) {
                 go_inside = true;
             }
-            else if (my_cav.id == "CAV_02" && vehicles_.count("CAV_03") && vehicles_["CAV_03"].active &&
-                     (vehicles_["CAV_03"].pos - round_center_).dist_Sq() <= 2.5*2.5) {
+            else if (my_cav.id == "CAV_04" &&
+                     vehicles_.count("CAV_06") &&
+                     vehicles_["CAV_06"].active &&
+                     (vehicles_["CAV_06"].pos - round_center_).dist_Sq() <= 2.5*2.5) {
                 go_inside = true;
             }
             
@@ -532,17 +490,6 @@ private:
         return false;
     }
 
-    void handle_safe_zone_recovery(Vehicle& my_cav, const std::string& my_id) {
-        if (my_cav.is_stopped) {
-            std_msgs::msg::Bool msg; msg.data = false; my_cav.pub_stop->publish(msg);
-            my_cav.is_stopped = false;
-            my_cav.stop_cause.clear();
-            clear_conflict_status(my_id);
-        } else {
-            std_msgs::msg::Bool msg; msg.data = false; my_cav.pub_stop->publish(msg);
-        }
-    }
-
     void control_loop() {
         if (vehicles_.empty()) return;
 
@@ -596,9 +543,7 @@ private:
                 }
             }
 
-            if (!my_cav_stop) {
-                clear_conflict_status(my_id);
-            }
+            if (!my_cav_stop) clear_conflict_status(my_id);
 
             if (my_cav.is_stopped != my_cav_stop) {
                 if (my_cav_stop) update_conflict_status(my_id, cause_id);
@@ -607,11 +552,8 @@ private:
             }
 
             my_cav.is_stopped = my_cav_stop;
-            if (my_cav_stop && my_cav.stop_cause.empty()) {
-                my_cav.stop_cause = cause_id;
-            } else if (!my_cav_stop) {
-                my_cav.stop_cause.clear();
-            }
+            if (my_cav_stop && my_cav.stop_cause.empty()) my_cav.stop_cause = cause_id;
+            else if (!my_cav_stop) my_cav.stop_cause.clear();
 
             if (my_cav.pub_stop) {
                 std_msgs::msg::Bool msg; msg.data = my_cav_stop; my_cav.pub_stop->publish(msg);
