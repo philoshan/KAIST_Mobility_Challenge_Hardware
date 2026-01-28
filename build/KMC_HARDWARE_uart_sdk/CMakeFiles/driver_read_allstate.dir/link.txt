@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/driver_read_allstate.dir/examples/Driver_Intermediate/driver_read_allstate.cpp.o  -o driver_read_allstate  libKMC_HARDWARE_uart.a -lpthread 

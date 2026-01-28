@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o  -o teleop_and_speed  libKMC_HARDWARE_uart.a -lpthread 
