@@ -1,20 +1,28 @@
 name: bridge_role_03
-from_domain: 4 # [주의] 대회 당일 실제 차량 도메인 번호로 수정 필수!
+from_domain: 4    # <--- [당일 수정] 실제 내 차량 도메인 ID 입력
 to_domain: 100
+
 topics:
-  - topic_name: /Ego_pose
+  # 1. 차량 -> 관제탑
+  /CAV_03/Ego_pose:
     type: geometry_msgs/msg/PoseStamped
-    remap_to: /CAV_03/Ego_pose
-    direction: from_source
-  - topic_name: /CAV_03/cmd_stop
+  
+  /CAV_03/change_waypoint:
     type: std_msgs/msg/Bool
-    remap_to: /cmd_stop
-    direction: to_source
-  - topic_name: /CAV_03/hv_vel
+
+  # 2. 관제탑 -> 차량 (역방향)
+  # [당일 수정] to_domain 값을 실제 내 차량 ID로 변경!
+  /CAV_03/cmd_stop:
+    type: std_msgs/msg/Bool
+    from_domain: 100
+    to_domain: 4
+
+  /CAV_03/hv_vel:
     type: std_msgs/msg/Float32
-    remap_to: /hv_vel
-    direction: to_source
-  - topic_name: /CAV_03/is_roundabout
+    from_domain: 100
+    to_domain: 4
+
+  /CAV_03/is_roundabout:
     type: std_msgs/msg/Bool
-    remap_to: /is_roundabout
-    direction: to_source
+    from_domain: 100
+    to_domain: 4

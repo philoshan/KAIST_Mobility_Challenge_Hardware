@@ -64,13 +64,13 @@ public:
 
         // [중요] Subscriber: 위치 정보
         // 하드웨어 드라이버가 쏘는 이름(Ego_pose)을 그대로 받습니다.
-        // 브릿지는 이 데이터를 퍼서 관제탑으로 보냅니다.
+        // 브릿지는 이 데이터를 퍼서 관제탑으로 보냅니다. 
         sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
             "Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
         // [중요] Publisher: 속도/조향 명령
         // 하드웨어 드라이버가 받는 이름(cmd_vel)으로 쏩니다.
-        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", qos_profile);
+        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
 
         // [중요] 관제탑 명령 수신 (브릿지 통과)
         // 브릿지 설정에서 /CAV_XX/cmd_stop -> /cmd_stop 으로 리매핑해서 줘야 함
