@@ -1,8 +1,8 @@
-# Install script for directory: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/simulator_launch
+# Install script for directory: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/simulator_launch
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chan/KAIST_Mobility_Challenge_Hardware/install/simulator_launch")
+  set(CMAKE_INSTALL_PREFIX "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/chan/KAIST_Mobility_Challenge_Hardware/build/simulator_launch/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -49,5 +49,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/chan/KAIST_Mobility_Challenge_Hardware/build/simulator_launch/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,8 +1,8 @@
-# Install script for directory: /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
+# Install script for directory: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chan/KAIST_Mobility_Challenge_Hardware/install/KMC_HARDWARE_uart_sdk")
+  set(CMAKE_INSTALL_PREFIX "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/KMC_HARDWARE_uart_sdk")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -33,15 +33,14 @@ public:
         // 2. 파라미터 설정 (Launch 파일의 'parameters'와 매칭)
         this->declare_parameter("original_way_path", "");
         this->declare_parameter("inside_way_path", "");
-        this->declare_parameter("k_gain", 2.0);
-        this->declare_parameter("max_steer", 0.7);
-        this->declare_parameter("target_speed", 2.0);
-        this->declare_parameter("center_to_front", 0.17);
-        this->declare_parameter("wheelbase", 0.33);
+        this->declare_parameter("k_gain", 1.2);
+        this->declare_parameter("max_steer", 0.56);
+        this->declare_parameter("target_speed", 0.5);
+        this->declare_parameter("center_to_front", 0.1055);
+        this->declare_parameter("wheelbase", 0.211);
         this->declare_parameter("steer_gain", 1.0);
-        this->declare_parameter("forward_step", 15);
-        this->declare_parameter("warmup_steps", 10);
-
+        this->declare_parameter("forward_step", 8);
+        this->declare_parameter("warmup_steps", 10);    
         // 3. 파라미터 로드
         original_csv_path_ = this->get_parameter("original_way_path").as_string();
         inside_csv_path_ = this->get_parameter("inside_way_path").as_string();
@@ -64,7 +63,7 @@ public:
         sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
             "Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
-        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", qos_profile);
+        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
 
         sub_stop_cmd_ = this->create_subscription<std_msgs::msg::Bool>(
             "cmd_stop", qos_profile, 

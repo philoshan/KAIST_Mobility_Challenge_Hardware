@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/read_speed.cpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/read_speed.cpp
 KMC_uart_client.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/KMC_uart_client.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/KMC_uart_client.hpp
 chrono
 -
 cstdio
@@ -22,7 +22,7 @@ thread
 variant
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
 cstdint
 -
 cstring
@@ -30,7 +30,7 @@ cstring
 vector
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
 cstddef
 -
 cstdint
@@ -38,11 +38,11 @@ cstdint
 string
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
 KMC_protocol.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
 KMC_serial_port.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
 cstdint
 -
 mutex

@@ -1,1 +1,1 @@
-/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/simulator_launch/launch/simulator_launch.py
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/simulator_launch/launch/simulator_launch.py

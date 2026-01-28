@@ -6,5 +6,5 @@ CXX_FLAGS =   -Wall -Wextra -Wpedantic -std=gnu++17
 
 CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DPLUGINLIB__DISABLE_BOOST_FUNCTIONS -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"domain_bridge\" -DSPDLOG_COMPILED_LIB
 
-CXX_INCLUDES = -I/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/include -I/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_generator_cpp -isystem /opt/ros/foxy/include -isystem /opt/ros/foxy/opt/yaml_cpp_vendor/include 
+CXX_INCLUDES = -I/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/include -I/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_generator_cpp -isystem /opt/ros/foxy/include -isystem /opt/ros/foxy/opt/yaml_cpp_vendor/include 
 

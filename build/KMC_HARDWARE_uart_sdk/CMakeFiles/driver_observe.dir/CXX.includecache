@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp
 KMC_driver.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/KMC_driver.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/KMC_driver.hpp
 chrono
 -
 cstdio
@@ -22,9 +22,9 @@ thread
 variant
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_driver.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_driver.hpp
 KMC_uart_client.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
 atomic
 -
 chrono
@@ -44,7 +44,7 @@ string
 thread
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
 cstdint
 -
 cstring
@@ -52,7 +52,7 @@ cstring
 vector
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
 cstddef
 -
 cstdint
@@ -60,11 +60,11 @@ cstdint
 string
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
 KMC_protocol.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
 KMC_serial_port.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
 cstdint
 -
 mutex

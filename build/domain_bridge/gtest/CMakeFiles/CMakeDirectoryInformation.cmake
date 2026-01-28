@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/opt/ros/foxy/src/gtest_vendor")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

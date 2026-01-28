@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_driver.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_driver.hpp
 KMC_uart_client.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
 atomic
 -
 chrono
@@ -28,7 +28,7 @@ string
 thread
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
 cstdint
 -
 cstring
@@ -36,7 +36,7 @@ cstring
 vector
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
 cstddef
 -
 cstdint
@@ -44,11 +44,11 @@ cstdint
 string
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_uart_client.hpp
 KMC_protocol.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_protocol.hpp
 KMC_serial_port.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/inc/KMC_serial_port.hpp
 cstdint
 -
 mutex
@@ -62,9 +62,9 @@ variant
 vector
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp
 KMC_driver.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.hpp
 algorithm
 -
 cmath
@@ -76,9 +76,9 @@ pthread.h
 sched.h
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp
 KMC_serial_port.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.hpp
 algorithm
 -
 cstring
@@ -98,9 +98,9 @@ termios.h
 unistd.h
 -
 
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp
 KMC_uart_client.hpp
-/home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.hpp
+/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.hpp
 algorithm
 -
 

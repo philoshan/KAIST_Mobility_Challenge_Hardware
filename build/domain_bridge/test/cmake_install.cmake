@@ -1,8 +1,8 @@
-# Install script for directory: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/test
+# Install script for directory: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chan/KAIST_Mobility_Challenge_Hardware/install/domain_bridge")
+  set(CMAKE_INSTALL_PREFIX "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/gmock/cmake_install.cmake")
+  include("/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/gmock/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/gtest/cmake_install.cmake")
+  include("/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/gtest/cmake_install.cmake")
 endif()
 

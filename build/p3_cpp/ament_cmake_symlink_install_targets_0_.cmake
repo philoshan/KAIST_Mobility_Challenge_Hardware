@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/chan/KAIST_Mobility_Challenge_Hardware/build/p3_cpp/control_p3" "/home/chan/KAIST_Mobility_Challenge_Hardware/build/p3_cpp/main_p3" "TARGETS" "control_p3" "main_p3" "DESTINATION" "lib/p3_cpp")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp/control_p3" "/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp/main_p3" "TARGETS" "control_p3" "main_p3" "DESTINATION" "lib/p3_cpp")

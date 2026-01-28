@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
+CMAKE_SOURCE_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk
+CMAKE_BINARY_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk
 
 # Include any dependencies generated for this target.
 include CMakeFiles/teleop_and_speed.dir/depend.make
@@ -58,17 +58,17 @@ include CMakeFiles/teleop_and_speed.dir/progress.make
 include CMakeFiles/teleop_and_speed.dir/flags.make
 
 CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o: CMakeFiles/teleop_and_speed.dir/flags.make
-CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o: /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/teleop_and_speed.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o -c /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/teleop_and_speed.cpp
+CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/teleop_and_speed.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o -c /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/teleop_and_speed.cpp
 
 CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/teleop_and_speed.cpp > CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/teleop_and_speed.cpp > CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.i
 
 CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/teleop_and_speed.cpp -o CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/UartClient_Advanced/teleop_and_speed.cpp -o CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.s
 
 # Object files for target teleop_and_speed
 teleop_and_speed_OBJECTS = \
@@ -81,7 +81,7 @@ teleop_and_speed: CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/t
 teleop_and_speed: CMakeFiles/teleop_and_speed.dir/build.make
 teleop_and_speed: libKMC_HARDWARE_uart.a
 teleop_and_speed: CMakeFiles/teleop_and_speed.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable teleop_and_speed"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable teleop_and_speed"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/teleop_and_speed.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -94,6 +94,6 @@ CMakeFiles/teleop_and_speed.dir/clean:
 .PHONY : CMakeFiles/teleop_and_speed.dir/clean
 
 CMakeFiles/teleop_and_speed.dir/depend:
-	cd /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles/teleop_and_speed.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles/teleop_and_speed.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/teleop_and_speed.dir/depend
 

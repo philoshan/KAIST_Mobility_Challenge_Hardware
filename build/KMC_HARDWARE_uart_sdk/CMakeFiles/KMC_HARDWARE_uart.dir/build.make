@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
+CMAKE_SOURCE_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk
+CMAKE_BINARY_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk
 
 # Include any dependencies generated for this target.
 include CMakeFiles/KMC_HARDWARE_uart.dir/depend.make
@@ -58,43 +58,43 @@ include CMakeFiles/KMC_HARDWARE_uart.dir/progress.make
 include CMakeFiles/KMC_HARDWARE_uart.dir/flags.make
 
 CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o: CMakeFiles/KMC_HARDWARE_uart.dir/flags.make
-CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o: /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o -c /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp
+CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o -c /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp
 
 CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp > CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp > CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.i
 
 CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_serial_port.cpp -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.s
 
 CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o: CMakeFiles/KMC_HARDWARE_uart.dir/flags.make
-CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o: /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o -c /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp
+CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o -c /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp
 
 CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp > CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp > CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.i
 
 CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_uart_client.cpp -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.s
 
 CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o: CMakeFiles/KMC_HARDWARE_uart.dir/flags.make
-CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o: /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o -c /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp
+CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o -c /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp
 
 CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp > CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp > CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.i
 
 CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/src/KMC_driver.cpp -o CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.s
 
 # Object files for target KMC_HARDWARE_uart
 KMC_HARDWARE_uart_OBJECTS = \
@@ -110,7 +110,7 @@ libKMC_HARDWARE_uart.a: CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp
 libKMC_HARDWARE_uart.a: CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o
 libKMC_HARDWARE_uart.a: CMakeFiles/KMC_HARDWARE_uart.dir/build.make
 libKMC_HARDWARE_uart.a: CMakeFiles/KMC_HARDWARE_uart.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libKMC_HARDWARE_uart.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libKMC_HARDWARE_uart.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/KMC_HARDWARE_uart.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/KMC_HARDWARE_uart.dir/link.txt --verbose=$(VERBOSE)
 
@@ -124,6 +124,6 @@ CMakeFiles/KMC_HARDWARE_uart.dir/clean:
 .PHONY : CMakeFiles/KMC_HARDWARE_uart.dir/clean
 
 CMakeFiles/KMC_HARDWARE_uart.dir/depend:
-	cd /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles/KMC_HARDWARE_uart.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles/KMC_HARDWARE_uart.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/KMC_HARDWARE_uart.dir/depend
 

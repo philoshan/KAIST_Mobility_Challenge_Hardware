@@ -1,1 +1,2 @@
-/home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/ament_cmake_environment_hooks/local_setup.dsv
+source;share/p3_cpp/environment/ament_prefix_path.sh
+source;share/p3_cpp/environment/path.sh

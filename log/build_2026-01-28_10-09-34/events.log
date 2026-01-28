@@ -1,0 +1,1404 @@
+[0.000000] (-) TimerEvent: {}
+[0.000647] (KMC_HARDWARE_uart_sdk) JobQueued: {'identifier': 'KMC_HARDWARE_uart_sdk', 'dependencies': OrderedDict()}
+[0.001321] (cav_controller) JobQueued: {'identifier': 'cav_controller', 'dependencies': OrderedDict()}
+[0.001606] (domain_bridge) JobQueued: {'identifier': 'domain_bridge', 'dependencies': OrderedDict()}
+[0.001730] (p3_cpp) JobQueued: {'identifier': 'p3_cpp', 'dependencies': OrderedDict()}
+[0.001921] (simulator_launch) JobQueued: {'identifier': 'simulator_launch', 'dependencies': OrderedDict()}
+[0.001996] (KMC_HARDWARE_uart_sdk) JobStarted: {'identifier': 'KMC_HARDWARE_uart_sdk'}
+[0.018973] (cav_controller) JobStarted: {'identifier': 'cav_controller'}
+[0.035911] (domain_bridge) JobStarted: {'identifier': 'domain_bridge'}
+[0.049260] (p3_cpp) JobStarted: {'identifier': 'p3_cpp'}
+[0.065624] (KMC_HARDWARE_uart_sdk) JobProgress: {'identifier': 'KMC_HARDWARE_uart_sdk', 'progress': 'cmake'}
+[0.067040] (KMC_HARDWARE_uart_sdk) Command: {'cmd': ['/usr/bin/cmake', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK', '-DCMAKE_INSTALL_PREFIX=/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/KMC_HARDWARE_uart_sdk'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge')]), 'shell': False}
+[0.099450] (-) TimerEvent: {}
+[0.200277] (-) TimerEvent: {}
+[0.300916] (-) TimerEvent: {}
+[0.401602] (-) TimerEvent: {}
+[0.502476] (-) TimerEvent: {}
+[0.594622] (domain_bridge) JobProgress: {'identifier': 'domain_bridge', 'progress': 'cmake'}
+[0.595956] (domain_bridge) Command: {'cmd': ['/usr/bin/cmake', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[0.603978] (-) TimerEvent: {}
+[0.606873] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'cmake'}
+[0.607979] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[0.680985] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.681768] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.682408] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.682637] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.682809] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.682955] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.683090] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.683221] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Looking for C++ include pthread.h\n'}
+[0.710153] (-) TimerEvent: {}
+[0.779013] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Looking for C++ include pthread.h - found\n'}
+[0.779680] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.810306] (-) TimerEvent: {}
+[0.908764] (domain_bridge) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.910400] (-) TimerEvent: {}
+[0.960667] (p3_cpp) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.010720] (-) TimerEvent: {}
+[1.100384] (p3_cpp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.105888] (domain_bridge) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.110844] (-) TimerEvent: {}
+[1.112889] (p3_cpp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[1.122945] (domain_bridge) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[1.150379] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.151001] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.211007] (-) TimerEvent: {}
+[1.311763] (-) TimerEvent: {}
+[1.329001] (domain_bridge) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[1.330848] (domain_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.358789] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.359278] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.375207] (p3_cpp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[1.378293] (p3_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.411979] (-) TimerEvent: {}
+[1.512737] (-) TimerEvent: {}
+[1.574388] (p3_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.596663] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.597228] (p3_cpp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.602210] (domain_bridge) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.602600] (p3_cpp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.602883] (p3_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.604830] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.607214] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.612868] (-) TimerEvent: {}
+[1.639498] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Generating done\n'}
+[1.645164] (domain_bridge) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.646989] (domain_bridge) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.647953] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'-- Build files have been written to: /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk\n'}
+[1.658392] (KMC_HARDWARE_uart_sdk) CommandEnded: {'returncode': 0}
+[1.659594] (KMC_HARDWARE_uart_sdk) JobProgress: {'identifier': 'KMC_HARDWARE_uart_sdk', 'progress': 'build'}
+[1.659671] (KMC_HARDWARE_uart_sdk) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk', '--', '-j4', '-l4'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge')]), 'shell': False}
+[1.660508] (domain_bridge) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.713157] (-) TimerEvent: {}
+[1.732590] (cav_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller/build', '--no-deps', 'symlink_data'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cav-06', 'SSH_CLIENT': '192.168.11.146 5463 22', 'LC_TIME': 'ko_KR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'BROWSER': '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/cav-06', 'OLDPWD': '/home/cav-06/KAIST_Mobility_Challenge_Hardware', 'TERM_PROGRAM_VERSION': '1.108.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'cav-06', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-cd849131e6.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.11.146 5463 192.168.10.193 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge'}, 'shell': False}
+[1.759119] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target KMC_HARDWARE_uart\x1b[0m\n'}
+[1.786226] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o\x1b[0m\n'}
+[1.793577] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o\x1b[0m\n'}
+[1.802872] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o\x1b[0m\n'}
+[1.813280] (-) TimerEvent: {}
+[1.874845] (p3_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.878202] (p3_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.913434] (-) TimerEvent: {}
+[1.989051] (domain_bridge) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.989569] (domain_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.013851] (-) TimerEvent: {}
+[2.115267] (-) TimerEvent: {}
+[2.163631] (p3_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.200447] (p3_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.201515] (p3_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.215233] (p3_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[2.215753] (-) TimerEvent: {}
+[2.316246] (-) TimerEvent: {}
+[2.332017] (p3_cpp) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[2.333128] (p3_cpp) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.416431] (-) TimerEvent: {}
+[2.454195] (domain_bridge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.511145] (domain_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.512126] (domain_bridge) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.516554] (-) TimerEvent: {}
+[2.518850] (domain_bridge) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[2.616845] (-) TimerEvent: {}
+[2.682441] (domain_bridge) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[2.683038] (domain_bridge) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.717050] (-) TimerEvent: {}
+[2.817979] (-) TimerEvent: {}
+[2.887878] (cav_controller) StdoutLine: {'line': b'running develop\n'}
+[2.918075] (-) TimerEvent: {}
+[3.019237] (-) TimerEvent: {}
+[3.058034] (p3_cpp) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.119397] (-) TimerEvent: {}
+[3.125553] (p3_cpp) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[3.219560] (-) TimerEvent: {}
+[3.264178] (p3_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.283650] (p3_cpp) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[3.319808] (-) TimerEvent: {}
+[3.420970] (-) TimerEvent: {}
+[3.509691] (domain_bridge) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.521117] (-) TimerEvent: {}
+[3.549320] (p3_cpp) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[3.552428] (cav_controller) StdoutLine: {'line': b'running egg_info\n'}
+[3.553046] (cav_controller) StdoutLine: {'line': b'creating cav_controller.egg-info\n'}
+[3.554030] (cav_controller) StdoutLine: {'line': b'writing cav_controller.egg-info/PKG-INFO\n'}
+[3.555421] (cav_controller) StdoutLine: {'line': b'writing dependency_links to cav_controller.egg-info/dependency_links.txt\n'}
+[3.556082] (cav_controller) StdoutLine: {'line': b'writing entry points to cav_controller.egg-info/entry_points.txt\n'}
+[3.556657] (cav_controller) StdoutLine: {'line': b'writing requirements to cav_controller.egg-info/requires.txt\n'}
+[3.557235] (cav_controller) StdoutLine: {'line': b'writing top-level names to cav_controller.egg-info/top_level.txt\n'}
+[3.560849] (cav_controller) StdoutLine: {'line': b"writing manifest file 'cav_controller.egg-info/SOURCES.txt'\n"}
+[3.591874] (domain_bridge) StdoutLine: {'line': b'-- Found rcl: 1.1.14 (/opt/ros/foxy/share/rcl/cmake)\n'}
+[3.621286] (-) TimerEvent: {}
+[3.627288] (cav_controller) StdoutLine: {'line': b"reading manifest file 'cav_controller.egg-info/SOURCES.txt'\n"}
+[3.628149] (cav_controller) StdoutLine: {'line': b"writing manifest file 'cav_controller.egg-info/SOURCES.txt'\n"}
+[3.655795] (p3_cpp) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[3.708889] (cav_controller) StdoutLine: {'line': b'running build_ext\n'}
+[3.709552] (cav_controller) StdoutLine: {'line': b'Creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages/site.py\n'}
+[3.714212] (cav_controller) StdoutLine: {'line': b'Creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages/cav-controller.egg-link (link to .)\n'}
+[3.716316] (cav_controller) StdoutLine: {'line': b'Installing echo_pose script to /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/cav_controller\n'}
+[3.717415] (cav_controller) StdoutLine: {'line': b'Installing p1_drive script to /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/cav_controller\n'}
+[3.717941] (domain_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.718335] (cav_controller) StdoutLine: {'line': b'Installing run_drive script to /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/cav_controller\n'}
+[3.719351] (cav_controller) StdoutLine: {'line': b'\n'}
+[3.719651] (cav_controller) StdoutLine: {'line': b'Installed /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller\n'}
+[3.720206] (cav_controller) StdoutLine: {'line': b'running symlink_data\n'}
+[3.720441] (cav_controller) StdoutLine: {'line': b'creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/share/ament_index\n'}
+[3.720630] (cav_controller) StdoutLine: {'line': b'creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/share/ament_index/resource_index\n'}
+[3.720941] (cav_controller) StdoutLine: {'line': b'creating /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/share/ament_index/resource_index/packages\n'}
+[3.721116] (cav_controller) StdoutLine: {'line': b'symbolically linking /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller/resource/cav_controller -> /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/share/ament_index/resource_index/packages\n'}
+[3.721262] (cav_controller) StdoutLine: {'line': b'symbolically linking /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller/package.xml -> /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/share/cav_controller\n'}
+[3.721398] (-) TimerEvent: {}
+[3.755935] (domain_bridge) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[3.819740] (cav_controller) CommandEnded: {'returncode': 0}
+[3.821644] (-) TimerEvent: {}
+[3.868436] (cav_controller) JobEnded: {'identifier': 'cav_controller', 'rc': 0}
+[3.873496] (simulator_launch) JobStarted: {'identifier': 'simulator_launch'}
+[3.917311] (simulator_launch) JobProgress: {'identifier': 'simulator_launch', 'progress': 'cmake'}
+[3.917888] (simulator_launch) Command: {'cmd': ['/usr/bin/cmake', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/simulator_launch', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[3.921890] (-) TimerEvent: {}
+[3.950829] (p3_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.022112] (-) TimerEvent: {}
+[4.117299] (simulator_launch) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[4.122662] (-) TimerEvent: {}
+[4.127610] (p3_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[4.134467] (p3_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.137132] (p3_cpp) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[4.170338] (domain_bridge) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[4.222862] (-) TimerEvent: {}
+[4.273205] (domain_bridge) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[4.292431] (simulator_launch) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[4.306545] (simulator_launch) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[4.323055] (-) TimerEvent: {}
+[4.423489] (p3_cpp) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[4.424021] (-) TimerEvent: {}
+[4.424352] (p3_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[4.524255] (-) TimerEvent: {}
+[4.573072] (domain_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.624454] (-) TimerEvent: {}
+[4.669316] (p3_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[4.670050] (p3_cpp) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[4.701730] (simulator_launch) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[4.704316] (simulator_launch) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.719893] (domain_bridge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[4.722962] (domain_bridge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.724556] (-) TimerEvent: {}
+[4.728323] (domain_bridge) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[4.824877] (-) TimerEvent: {}
+[4.925623] (-) TimerEvent: {}
+[4.948987] (p3_cpp) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[4.950928] (p3_cpp) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[4.962145] (simulator_launch) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.970164] (domain_bridge) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[4.971644] (domain_bridge) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[5.004580] (simulator_launch) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.005441] (simulator_launch) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.015966] (simulator_launch) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[5.026098] (-) TimerEvent: {}
+[5.126965] (-) TimerEvent: {}
+[5.213759] (p3_cpp) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[5.216562] (p3_cpp) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.227166] (-) TimerEvent: {}
+[5.257097] (domain_bridge) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[5.258029] (simulator_launch) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[5.260109] (domain_bridge) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[5.260448] (simulator_launch) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.327343] (-) TimerEvent: {}
+[5.429133] (-) TimerEvent: {}
+[5.450020] (simulator_launch) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.473388] (simulator_launch) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.474472] (simulator_launch) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.482356] (simulator_launch) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[5.486228] (domain_bridge) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[5.487361] (domain_bridge) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[5.529276] (-) TimerEvent: {}
+[5.552710] (simulator_launch) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[5.553374] (simulator_launch) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.619911] (p3_cpp) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[5.629452] (-) TimerEvent: {}
+[5.713113] (p3_cpp) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[5.729760] (-) TimerEvent: {}
+[5.747003] (domain_bridge) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[5.752177] (domain_bridge) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.801462] (domain_bridge) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[5.807955] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking CXX static library libKMC_HARDWARE_uart.a\x1b[0m\n'}
+[5.830041] (-) TimerEvent: {}
+[5.930671] (-) TimerEvent: {}
+[5.967529] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 20%] Built target KMC_HARDWARE_uart\n'}
+[5.972914] (p3_cpp) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[5.983246] (p3_cpp) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[5.984412] (p3_cpp) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[5.984935] (p3_cpp) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[5.995762] (p3_cpp) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[5.996569] (p3_cpp) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[5.999457] (p3_cpp) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[5.999954] (simulator_launch) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[6.003500] (p3_cpp) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.006188] (p3_cpp) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[6.016063] (p3_cpp) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[6.016728] (p3_cpp) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[6.020368] (p3_cpp) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.027440] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target read_allstate\x1b[0m\n'}
+[6.027842] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target high_rate_control\x1b[0m\n'}
+[6.030841] (p3_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.031248] (-) TimerEvent: {}
+[6.032394] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target teleop_and_speed\x1b[0m\n'}
+[6.040119] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target read_battery\x1b[0m\n'}
+[6.067320] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/read_allstate.dir/examples/UartClient_Advanced/read_allstate.cpp.o\x1b[0m\n'}
+[6.079365] (p3_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[6.083727] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/high_rate_control.dir/examples/Driver_Intermediate/high_rate_control.cpp.o\x1b[0m\n'}
+[6.094777] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o\x1b[0m\n'}
+[6.100510] (p3_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp\n'}
+[6.128362] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/read_battery.dir/examples/UartClient_Advanced/read_battery.cpp.o\x1b[0m\n'}
+[6.131409] (-) TimerEvent: {}
+[6.160968] (p3_cpp) CommandEnded: {'returncode': 0}
+[6.163458] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'build'}
+[6.163598] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp', '--', '-j4', '-l4'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[6.222624] (domain_bridge) StdoutLine: {'line': b'-- Found rosbag2_cpp: 0.3.11 (/opt/ros/foxy/share/rosbag2_cpp/cmake)\n'}
+[6.231594] (-) TimerEvent: {}
+[6.288879] (p3_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target control_p3\x1b[0m\n'}
+[6.331785] (-) TimerEvent: {}
+[6.398290] (p3_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target main_p3\x1b[0m\n'}
+[6.423475] (p3_cpp) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/control_p3.dir/src/control_p3.cpp.o\x1b[0m\n'}
+[6.431970] (-) TimerEvent: {}
+[6.450788] (simulator_launch) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.465090] (simulator_launch) StdoutLine: {'line': b'-- Generating done\n'}
+[6.474988] (simulator_launch) StdoutLine: {'line': b'-- Build files have been written to: /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch\n'}
+[6.495743] (domain_bridge) StdoutLine: {'line': b"-- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'\n"}
+[6.504190] (simulator_launch) CommandEnded: {'returncode': 0}
+[6.506732] (simulator_launch) JobProgress: {'identifier': 'simulator_launch', 'progress': 'build'}
+[6.506871] (simulator_launch) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch', '--', '-j4', '-l4'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[6.529982] (domain_bridge) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[6.532075] (-) TimerEvent: {}
+[6.600119] (p3_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/main_p3.dir/src/main_p3.cpp.o\x1b[0m\n'}
+[6.631111] (domain_bridge) StdoutLine: {'line': b'-- Found zstd_vendor: 0.3.11 (/opt/ros/foxy/share/zstd_vendor/cmake)\n'}
+[6.632494] (-) TimerEvent: {}
+[6.645429] (domain_bridge) StdoutLine: {'line': b'-- Found zstd: /opt/ros/foxy/lib/libzstd.so  \n'}
+[6.732682] (-) TimerEvent: {}
+[6.762992] (simulator_launch) CommandEnded: {'returncode': 0}
+[6.765361] (simulator_launch) JobProgress: {'identifier': 'simulator_launch', 'progress': 'install'}
+[6.832873] (-) TimerEvent: {}
+[6.838798] (simulator_launch) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[6.877969] (domain_bridge) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[6.912619] (simulator_launch) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.914021] (simulator_launch) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[6.920627] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/launch/simulator_launch.py\n'}
+[6.933066] (-) TimerEvent: {}
+[6.982122] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/ament_index/resource_index/package_run_dependencies/simulator_launch\n'}
+[7.010228] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/ament_index/resource_index/parent_prefix_path/simulator_launch\n'}
+[7.033219] (-) TimerEvent: {}
+[7.037881] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.sh\n'}
+[7.066884] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.dsv\n'}
+[7.095892] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/environment/path.sh\n'}
+[7.126884] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/environment/path.dsv\n'}
+[7.133377] (-) TimerEvent: {}
+[7.156145] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/local_setup.bash\n'}
+[7.185908] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/local_setup.sh\n'}
+[7.217254] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/local_setup.zsh\n'}
+[7.233589] (-) TimerEvent: {}
+[7.247083] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/local_setup.dsv\n'}
+[7.298126] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/package.dsv\n'}
+[7.333747] (-) TimerEvent: {}
+[7.375131] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/ament_index/resource_index/packages/simulator_launch\n'}
+[7.433912] (-) TimerEvent: {}
+[7.444131] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig.cmake\n'}
+[7.516926] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig-version.cmake\n'}
+[7.534087] (-) TimerEvent: {}
+[7.602371] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch/share/simulator_launch/package.xml\n'}
+[7.634291] (-) TimerEvent: {}
+[7.670369] (simulator_launch) CommandEnded: {'returncode': 0}
+[7.693092] (domain_bridge) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[7.725337] (simulator_launch) JobEnded: {'identifier': 'simulator_launch', 'rc': 0}
+[7.734527] (-) TimerEvent: {}
+[7.835894] (-) TimerEvent: {}
+[7.937597] (-) TimerEvent: {}
+[8.038498] (-) TimerEvent: {}
+[8.139386] (-) TimerEvent: {}
+[8.240222] (-) TimerEvent: {}
+[8.329645] (domain_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.340399] (-) TimerEvent: {}
+[8.395446] (domain_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.440567] (-) TimerEvent: {}
+[8.541750] (-) TimerEvent: {}
+[8.581356] (domain_bridge) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[8.585410] (domain_bridge) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[8.641923] (-) TimerEvent: {}
+[8.743130] (-) TimerEvent: {}
+[8.764645] (domain_bridge) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[8.769916] (domain_bridge) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[8.770651] (domain_bridge) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[8.771091] (domain_bridge) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[8.843372] (-) TimerEvent: {}
+[8.859521] (domain_bridge) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[8.943575] (-) TimerEvent: {}
+[9.044338] (-) TimerEvent: {}
+[9.099122] (domain_bridge) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[9.144528] (-) TimerEvent: {}
+[9.148466] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX executable read_allstate\x1b[0m\n'}
+[9.179209] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable read_battery\x1b[0m\n'}
+[9.204427] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX executable teleop_and_speed\x1b[0m\n'}
+[9.244728] (-) TimerEvent: {}
+[9.278537] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX executable high_rate_control\x1b[0m\n'}
+[9.344928] (-) TimerEvent: {}
+[9.445739] (-) TimerEvent: {}
+[9.546588] (-) TimerEvent: {}
+[9.626495] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 60%] Built target teleop_and_speed\n'}
+[9.646778] (-) TimerEvent: {}
+[9.651625] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target read_speed\x1b[0m\n'}
+[9.653618] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 60%] Built target read_allstate\n'}
+[9.706058] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/read_speed.dir/examples/UartClient_Advanced/read_speed.cpp.o\x1b[0m\n'}
+[9.727321] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 65%] Built target read_battery\n'}
+[9.739915] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target driver_observe\x1b[0m\n'}
+[9.746925] (-) TimerEvent: {}
+[9.802857] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 65%] Built target high_rate_control\n'}
+[9.804999] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target driver_demo\x1b[0m\n'}
+[9.827047] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o\x1b[0m\n'}
+[9.847084] (-) TimerEvent: {}
+[9.868527] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target driver_read_allstate\x1b[0m\n'}
+[9.901130] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/driver_demo.dir/examples/Driver_Basic/driver_demo.cpp.o\x1b[0m\n'}
+[9.947264] (-) TimerEvent: {}
+[9.956842] (domain_bridge) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[9.957372] (domain_bridge) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[9.957555] (domain_bridge) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[9.966859] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/driver_read_allstate.dir/examples/Driver_Intermediate/driver_read_allstate.cpp.o\x1b[0m\n'}
+[10.050147] (-) TimerEvent: {}
+[10.151088] (-) TimerEvent: {}
+[10.251809] (-) TimerEvent: {}
+[10.352497] (-) TimerEvent: {}
+[10.453226] (-) TimerEvent: {}
+[10.553996] (-) TimerEvent: {}
+[10.655201] (-) TimerEvent: {}
+[10.755887] (-) TimerEvent: {}
+[10.856601] (-) TimerEvent: {}
+[10.957338] (-) TimerEvent: {}
+[10.991848] (domain_bridge) StdoutLine: {'line': b"-- Found gmock sources under '/opt/ros/foxy/src/gmock_vendor': C++ tests using 'Google Mock' will be built\n"}
+[11.003552] (domain_bridge) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[11.057562] (-) TimerEvent: {}
+[11.082100] (domain_bridge) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[11.091534] (domain_bridge) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[11.094629] (domain_bridge) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/include>\n'}
+[11.095300] (domain_bridge) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[11.103460] (domain_bridge) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[11.104296] (domain_bridge) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[11.107585] (domain_bridge) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[11.111362] (domain_bridge) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[11.114364] (domain_bridge) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[11.122961] (domain_bridge) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[11.123646] (domain_bridge) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[11.126587] (domain_bridge) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[11.157737] (-) TimerEvent: {}
+[11.182758] (domain_bridge) StdoutLine: {'line': b'-- Configuring done\n'}
+[11.257985] (-) TimerEvent: {}
+[11.362146] (-) TimerEvent: {}
+[11.462889] (-) TimerEvent: {}
+[11.565230] (-) TimerEvent: {}
+[11.666461] (-) TimerEvent: {}
+[11.767816] (-) TimerEvent: {}
+[11.821416] (domain_bridge) StdoutLine: {'line': b'-- Generating done\n'}
+[11.868000] (-) TimerEvent: {}
+[11.969117] (-) TimerEvent: {}
+[11.993731] (domain_bridge) StdoutLine: {'line': b'-- Build files have been written to: /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge\n'}
+[12.069328] (-) TimerEvent: {}
+[12.147457] (domain_bridge) CommandEnded: {'returncode': 0}
+[12.150011] (domain_bridge) JobProgress: {'identifier': 'domain_bridge', 'progress': 'build'}
+[12.150147] (domain_bridge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge', '--', '-j4', '-l4'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[12.169556] (-) TimerEvent: {}
+[12.272182] (-) TimerEvent: {}
+[12.372963] (-) TimerEvent: {}
+[12.421110] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable read_speed\x1b[0m\n'}
+[12.438889] (domain_bridge) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[12.465660] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target gmock\x1b[0m\n'}
+[12.467389] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__cpp\x1b[0m\n'}
+[12.473139] (-) TimerEvent: {}
+[12.483882] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target gmock_main\x1b[0m\n'}
+[12.555286] (domain_bridge) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[12.573320] (-) TimerEvent: {}
+[12.601423] (domain_bridge) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/foxy/src/gtest_vendor/src/gtest-all.cc.o\x1b[0m\n'}
+[12.636810] (domain_bridge) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o\x1b[0m\n'}
+[12.673492] (-) TimerEvent: {}
+[12.774700] (-) TimerEvent: {}
+[12.875820] (-) TimerEvent: {}
+[12.976927] (-) TimerEvent: {}
+[13.059856] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 85%] Built target read_speed\n'}
+[13.077092] (-) TimerEvent: {}
+[13.144863] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable driver_demo\x1b[0m\n'}
+[13.177299] (-) TimerEvent: {}
+[13.278081] (-) TimerEvent: {}
+[13.378789] (-) TimerEvent: {}
+[13.479940] (-) TimerEvent: {}
+[13.581002] (-) TimerEvent: {}
+[13.682138] (-) TimerEvent: {}
+[13.783531] (-) TimerEvent: {}
+[13.801046] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable driver_read_allstate\x1b[0m\n'}
+[13.883730] (-) TimerEvent: {}
+[13.974420] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[ 95%] Built target driver_demo\n'}
+[13.983926] (-) TimerEvent: {}
+[14.031492] (domain_bridge) StdoutLine: {'line': b'[  6%] Built target domain_bridge__cpp\n'}
+[14.047853] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable driver_observe\x1b[0m\n'}
+[14.073521] (domain_bridge) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o\x1b[0m\n'}
+[14.084125] (-) TimerEvent: {}
+[14.185308] (-) TimerEvent: {}
+[14.286716] (-) TimerEvent: {}
+[14.388084] (-) TimerEvent: {}
+[14.389189] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_generator_c\x1b[0m\n'}
+[14.429470] (domain_bridge) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/domain_bridge__rosidl_generator_c.dir/rosidl_generator_c/domain_bridge/msg/detail/compressed_msg__functions.c.o\x1b[0m\n'}
+[14.464090] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[100%] Built target driver_read_allstate\n'}
+[14.488296] (-) TimerEvent: {}
+[14.589089] (-) TimerEvent: {}
+[14.691049] (-) TimerEvent: {}
+[14.694711] (domain_bridge) StdoutLine: {'line': b'[ 11%] \x1b[32m\x1b[1mLinking C shared library libdomain_bridge__rosidl_generator_c.so\x1b[0m\n'}
+[14.745300] (KMC_HARDWARE_uart_sdk) StdoutLine: {'line': b'[100%] Built target driver_observe\n'}
+[14.791243] (-) TimerEvent: {}
+[14.821740] (KMC_HARDWARE_uart_sdk) CommandEnded: {'returncode': 0}
+[14.851515] (KMC_HARDWARE_uart_sdk) JobEnded: {'identifier': 'KMC_HARDWARE_uart_sdk', 'rc': 0}
+[14.891436] (-) TimerEvent: {}
+[14.945024] (domain_bridge) StdoutLine: {'line': b'[ 11%] Built target domain_bridge__rosidl_generator_c\n'}
+[14.991637] (-) TimerEvent: {}
+[15.034880] (domain_bridge) StdoutLine: {'line': b'[ 13%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[15.091786] (-) TimerEvent: {}
+[15.192611] (-) TimerEvent: {}
+[15.293284] (-) TimerEvent: {}
+[15.393990] (-) TimerEvent: {}
+[15.494679] (-) TimerEvent: {}
+[15.595399] (-) TimerEvent: {}
+[15.596922] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[15.597660] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:225:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kstd::deque<double>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[15.598089] (p3_cpp) StderrLine: {'line': b'  225 |                             if (\x1b[01;35m\x1b[Khv_vel_buffer_.size() > vel_buffer_size_\x1b[m\x1b[K) {\n'}
+[15.598417] (p3_cpp) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.693145] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainTrafficController::process_roundabout_path_decision(Vehicle&, const string&, const string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[15.693880] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:451:79:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kzone\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[15.694305] (p3_cpp) StderrLine: {'line': b'  451 |     void process_roundabout_path_decision(Vehicle& my_cav, \x1b[01;35m\x1b[Kconst std::string& zone\x1b[m\x1b[K, const std::string& my_id) {\n'}
+[15.694630] (p3_cpp) StderrLine: {'line': b'      |                                                            \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[15.695012] (p3_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp:451:104:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmy_id\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[15.695320] (p3_cpp) StderrLine: {'line': b'  451 | ess_roundabout_path_decision(Vehicle& my_cav, const std::string& zone, \x1b[01;35m\x1b[Kconst std::string& my_id\x1b[m\x1b[K) {\n'}
+[15.695493] (-) TimerEvent: {}
+[15.696296] (p3_cpp) StderrLine: {'line': b'      |                                                                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[15.696628] (p3_cpp) StderrLine: {'line': b'\n'}
+[15.795693] (-) TimerEvent: {}
+[15.896853] (-) TimerEvent: {}
+[15.998106] (-) TimerEvent: {}
+[16.043968] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_typesupport_cpp\x1b[0m\n'}
+[16.098399] (-) TimerEvent: {}
+[16.143204] (domain_bridge) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/domain_bridge/msg/compressed_msg__type_support.cpp.o\x1b[0m\n'}
+[16.198651] (-) TimerEvent: {}
+[16.299838] (-) TimerEvent: {}
+[16.400697] (-) TimerEvent: {}
+[16.501606] (-) TimerEvent: {}
+[16.602561] (-) TimerEvent: {}
+[16.703903] (-) TimerEvent: {}
+[16.804684] (-) TimerEvent: {}
+[16.905569] (-) TimerEvent: {}
+[17.006812] (-) TimerEvent: {}
+[17.107712] (-) TimerEvent: {}
+[17.208615] (-) TimerEvent: {}
+[17.309413] (-) TimerEvent: {}
+[17.410286] (-) TimerEvent: {}
+[17.511239] (-) TimerEvent: {}
+[17.612243] (-) TimerEvent: {}
+[17.713173] (-) TimerEvent: {}
+[17.812821] (domain_bridge) StdoutLine: {'line': b'[ 16%] \x1b[32m\x1b[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[17.813348] (-) TimerEvent: {}
+[17.913993] (-) TimerEvent: {}
+[18.015248] (-) TimerEvent: {}
+[18.116092] (-) TimerEvent: {}
+[18.147827] (domain_bridge) StdoutLine: {'line': b'[ 16%] Built target domain_bridge__rosidl_typesupport_cpp\n'}
+[18.216300] (-) TimerEvent: {}
+[18.224397] (domain_bridge) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[18.316441] (-) TimerEvent: {}
+[18.417452] (-) TimerEvent: {}
+[18.518718] (-) TimerEvent: {}
+[18.619979] (-) TimerEvent: {}
+[18.720727] (-) TimerEvent: {}
+[18.821474] (-) TimerEvent: {}
+[18.922249] (-) TimerEvent: {}
+[19.023058] (-) TimerEvent: {}
+[19.123783] (-) TimerEvent: {}
+[19.224540] (-) TimerEvent: {}
+[19.325849] (-) TimerEvent: {}
+[19.427120] (-) TimerEvent: {}
+[19.446678] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[19.527309] (-) TimerEvent: {}
+[19.532501] (domain_bridge) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/domain_bridge/msg/detail/compressed_msg__type_support.cpp.o\x1b[0m\n'}
+[19.627476] (-) TimerEvent: {}
+[19.728654] (-) TimerEvent: {}
+[19.830106] (-) TimerEvent: {}
+[19.932264] (-) TimerEvent: {}
+[20.033507] (-) TimerEvent: {}
+[20.134842] (-) TimerEvent: {}
+[20.235515] (-) TimerEvent: {}
+[20.336475] (-) TimerEvent: {}
+[20.438047] (-) TimerEvent: {}
+[20.539448] (-) TimerEvent: {}
+[20.640929] (-) TimerEvent: {}
+[20.741754] (-) TimerEvent: {}
+[20.787906] (domain_bridge) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking CXX static library libgmock_main.a\x1b[0m\n'}
+[20.842309] (-) TimerEvent: {}
+[20.943279] (-) TimerEvent: {}
+[21.044130] (-) TimerEvent: {}
+[21.078266] (domain_bridge) StdoutLine: {'line': b'[ 22%] Built target gmock_main\n'}
+[21.144317] (-) TimerEvent: {}
+[21.173803] (domain_bridge) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[21.244473] (-) TimerEvent: {}
+[21.345335] (-) TimerEvent: {}
+[21.398799] (domain_bridge) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[21.445540] (-) TimerEvent: {}
+[21.546453] (-) TimerEvent: {}
+[21.647262] (-) TimerEvent: {}
+[21.748027] (-) TimerEvent: {}
+[21.808860] (domain_bridge) StdoutLine: {'line': b'[ 25%] Built target domain_bridge__rosidl_typesupport_introspection_cpp\n'}
+[21.848186] (-) TimerEvent: {}
+[21.908856] (domain_bridge) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[21.948352] (-) TimerEvent: {}
+[22.049002] (-) TimerEvent: {}
+[22.149660] (-) TimerEvent: {}
+[22.250334] (-) TimerEvent: {}
+[22.351020] (-) TimerEvent: {}
+[22.416814] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[22.451211] (-) TimerEvent: {}
+[22.472117] (domain_bridge) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/domain_bridge/msg/detail/dds_fastrtps/compressed_msg__type_support.cpp.o\x1b[0m\n'}
+[22.551395] (-) TimerEvent: {}
+[22.652168] (-) TimerEvent: {}
+[22.753514] (-) TimerEvent: {}
+[22.854848] (-) TimerEvent: {}
+[22.956247] (-) TimerEvent: {}
+[23.044036] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[23.056433] (-) TimerEvent: {}
+[23.135836] (domain_bridge) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding C object CMakeFiles/domain_bridge__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/domain_bridge/msg/detail/compressed_msg__type_support.c.o\x1b[0m\n'}
+[23.156631] (-) TimerEvent: {}
+[23.257359] (-) TimerEvent: {}
+[23.301095] (domain_bridge) StdoutLine: {'line': b'[ 32%] \x1b[32m\x1b[1mLinking C shared library libdomain_bridge__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[23.357553] (-) TimerEvent: {}
+[23.456457] (domain_bridge) StdoutLine: {'line': b'[ 32%] Built target domain_bridge__rosidl_typesupport_introspection_c\n'}
+[23.457642] (-) TimerEvent: {}
+[23.484048] (domain_bridge) StdoutLine: {'line': b'[ 33%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[23.557924] (-) TimerEvent: {}
+[23.658705] (-) TimerEvent: {}
+[23.759525] (-) TimerEvent: {}
+[23.860409] (-) TimerEvent: {}
+[23.961223] (-) TimerEvent: {}
+[24.062080] (-) TimerEvent: {}
+[24.119221] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_typesupport_c\x1b[0m\n'}
+[24.162264] (-) TimerEvent: {}
+[24.164140] (domain_bridge) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_c.dir/rosidl_typesupport_c/domain_bridge/msg/compressed_msg__type_support.cpp.o\x1b[0m\n'}
+[24.262447] (-) TimerEvent: {}
+[24.310785] (domain_bridge) StdoutLine: {'line': b'[ 37%] \x1b[32m\x1b[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_c.so\x1b[0m\n'}
+[24.362634] (-) TimerEvent: {}
+[24.464084] (-) TimerEvent: {}
+[24.540207] (domain_bridge) StdoutLine: {'line': b'[ 37%] Built target domain_bridge__rosidl_typesupport_c\n'}
+[24.564286] (-) TimerEvent: {}
+[24.663943] (domain_bridge) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[24.664539] (-) TimerEvent: {}
+[24.765502] (-) TimerEvent: {}
+[24.867526] (-) TimerEvent: {}
+[24.969141] (-) TimerEvent: {}
+[25.061570] (domain_bridge) StdoutLine: {'line': b'[ 38%] Built target domain_bridge__rosidl_typesupport_fastrtps_cpp\n'}
+[25.069318] (-) TimerEvent: {}
+[25.085435] (domain_bridge) StdoutLine: {'line': b'[ 40%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[25.169477] (-) TimerEvent: {}
+[25.270790] (-) TimerEvent: {}
+[25.372234] (-) TimerEvent: {}
+[25.473744] (-) TimerEvent: {}
+[25.575672] (-) TimerEvent: {}
+[25.675134] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[25.675646] (-) TimerEvent: {}
+[25.732014] (domain_bridge) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/domain_bridge/msg/detail/compressed_msg__type_support_c.cpp.o\x1b[0m\n'}
+[25.775864] (-) TimerEvent: {}
+[25.877077] (-) TimerEvent: {}
+[25.978368] (-) TimerEvent: {}
+[26.079703] (-) TimerEvent: {}
+[26.180968] (-) TimerEvent: {}
+[26.282264] (-) TimerEvent: {}
+[26.383607] (-) TimerEvent: {}
+[26.484991] (-) TimerEvent: {}
+[26.585739] (-) TimerEvent: {}
+[26.687083] (-) TimerEvent: {}
+[26.788461] (-) TimerEvent: {}
+[26.889851] (-) TimerEvent: {}
+[26.923793] (domain_bridge) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[26.990063] (-) TimerEvent: {}
+[27.090815] (-) TimerEvent: {}
+[27.112441] (domain_bridge) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX static library libgmock.a\x1b[0m\n'}
+[27.191262] (-) TimerEvent: {}
+[27.230742] (domain_bridge) StdoutLine: {'line': b'[ 45%] Built target domain_bridge__rosidl_typesupport_fastrtps_c\n'}
+[27.260473] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge\x1b[0m\n'}
+[27.288374] (domain_bridge) StdoutLine: {'line': b'[ 45%] Built target domain_bridge\n'}
+[27.291418] (-) TimerEvent: {}
+[27.317558] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge_lib\x1b[0m\n'}
+[27.320915] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__py\x1b[0m\n'}
+[27.334194] (domain_bridge) StdoutLine: {'line': b'[ 45%] Built target gmock\n'}
+[27.360057] (domain_bridge) StdoutLine: {'line': b'[ 47%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[27.391591] (-) TimerEvent: {}
+[27.492272] (-) TimerEvent: {}
+[27.591133] (domain_bridge) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/compress_messages.cpp.o\x1b[0m\n'}
+[27.592372] (-) TimerEvent: {}
+[27.602440] (domain_bridge) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/domain_bridge.cpp.o\x1b[0m\n'}
+[27.619732] (domain_bridge) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/domain_bridge_options.cpp.o\x1b[0m\n'}
+[27.692560] (-) TimerEvent: {}
+[27.793575] (-) TimerEvent: {}
+[27.894283] (-) TimerEvent: {}
+[27.995337] (-) TimerEvent: {}
+[28.096422] (-) TimerEvent: {}
+[28.197566] (-) TimerEvent: {}
+[28.298271] (-) TimerEvent: {}
+[28.398949] (-) TimerEvent: {}
+[28.499672] (-) TimerEvent: {}
+[28.600394] (-) TimerEvent: {}
+[28.701224] (-) TimerEvent: {}
+[28.802002] (-) TimerEvent: {}
+[28.902727] (-) TimerEvent: {}
+[29.003468] (-) TimerEvent: {}
+[29.036183] (domain_bridge) StdoutLine: {'line': b'[ 52%] Built target domain_bridge__py\n'}
+[29.053413] (domain_bridge) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/generic_publisher.cpp.o\x1b[0m\n'}
+[29.075440] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__python\x1b[0m\n'}
+[29.103654] (-) TimerEvent: {}
+[29.123433] (domain_bridge) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/generic_subscription.cpp.o\x1b[0m\n'}
+[29.164578] (domain_bridge) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/domain_bridge__python.dir/rosidl_generator_py/domain_bridge/msg/_compressed_msg_s.c.o\x1b[0m\n'}
+[29.203836] (-) TimerEvent: {}
+[29.305293] (-) TimerEvent: {}
+[29.406729] (-) TimerEvent: {}
+[29.508276] (-) TimerEvent: {}
+[29.609600] (-) TimerEvent: {}
+[29.668610] (domain_bridge) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/domain_bridge/libdomain_bridge__python.so\x1b[0m\n'}
+[29.709792] (-) TimerEvent: {}
+[29.810807] (-) TimerEvent: {}
+[29.911650] (-) TimerEvent: {}
+[30.012397] (-) TimerEvent: {}
+[30.015318] (domain_bridge) StdoutLine: {'line': b'[ 59%] Built target domain_bridge__python\n'}
+[30.110612] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[30.112513] (-) TimerEvent: {}
+[30.213246] (-) TimerEvent: {}
+[30.259038] (domain_bridge) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/domain_bridge__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/domain_bridge/_domain_bridge_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[30.313414] (-) TimerEvent: {}
+[30.414316] (-) TimerEvent: {}
+[30.515082] (-) TimerEvent: {}
+[30.615970] (-) TimerEvent: {}
+[30.716827] (-) TimerEvent: {}
+[30.786989] (domain_bridge) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/domain_bridge/domain_bridge_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[30.817034] (-) TimerEvent: {}
+[30.918888] (-) TimerEvent: {}
+[31.020435] (-) TimerEvent: {}
+[31.029836] (domain_bridge) StdoutLine: {'line': b'[ 62%] Built target domain_bridge__rosidl_typesupport_introspection_c__pyext\n'}
+[31.120635] (-) TimerEvent: {}
+[31.123784] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[31.220812] (-) TimerEvent: {}
+[31.245808] (domain_bridge) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding C object CMakeFiles/domain_bridge__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/domain_bridge/_domain_bridge_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[31.320995] (-) TimerEvent: {}
+[31.421810] (-) TimerEvent: {}
+[31.522685] (-) TimerEvent: {}
+[31.623532] (-) TimerEvent: {}
+[31.724355] (-) TimerEvent: {}
+[31.806953] (domain_bridge) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/domain_bridge/domain_bridge_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[31.824442] (-) TimerEvent: {}
+[31.925202] (-) TimerEvent: {}
+[32.010554] (domain_bridge) StdoutLine: {'line': b'[ 66%] Built target domain_bridge__rosidl_typesupport_c__pyext\n'}
+[32.025384] (-) TimerEvent: {}
+[32.112065] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[32.125609] (-) TimerEvent: {}
+[32.226505] (-) TimerEvent: {}
+[32.268173] (domain_bridge) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding C object CMakeFiles/domain_bridge__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/domain_bridge/_domain_bridge_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[32.326691] (-) TimerEvent: {}
+[32.427471] (-) TimerEvent: {}
+[32.528196] (-) TimerEvent: {}
+[32.628939] (-) TimerEvent: {}
+[32.663406] (domain_bridge) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/domain_bridge/domain_bridge_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[32.729134] (-) TimerEvent: {}
+[32.829843] (-) TimerEvent: {}
+[32.931189] (-) TimerEvent: {}
+[33.011744] (domain_bridge) StdoutLine: {'line': b'[ 69%] Built target domain_bridge__rosidl_typesupport_fastrtps_c__pyext\n'}
+[33.031371] (-) TimerEvent: {}
+[33.060313] (domain_bridge) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/parse_domain_bridge_yaml_config.cpp.o\x1b[0m\n'}
+[33.131572] (-) TimerEvent: {}
+[33.233889] (-) TimerEvent: {}
+[33.335710] (-) TimerEvent: {}
+[33.436586] (-) TimerEvent: {}
+[33.537317] (-) TimerEvent: {}
+[33.638112] (-) TimerEvent: {}
+[33.738860] (-) TimerEvent: {}
+[33.839620] (-) TimerEvent: {}
+[33.940376] (-) TimerEvent: {}
+[34.041126] (-) TimerEvent: {}
+[34.142371] (-) TimerEvent: {}
+[34.243703] (-) TimerEvent: {}
+[34.345246] (-) TimerEvent: {}
+[34.446940] (-) TimerEvent: {}
+[34.548978] (-) TimerEvent: {}
+[34.649724] (-) TimerEvent: {}
+[34.750619] (-) TimerEvent: {}
+[34.851352] (-) TimerEvent: {}
+[34.952131] (-) TimerEvent: {}
+[35.052894] (-) TimerEvent: {}
+[35.153664] (-) TimerEvent: {}
+[35.254758] (-) TimerEvent: {}
+[35.355490] (-) TimerEvent: {}
+[35.456217] (-) TimerEvent: {}
+[35.557095] (-) TimerEvent: {}
+[35.658067] (-) TimerEvent: {}
+[35.758831] (-) TimerEvent: {}
+[35.859561] (-) TimerEvent: {}
+[35.960405] (-) TimerEvent: {}
+[36.061100] (-) TimerEvent: {}
+[36.128298] (p3_cpp) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable main_p3\x1b[0m\n'}
+[36.161285] (-) TimerEvent: {}
+[36.262065] (-) TimerEvent: {}
+[36.362798] (-) TimerEvent: {}
+[36.463657] (-) TimerEvent: {}
+[36.564870] (-) TimerEvent: {}
+[36.665645] (-) TimerEvent: {}
+[36.766601] (-) TimerEvent: {}
+[36.867347] (-) TimerEvent: {}
+[36.968061] (-) TimerEvent: {}
+[37.068802] (-) TimerEvent: {}
+[37.170050] (-) TimerEvent: {}
+[37.271193] (-) TimerEvent: {}
+[37.305517] (p3_cpp) StdoutLine: {'line': b'[ 75%] Built target main_p3\n'}
+[37.371384] (-) TimerEvent: {}
+[37.472156] (-) TimerEvent: {}
+[37.573288] (-) TimerEvent: {}
+[37.674032] (-) TimerEvent: {}
+[37.774724] (-) TimerEvent: {}
+[37.875437] (-) TimerEvent: {}
+[37.976193] (-) TimerEvent: {}
+[38.076920] (-) TimerEvent: {}
+[38.177768] (-) TimerEvent: {}
+[38.279087] (-) TimerEvent: {}
+[38.380317] (-) TimerEvent: {}
+[38.481727] (-) TimerEvent: {}
+[38.583169] (-) TimerEvent: {}
+[38.684020] (-) TimerEvent: {}
+[38.785489] (-) TimerEvent: {}
+[38.887119] (-) TimerEvent: {}
+[38.988443] (-) TimerEvent: {}
+[39.089306] (-) TimerEvent: {}
+[39.177660] (domain_bridge) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/service_bridge_options.cpp.o\x1b[0m\n'}
+[39.189464] (-) TimerEvent: {}
+[39.290639] (-) TimerEvent: {}
+[39.391924] (-) TimerEvent: {}
+[39.492529] (-) TimerEvent: {}
+[39.593175] (-) TimerEvent: {}
+[39.696418] (-) TimerEvent: {}
+[39.797034] (-) TimerEvent: {}
+[39.897649] (-) TimerEvent: {}
+[39.998317] (-) TimerEvent: {}
+[40.098936] (-) TimerEvent: {}
+[40.199618] (-) TimerEvent: {}
+[40.300289] (-) TimerEvent: {}
+[40.400966] (-) TimerEvent: {}
+[40.457191] (domain_bridge) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/topic_bridge_options.cpp.o\x1b[0m\n'}
+[40.501160] (-) TimerEvent: {}
+[40.602509] (-) TimerEvent: {}
+[40.703339] (-) TimerEvent: {}
+[40.804122] (-) TimerEvent: {}
+[40.904869] (-) TimerEvent: {}
+[41.005525] (-) TimerEvent: {}
+[41.106519] (-) TimerEvent: {}
+[41.207964] (-) TimerEvent: {}
+[41.308833] (-) TimerEvent: {}
+[41.410223] (-) TimerEvent: {}
+[41.511468] (-) TimerEvent: {}
+[41.612667] (-) TimerEvent: {}
+[41.714011] (-) TimerEvent: {}
+[41.815487] (-) TimerEvent: {}
+[41.916950] (-) TimerEvent: {}
+[42.018176] (-) TimerEvent: {}
+[42.119460] (-) TimerEvent: {}
+[42.220750] (-) TimerEvent: {}
+[42.321574] (-) TimerEvent: {}
+[42.361978] (domain_bridge) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/utils.cpp.o\x1b[0m\n'}
+[42.421777] (-) TimerEvent: {}
+[42.522607] (-) TimerEvent: {}
+[42.623363] (-) TimerEvent: {}
+[42.724095] (-) TimerEvent: {}
+[42.825025] (-) TimerEvent: {}
+[42.925762] (-) TimerEvent: {}
+[43.026714] (-) TimerEvent: {}
+[43.031492] (domain_bridge) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/qos_options.cpp.o\x1b[0m\n'}
+[43.126909] (-) TimerEvent: {}
+[43.164981] (p3_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable control_p3\x1b[0m\n'}
+[43.227365] (-) TimerEvent: {}
+[43.328117] (-) TimerEvent: {}
+[43.429736] (-) TimerEvent: {}
+[43.531517] (-) TimerEvent: {}
+[43.633002] (-) TimerEvent: {}
+[43.734874] (-) TimerEvent: {}
+[43.835967] (-) TimerEvent: {}
+[43.937013] (-) TimerEvent: {}
+[44.037704] (-) TimerEvent: {}
+[44.073260] (p3_cpp) StdoutLine: {'line': b'[100%] Built target control_p3\n'}
+[44.100211] (p3_cpp) CommandEnded: {'returncode': 0}
+[44.102104] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'install'}
+[44.102653] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/p3_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[44.128454] (p3_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[44.129320] (p3_cpp) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[44.130527] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/lib/p3_cpp/control_p3\n'}
+[44.137849] (-) TimerEvent: {}
+[44.151352] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/lib/p3_cpp/main_p3\n'}
+[44.171714] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/launch/cav_launch.py\n'}
+[44.191960] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/launch/server_launch.py\n'}
+[44.214348] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/Readme.md\n'}
+[44.233476] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/cav01p3.csv\n'}
+[44.238003] (-) TimerEvent: {}
+[44.254867] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/cav01p3_inside.csv\n'}
+[44.275058] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/cav04p3.csv\n'}
+[44.294103] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/cav04p3_inside.csv\n'}
+[44.313801] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/cav06p3.csv\n'}
+[44.334715] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/cav06p3_inside.csv\n'}
+[44.338150] (-) TimerEvent: {}
+[44.354543] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/cav07p3.csv\n'}
+[44.374397] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/cav07p3_inside.csv\n'}
+[44.394171] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/cav1p1.csv\n'}
+[44.413730] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/csv_to_json.py\n'}
+[44.432872] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/node_info.png\n'}
+[44.438292] (-) TimerEvent: {}
+[44.452422] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/p1_1.csv\n'}
+[44.471944] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/p1_2.csv\n'}
+[44.491691] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/path_generator.py\n'}
+[44.511461] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/10_13.csv\n'}
+[44.532633] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/11_16.csv\n'}
+[44.538440] (-) TimerEvent: {}
+[44.552688] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/12_15.csv\n'}
+[44.572222] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/13_14.csv\n'}
+[44.591903] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/14_17.csv\n'}
+[44.611282] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/15_18.csv\n'}
+[44.630932] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/15_60.csv\n'}
+[44.638584] (-) TimerEvent: {}
+[44.650597] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/16_19.csv\n'}
+[44.670465] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/16_61.csv\n'}
+[44.689888] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/17_20.csv\n'}
+[44.709650] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/18_21.csv\n'}
+[44.729836] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/19_22.csv\n'}
+[44.738733] (-) TimerEvent: {}
+[44.749439] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/1_3.csv\n'}
+[44.769581] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/20_23.csv\n'}
+[44.789583] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/21_24.csv\n'}
+[44.809417] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/21_51.csv\n'}
+[44.829101] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/22_25.csv\n'}
+[44.838879] (-) TimerEvent: {}
+[44.849544] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/22_50.csv\n'}
+[44.871001] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/23_26.csv\n'}
+[44.890660] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/24_27.csv\n'}
+[44.909818] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/24_37.csv\n'}
+[44.931280] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/25_28.csv\n'}
+[44.939043] (-) TimerEvent: {}
+[44.951295] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/25_36.csv\n'}
+[44.972669] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/26_29.csv\n'}
+[44.992372] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/27_30.csv\n'}
+[45.012101] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/27_31.csv\n'}
+[45.031744] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/28_31.csv\n'}
+[45.039190] (-) TimerEvent: {}
+[45.051823] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/28_32.csv\n'}
+[45.071797] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/29_2.csv\n'}
+[45.092166] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/2_4.csv\n'}
+[45.110973] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/30_1.csv\n'}
+[45.131099] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/31_1.csv\n'}
+[45.139351] (-) TimerEvent: {}
+[45.151024] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/32_5.csv\n'}
+[45.170809] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/33_31.csv\n'}
+[45.190928] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/34_27.csv\n'}
+[45.210452] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/35_28.csv\n'}
+[45.230763] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/36_38.csv\n'}
+[45.239493] (-) TimerEvent: {}
+[45.250459] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/37_38.csv\n'}
+[45.270140] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/37_39.csv\n'}
+[45.289707] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/38_41.csv\n'}
+[45.309365] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/38_48.csv\n'}
+[45.328984] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/38_49.csv\n'}
+[45.339649] (-) TimerEvent: {}
+[45.349140] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/39_40.csv\n'}
+[45.369712] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/39_49.csv\n'}
+[45.390604] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/3_33.csv\n'}
+[45.410124] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/3_6.csv\n'}
+[45.430517] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/3_7.csv\n'}
+[45.439783] (-) TimerEvent: {}
+[45.450757] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/40_43.csv\n'}
+[45.469664] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/40_63.csv\n'}
+[45.489351] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/41_42.csv\n'}
+[45.508717] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/41_43.csv\n'}
+[45.528123] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/41_62.csv\n'}
+[45.539964] (-) TimerEvent: {}
+[45.548869] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/42_8.csv\n'}
+[45.569427] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/43_9.csv\n'}
+[45.589136] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/44_63.csv\n'}
+[45.608464] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/45_62.csv\n'}
+[45.628477] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/46_40.csv\n'}
+[45.640120] (-) TimerEvent: {}
+[45.648693] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/46_41.csv\n'}
+[45.669576] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/47_41.csv\n'}
+[45.688977] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/48_53.csv\n'}
+[45.708936] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/48_58.csv\n'}
+[45.735027] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/49_55.csv\n'}
+[45.740258] (-) TimerEvent: {}
+[45.754562] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/49_59.csv\n'}
+[45.775114] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/4_7.csv\n'}
+[45.795213] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/50_48.csv\n'}
+[45.815332] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/50_54.csv\n'}
+[45.836069] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/51_46.csv\n'}
+[45.840372] (-) TimerEvent: {}
+[45.855864] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/51_55.csv\n'}
+[45.876274] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/52_24.csv\n'}
+[45.896913] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/53_25.csv\n'}
+[45.916641] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/54_11.csv\n'}
+[45.936337] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/55_12.csv\n'}
+[45.940510] (-) TimerEvent: {}
+[45.956511] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/56_52.csv\n'}
+[45.976676] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/56_59.csv\n'}
+[45.996583] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/57_47.csv\n'}
+[46.015990] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/57_53.csv\n'}
+[46.035407] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/58_19.csv\n'}
+[46.040626] (-) TimerEvent: {}
+[46.054458] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/59_18.csv\n'}
+[46.074686] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/5_45.csv\n'}
+[46.093746] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/5_8.csv\n'}
+[46.113495] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/60_46.csv\n'}
+[46.126939] (domain_bridge) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libdomain_bridge.so\x1b[0m\n'}
+[46.129782] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/60_52.csv\n'}
+[46.140788] (-) TimerEvent: {}
+[46.146645] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/61_47.csv\n'}
+[46.165776] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/61_54.csv\n'}
+[46.187177] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/62_35.csv\n'}
+[46.209584] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/62_38.csv\n'}
+[46.233531] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/63_34.csv\n'}
+[46.241121] (-) TimerEvent: {}
+[46.258960] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/63_39.csv\n'}
+[46.280126] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/6_44.csv\n'}
+[46.304655] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/6_9.csv\n'}
+[46.325889] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/7_10.csv\n'}
+[46.341166] (-) TimerEvent: {}
+[46.348389] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/7_9.csv\n'}
+[46.369426] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/8_11.csv\n'}
+[46.390186] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/8_57.csv\n'}
+[46.409688] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/9_12.csv\n'}
+[46.429313] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/tool/waypoint/9_56.csv\n'}
+[46.441345] (-) TimerEvent: {}
+[46.449634] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/config/bridge01.yaml\n'}
+[46.470980] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/config/bridge04.yaml\n'}
+[46.491021] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/config/bridge07.yaml\n'}
+[46.511260] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/config/bridge_06.yaml\n'}
+[46.531754] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/ament_index/resource_index/package_run_dependencies/p3_cpp\n'}
+[46.541524] (-) TimerEvent: {}
+[46.552587] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/ament_index/resource_index/parent_prefix_path/p3_cpp\n'}
+[46.572682] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.sh\n'}
+[46.591585] (domain_bridge) StdoutLine: {'line': b'[ 79%] Built target domain_bridge_lib\n'}
+[46.592142] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.dsv\n'}
+[46.609908] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target domain_bridge_exec\x1b[0m\n'}
+[46.610916] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/environment/path.sh\n'}
+[46.629396] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/environment/path.dsv\n'}
+[46.641664] (-) TimerEvent: {}
+[46.648697] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/local_setup.bash\n'}
+[46.668127] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/local_setup.sh\n'}
+[46.676294] (domain_bridge) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.o\x1b[0m\n'}
+[46.686959] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/local_setup.zsh\n'}
+[46.706712] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/local_setup.dsv\n'}
+[46.725767] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/package.dsv\n'}
+[46.741841] (-) TimerEvent: {}
+[46.745453] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/ament_index/resource_index/packages/p3_cpp\n'}
+[46.766813] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig.cmake\n'}
+[46.787466] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig-version.cmake\n'}
+[46.806816] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp/share/p3_cpp/package.xml\n'}
+[46.830372] (p3_cpp) CommandEnded: {'returncode': 0}
+[46.842429] (-) TimerEvent: {}
+[46.861111] (p3_cpp) JobEnded: {'identifier': 'p3_cpp', 'rc': 0}
+[46.942621] (-) TimerEvent: {}
+[47.043331] (-) TimerEvent: {}
+[47.144043] (-) TimerEvent: {}
+[47.244753] (-) TimerEvent: {}
+[47.345476] (-) TimerEvent: {}
+[47.446190] (-) TimerEvent: {}
+[47.546905] (-) TimerEvent: {}
+[47.647643] (-) TimerEvent: {}
+[47.748330] (-) TimerEvent: {}
+[47.849012] (-) TimerEvent: {}
+[47.949695] (-) TimerEvent: {}
+[48.050428] (-) TimerEvent: {}
+[48.151143] (-) TimerEvent: {}
+[48.251852] (-) TimerEvent: {}
+[48.352560] (-) TimerEvent: {}
+[48.453309] (-) TimerEvent: {}
+[48.554177] (-) TimerEvent: {}
+[48.654893] (-) TimerEvent: {}
+[48.672574] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target test_parse_domain_bridge_yaml_config\x1b[0m\n'}
+[48.736692] (domain_bridge) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object test/CMakeFiles/test_parse_domain_bridge_yaml_config.dir/domain_bridge/test_parse_domain_bridge_yaml_config.cpp.o\x1b[0m\n'}
+[48.755070] (-) TimerEvent: {}
+[48.856475] (-) TimerEvent: {}
+[48.957651] (-) TimerEvent: {}
+[49.058513] (-) TimerEvent: {}
+[49.159325] (-) TimerEvent: {}
+[49.260580] (-) TimerEvent: {}
+[49.361610] (-) TimerEvent: {}
+[49.462697] (-) TimerEvent: {}
+[49.563538] (-) TimerEvent: {}
+[49.664341] (-) TimerEvent: {}
+[49.727680] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target test_qos_matching__rmw_fastrtps_cpp\x1b[0m\n'}
+[49.764526] (-) TimerEvent: {}
+[49.819708] (domain_bridge) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object test/CMakeFiles/test_qos_matching__rmw_fastrtps_cpp.dir/domain_bridge/test_qos_matching.cpp.o\x1b[0m\n'}
+[49.864712] (-) TimerEvent: {}
+[49.966111] (-) TimerEvent: {}
+[50.067820] (-) TimerEvent: {}
+[50.168641] (-) TimerEvent: {}
+[50.269910] (-) TimerEvent: {}
+[50.371382] (-) TimerEvent: {}
+[50.472752] (-) TimerEvent: {}
+[50.574189] (-) TimerEvent: {}
+[50.675874] (-) TimerEvent: {}
+[50.777558] (-) TimerEvent: {}
+[50.822720] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target test_domain_bridge_end_to_end__rmw_fastrtps_cpp\x1b[0m\n'}
+[50.876877] (domain_bridge) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking CXX executable domain_bridge\x1b[0m\n'}
+[50.877896] (-) TimerEvent: {}
+[50.979039] (-) TimerEvent: {}
+[51.057463] (domain_bridge) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object test/CMakeFiles/test_domain_bridge_end_to_end__rmw_fastrtps_cpp.dir/domain_bridge/test_domain_bridge_end_to_end.cpp.o\x1b[0m\n'}
+[51.079231] (-) TimerEvent: {}
+[51.180380] (-) TimerEvent: {}
+[51.252716] (domain_bridge) StdoutLine: {'line': b'[ 88%] Built target domain_bridge_exec\n'}
+[51.280782] (-) TimerEvent: {}
+[51.306060] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target test_domain_bridge_services__rmw_fastrtps_cpp\x1b[0m\n'}
+[51.381054] (-) TimerEvent: {}
+[51.409819] (domain_bridge) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding CXX object test/CMakeFiles/test_domain_bridge_services__rmw_fastrtps_cpp.dir/domain_bridge/test_domain_bridge_services.cpp.o\x1b[0m\n'}
+[51.481253] (-) TimerEvent: {}
+[51.582744] (-) TimerEvent: {}
+[51.684187] (-) TimerEvent: {}
+[51.786840] (-) TimerEvent: {}
+[51.888560] (-) TimerEvent: {}
+[51.990188] (-) TimerEvent: {}
+[52.092071] (-) TimerEvent: {}
+[52.193536] (-) TimerEvent: {}
+[52.295206] (-) TimerEvent: {}
+[52.396864] (-) TimerEvent: {}
+[52.498121] (-) TimerEvent: {}
+[52.599509] (-) TimerEvent: {}
+[52.700230] (-) TimerEvent: {}
+[52.801089] (-) TimerEvent: {}
+[52.901998] (-) TimerEvent: {}
+[53.002862] (-) TimerEvent: {}
+[53.103755] (-) TimerEvent: {}
+[53.204997] (-) TimerEvent: {}
+[53.305959] (-) TimerEvent: {}
+[53.407220] (-) TimerEvent: {}
+[53.508180] (-) TimerEvent: {}
+[53.609056] (-) TimerEvent: {}
+[53.709906] (-) TimerEvent: {}
+[53.810863] (-) TimerEvent: {}
+[53.911718] (-) TimerEvent: {}
+[54.012614] (-) TimerEvent: {}
+[54.113834] (-) TimerEvent: {}
+[54.215195] (-) TimerEvent: {}
+[54.316975] (-) TimerEvent: {}
+[54.417869] (-) TimerEvent: {}
+[54.518664] (-) TimerEvent: {}
+[54.563395] (domain_bridge) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX executable test_parse_domain_bridge_yaml_config\x1b[0m\n'}
+[54.618850] (-) TimerEvent: {}
+[54.719660] (-) TimerEvent: {}
+[54.820396] (-) TimerEvent: {}
+[54.922104] (-) TimerEvent: {}
+[55.023028] (-) TimerEvent: {}
+[55.124644] (-) TimerEvent: {}
+[55.226008] (-) TimerEvent: {}
+[55.327720] (-) TimerEvent: {}
+[55.428984] (-) TimerEvent: {}
+[55.530204] (-) TimerEvent: {}
+[55.586112] (domain_bridge) StdoutLine: {'line': b'[ 91%] Built target test_parse_domain_bridge_yaml_config\n'}
+[55.611301] (domain_bridge) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target test_domain_bridge\x1b[0m\n'}
+[55.630389] (-) TimerEvent: {}
+[55.707772] (domain_bridge) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding CXX object test/CMakeFiles/test_domain_bridge.dir/domain_bridge/test_domain_bridge.cpp.o\x1b[0m\n'}
+[55.730695] (-) TimerEvent: {}
+[55.831893] (-) TimerEvent: {}
+[55.933145] (-) TimerEvent: {}
+[56.034696] (-) TimerEvent: {}
+[56.135970] (-) TimerEvent: {}
+[56.237713] (-) TimerEvent: {}
+[56.338471] (-) TimerEvent: {}
+[56.439305] (-) TimerEvent: {}
+[56.540174] (-) TimerEvent: {}
+[56.641014] (-) TimerEvent: {}
+[56.741840] (-) TimerEvent: {}
+[56.842750] (-) TimerEvent: {}
+[56.943524] (-) TimerEvent: {}
+[57.045086] (-) TimerEvent: {}
+[57.145893] (-) TimerEvent: {}
+[57.247187] (-) TimerEvent: {}
+[57.348014] (-) TimerEvent: {}
+[57.448826] (-) TimerEvent: {}
+[57.549570] (-) TimerEvent: {}
+[57.650437] (-) TimerEvent: {}
+[57.751288] (-) TimerEvent: {}
+[57.852163] (-) TimerEvent: {}
+[57.953001] (-) TimerEvent: {}
+[58.053806] (-) TimerEvent: {}
+[58.154754] (-) TimerEvent: {}
+[58.255468] (-) TimerEvent: {}
+[58.358470] (-) TimerEvent: {}
+[58.459272] (-) TimerEvent: {}
+[58.560061] (-) TimerEvent: {}
+[58.660848] (-) TimerEvent: {}
+[58.761569] (-) TimerEvent: {}
+[58.862511] (-) TimerEvent: {}
+[58.963385] (-) TimerEvent: {}
+[59.064280] (-) TimerEvent: {}
+[59.165491] (-) TimerEvent: {}
+[59.266662] (-) TimerEvent: {}
+[59.367462] (-) TimerEvent: {}
+[59.468369] (-) TimerEvent: {}
+[59.569203] (-) TimerEvent: {}
+[59.670058] (-) TimerEvent: {}
+[59.770867] (-) TimerEvent: {}
+[59.871500] (-) TimerEvent: {}
+[59.972283] (-) TimerEvent: {}
+[60.055529] (domain_bridge) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking CXX executable test_qos_matching__rmw_fastrtps_cpp\x1b[0m\n'}
+[60.072433] (-) TimerEvent: {}
+[60.173697] (-) TimerEvent: {}
+[60.275563] (-) TimerEvent: {}
+[60.377847] (-) TimerEvent: {}
+[60.479439] (-) TimerEvent: {}
+[60.581962] (-) TimerEvent: {}
+[60.683182] (-) TimerEvent: {}
+[60.784579] (-) TimerEvent: {}
+[60.885848] (-) TimerEvent: {}
+[60.987440] (-) TimerEvent: {}
+[61.088510] (-) TimerEvent: {}
+[61.190008] (-) TimerEvent: {}
+[61.291975] (-) TimerEvent: {}
+[61.327886] (domain_bridge) StdoutLine: {'line': b'[ 94%] Built target test_qos_matching__rmw_fastrtps_cpp\n'}
+[61.392169] (-) TimerEvent: {}
+[61.493542] (-) TimerEvent: {}
+[61.594643] (-) TimerEvent: {}
+[61.696169] (-) TimerEvent: {}
+[61.797052] (-) TimerEvent: {}
+[61.852765] (domain_bridge) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable test_domain_bridge_services__rmw_fastrtps_cpp\x1b[0m\n'}
+[61.897247] (-) TimerEvent: {}
+[61.999141] (-) TimerEvent: {}
+[62.100083] (-) TimerEvent: {}
+[62.201525] (-) TimerEvent: {}
+[62.302999] (-) TimerEvent: {}
+[62.404205] (-) TimerEvent: {}
+[62.505482] (-) TimerEvent: {}
+[62.606938] (-) TimerEvent: {}
+[62.658094] (domain_bridge) StdoutLine: {'line': b'[ 96%] Built target test_domain_bridge_services__rmw_fastrtps_cpp\n'}
+[62.707085] (-) TimerEvent: {}
+[62.807767] (-) TimerEvent: {}
+[62.908489] (-) TimerEvent: {}
+[63.009485] (-) TimerEvent: {}
+[63.110737] (-) TimerEvent: {}
+[63.211756] (-) TimerEvent: {}
+[63.312463] (-) TimerEvent: {}
+[63.413156] (-) TimerEvent: {}
+[63.513924] (-) TimerEvent: {}
+[63.614689] (-) TimerEvent: {}
+[63.715421] (-) TimerEvent: {}
+[63.816497] (-) TimerEvent: {}
+[63.917494] (-) TimerEvent: {}
+[63.922178] (domain_bridge) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking CXX executable test_domain_bridge\x1b[0m\n'}
+[64.017686] (-) TimerEvent: {}
+[64.118985] (-) TimerEvent: {}
+[64.219730] (-) TimerEvent: {}
+[64.320477] (-) TimerEvent: {}
+[64.421301] (-) TimerEvent: {}
+[64.469791] (domain_bridge) StdoutLine: {'line': b'[ 98%] Built target test_domain_bridge\n'}
+[64.521476] (-) TimerEvent: {}
+[64.622186] (-) TimerEvent: {}
+[64.722869] (-) TimerEvent: {}
+[64.823575] (-) TimerEvent: {}
+[64.924277] (-) TimerEvent: {}
+[65.024970] (-) TimerEvent: {}
+[65.125707] (-) TimerEvent: {}
+[65.226503] (-) TimerEvent: {}
+[65.327196] (-) TimerEvent: {}
+[65.427881] (-) TimerEvent: {}
+[65.528557] (-) TimerEvent: {}
+[65.629246] (-) TimerEvent: {}
+[65.729951] (-) TimerEvent: {}
+[65.830653] (-) TimerEvent: {}
+[65.931329] (-) TimerEvent: {}
+[66.032029] (-) TimerEvent: {}
+[66.132743] (-) TimerEvent: {}
+[66.233400] (-) TimerEvent: {}
+[66.334104] (-) TimerEvent: {}
+[66.434782] (-) TimerEvent: {}
+[66.535461] (-) TimerEvent: {}
+[66.636120] (-) TimerEvent: {}
+[66.736793] (-) TimerEvent: {}
+[66.837474] (-) TimerEvent: {}
+[66.938160] (-) TimerEvent: {}
+[67.038839] (-) TimerEvent: {}
+[67.139543] (-) TimerEvent: {}
+[67.240473] (-) TimerEvent: {}
+[67.341143] (-) TimerEvent: {}
+[67.441830] (-) TimerEvent: {}
+[67.542504] (-) TimerEvent: {}
+[67.643208] (-) TimerEvent: {}
+[67.743909] (-) TimerEvent: {}
+[67.844641] (-) TimerEvent: {}
+[67.945446] (-) TimerEvent: {}
+[68.046106] (-) TimerEvent: {}
+[68.146800] (-) TimerEvent: {}
+[68.247469] (-) TimerEvent: {}
+[68.348131] (-) TimerEvent: {}
+[68.448797] (-) TimerEvent: {}
+[68.549466] (-) TimerEvent: {}
+[68.650121] (-) TimerEvent: {}
+[68.750797] (-) TimerEvent: {}
+[68.851464] (-) TimerEvent: {}
+[68.952125] (-) TimerEvent: {}
+[69.052779] (-) TimerEvent: {}
+[69.153451] (-) TimerEvent: {}
+[69.254160] (-) TimerEvent: {}
+[69.354946] (-) TimerEvent: {}
+[69.455619] (-) TimerEvent: {}
+[69.556443] (-) TimerEvent: {}
+[69.657101] (-) TimerEvent: {}
+[69.757758] (-) TimerEvent: {}
+[69.858469] (-) TimerEvent: {}
+[69.959132] (-) TimerEvent: {}
+[70.059789] (-) TimerEvent: {}
+[70.160460] (-) TimerEvent: {}
+[70.261104] (-) TimerEvent: {}
+[70.361772] (-) TimerEvent: {}
+[70.462470] (-) TimerEvent: {}
+[70.563134] (-) TimerEvent: {}
+[70.663807] (-) TimerEvent: {}
+[70.764675] (-) TimerEvent: {}
+[70.865337] (-) TimerEvent: {}
+[70.966051] (-) TimerEvent: {}
+[71.066873] (-) TimerEvent: {}
+[71.167553] (-) TimerEvent: {}
+[71.268223] (-) TimerEvent: {}
+[71.368939] (-) TimerEvent: {}
+[71.469626] (-) TimerEvent: {}
+[71.570330] (-) TimerEvent: {}
+[71.671001] (-) TimerEvent: {}
+[71.771677] (-) TimerEvent: {}
+[71.872353] (-) TimerEvent: {}
+[71.972988] (-) TimerEvent: {}
+[72.073626] (-) TimerEvent: {}
+[72.174307] (-) TimerEvent: {}
+[72.275050] (-) TimerEvent: {}
+[72.375779] (-) TimerEvent: {}
+[72.476500] (-) TimerEvent: {}
+[72.506153] (domain_bridge) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_domain_bridge_end_to_end__rmw_fastrtps_cpp\x1b[0m\n'}
+[72.576688] (-) TimerEvent: {}
+[72.677436] (-) TimerEvent: {}
+[72.778133] (-) TimerEvent: {}
+[72.878911] (-) TimerEvent: {}
+[72.979638] (-) TimerEvent: {}
+[73.080346] (-) TimerEvent: {}
+[73.181033] (-) TimerEvent: {}
+[73.281718] (-) TimerEvent: {}
+[73.382528] (-) TimerEvent: {}
+[73.483206] (-) TimerEvent: {}
+[73.553368] (domain_bridge) StdoutLine: {'line': b'[100%] Built target test_domain_bridge_end_to_end__rmw_fastrtps_cpp\n'}
+[73.581524] (domain_bridge) CommandEnded: {'returncode': 0}
+[73.583367] (-) TimerEvent: {}
+[73.584817] (domain_bridge) JobProgress: {'identifier': 'domain_bridge', 'progress': 'install'}
+[73.585761] (domain_bridge) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge'], 'cwd': '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cav-06'), ('SSH_CLIENT', '192.168.11.146 5463 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/cav-06'), ('OLDPWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-38f4dc4e-bcce-4684-9bfd-f8c9d0c42782.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cav-06'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/cav-06/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/cav-06/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-cd849131e6.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.11.146 5463 192.168.10.193 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages:/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/cav_controller:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[73.611034] (domain_bridge) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[73.612166] (domain_bridge) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[73.613140] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/ament_index/resource_index/rosidl_interfaces/domain_bridge\n'}
+[73.633678] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/compressed_msg.h\n'}
+[73.652437] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__functions.h\n'}
+[73.671343] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__struct.h\n'}
+[73.683523] (-) TimerEvent: {}
+[73.689604] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__type_support.h\n'}
+[73.707943] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_generator_c__visibility_control.h\n'}
+[73.727600] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/library_path.sh\n'}
+[73.747128] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/library_path.dsv\n'}
+[73.767797] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[73.783678] (-) TimerEvent: {}
+[73.786683] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[73.807370] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_fastrtps_c.so\n'}
+[73.828952] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[73.847165] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[73.867633] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_fastrtps_cpp.so\n'}
+[73.883809] (-) TimerEvent: {}
+[73.888086] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_introspection_c.h\n'}
+[73.906799] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[73.926588] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/compressed_msg.hpp\n'}
+[73.945652] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__builder.hpp\n'}
+[73.964832] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__struct.hpp\n'}
+[73.983985] (-) TimerEvent: {}
+[73.984856] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__traits.hpp\n'}
+[74.004966] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__type_support.hpp\n'}
+[74.025131] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[74.045277] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[74.064179] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/pythonpath.sh\n'}
+[74.083568] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/pythonpath.dsv\n'}
+[74.084140] (-) TimerEvent: {}
+[74.103553] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/__init__.py\n'}
+[74.123352] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/msg/__init__.py\n'}
+[74.141634] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/msg/_compressed_msg.py\n'}
+[74.161657] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/domain_bridge_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[74.180797] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/domain_bridge_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[74.184237] (-) TimerEvent: {}
+[74.202010] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/domain_bridge_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[74.222159] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__python.so\n'}
+[74.243230] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/msg/CompressedMsg.idl\n'}
+[74.261995] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/msg/CompressedMsg.msg\n'}
+[74.281444] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/compress_messages.hpp\n'}
+[74.284347] (-) TimerEvent: {}
+[74.301028] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/domain_bridge.hpp\n'}
+[74.320172] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/domain_bridge_config.hpp\n'}
+[74.338969] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/domain_bridge_options.hpp\n'}
+[74.358428] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/parse_domain_bridge_yaml_config.hpp\n'}
+[74.379116] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/process_cmd_line_arguments.hpp\n'}
+[74.384671] (-) TimerEvent: {}
+[74.400082] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/qos_options.hpp\n'}
+[74.420314] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/service_bridge_impl.inc\n'}
+[74.440637] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/service_bridge_options.hpp\n'}
+[74.462404] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/topic_bridge.hpp\n'}
+[74.482840] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/topic_bridge_options.hpp\n'}
+[74.484762] (-) TimerEvent: {}
+[74.502954] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/utils.hpp\n'}
+[74.523110] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/visibility_control.hpp\n'}
+[74.544706] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/domain_bridge/domain_bridge\n'}
+[74.565388] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/examples/example_bridge_config.yaml\n'}
+[74.584945] (-) TimerEvent: {}
+[74.585504] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/launch/domain_bridge.launch.xml\n'}
+[74.605349] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/ament_index/resource_index/package_run_dependencies/domain_bridge\n'}
+[74.624836] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/ament_index/resource_index/parent_prefix_path/domain_bridge\n'}
+[74.643936] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/ament_prefix_path.sh\n'}
+[74.662207] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/ament_prefix_path.dsv\n'}
+[74.681323] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/path.sh\n'}
+[74.685033] (-) TimerEvent: {}
+[74.700984] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/path.dsv\n'}
+[74.719995] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/local_setup.bash\n'}
+[74.739175] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/local_setup.sh\n'}
+[74.758337] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/local_setup.zsh\n'}
+[74.778712] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/local_setup.dsv\n'}
+[74.785165] (-) TimerEvent: {}
+[74.798741] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/package.dsv\n'}
+[74.818849] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/ament_index/resource_index/packages/domain_bridge\n'}
+[74.837432] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/rosidl_cmake-extras.cmake\n'}
+[74.857430] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[74.876493] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[74.885297] (-) TimerEvent: {}
+[74.895187] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[74.913783] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[74.933397] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[74.951995] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[74.971997] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridgeConfig.cmake\n'}
+[74.985548] (-) TimerEvent: {}
+[74.993190] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridgeConfig-version.cmake\n'}
+[75.013158] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/package.xml\n'}
+[75.031795] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_generator_c.so\n'}
+[75.032804] (domain_bridge) StdoutLine: {'line': b'-- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_generator_c.so" to ""\n'}
+[75.033196] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_c.so\n'}
+[75.034399] (domain_bridge) StdoutLine: {'line': b'-- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_c.so" to ""\n'}
+[75.034897] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_c.so\n'}
+[75.035287] (domain_bridge) StdoutLine: {'line': b'-- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_c.so" to ""\n'}
+[75.035739] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_cpp.so\n'}
+[75.036833] (domain_bridge) StdoutLine: {'line': b'-- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[75.037164] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_cpp.so\n'}
+[75.037850] (domain_bridge) StdoutLine: {'line': b'-- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_cpp.so" to ""\n'}
+[75.085599] (-) TimerEvent: {}
+[75.105292] (domain_bridge) StdoutLine: {'line': b"Compiling '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/__init__.py'...\n"}
+[75.117649] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge.so\n'}
+[75.122633] (domain_bridge) StdoutLine: {'line': b'-- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge.so" to ""\n'}
+[75.123493] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_generator_cExport.cmake\n'}
+[75.123877] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_generator_cExport-noconfig.cmake\n'}
+[75.124310] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cExport.cmake\n'}
+[75.124642] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[75.125051] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cExport.cmake\n'}
+[75.125381] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[75.125784] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_generator_cppExport.cmake\n'}
+[75.126216] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[75.126541] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[75.126936] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cppExport.cmake\n'}
+[75.127232] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[75.127604] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/export_domain_bridgeExport.cmake\n'}
+[75.127926] (domain_bridge) StdoutLine: {'line': b'-- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/export_domain_bridgeExport-noconfig.cmake\n'}
+[75.132760] (domain_bridge) CommandEnded: {'returncode': 0}
+[75.178464] (domain_bridge) JobEnded: {'identifier': 'domain_bridge', 'rc': 0}
+[75.180678] (-) EventReactorShutdown: {}

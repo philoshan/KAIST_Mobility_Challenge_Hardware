@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -Wall -std=gnu++14
 
 CXX_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"domain_bridge\" -Ddomain_bridge__rosidl_typesupport_introspection_cpp_EXPORTS
 
-CXX_INCLUDES = -I/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_generator_cpp -isystem /opt/ros/foxy/include 
+CXX_INCLUDES = -I/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_generator_cpp -isystem /opt/ros/foxy/include 
 

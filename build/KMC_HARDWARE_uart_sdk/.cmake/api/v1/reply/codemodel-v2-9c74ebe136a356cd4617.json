@@ -1,0 +1,131 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "KMC_HARDWARE_uart_sdk",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "KMC_HARDWARE_uart::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-KMC_HARDWARE_uart-54443ce55ac655e35f18.json",
+					"name" : "KMC_HARDWARE_uart",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "driver_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-driver_demo-44932de4923ee245dd6d.json",
+					"name" : "driver_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "driver_observe::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-driver_observe-fe64a7aed5ae2dd94e05.json",
+					"name" : "driver_observe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "driver_read_allstate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-driver_read_allstate-ed85e8234f1fc8943328.json",
+					"name" : "driver_read_allstate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "high_rate_control::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-high_rate_control-3330872e6a3aa4613b98.json",
+					"name" : "high_rate_control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "read_allstate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-read_allstate-a23fc607ee5b8e7a2487.json",
+					"name" : "read_allstate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "read_battery::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-read_battery-9988ff3b6cea15d27f7d.json",
+					"name" : "read_battery",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "read_speed::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-read_speed-3ec453e34b362d6a5392.json",
+					"name" : "read_speed",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "teleop_and_speed::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-teleop_and_speed-7f211d1d87ebd2c61dc9.json",
+					"name" : "teleop_and_speed",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk",
+		"source" : "/home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

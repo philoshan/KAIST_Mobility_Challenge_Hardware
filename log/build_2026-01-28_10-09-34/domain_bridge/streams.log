@@ -1,0 +1,284 @@
+[0.567s] Invoking command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy /usr/bin/cmake /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge
+[0.873s] -- The C compiler identification is GNU 9.4.0
+[1.071s] -- The CXX compiler identification is GNU 9.4.0
+[1.087s] -- Check for working C compiler: /usr/bin/cc
+[1.293s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.295s] -- Detecting C compiler ABI info
+[1.567s] -- Detecting C compiler ABI info - done
+[1.610s] -- Detecting C compile features
+[1.611s] -- Detecting C compile features - done
+[1.625s] -- Check for working CXX compiler: /usr/bin/c++
+[1.953s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.954s] -- Detecting CXX compiler ABI info
+[2.419s] -- Detecting CXX compiler ABI info - done
+[2.476s] -- Detecting CXX compile features
+[2.476s] -- Detecting CXX compile features - done
+[2.483s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[2.647s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.647s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.474s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.556s] -- Found rcl: 1.1.14 (/opt/ros/foxy/share/rcl/cmake)
+[3.682s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.721s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[4.135s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[4.238s] -- Found FastRTPS: /opt/ros/foxy/include  
+[4.537s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.684s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[4.687s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.693s] -- Looking for pthread.h
+[4.935s] -- Looking for pthread.h - found
+[4.936s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.221s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[5.224s] -- Looking for pthread_create in pthreads
+[5.451s] -- Looking for pthread_create in pthreads - not found
+[5.452s] -- Looking for pthread_create in pthread
+[5.711s] -- Looking for pthread_create in pthread - found
+[5.717s] -- Found Threads: TRUE  
+[5.766s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[6.187s] -- Found rosbag2_cpp: 0.3.11 (/opt/ros/foxy/share/rosbag2_cpp/cmake)
+[6.460s] -- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+[6.494s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[6.595s] -- Found zstd_vendor: 0.3.11 (/opt/ros/foxy/share/zstd_vendor/cmake)
+[6.610s] -- Found zstd: /opt/ros/foxy/lib/libzstd.so  
+[6.843s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[7.657s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[8.294s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.360s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.546s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[8.550s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[8.729s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[8.734s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[8.735s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[8.735s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[8.824s] -- Found PythonExtra: .so  
+[9.064s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[9.921s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[9.922s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[9.922s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[10.956s] -- Found gmock sources under '/opt/ros/foxy/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[10.968s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[11.046s] -- Added test 'copyright' to check source files copyright and LICENSE
+[11.056s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[11.059s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/include>
+[11.059s] -- Configured cppcheck exclude dirs and/or files: 
+[11.068s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[11.069s] -- Configured cpplint exclude dirs and/or files: 
+[11.072s] -- Added test 'flake8' to check Python code syntax and style conventions
+[11.076s] -- Added test 'lint_cmake' to check CMake code style
+[11.079s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[11.087s] -- Added test 'uncrustify' to check C / C++ code style
+[11.088s] -- Configured uncrustify additional arguments: 
+[11.091s] -- Added test 'xmllint' to check XML markup files
+[11.147s] -- Configuring done
+[11.786s] -- Generating done
+[11.958s] -- Build files have been written to: /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge
+[12.113s] Invoked command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy /usr/bin/cmake /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge
+[12.115s] Invoking command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --build /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge -- -j4 -l4
+[12.403s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[12.430s] [35m[1mScanning dependencies of target gmock[0m
+[12.432s] [35m[1mScanning dependencies of target domain_bridge__cpp[0m
+[12.448s] [35m[1mScanning dependencies of target gmock_main[0m
+[12.520s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[12.566s] [  5%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/foxy/src/gtest_vendor/src/gtest-all.cc.o[0m
+[12.601s] [  6%] [32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[13.996s] [  6%] Built target domain_bridge__cpp
+[14.038s] [  8%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[14.353s] [35m[1mScanning dependencies of target domain_bridge__rosidl_generator_c[0m
+[14.394s] [ 10%] [32mBuilding C object CMakeFiles/domain_bridge__rosidl_generator_c.dir/rosidl_generator_c/domain_bridge/msg/detail/compressed_msg__functions.c.o[0m
+[14.659s] [ 11%] [32m[1mLinking C shared library libdomain_bridge__rosidl_generator_c.so[0m
+[14.909s] [ 11%] Built target domain_bridge__rosidl_generator_c
+[14.999s] [ 13%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[16.008s] [35m[1mScanning dependencies of target domain_bridge__rosidl_typesupport_cpp[0m
+[16.108s] [ 15%] [32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/domain_bridge/msg/compressed_msg__type_support.cpp.o[0m
+[17.777s] [ 16%] [32m[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_cpp.so[0m
+[18.112s] [ 16%] Built target domain_bridge__rosidl_typesupport_cpp
+[18.189s] [ 18%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[19.411s] [35m[1mScanning dependencies of target domain_bridge__rosidl_typesupport_introspection_cpp[0m
+[19.497s] [ 20%] [32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/domain_bridge/msg/detail/compressed_msg__type_support.cpp.o[0m
+[20.752s] [ 22%] [32m[1mLinking CXX static library libgmock_main.a[0m
+[21.043s] [ 22%] Built target gmock_main
+[21.138s] [ 23%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[21.363s] [ 25%] [32m[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_introspection_cpp.so[0m
+[21.773s] [ 25%] Built target domain_bridge__rosidl_typesupport_introspection_cpp
+[21.873s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[22.381s] [35m[1mScanning dependencies of target domain_bridge__rosidl_typesupport_fastrtps_cpp[0m
+[22.436s] [ 28%] [32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/domain_bridge/msg/detail/dds_fastrtps/compressed_msg__type_support.cpp.o[0m
+[23.008s] [35m[1mScanning dependencies of target domain_bridge__rosidl_typesupport_introspection_c[0m
+[23.100s] [ 30%] [32mBuilding C object CMakeFiles/domain_bridge__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/domain_bridge/msg/detail/compressed_msg__type_support.c.o[0m
+[23.265s] [ 32%] [32m[1mLinking C shared library libdomain_bridge__rosidl_typesupport_introspection_c.so[0m
+[23.421s] [ 32%] Built target domain_bridge__rosidl_typesupport_introspection_c
+[23.448s] [ 33%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[24.084s] [35m[1mScanning dependencies of target domain_bridge__rosidl_typesupport_c[0m
+[24.129s] [ 35%] [32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_c.dir/rosidl_typesupport_c/domain_bridge/msg/compressed_msg__type_support.cpp.o[0m
+[24.275s] [ 37%] [32m[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_c.so[0m
+[24.505s] [ 37%] Built target domain_bridge__rosidl_typesupport_c
+[24.628s] [ 38%] [32m[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_fastrtps_cpp.so[0m
+[25.026s] [ 38%] Built target domain_bridge__rosidl_typesupport_fastrtps_cpp
+[25.050s] [ 40%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[25.640s] [35m[1mScanning dependencies of target domain_bridge__rosidl_typesupport_fastrtps_c[0m
+[25.696s] [ 42%] [32mBuilding CXX object CMakeFiles/domain_bridge__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/domain_bridge/msg/detail/compressed_msg__type_support_c.cpp.o[0m
+[26.888s] [ 44%] [32m[1mLinking CXX shared library libdomain_bridge__rosidl_typesupport_fastrtps_c.so[0m
+[27.077s] [ 45%] [32m[1mLinking CXX static library libgmock.a[0m
+[27.195s] [ 45%] Built target domain_bridge__rosidl_typesupport_fastrtps_c
+[27.225s] [35m[1mScanning dependencies of target domain_bridge[0m
+[27.253s] [ 45%] Built target domain_bridge
+[27.282s] [35m[1mScanning dependencies of target domain_bridge_lib[0m
+[27.285s] [35m[1mScanning dependencies of target domain_bridge__py[0m
+[27.299s] [ 45%] Built target gmock
+[27.324s] [ 47%] [34m[1mGenerating Python code for ROS interfaces[0m
+[27.555s] [ 49%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/compress_messages.cpp.o[0m
+[27.567s] [ 50%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/domain_bridge.cpp.o[0m
+[27.584s] [ 52%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/domain_bridge_options.cpp.o[0m
+[29.001s] [ 52%] Built target domain_bridge__py
+[29.018s] [ 54%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/generic_publisher.cpp.o[0m
+[29.040s] [35m[1mScanning dependencies of target domain_bridge__python[0m
+[29.088s] [ 55%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/generic_subscription.cpp.o[0m
+[29.129s] [ 57%] [32mBuilding C object CMakeFiles/domain_bridge__python.dir/rosidl_generator_py/domain_bridge/msg/_compressed_msg_s.c.o[0m
+[29.633s] [ 59%] [32m[1mLinking C shared library rosidl_generator_py/domain_bridge/libdomain_bridge__python.so[0m
+[29.980s] [ 59%] Built target domain_bridge__python
+[30.075s] [35m[1mScanning dependencies of target domain_bridge__rosidl_typesupport_introspection_c__pyext[0m
+[30.224s] [ 61%] [32mBuilding C object CMakeFiles/domain_bridge__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/domain_bridge/_domain_bridge_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[30.751s] [ 62%] [32m[1mLinking C shared library rosidl_generator_py/domain_bridge/domain_bridge_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[30.994s] [ 62%] Built target domain_bridge__rosidl_typesupport_introspection_c__pyext
+[31.088s] [35m[1mScanning dependencies of target domain_bridge__rosidl_typesupport_c__pyext[0m
+[31.210s] [ 64%] [32mBuilding C object CMakeFiles/domain_bridge__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/domain_bridge/_domain_bridge_s.ep.rosidl_typesupport_c.c.o[0m
+[31.771s] [ 66%] [32m[1mLinking C shared library rosidl_generator_py/domain_bridge/domain_bridge_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[31.975s] [ 66%] Built target domain_bridge__rosidl_typesupport_c__pyext
+[32.076s] [35m[1mScanning dependencies of target domain_bridge__rosidl_typesupport_fastrtps_c__pyext[0m
+[32.233s] [ 67%] [32mBuilding C object CMakeFiles/domain_bridge__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/domain_bridge/_domain_bridge_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[32.628s] [ 69%] [32m[1mLinking CXX shared library rosidl_generator_py/domain_bridge/domain_bridge_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[32.976s] [ 69%] Built target domain_bridge__rosidl_typesupport_fastrtps_c__pyext
+[33.025s] [ 71%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/parse_domain_bridge_yaml_config.cpp.o[0m
+[39.142s] [ 72%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/service_bridge_options.cpp.o[0m
+[40.422s] [ 74%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/topic_bridge_options.cpp.o[0m
+[42.326s] [ 76%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/utils.cpp.o[0m
+[42.996s] [ 77%] [32mBuilding CXX object CMakeFiles/domain_bridge_lib.dir/src/domain_bridge/qos_options.cpp.o[0m
+[46.091s] [ 79%] [32m[1mLinking CXX shared library libdomain_bridge.so[0m
+[46.556s] [ 79%] Built target domain_bridge_lib
+[46.575s] [35m[1mScanning dependencies of target domain_bridge_exec[0m
+[46.641s] [ 81%] [32mBuilding CXX object CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.o[0m
+[48.637s] [35m[1mScanning dependencies of target test_parse_domain_bridge_yaml_config[0m
+[48.701s] [ 83%] [32mBuilding CXX object test/CMakeFiles/test_parse_domain_bridge_yaml_config.dir/domain_bridge/test_parse_domain_bridge_yaml_config.cpp.o[0m
+[49.692s] [35m[1mScanning dependencies of target test_qos_matching__rmw_fastrtps_cpp[0m
+[49.784s] [ 84%] [32mBuilding CXX object test/CMakeFiles/test_qos_matching__rmw_fastrtps_cpp.dir/domain_bridge/test_qos_matching.cpp.o[0m
+[50.787s] [35m[1mScanning dependencies of target test_domain_bridge_end_to_end__rmw_fastrtps_cpp[0m
+[50.841s] [ 86%] [32m[1mLinking CXX executable domain_bridge[0m
+[51.022s] [ 88%] [32mBuilding CXX object test/CMakeFiles/test_domain_bridge_end_to_end__rmw_fastrtps_cpp.dir/domain_bridge/test_domain_bridge_end_to_end.cpp.o[0m
+[51.217s] [ 88%] Built target domain_bridge_exec
+[51.272s] [35m[1mScanning dependencies of target test_domain_bridge_services__rmw_fastrtps_cpp[0m
+[51.374s] [ 89%] [32mBuilding CXX object test/CMakeFiles/test_domain_bridge_services__rmw_fastrtps_cpp.dir/domain_bridge/test_domain_bridge_services.cpp.o[0m
+[54.528s] [ 91%] [32m[1mLinking CXX executable test_parse_domain_bridge_yaml_config[0m
+[55.551s] [ 91%] Built target test_parse_domain_bridge_yaml_config
+[55.576s] [35m[1mScanning dependencies of target test_domain_bridge[0m
+[55.672s] [ 93%] [32mBuilding CXX object test/CMakeFiles/test_domain_bridge.dir/domain_bridge/test_domain_bridge.cpp.o[0m
+[60.020s] [ 94%] [32m[1mLinking CXX executable test_qos_matching__rmw_fastrtps_cpp[0m
+[61.292s] [ 94%] Built target test_qos_matching__rmw_fastrtps_cpp
+[61.817s] [ 96%] [32m[1mLinking CXX executable test_domain_bridge_services__rmw_fastrtps_cpp[0m
+[62.622s] [ 96%] Built target test_domain_bridge_services__rmw_fastrtps_cpp
+[63.887s] [ 98%] [32m[1mLinking CXX executable test_domain_bridge[0m
+[64.434s] [ 98%] Built target test_domain_bridge
+[72.471s] [100%] [32m[1mLinking CXX executable test_domain_bridge_end_to_end__rmw_fastrtps_cpp[0m
+[73.518s] [100%] Built target test_domain_bridge_end_to_end__rmw_fastrtps_cpp
+[73.546s] Invoked command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --build /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge -- -j4 -l4
+[73.551s] Invoking command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --install /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge
+[73.575s] -- Install configuration: ""
+[73.576s] -- Execute custom install script
+[73.577s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/ament_index/resource_index/rosidl_interfaces/domain_bridge
+[73.598s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/compressed_msg.h
+[73.617s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__functions.h
+[73.636s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__struct.h
+[73.654s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__type_support.h
+[73.672s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_generator_c__visibility_control.h
+[73.692s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/library_path.sh
+[73.712s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/library_path.dsv
+[73.732s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_fastrtps_c.h
+[73.751s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[73.772s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_fastrtps_c.so
+[73.793s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[73.812s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[73.832s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_fastrtps_cpp.so
+[73.852s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_introspection_c.h
+[73.871s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[73.891s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/compressed_msg.hpp
+[73.910s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__builder.hpp
+[73.929s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__struct.hpp
+[73.949s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__traits.hpp
+[73.969s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__type_support.hpp
+[73.990s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/rosidl_generator_cpp__visibility_control.hpp
+[74.010s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_introspection_cpp.hpp
+[74.029s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/pythonpath.sh
+[74.048s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/pythonpath.dsv
+[74.068s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/__init__.py
+[74.088s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/msg/__init__.py
+[74.106s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/msg/_compressed_msg.py
+[74.127s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/domain_bridge_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[74.145s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/domain_bridge_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[74.166s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/domain_bridge_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[74.187s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__python.so
+[74.208s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/msg/CompressedMsg.idl
+[74.226s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/msg/CompressedMsg.msg
+[74.246s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/compress_messages.hpp
+[74.265s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/domain_bridge.hpp
+[74.285s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/domain_bridge_config.hpp
+[74.303s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/domain_bridge_options.hpp
+[74.323s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/parse_domain_bridge_yaml_config.hpp
+[74.343s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/process_cmd_line_arguments.hpp
+[74.364s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/qos_options.hpp
+[74.385s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/service_bridge_impl.inc
+[74.405s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/service_bridge_options.hpp
+[74.427s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/topic_bridge.hpp
+[74.447s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/topic_bridge_options.hpp
+[74.467s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/utils.hpp
+[74.487s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/include/domain_bridge/visibility_control.hpp
+[74.509s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/domain_bridge/domain_bridge
+[74.530s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/examples/example_bridge_config.yaml
+[74.550s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/launch/domain_bridge.launch.xml
+[74.570s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/ament_index/resource_index/package_run_dependencies/domain_bridge
+[74.589s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/ament_index/resource_index/parent_prefix_path/domain_bridge
+[74.608s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/ament_prefix_path.sh
+[74.627s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/ament_prefix_path.dsv
+[74.646s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/path.sh
+[74.665s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/environment/path.dsv
+[74.684s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/local_setup.bash
+[74.704s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/local_setup.sh
+[74.723s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/local_setup.zsh
+[74.743s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/local_setup.dsv
+[74.763s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/package.dsv
+[74.783s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/ament_index/resource_index/packages/domain_bridge
+[74.802s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/rosidl_cmake-extras.cmake
+[74.822s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_dependencies-extras.cmake
+[74.841s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_libraries-extras.cmake
+[74.860s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_targets-extras.cmake
+[74.878s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_include_directories-extras.cmake
+[74.898s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[74.916s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[74.936s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridgeConfig.cmake
+[74.958s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridgeConfig-version.cmake
+[74.978s] -- Symlinking: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/package.xml
+[74.996s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_generator_c.so
+[74.997s] -- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_generator_c.so" to ""
+[74.997s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_c.so
+[74.999s] -- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_c.so" to ""
+[74.999s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_c.so
+[74.999s] -- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_c.so" to ""
+[75.000s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_cpp.so
+[75.001s] -- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_cpp.so" to ""
+[75.001s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_cpp.so
+[75.002s] -- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_cpp.so" to ""
+[75.070s] Compiling '/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/__init__.py'...
+[75.082s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge.so
+[75.087s] -- Set runtime path of "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/lib/libdomain_bridge.so" to ""
+[75.088s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_generator_cExport.cmake
+[75.088s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_generator_cExport-noconfig.cmake
+[75.088s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cExport.cmake
+[75.089s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[75.089s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cExport.cmake
+[75.090s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cExport-noconfig.cmake
+[75.090s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_generator_cppExport.cmake
+[75.090s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cppExport.cmake
+[75.091s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[75.091s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cppExport.cmake
+[75.091s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cppExport-noconfig.cmake
+[75.092s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/export_domain_bridgeExport.cmake
+[75.092s] -- Installing: /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge/share/domain_bridge/cmake/export_domain_bridgeExport-noconfig.cmake
+[75.098s] Invoked command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --install /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge

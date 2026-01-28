@@ -1,0 +1,57 @@
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk
+[35m[1mScanning dependencies of target KMC_HARDWARE_uart[0m
+[  5%] [32mBuilding CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_uart_client.cpp.o[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_driver.cpp.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/KMC_HARDWARE_uart.dir/src/KMC_serial_port.cpp.o[0m
+[ 20%] [32m[1mLinking CXX static library libKMC_HARDWARE_uart.a[0m
+[ 20%] Built target KMC_HARDWARE_uart
+[35m[1mScanning dependencies of target read_allstate[0m
+[35m[1mScanning dependencies of target high_rate_control[0m
+[35m[1mScanning dependencies of target teleop_and_speed[0m
+[35m[1mScanning dependencies of target read_battery[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/read_allstate.dir/examples/UartClient_Advanced/read_allstate.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/high_rate_control.dir/examples/Driver_Intermediate/high_rate_control.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/teleop_and_speed.dir/examples/UartClient_Advanced/teleop_and_speed.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/read_battery.dir/examples/UartClient_Advanced/read_battery.cpp.o[0m
+[ 45%] [32m[1mLinking CXX executable read_allstate[0m
+[ 50%] [32m[1mLinking CXX executable read_battery[0m
+[ 55%] [32m[1mLinking CXX executable teleop_and_speed[0m
+[ 60%] [32m[1mLinking CXX executable high_rate_control[0m
+[ 60%] Built target teleop_and_speed
+[35m[1mScanning dependencies of target read_speed[0m
+[ 60%] Built target read_allstate
+[ 65%] [32mBuilding CXX object CMakeFiles/read_speed.dir/examples/UartClient_Advanced/read_speed.cpp.o[0m
+[ 65%] Built target read_battery
+[35m[1mScanning dependencies of target driver_observe[0m
+[ 65%] Built target high_rate_control
+[35m[1mScanning dependencies of target driver_demo[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o[0m
+[35m[1mScanning dependencies of target driver_read_allstate[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/driver_demo.dir/examples/Driver_Basic/driver_demo.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/driver_read_allstate.dir/examples/Driver_Intermediate/driver_read_allstate.cpp.o[0m
+[ 85%] [32m[1mLinking CXX executable read_speed[0m
+[ 85%] Built target read_speed
+[ 90%] [32m[1mLinking CXX executable driver_demo[0m
+[ 95%] [32m[1mLinking CXX executable driver_read_allstate[0m
+[ 95%] Built target driver_demo
+[100%] [32m[1mLinking CXX executable driver_observe[0m
+[100%] Built target driver_read_allstate
+[100%] Built target driver_observe

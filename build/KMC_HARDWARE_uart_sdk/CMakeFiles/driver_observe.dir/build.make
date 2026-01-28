@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
+CMAKE_SOURCE_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk
+CMAKE_BINARY_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk
 
 # Include any dependencies generated for this target.
 include CMakeFiles/driver_observe.dir/depend.make
@@ -58,17 +58,17 @@ include CMakeFiles/driver_observe.dir/progress.make
 include CMakeFiles/driver_observe.dir/flags.make
 
 CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o: CMakeFiles/driver_observe.dir/flags.make
-CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o: /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o -c /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp
+CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o: /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.o -c /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp
 
 CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp > CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp > CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.i
 
 CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp -o CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_Intermediate/driver_observe.cpp -o CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/driver_observe.cpp.s
 
 # Object files for target driver_observe
 driver_observe_OBJECTS = \
@@ -81,7 +81,7 @@ driver_observe: CMakeFiles/driver_observe.dir/examples/Driver_Intermediate/drive
 driver_observe: CMakeFiles/driver_observe.dir/build.make
 driver_observe: libKMC_HARDWARE_uart.a
 driver_observe: CMakeFiles/driver_observe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable driver_observe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable driver_observe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/driver_observe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -94,6 +94,6 @@ CMakeFiles/driver_observe.dir/clean:
 .PHONY : CMakeFiles/driver_observe.dir/clean
 
 CMakeFiles/driver_observe.dir/depend:
-	cd /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles/driver_observe.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles/driver_observe.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/driver_observe.dir/depend
 

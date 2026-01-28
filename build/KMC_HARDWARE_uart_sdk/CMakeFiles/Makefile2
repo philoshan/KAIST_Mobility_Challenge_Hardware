@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
+CMAKE_SOURCE_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/sdk/KAIST_Mobility_Challenge_SDK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk
+CMAKE_BINARY_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -90,14 +90,14 @@ clean: CMakeFiles/KMC_HARDWARE_uart.dir/clean
 CMakeFiles/teleop_and_speed.dir/all: CMakeFiles/KMC_HARDWARE_uart.dir/all
 	$(MAKE) -f CMakeFiles/teleop_and_speed.dir/build.make CMakeFiles/teleop_and_speed.dir/depend
 	$(MAKE) -f CMakeFiles/teleop_and_speed.dir/build.make CMakeFiles/teleop_and_speed.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=19,20 "Built target teleop_and_speed"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=19,20 "Built target teleop_and_speed"
 .PHONY : CMakeFiles/teleop_and_speed.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/teleop_and_speed.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/teleop_and_speed.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
 .PHONY : CMakeFiles/teleop_and_speed.dir/rule
 
 # Convenience name for target.
@@ -117,14 +117,14 @@ CMakeFiles/teleop_and_speed.dir/clean:
 CMakeFiles/read_allstate.dir/all: CMakeFiles/KMC_HARDWARE_uart.dir/all
 	$(MAKE) -f CMakeFiles/read_allstate.dir/build.make CMakeFiles/read_allstate.dir/depend
 	$(MAKE) -f CMakeFiles/read_allstate.dir/build.make CMakeFiles/read_allstate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=13,14 "Built target read_allstate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=13,14 "Built target read_allstate"
 .PHONY : CMakeFiles/read_allstate.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/read_allstate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/read_allstate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
 .PHONY : CMakeFiles/read_allstate.dir/rule
 
 # Convenience name for target.
@@ -144,14 +144,14 @@ CMakeFiles/read_allstate.dir/clean:
 CMakeFiles/read_battery.dir/all: CMakeFiles/KMC_HARDWARE_uart.dir/all
 	$(MAKE) -f CMakeFiles/read_battery.dir/build.make CMakeFiles/read_battery.dir/depend
 	$(MAKE) -f CMakeFiles/read_battery.dir/build.make CMakeFiles/read_battery.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=15,16 "Built target read_battery"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=15,16 "Built target read_battery"
 .PHONY : CMakeFiles/read_battery.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/read_battery.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/read_battery.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
 .PHONY : CMakeFiles/read_battery.dir/rule
 
 # Convenience name for target.
@@ -171,14 +171,14 @@ CMakeFiles/read_battery.dir/clean:
 CMakeFiles/high_rate_control.dir/all: CMakeFiles/KMC_HARDWARE_uart.dir/all
 	$(MAKE) -f CMakeFiles/high_rate_control.dir/build.make CMakeFiles/high_rate_control.dir/depend
 	$(MAKE) -f CMakeFiles/high_rate_control.dir/build.make CMakeFiles/high_rate_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=11,12 "Built target high_rate_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=11,12 "Built target high_rate_control"
 .PHONY : CMakeFiles/high_rate_control.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/high_rate_control.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/high_rate_control.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
 .PHONY : CMakeFiles/high_rate_control.dir/rule
 
 # Convenience name for target.
@@ -198,14 +198,14 @@ CMakeFiles/high_rate_control.dir/clean:
 CMakeFiles/read_speed.dir/all: CMakeFiles/KMC_HARDWARE_uart.dir/all
 	$(MAKE) -f CMakeFiles/read_speed.dir/build.make CMakeFiles/read_speed.dir/depend
 	$(MAKE) -f CMakeFiles/read_speed.dir/build.make CMakeFiles/read_speed.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=17,18 "Built target read_speed"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=17,18 "Built target read_speed"
 .PHONY : CMakeFiles/read_speed.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/read_speed.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/read_speed.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
 .PHONY : CMakeFiles/read_speed.dir/rule
 
 # Convenience name for target.
@@ -225,14 +225,14 @@ CMakeFiles/read_speed.dir/clean:
 CMakeFiles/driver_observe.dir/all: CMakeFiles/KMC_HARDWARE_uart.dir/all
 	$(MAKE) -f CMakeFiles/driver_observe.dir/build.make CMakeFiles/driver_observe.dir/depend
 	$(MAKE) -f CMakeFiles/driver_observe.dir/build.make CMakeFiles/driver_observe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=7,8 "Built target driver_observe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=7,8 "Built target driver_observe"
 .PHONY : CMakeFiles/driver_observe.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/driver_observe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/driver_observe.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
 .PHONY : CMakeFiles/driver_observe.dir/rule
 
 # Convenience name for target.
@@ -252,14 +252,14 @@ CMakeFiles/driver_observe.dir/clean:
 CMakeFiles/driver_demo.dir/all: CMakeFiles/KMC_HARDWARE_uart.dir/all
 	$(MAKE) -f CMakeFiles/driver_demo.dir/build.make CMakeFiles/driver_demo.dir/depend
 	$(MAKE) -f CMakeFiles/driver_demo.dir/build.make CMakeFiles/driver_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=5,6 "Built target driver_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=5,6 "Built target driver_demo"
 .PHONY : CMakeFiles/driver_demo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/driver_demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/driver_demo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
 .PHONY : CMakeFiles/driver_demo.dir/rule
 
 # Convenience name for target.
@@ -279,14 +279,14 @@ CMakeFiles/driver_demo.dir/clean:
 CMakeFiles/driver_read_allstate.dir/all: CMakeFiles/KMC_HARDWARE_uart.dir/all
 	$(MAKE) -f CMakeFiles/driver_read_allstate.dir/build.make CMakeFiles/driver_read_allstate.dir/depend
 	$(MAKE) -f CMakeFiles/driver_read_allstate.dir/build.make CMakeFiles/driver_read_allstate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=9,10 "Built target driver_read_allstate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=9,10 "Built target driver_read_allstate"
 .PHONY : CMakeFiles/driver_read_allstate.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/driver_read_allstate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/driver_read_allstate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
 .PHONY : CMakeFiles/driver_read_allstate.dir/rule
 
 # Convenience name for target.
@@ -306,14 +306,14 @@ CMakeFiles/driver_read_allstate.dir/clean:
 CMakeFiles/KMC_HARDWARE_uart.dir/all:
 	$(MAKE) -f CMakeFiles/KMC_HARDWARE_uart.dir/build.make CMakeFiles/KMC_HARDWARE_uart.dir/depend
 	$(MAKE) -f CMakeFiles/KMC_HARDWARE_uart.dir/build.make CMakeFiles/KMC_HARDWARE_uart.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=1,2,3,4 "Built target KMC_HARDWARE_uart"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles --progress-num=1,2,3,4 "Built target KMC_HARDWARE_uart"
 .PHONY : CMakeFiles/KMC_HARDWARE_uart.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/KMC_HARDWARE_uart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/KMC_HARDWARE_uart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chan/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/KMC_HARDWARE_uart_sdk/CMakeFiles 0
 .PHONY : CMakeFiles/KMC_HARDWARE_uart.dir/rule
 
 # Convenience name for target.

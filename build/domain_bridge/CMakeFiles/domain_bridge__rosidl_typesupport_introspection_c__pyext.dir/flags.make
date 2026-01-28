@@ -6,5 +6,5 @@ C_FLAGS = -fPIC   -Wall -Wextra -std=gnu99
 
 C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"domain_bridge\" -Ddomain_bridge__rosidl_typesupport_introspection_c__pyext_EXPORTS
 
-C_INCLUDES = -I/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_generator_c -I/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_generator_py -I/usr/include/python3.8 -I/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_typesupport_c -I/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_typesupport_introspection_c -isystem /opt/ros/foxy/include 
+C_INCLUDES = -I/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_generator_c -I/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_generator_py -I/usr/include/python3.8 -I/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_typesupport_c -I/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_typesupport_introspection_c -isystem /opt/ros/foxy/include 
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge
+CMAKE_SOURCE_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge
+CMAKE_BINARY_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge
 
 # Include any dependencies generated for this target.
 include CMakeFiles/domain_bridge_exec.dir/depend.make
@@ -58,17 +58,17 @@ include CMakeFiles/domain_bridge_exec.dir/progress.make
 include CMakeFiles/domain_bridge_exec.dir/flags.make
 
 CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.o: CMakeFiles/domain_bridge_exec.dir/flags.make
-CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.o: /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/src/domain_bridge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.o -c /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/src/domain_bridge.cpp
+CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.o: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/src/domain_bridge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.o -c /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/src/domain_bridge.cpp
 
 CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/src/domain_bridge.cpp > CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/src/domain_bridge.cpp > CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.i
 
 CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/src/domain_bridge.cpp -o CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/src/domain_bridge.cpp -o CMakeFiles/domain_bridge_exec.dir/src/domain_bridge.cpp.s
 
 # Object files for target domain_bridge_exec
 domain_bridge_exec_OBJECTS = \
@@ -92,7 +92,7 @@ domain_bridge: /opt/ros/foxy/lib/librcl_yaml_param_parser.so
 domain_bridge: /opt/ros/foxy/lib/libyaml.so
 domain_bridge: /opt/ros/foxy/lib/librmw_implementation.so
 domain_bridge: /opt/ros/foxy/lib/librcl_logging_spdlog.so
-domain_bridge: /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0
+domain_bridge: /usr/lib/aarch64-linux-gnu/libspdlog.so.1.5.0
 domain_bridge: /opt/ros/foxy/lib/libtracetools.so
 domain_bridge: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
 domain_bridge: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so
@@ -123,8 +123,8 @@ domain_bridge: /opt/ros/foxy/lib/librosbag2_cpp.so
 domain_bridge: /opt/ros/foxy/lib/librosbag2_storage.so
 domain_bridge: /opt/ros/foxy/lib/libament_index_cpp.so
 domain_bridge: /opt/ros/foxy/lib/libclass_loader.so
-domain_bridge: /opt/ros/foxy/lib/x86_64-linux-gnu/libconsole_bridge.so.1.0
-domain_bridge: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+domain_bridge: /opt/ros/foxy/lib/aarch64-linux-gnu/libconsole_bridge.so.1.0
+domain_bridge: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
 domain_bridge: /opt/ros/foxy/lib/librosidl_typesupport_introspection_cpp.so
 domain_bridge: /opt/ros/foxy/lib/librosidl_typesupport_introspection_c.so
 domain_bridge: /opt/ros/foxy/lib/librmw.so
@@ -137,7 +137,7 @@ domain_bridge: /opt/ros/foxy/lib/librcpputils.so
 domain_bridge: /opt/ros/foxy/lib/librosidl_runtime_c.so
 domain_bridge: /opt/ros/foxy/lib/librcutils.so
 domain_bridge: CMakeFiles/domain_bridge_exec.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable domain_bridge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable domain_bridge"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/domain_bridge_exec.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -150,6 +150,6 @@ CMakeFiles/domain_bridge_exec.dir/clean:
 .PHONY : CMakeFiles/domain_bridge_exec.dir/clean
 
 CMakeFiles/domain_bridge_exec.dir/depend:
-	cd /home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge /home/chan/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge /home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge /home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge /home/chan/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/CMakeFiles/domain_bridge_exec.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge /home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/CMakeFiles/domain_bridge_exec.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/domain_bridge_exec.dir/depend
 
