@@ -1,0 +1,32 @@
+name: bridge_cav_07
+
+topics:
+  /Ego_pose:
+    type: geometry_msgs/msg/PoseStamped
+    from_domain: 7
+    to_domain: 100
+    remap: /CAV_07
+
+  /CAV_07/cmd_stop:
+    type: std_msgs/msg/Bool
+    from_domain: 100
+    to_domain: 7
+    remap: /cmd_stop
+
+  /CAV_07/change_waypoint:
+    type: std_msgs/msg/Bool
+    from_domain: 100
+    to_domain: 7
+    remap: /change_waypoint
+
+  /CAV_07/is_roundabout:
+    type: std_msgs/msg/Bool
+    from_domain: 100
+    to_domain: 7
+    remap: /is_roundabout
+
+  /CAV_07/hv_vel:
+    type: std_msgs/msg/Float32
+    from_domain: 100
+    to_domain: 7
+    remap: /hv_vel
