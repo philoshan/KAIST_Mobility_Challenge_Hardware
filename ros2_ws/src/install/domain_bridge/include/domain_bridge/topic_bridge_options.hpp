@@ -1,1 +1,0 @@
-/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge/include/domain_bridge/topic_bridge_options.hpp

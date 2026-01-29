@@ -155,12 +155,8 @@ private:
         double center_x = msg->pose.position.x;
         double center_y = msg->pose.position.y;
         
-        // [주의] 만약 조향이 아예 안 된다면 아래 주석 해제하여 쿼터니언 변환 사용
         double current_yaw = msg->pose.orientation.z; 
-        /* double x = msg->pose.orientation.x; double y = msg->pose.orientation.y;
-        double z = msg->pose.orientation.z; double w = msg->pose.orientation.w;
-        double current_yaw = std::atan2(2*(w*z + x*y), 1 - 2*(y*y + z*z));
-        */
+       
 
         double front_x = center_x + center_to_front_ * std::cos(current_yaw);
         double front_y = center_y + center_to_front_ * std::sin(current_yaw);
