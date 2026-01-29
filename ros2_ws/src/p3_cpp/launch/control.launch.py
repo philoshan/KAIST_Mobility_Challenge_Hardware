@@ -40,7 +40,7 @@ def generate_launch_description():
     inside_path = PathJoinSubstitution([pkg_share, 'tool', inside_csv_name])
 
     # 브릿지 설정 파일: config/bridge_role_01.yaml
-    bridge_yaml_name = PythonExpression(["'bridge_role_0' + str('", lid, "') + '.yaml'"])
+    bridge_yaml_name = PythonExpression(["'domain_' + str('", lid, "') + '.yaml'"])
     bridge_config_path = PathJoinSubstitution([pkg_share, 'config', bridge_yaml_name])
 
     return LaunchDescription([
