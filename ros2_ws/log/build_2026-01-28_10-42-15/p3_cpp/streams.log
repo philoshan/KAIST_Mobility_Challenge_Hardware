@@ -1,8 +1,0 @@
-[0.027s] Invoking command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --build /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp -- -j4 -l4
-[0.122s] [35m[1mScanning dependencies of target control_p3[0m
-[0.157s] [ 50%] Built target main_p3
-[0.177s] [ 75%] [32mBuilding CXX object CMakeFiles/control_p3.dir/src/control_p3.cpp.o[0m
-[2.636s] make[2]: *** [CMakeFiles/control_p3.dir/build.make:63: CMakeFiles/control_p3.dir/src/control_p3.cpp.o] Interrupt
-[2.636s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control_p3.dir/all] Interrupt
-[2.637s] make: *** [Makefile:141: all] Interrupt
-[2.662s] Invoked command in '/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy /usr/bin/cmake --build /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp -- -j4 -l4

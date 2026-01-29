@@ -1,6 +1,0 @@
-[35m[1mScanning dependencies of target control_p3[0m
-[ 50%] Built target main_p3
-[ 75%] [32mBuilding CXX object CMakeFiles/control_p3.dir/src/control_p3.cpp.o[0m
-make[2]: *** [CMakeFiles/control_p3.dir/build.make:63: CMakeFiles/control_p3.dir/src/control_p3.cpp.o] Interrupt
-make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control_p3.dir/all] Interrupt
-make: *** [Makefile:141: all] Interrupt

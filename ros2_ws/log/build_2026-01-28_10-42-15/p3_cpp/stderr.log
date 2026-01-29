@@ -1,3 +1,0 @@
-make[2]: *** [CMakeFiles/control_p3.dir/build.make:63: CMakeFiles/control_p3.dir/src/control_p3.cpp.o] Interrupt
-make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control_p3.dir/all] Interrupt
-make: *** [Makefile:141: all] Interrupt
