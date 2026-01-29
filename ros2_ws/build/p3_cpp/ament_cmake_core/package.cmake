@@ -1,11 +1,19 @@
 set(_AMENT_PACKAGE_NAME "p3_cpp")
 set(p3_cpp_VERSION "0.0.0")
 set(p3_cpp_MAINTAINER "hy <philos0406@gmail.com>")
+<<<<<<< HEAD
 set(p3_cpp_BUILD_DEPENDS "rclcpp" "std_msgs" "geometry_msgs")
 set(p3_cpp_BUILDTOOL_DEPENDS "ament_cmake")
 set(p3_cpp_BUILD_EXPORT_DEPENDS "rclcpp" "std_msgs" "geometry_msgs")
 set(p3_cpp_BUILDTOOL_EXPORT_DEPENDS )
 set(p3_cpp_EXEC_DEPENDS "rclcpp" "std_msgs" "geometry_msgs")
+=======
+set(p3_cpp_BUILD_DEPENDS "rclcpp" "std_msgs" "geometry_msgs" "tf2" "tf2_geometry_msgs")
+set(p3_cpp_BUILDTOOL_DEPENDS "ament_cmake")
+set(p3_cpp_BUILD_EXPORT_DEPENDS "rclcpp" "std_msgs" "geometry_msgs" "tf2" "tf2_geometry_msgs")
+set(p3_cpp_BUILDTOOL_EXPORT_DEPENDS )
+set(p3_cpp_EXEC_DEPENDS "domain_bridge" "ros2launch" "rclcpp" "std_msgs" "geometry_msgs" "tf2" "tf2_geometry_msgs")
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 set(p3_cpp_TEST_DEPENDS "ament_lint_auto" "ament_lint_common")
 set(p3_cpp_GROUP_DEPENDS )
 set(p3_cpp_MEMBER_OF_GROUPS )

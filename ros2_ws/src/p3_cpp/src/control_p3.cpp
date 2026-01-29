@@ -1,8 +1,14 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
+<<<<<<< HEAD
 #include <geometry_msgs/msg/twist.hpp>
 #include <std_msgs/msg/bool.hpp>
 #include <std_msgs/msg/float32.hpp>
+=======
+#include <geometry_msgs/msg/twist.hpp> 
+#include <std_msgs/msg/bool.hpp> 
+#include <std_msgs/msg/float32.hpp> 
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 
 #include <fstream>
 #include <sstream>
@@ -25,6 +31,7 @@ public:
     StanleyTrackerNode()
     : Node("stanley_tracker_node")
     {
+<<<<<<< HEAD
         // 1. QoS 설정 (시뮬레이션에서 검증된 설정 유지)
         auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
         qos_profile.best_effort();
@@ -42,6 +49,32 @@ public:
         this->declare_parameter("forward_step", 8);
         this->declare_parameter("warmup_steps", 10);    
         // 3. 파라미터 로드
+=======
+        // 1. QoS 설정 분리
+        // 시뮬레이터 데이터 수신용 (Sensor Data) -> Best Effort
+        auto qos_profile_sensor = rclcpp::QoS(rclcpp::KeepLast(10));
+        qos_profile_sensor.best_effort();
+        qos_profile_sensor.durability_volatile();
+
+        // 드라이버 명령 전송용 (Command) -> Reliable (드라이버 노드 설정과 일치)
+        auto qos_profile_cmd = rclcpp::QoS(rclcpp::KeepLast(10));
+        qos_profile_cmd.reliable(); // 명시적 Reliable 설정
+        qos_profile_cmd.durability_volatile();
+
+        // 파라미터 설정
+        this->declare_parameter("original_way_path", "tool/cav1p3.csv");
+        this->declare_parameter("inside_way_path", "tool/cav1p3_inside.csv");
+        this->declare_parameter("k_gain", 1.2);
+        this->declare_parameter("max_steer", 0.56);       
+        this->declare_parameter("target_speed", 0.5);    
+        this->declare_parameter("center_to_front", 0.1055);
+        this->declare_parameter("wheelbase", 0.211); // 차량 길이에 맞는 축거 설정      
+        this->declare_parameter("steer_gain", 1.0);
+        this->declare_parameter("forward_step", 8);     
+        this->declare_parameter("warmup_steps", 10); 
+
+        // 파라미터 로드
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         original_csv_path_ = this->get_parameter("original_way_path").as_string();
         inside_csv_path_ = this->get_parameter("inside_way_path").as_string();
         k_gain_ = this->get_parameter("k_gain").as_double();
@@ -59,32 +92,45 @@ public:
         current_waypoints_ = &waypoints_original_;
         is_inside_path_active_ = false;
 
+<<<<<<< HEAD
         // 5. 통신 설정 (런치 파일의 remappings 적용을 위해 상대 경로 사용)
         sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
             "Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
         pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
 
+=======
+        // Subscriber (시뮬레이터 토픽 -> Best Effort QoS 사용)
+        sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
+            "/Ego_pose", qos_profile_sensor, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
+        
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         sub_stop_cmd_ = this->create_subscription<std_msgs::msg::Bool>(
-            "cmd_stop", qos_profile, 
+            "cmd_stop", qos_profile_sensor, 
             [this](const std_msgs::msg::Bool::SharedPtr msg) {
                 this->stop_signal_ = msg->data; 
                 if (this->stop_signal_) this->publish_stop_command();
             });
 
         sub_change_way_ = this->create_subscription<std_msgs::msg::Bool>(
-            "change_waypoint", qos_profile,
+            "change_waypoint", qos_profile_sensor,
             std::bind(&StanleyTrackerNode::callback_change_waypoint, this, _1));
 
         sub_hv_vel_ = this->create_subscription<std_msgs::msg::Float32>(
-            "hv_vel", qos_profile,
+            "hv_vel", qos_profile_sensor,
             [this](const std_msgs::msg::Float32::SharedPtr msg) { this->hv_vel_ = msg->data; });
 
         sub_is_roundabout_ = this->create_subscription<std_msgs::msg::Bool>(
-            "is_roundabout", qos_profile,
+            "is_roundabout", qos_profile_sensor,
             [this](const std_msgs::msg::Bool::SharedPtr msg) { this->is_roundabout_ = msg->data; });
 
+<<<<<<< HEAD
         RCLCPP_INFO(this->get_logger(), "Stanley Tracker Node Initialized with ID-based paths.");
+=======
+        // [변경] Publisher: /cmd_vel (Twist 타입) -> Reliable QoS 사용
+        // 드라이버 노드가 Reliable로 구독하므로, 퍼블리셔도 Reliable이어야 통신 가능
+        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", qos_profile_cmd);
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
     }
 
 private:
@@ -151,7 +197,11 @@ private:
 
         if (current_waypoints_->empty()) return;
 
+<<<<<<< HEAD
         // --- Stanley Logic (시뮬레이션 버전 유지) ---
+=======
+        // --- Stanley Logic ---
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         double center_x = msg->pose.position.x;
         double center_y = msg->pose.position.y;
         
@@ -207,7 +257,12 @@ private:
         double steer_angle = heading_error + std::atan2(k_gain_ * cte, std::max(final_speed, 0.1));
         steer_angle = std::clamp(normalize_angle(steer_angle) * steer_gain_, -max_steer_, max_steer_);
 
+<<<<<<< HEAD
         // Publish (Yaw Rate 기반)
+=======
+        // [변경] Twist 메시지 생성 및 발행 (v, w 계산)
+        // w = (v / L) * tan(delta) 공식을 사용하여 조향각을 각속도로 변환
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         auto msg_out = geometry_msgs::msg::Twist();
         msg_out.linear.x = final_speed;
         msg_out.angular.z = (final_speed / wheelbase_) * std::tan(steer_angle);

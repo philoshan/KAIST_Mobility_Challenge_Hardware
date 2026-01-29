@@ -1,8 +1,24 @@
+<<<<<<< HEAD
 # Install script for directory: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX "/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp")
+=======
+<<<<<<<< HEAD:ros2_ws/build/p3_cpp/cmake_install.cmake
+# Install script for directory: /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp")
+========
+# Install script for directory: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/simulator_launch
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch")
+>>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3:build/simulator_launch/cmake_install.cmake
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +54,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/p3_cpp/control_p3" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/p3_cpp/control_p3")
     file(RPATH_CHECK
@@ -142,6 +159,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/p3_cpp" TYPE FILE FILES "/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/package.xml")
+=======
+<<<<<<<< HEAD:ros2_ws/build/p3_cpp/cmake_install.cmake
+  include("/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+========
+  include("/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+>>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3:build/simulator_launch/cmake_install.cmake
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -152,5 +176,13 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/${CMAKE_INSTALL_MANIFEST}"
+=======
+<<<<<<<< HEAD:ros2_ws/build/p3_cpp/cmake_install.cmake
+file(WRITE "/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/${CMAKE_INSTALL_MANIFEST}"
+========
+file(WRITE "/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3:build/simulator_launch/cmake_install.cmake
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

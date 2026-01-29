@@ -52,7 +52,15 @@ _colcon_prepend_unique_value() {
 # since a plain shell script can't determine its own path when being sourced
 # either use the provided COLCON_CURRENT_PREFIX
 # or fall back to the build time prefix (if it exists)
+<<<<<<< HEAD
 _colcon_package_sh_COLCON_CURRENT_PREFIX="/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp"
+=======
+<<<<<<<< HEAD:ros2_ws/install/p3_cpp/share/p3_cpp/package.sh
+_colcon_package_sh_COLCON_CURRENT_PREFIX="/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp"
+========
+_colcon_package_sh_COLCON_CURRENT_PREFIX="/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller"
+>>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3:install/cav_controller/share/cav_controller/package.sh
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 if [ -z "$COLCON_CURRENT_PREFIX" ]; then
   if [ ! -d "$_colcon_package_sh_COLCON_CURRENT_PREFIX" ]; then
     echo "The build time path \"$_colcon_package_sh_COLCON_CURRENT_PREFIX\" doesn't exist. Either source a script for a different shell or set the environment variable \"COLCON_CURRENT_PREFIX\" explicitly." 1>&2

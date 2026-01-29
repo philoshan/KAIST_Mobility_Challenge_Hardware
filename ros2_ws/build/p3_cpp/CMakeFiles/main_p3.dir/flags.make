@@ -6,5 +6,9 @@ CXX_FLAGS =   -Wall -Wextra -Wpedantic -std=gnu++17
 
 CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB
 
+<<<<<<< HEAD
 CXX_INCLUDES = -isystem /opt/ros/foxy/include 
+=======
+CXX_INCLUDES = -isystem /opt/ros/foxy/include -isystem /usr/include/eigen3 
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 

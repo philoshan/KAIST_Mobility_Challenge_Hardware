@@ -5,13 +5,17 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
+<<<<<<< HEAD
 #include <unordered_set>
+=======
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 #include <cmath>
 #include <algorithm>
 #include <iostream>
 #include <map>
 #include <deque> 
 
+<<<<<<< HEAD
 // 2D 벡터 연산 및 OBB(Oriented Bounding Box) 충돌 감지를 위한 네임스페이스
 namespace Geo {
     // 기본적인 벡터 연산을 위한 구조체
@@ -24,6 +28,23 @@ namespace Geo {
     };
 
     // 두 개의 회전된 직사각형(OBB) 간의 충돌 여부를 분리 축 이론(SAT)을 사용하여 판별하는 함수
+=======
+using namespace std::chrono_literals;
+
+// ==========================================
+// [Geo] 2D 벡터 연산 및 충돌 감지 로직
+// ==========================================
+namespace Geo {
+    struct Vec2 {
+        double x, y;
+        Vec2 operator+(const Vec2& o) const { return {x + o.x, y + o.y}; }
+        Vec2 operator-(const Vec2& o) const { return {x - o.x, y - o.y}; }
+        double dot(const Vec2& o) const { return x * o.x + y * o.y; }
+        double dist_Sq() const { return x*x + y*y; }
+    };
+
+    // OBB (Oriented Bounding Box) 충돌 검사
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
     bool check_obb_intersection(const std::vector<Vec2>& box1, const std::vector<Vec2>& box2) {
         auto get_axes = [](const std::vector<Vec2>& b) {
             return std::vector<Vec2>{
@@ -52,14 +73,23 @@ namespace Geo {
     }
 }
 
+<<<<<<< HEAD
 // 차량의 상태 정보(ID, 위치, 속도, 활성 여부 등)와 ROS 통신 객체(Publisher/Subscriber)를 관리하는 구조체
 struct Vehicle {
     std::string id;       // 실제 물리적 ID (예: CAV_12)
     std::string role;     // 논리적 역할 (예: cav1, cav2, cav3, cav4)
+=======
+// ==========================================
+// [Vehicle] 차량 상태 관리 구조체
+// ==========================================
+struct Vehicle {
+    std::string id;
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
     bool is_cav;
     Geo::Vec2 pos{0.0, 0.0};
     double z = 0.0;
     bool active = false;
+<<<<<<< HEAD
     bool is_stopped = false; // 현재 정지 상태인가
     bool forced_stop = false; // 다른 cav에 의해 강제로 정지되었는가
     std::string stop_cause = ""; // 내 차량을 멈추게 한 다른 차량은 누구인가
@@ -73,12 +103,26 @@ struct Vehicle {
     rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub;
     
     // publisher
+=======
+    bool is_stopped = false; 
+    bool forced_stop = false; 
+    std::string stop_cause = ""; 
+    bool has_entered_roundabout = false; 
+
+    // HV 속도 추정용
+    Geo::Vec2 last_pos{0.0, 0.0};
+    rclcpp::Time last_time;
+
+    // ROS Interface
+    rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub;
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_stop;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_change_way;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr pub_is_roundabout;
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_hv_vel;
 };
 
+<<<<<<< HEAD
 // 전체 교통 흐름을 제어하며 차량 간 충돌 방지 및 교차로 통행 우선순위를 관리하는 메인 ROS2 노드 클래스
 class MainTrafficController : public rclcpp::Node {
 public:
@@ -99,21 +143,45 @@ public:
         approach_range_sq_ = 2.5 * 2.5;
 
         // 사지교차로 관련 변수
+=======
+// ==========================================
+// [Main Node] 중앙 관제 컨트롤러 (Domain 100)
+// ==========================================
+class MainTrafficController : public rclcpp::Node {
+public:
+    MainTrafficController() : Node("main_traffic_controller") {
+        // [설정] 차량 크기 (전장, 전폭 고려)
+        car_info = {0.17, 0.16, 0.075, 0.075};
+        front_padding_ = 0.8;
+        side_padding_ = 0.8;
+        approach_range_sq_ = 2.5 * 2.5;
+
+        // 사지교차로 영역
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         fourway_center_ = {-2.333, 0.0};
         fourway_len_ = 2.0;
         fourway_app_r_sq_ = 1.5 * 1.5;
         fourway_box_half_len_ = fourway_len_ / 2.0;
 
+<<<<<<< HEAD
         // 회전교차로 관련 변수
+=======
+        // 회전교차로 영역
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         round_center_ = {1.667, 0.0};
         round_app_r_sq_ = 1.8 * 1.8;
         round_radius_ = 1.4;
 
+<<<<<<< HEAD
         // 삼지교차로 관련 변수 중심 x : -2.3
+=======
+        // 삼지교차로 영역
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         threeway_box_x_min_ = -3.7; threeway_box_x_max_ = -1.2;
         threeway_1_y_min_ = 1.0;    threeway_1_y_max_ = 3.0;
         threeway_2_y_min_ = -3.0;   threeway_2_y_max_ = -1.0;
 
+<<<<<<< HEAD
         // 타이머
         tmr_discovery_ = create_wall_timer(
             std::chrono::seconds(1),
@@ -125,6 +193,19 @@ public:
         );
 
         RCLCPP_INFO(get_logger(), "Controller Started: Ready to assign roles from parameters.");
+=======
+        // 타이머 설정
+        // 1. 차량 발견 (1초마다 새로운 토픽 스캔)
+        tmr_discovery_ = create_wall_timer(
+            1000ms, std::bind(&MainTrafficController::discover_vehicles, this));
+        
+        // 2. 제어 루프 (20ms = 50Hz)
+        tmr_control_ = create_wall_timer(
+            20ms, std::bind(&MainTrafficController::control_loop, this));
+
+        RCLCPP_INFO(get_logger(), "=== Central Traffic Controller Started (Domain 100) ===");
+        RCLCPP_INFO(get_logger(), "Waiting for Bridged Topics (e.g., /CAV_01/Ego_pose)...");
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
     }
 
 private:
@@ -132,11 +213,17 @@ private:
     std::unordered_map<std::string, Vehicle> vehicles_;
     std::map<std::string, std::string> conflict_info_;
 
+<<<<<<< HEAD
     // HV 속도 이동 평균 필터용 변수
     std::deque<double> hv_vel_buffer_;
     const int vel_buffer_size_ = 10;
 
     // 각 교차로 및 거리 기반 충돌 감지용 변수
+=======
+    std::deque<double> hv_vel_buffer_;
+    const int vel_buffer_size_ = 10;
+
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
     std::vector<double> car_info;
     double front_padding_, side_padding_, approach_range_sq_;
     Geo::Vec2 fourway_center_;
@@ -145,6 +232,7 @@ private:
     double round_app_r_sq_, round_radius_;
     double threeway_box_x_min_, threeway_box_x_max_, threeway_1_y_min_, threeway_1_y_max_, threeway_2_y_min_, threeway_2_y_max_;
 
+<<<<<<< HEAD
     // [추가] 역할(role)을 통해 실제 등록된 차량의 ID를 찾는 헬퍼 함수
     std::string get_id_by_role(const std::string& role_name) {
         for (const auto& [id, v] : vehicles_) {
@@ -230,10 +318,120 @@ private:
                     if (vehicles_[id].role != assigned_role) {
                         vehicles_[id].role = assigned_role;
                         // RCLCPP_INFO(get_logger(), "Updated Role for %s: %s", id.c_str(), assigned_role.c_str());
+=======
+    // ==========================================
+    // [Discovery] 차량 자동 감지 로직 (브릿지 대응)
+    // ==========================================
+    void discover_vehicles() {
+        auto topic_map = this->get_topic_names_and_types();
+        for (const auto& [name, types] : topic_map) {
+            // 올바른 토픽 형식인지 확인 (반드시 /Ego_pose로 끝나야 함)
+            if (name.length() < 9 || name.find("/Ego_pose") == std::string::npos) continue;
+
+            // 파싱 로직: "/CAV_01/Ego_pose" -> "CAV_01" 추출
+            // 1. 뒤쪽 "/Ego_pose" 제거
+            size_t suffix_pos = name.find("/Ego_pose");
+            if (suffix_pos == 0) continue; // 네임스페이스가 없는 경우 (/Ego_pose) -> 무시
+
+            std::string ns_part = name.substr(0, suffix_pos); // "/CAV_01"
+            
+            // 2. 앞쪽 "/" 제거
+            if (ns_part.front() == '/') {
+                ns_part.erase(0, 1); // "CAV_01"
+            }
+
+            // 3. ID 유효성 검사 (CAV_ 또는 HV_로 시작해야 함)
+            std::string id = ns_part;
+            bool is_cav = false;
+
+            if (id.find("CAV_") != std::string::npos) {
+                is_cav = true;
+            } else if (id.find("HV_") != std::string::npos) {
+                is_cav = false;
+            } else {
+                continue; // 엉뚱한 이름이면 패스
+            }
+
+            // 4. 신규 차량이면 등록
+            if (!id.empty() && !vehicles_.count(id)) {
+                register_vehicle(id, name, is_cav);
+            }
+        }
+    }
+
+    void register_vehicle(const std::string& id, const std::string& topic_name, bool is_cav) {
+        Vehicle v; 
+        v.id = id; 
+        v.is_cav = is_cav;
+        v.last_time = this->now();
+
+        // QoS: 무선 통신(브릿지) 환경을 고려하여 Best Effort 사용
+        rclcpp::QoS qos(10);
+        qos.best_effort();
+        qos.durability_volatile();
+
+        // 구독 (Subscriber): 브릿지에서 넘어온 위치 정보 수신
+        v.sub = create_subscription<geometry_msgs::msg::PoseStamped>(
+            topic_name, qos,
+            [this, id](const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
+                if (vehicles_.count(id)) {
+                    Vehicle& veh = vehicles_[id];
+                    
+                    double prev_x = veh.last_pos.x;
+                    double prev_y = veh.last_pos.y;
+                    rclcpp::Time prev_time = veh.last_time;
+
+                    veh.pos = {msg->pose.position.x, msg->pose.position.y};
+                    veh.z = msg->pose.orientation.z; 
+                    veh.active = true;
+                    
+                    veh.last_pos = veh.pos;
+                    veh.last_time = msg->header.stamp;
+
+                    // HV 차량 속도 계산 (HV_19 등)
+                    if (id.find("HV_") != std::string::npos) {
+                        double dt = (veh.last_time - prev_time).seconds();
+                        if (dt > 0.001) { 
+                            double dx = veh.pos.x - prev_x;
+                            double dy = veh.pos.y - prev_y;
+                            double dist = std::hypot(dx, dy);
+                            double vel = dist / dt;
+
+                            hv_vel_buffer_.push_back(vel);
+                            if (hv_vel_buffer_.size() > vel_buffer_size_) {
+                                hv_vel_buffer_.pop_front();
+                            }
+                            // 평균 속도 계산 후 전파
+                            double sum = 0.0;
+                            for (double val : hv_vel_buffer_) sum += val;
+                            double avg_vel = sum / hv_vel_buffer_.size();
+
+                            std_msgs::msg::Float32 vel_msg;
+                            vel_msg.data = static_cast<float>(avg_vel - 0.05); // 약간 보수적으로 잡음
+                            
+                            // 모든 CAV에게 HV 속도 정보 공유
+                            for (auto& [target_id, target_v] : vehicles_) {
+                                if (target_v.is_cav && target_v.active && target_v.pub_hv_vel) {
+                                    target_v.pub_hv_vel->publish(vel_msg);
+                                }
+                            }
+                        }
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
                     }
                 }
             }
+        );
+
+        // 발행 (Publisher): 브릿지로 보낼 명령
+        // Topic 이름: /CAV_XX/cmd_stop (도메인 브릿지가 이걸 잡아서 차량의 /cmd_stop으로 쏴줌)
+        if (is_cav) {
+            std::string base_topic = "/" + id; // ex: /CAV_01
+            v.pub_stop = create_publisher<std_msgs::msg::Bool>(base_topic + "/cmd_stop", qos);
+            v.pub_change_way = create_publisher<std_msgs::msg::Bool>(base_topic + "/change_waypoint", qos);
+            v.pub_is_roundabout = create_publisher<std_msgs::msg::Bool>(base_topic + "/is_roundabout", qos);
+            v.pub_hv_vel = create_publisher<std_msgs::msg::Float32>(base_topic + "/hv_vel", qos);
         }
+<<<<<<< HEAD
     }
 
     // 감지된 차량에 대한 구독(Sub) 및 발행(Pub) 객체를 생성 / HV 차량의 t linear 속도를 계산
@@ -349,19 +547,100 @@ private:
     // 사지교차로 진입 전, 내부 상황 파악 및 정지 판단하는 로직. true : 정지해야함 / false : 계속 주행
     bool check_fourway_rect_split(const Vehicle& my_cav) {
         // 사지교차로 범위 (정사각형)
+=======
+        
+        vehicles_[id] = std::move(v);
+        RCLCPP_INFO(get_logger(), "New Vehicle Registered: %s (Sub: %s)", id.c_str(), topic_name.c_str());
+    }
+
+    // ==========================================
+    // [Logic] 충돌 및 우선순위 판단 로직
+    // ==========================================
+    void update_conflict_status(const std::string& stopped_cav, const std::string& cause_vehicle) {
+        if (conflict_info_.count(stopped_cav) && conflict_info_[stopped_cav] == cause_vehicle) return; 
+        conflict_info_[stopped_cav] = cause_vehicle;
+        RCLCPP_INFO(get_logger(), "[STOP] %s stopped by %s", stopped_cav.c_str(), cause_vehicle.c_str());
+    }
+
+    void clear_conflict_status(const std::string& stopped_cav) {
+        if (conflict_info_.count(stopped_cav)) {
+            RCLCPP_INFO(get_logger(), "[GO] %s released", stopped_cav.c_str());
+            conflict_info_.erase(stopped_cav);
+        }
+    }
+
+    bool is_approaching(const Vehicle& spot, const Geo::Vec2& target_pos) {
+        Geo::Vec2 vec = target_pos - spot.pos;
+        return vec.dot({std::cos(spot.z), std::sin(spot.z)}) > 0;
+    }
+
+    std::vector<Geo::Vec2> get_vehicle_corners(const Vehicle& v, double front_ext, double side_pad) {
+        double front = car_info[0] + front_ext;
+        double rear = car_info[1];
+        double left = car_info[2] + side_pad;
+        double right = car_info[3] + side_pad;
+        std::vector<Geo::Vec2> locals = {{front, left}, {front, -right}, {-rear, -right}, {-rear, left}};
+        std::vector<Geo::Vec2> world_corners;
+        double c = std::cos(v.z), s = std::sin(v.z);
+        for (const auto& p : locals) {
+            world_corners.push_back({
+                v.pos.x + (p.x * c - p.y * s),
+                v.pos.y + (p.x * s + p.y * c)
+            });
+        }
+        return world_corners;
+    }
+
+    bool is_in_threeway_zone(const Geo::Vec2& pos) {
+        return (pos.x >= threeway_box_x_min_ && pos.x <= threeway_box_x_max_) &&
+               ((pos.y >= threeway_1_y_min_ && pos.y <= threeway_1_y_max_) ||
+                (pos.y >= threeway_2_y_min_ && pos.y <= threeway_2_y_max_));
+    }
+
+    bool check_threeway_conflict(const Vehicle& my_cav, const std::string& tid, bool is_next_lane, bool is_full, std::string& temp_log) {
+        if (tid == "CAV_03" || tid == "CAV_04") {
+            if (my_cav.id == "CAV_01" && is_next_lane) {
+                temp_log = "threeway_NEXT_LANE";
+                return true;
+            } else if (my_cav.id == "CAV_02" && is_full && !is_next_lane) {
+                temp_log = "threeway_VERTICAL";
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool is_in_fourway_zone(const Vehicle& v){ return (v.pos - fourway_center_).dist_Sq() <= fourway_app_r_sq_; }
+
+    bool check_fourway_conflict(bool is_front, bool is_next_lane, std::string& temp_log) {
+        if (is_front && !is_next_lane) {
+            temp_log = "4WAY_FRONT";
+            return true;
+        }
+        return false;
+    }
+
+    bool check_fourway_rect_split(const Vehicle& my_cav) {
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         double x_min = fourway_center_.x - fourway_box_half_len_;
         double x_max = fourway_center_.x + fourway_box_half_len_;
         double y_min = fourway_center_.y - fourway_box_half_len_;
         double y_max = fourway_center_.y + fourway_box_half_len_;
 
+<<<<<<< HEAD
         // my_cav가 사지교차로 내부에 있는가?
         bool i_am_inside = (my_cav.pos.x >= x_min && my_cav.pos.x <= x_max &&
                             my_cav.pos.y >= y_min && my_cav.pos.y <= y_max);
         // my_cav가 사지교차로를 향해 주행중이며 접근 구역에 있는 경우에만 계산 (이미 내부에 있는 경우는 계산 X)
+=======
+        bool i_am_inside = (my_cav.pos.x >= x_min && my_cav.pos.x <= x_max &&
+                            my_cav.pos.y >= y_min && my_cav.pos.y <= y_max);
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         if (i_am_inside) return false;
         if ((my_cav.pos - fourway_center_).dist_Sq() > fourway_app_r_sq_) return false;
         if (!is_approaching(my_cav, fourway_center_)) return false;
         
+<<<<<<< HEAD
         // 사지교차로(정사각형) 중심을 기준으로 my_cav의 위치가 어디인지 반환
         bool am_i_top = (my_cav.pos.y > fourway_center_.y); // 위쪽 : true, 아래쪽 : false
         bool am_i_right = (my_cav.pos.x > fourway_center_.x); // 오른쪽 : true, 왼쪽 : false
@@ -417,6 +696,47 @@ private:
             if (is_role_in_box("cav4")) {
                 if (my_cav.role == "cav1" && !am_i_top) return true;
                 if (my_cav.role == "cav2" && am_i_right) return true;
+=======
+        bool am_i_top = (my_cav.pos.y > fourway_center_.y); 
+        bool am_i_right = (my_cav.pos.x > fourway_center_.x); 
+
+        if (my_cav.id == "CAV_01" || my_cav.id == "CAV_02") {
+            std::string tid = (my_cav.id == "CAV_01") ? "CAV_02" : "CAV_01"; 
+            if (vehicles_.count(tid) && vehicles_.at(tid).active) {
+                const auto& target = vehicles_.at(tid);
+                bool target_inside = (target.pos.x >= x_min && target.pos.x <= x_max &&
+                                      target.pos.y >= y_min && target.pos.y <= y_max);
+                if (target_inside) {
+                    bool target_is_right = (target.pos.x > fourway_center_.x);
+                    bool target_approaching = is_approaching(target, fourway_center_);
+                    
+                    if (my_cav.id == "CAV_01"){
+                        if (am_i_top && !target_is_right && target_approaching) return true;
+                        else if (!am_i_top && target_is_right && target_approaching) return true;
+                    }
+                    else{
+                        bool target_is_top = (target.pos.y > fourway_center_.y);
+                        if(!am_i_right && !target_is_top && target_approaching) return true;
+                        else if (am_i_right && target_is_right && target_approaching) return true;
+                    }
+                }
+            }
+            // HV 간섭 체크
+            auto is_target_in_box = [&](const std::string& tid) {
+                if (vehicles_.count(tid) && vehicles_.at(tid).active) {
+                    const auto& tv = vehicles_.at(tid);
+                    return (tv.pos.x >= x_min && tv.pos.x <= x_max &&
+                            tv.pos.y >= y_min && tv.pos.y <= y_max);
+                }
+                return false;
+            };
+            if (is_target_in_box("CAV_03")) {
+                if (my_cav.id == "CAV_01" && am_i_top) return true;
+                if (my_cav.id == "CAV_02" && !am_i_right) return true;
+            }
+            if (is_target_in_box("CAV_04")) {
+                if (my_cav.id == "CAV_01" && !am_i_top) return true;
+                if (my_cav.id == "CAV_02" && am_i_right) return true;
             }
         }
 
@@ -429,6 +749,101 @@ private:
                 else count_bottom++;
             }
         }
+        return am_i_top ? (count_top >= 2) : (count_bottom >= 2);
+    }
+
+    bool is_in_round_zone(const Vehicle& v){ return (v.pos - round_center_).dist_Sq() <= round_app_r_sq_; }
+
+    int count_cavs_in_roundabout() {
+        int count = 0;
+        double r_sq = round_radius_ * round_radius_;
+        for (const auto& [id, v] : vehicles_) {
+            if (v.is_cav && v.active &&
+                (v.pos - round_center_).dist_Sq() <= r_sq) count++;
+        }
+        return count;
+    }
+
+    bool check_roundabout(const Vehicle& my_cav) {
+        double dist_sq = (my_cav.pos - round_center_).dist_Sq();
+        double r_sq = round_radius_ * round_radius_;
+        if (dist_sq > round_app_r_sq_ || dist_sq <= r_sq || !is_approaching(my_cav, round_center_))
+            return false;
+
+        int cavs_inside = count_cavs_in_roundabout();
+        if (cavs_inside >= 2) return true;
+
+        auto is_blocked_by_hv_check = [&](const Vehicle& v) -> bool {
+            double default_check_left = 2.1 / round_radius_;
+            double default_check_right = 0.4 / round_radius_;
+            if (v.is_stopped && v.stop_cause == "ROUND_YIELD") default_check_left += 0.5;
+            double v_angle = std::atan2(v.pos.y - round_center_.y, v.pos.x - round_center_.x);
+
+            for (const auto& [tid, target] : vehicles_) {
+                if (tid == v.id || !target.active || target.is_cav) continue;
+                if ((target.pos - round_center_).dist_Sq() <= r_sq){
+                    double t_angle = std::atan2(target.pos.y - round_center_.y, target.pos.x - round_center_.x);
+                    double diff = t_angle - v_angle;
+                    while (diff > M_PI) diff -= 2.0 * M_PI;
+                    while (diff < -M_PI) diff += 2.0 * M_PI;
+                    if ((diff > 0 && diff < default_check_right) ||
+                        (diff <= 0 && diff > -default_check_left)) return true;
+                }
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
+            }
+            return false;
+        };
+
+        if (is_blocked_by_hv_check(my_cav)) return true;
+
+        for (const auto& [tid, target] : vehicles_) {
+            if (tid == my_cav.id || !target.is_cav || !target.active) continue;
+            bool is_pair = ((my_cav.id == "CAV_01" && tid == "CAV_04") ||
+                            (my_cav.id == "CAV_04" && tid == "CAV_01") ||
+                            (my_cav.id == "CAV_02" && tid == "CAV_03") ||
+                            (my_cav.id == "CAV_03" && tid == "CAV_02"));
+            double t_dist_sq = (target.pos - round_center_).dist_Sq();
+            if (t_dist_sq > round_app_r_sq_ || t_dist_sq <= r_sq || !is_approaching(target, round_center_)) continue;
+            if (is_blocked_by_hv_check(target)) continue;
+            if (is_pair) continue;
+            if (t_dist_sq < dist_sq - 0.01) return true;
+            if (std::abs(t_dist_sq - dist_sq) <= 0.01 && tid < my_cav.id) return true;
+        }
+        return false;
+    }
+
+    void process_roundabout_path_decision(Vehicle& my_cav, const std::string& zone, const std::string& my_id) {
+        double dist_sq = (my_cav.pos - round_center_).dist_Sq();
+        if (dist_sq <= round_app_r_sq_ * 1.1 &&
+            dist_sq > (round_radius_ * round_radius_) &&
+            !my_cav.has_entered_roundabout) {
+
+<<<<<<< HEAD
+        int count_top = 0, count_bottom = 0;
+        for (const auto& [id, v] : vehicles_) {
+            if (!v.active) continue;
+            if (v.pos.x >= x_min && v.pos.x <= x_max &&
+                v.pos.y >= y_min && v.pos.y <= y_max) {
+                if (v.pos.y > fourway_center_.y) count_top++;
+                else count_bottom++;
+=======
+            bool go_inside = false;
+            if (my_cav.id == "CAV_01" && vehicles_.count("CAV_04") && vehicles_["CAV_04"].active &&
+                (vehicles_["CAV_04"].pos - round_center_).dist_Sq() <= 2.5*2.5) {
+                go_inside = true;
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
+            }
+            else if (my_cav.id == "CAV_02" && vehicles_.count("CAV_03") && vehicles_["CAV_03"].active &&
+                     (vehicles_["CAV_03"].pos - round_center_).dist_Sq() <= 2.5*2.5) {
+                go_inside = true;
+            }
+            
+            std_msgs::msg::Bool way_msg;
+            way_msg.data = go_inside;
+            my_cav.pub_change_way->publish(way_msg);
+            my_cav.has_entered_roundabout = true;
+        }
+<<<<<<< HEAD
         return am_i_top ? (count_top >= 2) : (count_bottom >= 2);
     }
 
@@ -694,6 +1109,142 @@ private:
                 if (my_cav_stop) {
                     update_conflict_status(my_id, cause_id);
                 } 
+=======
+    }
+
+    bool is_in_danger_zone(const Vehicle& v) {
+        if ((v.pos - round_center_).dist_Sq() <= round_app_r_sq_) return true;
+        if ((v.pos - fourway_center_).dist_Sq() <= fourway_app_r_sq_) return true;
+        if (is_in_threeway_zone(v.pos)) return true;
+        return false;
+    }
+
+    bool is_parallel(const Vehicle& my_cav, const Vehicle& target){
+        double dz = my_cav.z - target.z;
+        while (dz > M_PI) dz -= 2.0 * M_PI;
+        while (dz < -M_PI) dz += 2.0 * M_PI;
+        dz = std::abs(dz);
+        return (dz < 0.40) || (dz > (M_PI - 0.40));
+    }
+
+    bool is_conflict(const Vehicle& my_cav, std::string& conflict_id, std::string& log_msg, bool& deadlock_override) {
+        double dist_to_round = (my_cav.pos - round_center_).dist_Sq(); 
+        if (dist_to_round <= (round_radius_* round_radius_) && !is_approaching(my_cav, round_center_)) return false;
+
+        for (const auto& [tid, target] : vehicles_) {
+            if (tid == my_cav.id || !target.active) continue;
+            if ((my_cav.pos - target.pos).dist_Sq() > approach_range_sq_) continue;
+
+            auto target_box = get_vehicle_corners(target, 0.0, 0.0);
+            auto full_box = get_vehicle_corners(my_cav, front_padding_, side_padding_);
+            auto front_box = get_vehicle_corners(my_cav, front_padding_, 0.1);
+
+            bool is_full = Geo::check_obb_intersection(full_box, target_box);
+            bool is_front = Geo::check_obb_intersection(front_box, target_box);
+
+            double vehicle_width = car_info[2] + car_info[3];
+            double dx = target.pos.x - my_cav.pos.x;
+            double dy = target.pos.y - my_cav.pos.y;
+            double side_dist = std::abs(-std::sin(my_cav.z) * dx + std::cos(my_cav.z) * dy);
+            bool is_parallel_result = is_parallel(my_cav, target);
+            bool is_next_lane = is_parallel_result && (side_dist > vehicle_width * 1.2) && (side_dist < vehicle_width * 5.0);
+
+            bool collision_detected = false;
+            std::string temp_log = "";
+
+            if (is_in_threeway_zone(my_cav.pos)) {
+                collision_detected = check_threeway_conflict(my_cav, tid, is_next_lane, is_full, temp_log);
+            }  
+            else if (is_in_fourway_zone(my_cav)) {
+                collision_detected = check_fourway_conflict(is_front, is_next_lane, temp_log);
+            }
+
+            if (collision_detected) {
+                if (conflict_info_.count(tid) && conflict_info_[tid] == my_cav.id) {
+                    deadlock_override = true;
+                    continue;
+                } else {
+                    conflict_id = tid;
+                    log_msg = temp_log;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    void handle_safe_zone_recovery(Vehicle& my_cav, const std::string& my_id) {
+        if (my_cav.is_stopped) {
+            std_msgs::msg::Bool msg; msg.data = false; my_cav.pub_stop->publish(msg);
+            my_cav.is_stopped = false;
+            my_cav.stop_cause.clear();
+            clear_conflict_status(my_id);
+        } else {
+            // [Safety] 평시에도 false를 지속적으로 보내줌
+            std_msgs::msg::Bool msg; msg.data = false; my_cav.pub_stop->publish(msg);
+        }
+    }
+
+    void control_loop() {
+        if (vehicles_.empty()) return;
+
+        for (auto& [my_id, my_cav] : vehicles_) {
+            if (!my_cav.is_cav || !my_cav.active) continue;
+
+            double dist_from_center = std::sqrt((my_cav.pos - round_center_).dist_Sq());
+            bool inside_roundabout = (dist_from_center <= round_radius_);
+            if (my_cav.pub_is_roundabout) {
+                std_msgs::msg::Bool round_msg;
+                round_msg.data = inside_roundabout;
+                my_cav.pub_is_roundabout->publish(round_msg);
+            }
+
+            if (!is_in_danger_zone(my_cav)) {
+                handle_safe_zone_recovery(my_cav, my_id);
+                continue;
+            }
+
+            bool my_cav_stop = false;
+            std::string cause_id = "NONE";
+            std::string log_msg = "";
+            bool deadlock_active = false;
+            std::string zone = is_in_threeway_zone(my_cav.pos) ? "threeway" :
+                               (is_in_fourway_zone(my_cav) ? "4WAY" : "ROUND");
+
+            if (my_cav.forced_stop) {
+                my_cav_stop = true; cause_id = my_cav.stop_cause; log_msg = "FORCED";
+            }
+            else {
+                if (is_conflict(my_cav, cause_id, log_msg, deadlock_active)) {
+                    my_cav_stop = true;
+                }
+                else {
+                    if (zone == "4WAY") {
+                        if (check_fourway_rect_split(my_cav)) {
+                            my_cav_stop = true; cause_id = "4WAY_BLOCK"; log_msg = "4WAY_FULL";
+                        }
+                    }
+                    else if (zone == "ROUND") {
+                        if (check_roundabout(my_cav)) {
+                            my_cav_stop = true; cause_id = "ROUND_YIELD"; log_msg = "ROUND_YIELD";
+                            my_cav.has_entered_roundabout = false;
+                        } 
+                        else {
+                            process_roundabout_path_decision(my_cav, zone, my_id);
+                        }
+                    } else {
+                        my_cav.has_entered_roundabout = false;
+                    }
+                }
+            }
+
+            if (!my_cav_stop) {
+                clear_conflict_status(my_id);
+            }
+
+            if (my_cav.is_stopped != my_cav_stop) {
+                if (my_cav_stop) update_conflict_status(my_id, cause_id);
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
             } else if (my_cav_stop) {
                 update_conflict_status(my_id, cause_id);
             }
@@ -712,7 +1263,10 @@ private:
     }
 };
 
+<<<<<<< HEAD
 // ROS2 노드를 초기화하고 MainTrafficController를 실행하는 프로그램 진입점
+=======
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 int main(int argc, char * argv[]) {
     rclcpp::init(argc, argv);
     rclcpp::spin(std::make_shared<MainTrafficController>());

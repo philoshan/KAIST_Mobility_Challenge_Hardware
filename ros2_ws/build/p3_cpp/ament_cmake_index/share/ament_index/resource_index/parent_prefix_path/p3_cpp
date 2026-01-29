@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/p3_cpp:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/domain_bridge:/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/cav_controller:/opt/ros/foxy
+=======
+/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/domain_bridge:/opt/ros/foxy
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3

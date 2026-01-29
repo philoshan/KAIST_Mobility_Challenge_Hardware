@@ -1,6 +1,0 @@
-{
-  "package_name": "domain_bridge",
-  "non_idl_tuples": [
-    "/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/domain_bridge:msg/CompressedMsg.msg"
-  ]
-}

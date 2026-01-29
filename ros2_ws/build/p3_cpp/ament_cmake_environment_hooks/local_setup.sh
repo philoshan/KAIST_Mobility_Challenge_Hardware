@@ -2,7 +2,11 @@
 
 # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
 # or fall back to the destination set at configure time
+<<<<<<< HEAD
 : ${AMENT_CURRENT_PREFIX:="/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp"}
+=======
+: ${AMENT_CURRENT_PREFIX:="/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp"}
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 if [ ! -d "$AMENT_CURRENT_PREFIX" ]; then
   if [ -z "$COLCON_CURRENT_PREFIX" ]; then
     echo "The compile time prefix path '$AMENT_CURRENT_PREFIX' doesn't " \

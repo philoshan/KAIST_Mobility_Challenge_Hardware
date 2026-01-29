@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/domain_bridge/rosidl_generator_py/domain_bridge/domain_bridge_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" "TARGETS" "domain_bridge__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/domain_bridge")

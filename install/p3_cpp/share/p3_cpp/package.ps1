@@ -110,7 +110,13 @@ function colcon_package_source_powershell_script {
 # the prefix is two levels up from the package specific share directory
 $env:COLCON_CURRENT_PREFIX=(Get-Item $PSCommandPath).Directory.Parent.Parent.FullName
 
+<<<<<<< HEAD:install/p3_cpp/share/p3_cpp/package.ps1
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/p3_cpp/hook/cmake_prefix_path.ps1"
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/p3_cpp/local_setup.ps1"
+=======
+colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/cav_controller/hook/pythonpath.ps1"
+colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/cav_controller/hook/ament_prefix_path.ps1"
+colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\../../build/cav_controller/share/cav_controller/hook/pythonpath_develop.ps1"
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3:ros2_ws/install/cav_controller/share/cav_controller/package.ps1
 
 Remove-Item Env:\COLCON_CURRENT_PREFIX

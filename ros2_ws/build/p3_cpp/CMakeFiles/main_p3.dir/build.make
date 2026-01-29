@@ -43,10 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp
+=======
+CMAKE_SOURCE_DIR = /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main_p3.dir/depend.make
@@ -58,6 +65,7 @@ include CMakeFiles/main_p3.dir/progress.make
 include CMakeFiles/main_p3.dir/flags.make
 
 CMakeFiles/main_p3.dir/src/main_p3.cpp.o: CMakeFiles/main_p3.dir/flags.make
+<<<<<<< HEAD
 CMakeFiles/main_p3.dir/src/main_p3.cpp.o: /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main_p3.dir/src/main_p3.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_p3.dir/src/main_p3.cpp.o -c /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp
@@ -69,6 +77,19 @@ CMakeFiles/main_p3.dir/src/main_p3.cpp.i: cmake_force
 CMakeFiles/main_p3.dir/src/main_p3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_p3.dir/src/main_p3.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp -o CMakeFiles/main_p3.dir/src/main_p3.cpp.s
+=======
+CMakeFiles/main_p3.dir/src/main_p3.cpp.o: /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main_p3.dir/src/main_p3.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_p3.dir/src/main_p3.cpp.o -c /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp
+
+CMakeFiles/main_p3.dir/src/main_p3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_p3.dir/src/main_p3.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp > CMakeFiles/main_p3.dir/src/main_p3.cpp.i
+
+CMakeFiles/main_p3.dir/src/main_p3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_p3.dir/src/main_p3.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp/src/main_p3.cpp -o CMakeFiles/main_p3.dir/src/main_p3.cpp.s
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 
 # Object files for target main_p3
 main_p3_OBJECTS = \
@@ -79,23 +100,64 @@ main_p3_EXTERNAL_OBJECTS =
 
 main_p3: CMakeFiles/main_p3.dir/src/main_p3.cpp.o
 main_p3: CMakeFiles/main_p3.dir/build.make
+<<<<<<< HEAD
 main_p3: /opt/ros/foxy/lib/librclcpp.so
 main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_c.so
 main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
 main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
+=======
+main_p3: /opt/ros/foxy/lib/liborocos-kdl.so.1.4.0
+main_p3: /opt/ros/foxy/lib/libstatic_transform_broadcaster_node.so
+main_p3: /opt/ros/foxy/lib/libtf2_ros.so
+main_p3: /opt/ros/foxy/lib/libtf2.so
+main_p3: /opt/ros/foxy/lib/libmessage_filters.so
+main_p3: /opt/ros/foxy/lib/librclcpp_action.so
+main_p3: /opt/ros/foxy/lib/librcl_action.so
+main_p3: /opt/ros/foxy/lib/libtf2_msgs__rosidl_typesupport_introspection_c.so
+main_p3: /opt/ros/foxy/lib/libtf2_msgs__rosidl_generator_c.so
+main_p3: /opt/ros/foxy/lib/libtf2_msgs__rosidl_typesupport_c.so
+main_p3: /opt/ros/foxy/lib/libtf2_msgs__rosidl_typesupport_introspection_cpp.so
+main_p3: /opt/ros/foxy/lib/libtf2_msgs__rosidl_typesupport_cpp.so
+main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
+main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_generator_c.so
+main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_c.so
+main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
+main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
+main_p3: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
+main_p3: /opt/ros/foxy/lib/libaction_msgs__rosidl_generator_c.so
+main_p3: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_c.so
+main_p3: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so
+main_p3: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_cpp.so
+main_p3: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_c.so
+main_p3: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_generator_c.so
+main_p3: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_c.so
+main_p3: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
+main_p3: /opt/ros/foxy/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
+main_p3: /opt/ros/foxy/lib/libcomponent_manager.so
+main_p3: /opt/ros/foxy/lib/librclcpp.so
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 main_p3: /opt/ros/foxy/lib/liblibstatistics_collector.so
 main_p3: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
 main_p3: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so
 main_p3: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_c.so
 main_p3: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_cpp.so
 main_p3: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_cpp.so
+<<<<<<< HEAD
 main_p3: /opt/ros/foxy/lib/librcl.so
 main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_generator_c.so
 main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_c.so
 main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
 main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_cpp.so
+=======
+main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_generator_c.so
+main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_c.so
+main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
+main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_cpp.so
+main_p3: /opt/ros/foxy/lib/librcl.so
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 main_p3: /opt/ros/foxy/lib/librmw_implementation.so
 main_p3: /opt/ros/foxy/lib/librmw.so
 main_p3: /opt/ros/foxy/lib/librcl_logging_spdlog.so
@@ -113,12 +175,28 @@ main_p3: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_c.so
 main_p3: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
 main_p3: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
 main_p3: /opt/ros/foxy/lib/libtracetools.so
+<<<<<<< HEAD
 main_p3: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_generator_c.so
 main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_generator_c.so
 main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_c.so
 main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 main_p3: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_cpp.so
+=======
+main_p3: /opt/ros/foxy/lib/libament_index_cpp.so
+main_p3: /opt/ros/foxy/lib/libclass_loader.so
+main_p3: /opt/ros/foxy/lib/aarch64-linux-gnu/libconsole_bridge.so.1.0
+main_p3: /opt/ros/foxy/lib/libcomposition_interfaces__rosidl_typesupport_introspection_c.so
+main_p3: /opt/ros/foxy/lib/libcomposition_interfaces__rosidl_generator_c.so
+main_p3: /opt/ros/foxy/lib/libcomposition_interfaces__rosidl_typesupport_c.so
+main_p3: /opt/ros/foxy/lib/libcomposition_interfaces__rosidl_typesupport_introspection_cpp.so
+main_p3: /opt/ros/foxy/lib/libcomposition_interfaces__rosidl_typesupport_cpp.so
+main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
+main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_generator_c.so
+main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_c.so
+main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
+main_p3: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_cpp.so
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 main_p3: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 main_p3: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so
 main_p3: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
@@ -132,7 +210,11 @@ main_p3: /opt/ros/foxy/lib/librcpputils.so
 main_p3: /opt/ros/foxy/lib/librosidl_runtime_c.so
 main_p3: /opt/ros/foxy/lib/librcutils.so
 main_p3: CMakeFiles/main_p3.dir/link.txt
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main_p3"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main_p3"
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_p3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -145,6 +227,10 @@ CMakeFiles/main_p3.dir/clean:
 .PHONY : CMakeFiles/main_p3.dir/clean
 
 CMakeFiles/main_p3.dir/depend:
+<<<<<<< HEAD
 	cd /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp /home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles/main_p3.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/src/p3_cpp /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp /home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/CMakeFiles/main_p3.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 .PHONY : CMakeFiles/main_p3.dir/depend
 

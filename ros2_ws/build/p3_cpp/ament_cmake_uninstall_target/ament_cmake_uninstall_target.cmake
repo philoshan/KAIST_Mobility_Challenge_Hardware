@@ -2,7 +2,15 @@
 # ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target.cmake.in
 
 function(ament_cmake_uninstall_target_remove_empty_directories path)
+<<<<<<< HEAD
   set(install_space "/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp")
+=======
+<<<<<<<< HEAD:ros2_ws/build/p3_cpp/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+  set(install_space "/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/install/p3_cpp")
+========
+  set(install_space "/home/cav-06/KAIST_Mobility_Challenge_Hardware/install/simulator_launch")
+>>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3:build/simulator_launch/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
   if(install_space STREQUAL "")
     message(FATAL_ERROR "The CMAKE_INSTALL_PREFIX variable must not be empty")
   endif()
@@ -29,7 +37,15 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
 endfunction()
 
 # uninstall files installed using the standard install() function
+<<<<<<< HEAD
 set(install_manifest "/home/cav-06/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/install_manifest.txt")
+=======
+<<<<<<<< HEAD:ros2_ws/build/p3_cpp/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+set(install_manifest "/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/install_manifest.txt")
+========
+set(install_manifest "/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch/install_manifest.txt")
+>>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3:build/simulator_launch/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find install manifest: ${install_manifest}")
 endif()
@@ -55,3 +71,13 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
+<<<<<<< HEAD
+=======
+
+# uninstall files installed using the symlink install functions
+<<<<<<<< HEAD:ros2_ws/build/p3_cpp/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+include("/home/cav-07/KAIST_Mobility_Challenge_Hardware/ros2_ws/build/p3_cpp/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+========
+include("/home/cav-06/KAIST_Mobility_Challenge_Hardware/build/simulator_launch/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+>>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3:build/simulator_launch/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+>>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
