@@ -1,0 +1,22 @@
+[0.556s] Invoking command in '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch -- -j4 -l4
+[0.673s] Invoked command in '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch -- -j4 -l4
+[0.699s] Invoking command in '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch
+[0.715s] -- Install configuration: ""
+[0.716s] -- Execute custom install script
+[0.718s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/launch/simulator_launch.py
+[0.720s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/ament_index/resource_index/package_run_dependencies/simulator_launch
+[0.721s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/ament_index/resource_index/parent_prefix_path/simulator_launch
+[0.722s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.sh
+[0.723s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.dsv
+[0.723s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/path.sh
+[0.723s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/path.dsv
+[0.724s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.bash
+[0.730s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.sh
+[0.732s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.zsh
+[0.732s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.dsv
+[0.732s] -- Symlinking: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/package.dsv
+[0.747s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/ament_index/resource_index/packages/simulator_launch
+[0.747s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig.cmake
+[0.748s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig-version.cmake
+[0.749s] -- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/package.xml
+[0.755s] Invoked command in '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch

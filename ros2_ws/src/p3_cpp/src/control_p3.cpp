@@ -67,7 +67,7 @@ public:
             "Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
         // [중요] 제어 명령 발행 (Reliable 10 필수!)
-        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
+        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", qos_profile);
 
         // 관제탑 명령 수신
         sub_stop_cmd_ = this->create_subscription<std_msgs::msg::Bool>(

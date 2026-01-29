@@ -1,43 +1,41 @@
 name: bridge_role_01
-from_domain: 27   # 내 차
-to_domain: 100    # 관제탑
+from_domain: 27
+to_domain: 100
 
 topics:
-  # ====================================================================
-  # 핵심: 관제탑(100) -> 내 차(27)로 데이터 가져오기 + 이름 바꾸기(Remap)
-  # ====================================================================
+  # -------------------------------------------------------------
+  # [삭제] 1. 위치 정보 (Ego_pose)
+  # 카메라가 이미 27번 도메인에 "/Ego_pose"로 주고 있으므로 브릿지 필요 없음!
+  # -------------------------------------------------------------
+  
+  # =============================================================
+  # [유지] 나머지 명령들은 Main(100)에서 계산해서 보내주는 것들임
+  # 관제탑은 27번에게 명령하지만(/CAV_27/...), 
+  # 내 차는 1번 명령을 기다리므로(/CAV_01/...) Remap 필수!
+  # =============================================================
 
-  # 1. 위치 정보 (Ego_pose)
-  # 관제탑은 "/CAV_27"로 쏘지만, 내 코드는 "/CAV_01"을 원함
-  /CAV_27/Ego_pose:
-    type: geometry_msgs/msg/PoseStamped
-    from_domain: 100    # 관제탑에서 가져옴
-    to_domain: 27       # 내 차로 보냄
-    remap: /CAV_01/Ego_pose  # <--- [핵심] 27번 딱지를 01번으로 바꿔치기!
-
-  # 2. 정지 명령 (cmd_stop)
-  # 관제탑은 27번 차를 멈추라고 "/CAV_27/cmd_stop"을 쏨
+  # 2. 정지 명령
   /CAV_27/cmd_stop:
     type: std_msgs/msg/Bool
     from_domain: 100
     to_domain: 27
-    remap: /CAV_01/cmd_stop  # 내 코드는 01번 명령을 기다리므로 바꿈
+    remap: /CAV_01/cmd_stop
 
-  # 3. 경로 변경 명령 (change_waypoint)
+  # 3. 경로 변경 명령
   /CAV_27/change_waypoint:
     type: std_msgs/msg/Bool
     from_domain: 100
     to_domain: 27
     remap: /CAV_01/change_waypoint
 
-  # 4. 주변 차량 속도 (hv_vel)
+  # 4. 주변 차량 속도 정보
   /CAV_27/hv_vel:
     type: std_msgs/msg/Float32
     from_domain: 100
     to_domain: 27
     remap: /CAV_01/hv_vel
 
-  # 5. 회전교차로 여부 (is_roundabout)
+  # 5. 회전교차로 인식 정보
   /CAV_27/is_roundabout:
     type: std_msgs/msg/Bool
     from_domain: 100

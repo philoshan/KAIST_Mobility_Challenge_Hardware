@@ -39,7 +39,7 @@ def generate_launch_description():
     original_path = PathJoinSubstitution([pkg_share, 'tool', original_csv_name])
     inside_path = PathJoinSubstitution([pkg_share, 'tool', inside_csv_name])
 
-    # 브릿지 설정 파일: config/bridge_role_01.yaml
+    # 브릿지 설정 파일: config/domain_1.yaml (파일명 규칙에 맞게 수정됨)
     bridge_yaml_name = PythonExpression(["'domain_' + str('", lid, "') + '.yaml'"])
     bridge_config_path = PathJoinSubstitution([pkg_share, 'config', bridge_yaml_name])
 
@@ -71,7 +71,14 @@ def generate_launch_description():
                 'steer_gain': 1.0,
                 'forward_step': 15,
                 'warmup_steps': 10
-            }]
+            }],
+            # ===============================================================
+            # [수정된 부분] Remappings 추가 (생명줄!)
+            # 코드 안의 "Ego_pose"를 실제 존재하는 글로벌 토픽 "/Ego_pose"로 연결
+            # ===============================================================
+            remappings=[
+                ('Ego_pose', '/Ego_pose')
+            ]
         ),
 
         # [노드 2] 도메인 브릿지
