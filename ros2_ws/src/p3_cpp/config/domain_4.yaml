@@ -1,5 +1,5 @@
 name: bridge_role_04
-from_domain: 6    # <--- [당일 수정] 실제 내 차량 도메인 ID 입력
+from_domain: 8    # <--- [당일 수정] 실제 내 차량 도메인 ID 입력
 to_domain: 100
 
 topics:
@@ -15,14 +15,14 @@ topics:
   /CAV_04/cmd_stop:
     type: std_msgs/msg/Bool
     from_domain: 100
-    to_domain: 6
+    to_domain: 8
 
   /CAV_04/hv_vel:
     type: std_msgs/msg/Float32
     from_domain: 100
-    to_domain: 6
+    to_domain: 8
 
   /CAV_04/is_roundabout:
     type: std_msgs/msg/Bool
     from_domain: 100
-    to_domain: 6
+    to_domain: 8

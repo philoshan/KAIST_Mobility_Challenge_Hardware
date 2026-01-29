@@ -1,0 +1,11 @@
+[01m[K/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp/src/main_p3.cpp:[m[K In lambda function:
+[01m[K/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp/src/main_p3.cpp:181:55:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kconst int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+  181 |                             if ([01;35m[Khv_vel_buffer_.size() > vel_buffer_size_[m[K) hv_vel_buffer_.pop_front();
+      |                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp/src/main_p3.cpp:[m[K In member function ‘[01m[Kvoid MainTrafficController::process_roundabout_path_decision(Vehicle&, const string&, const string&)[m[K’:
+[01m[K/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp/src/main_p3.cpp:402:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kzone[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  402 |     void process_roundabout_path_decision(Vehicle& my_cav, [01;35m[Kconst std::string& zone[m[K, const std::string& my_id) {
+      |                                                            [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/hy/Mobility_Challenge/ros2_ws/src/p3_cpp/src/main_p3.cpp:402:104:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmy_id[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  402 |     void process_roundabout_path_decision(Vehicle& my_cav, const std::string& zone, [01;35m[Kconst std::string& my_id[m[K) {
+      |                                                                                     [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~[m[K

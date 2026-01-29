@@ -25,12 +25,12 @@ public:
     StanleyTrackerNode()
     : Node("stanley_tracker_node")
     {
-        // QoS 설정
+        // QoS 설정 (수신용 - Best Effort)
         auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
         qos_profile.best_effort();
         qos_profile.durability_volatile();
 
-        // 파라미터 설정
+        // 파라미터 선언
         this->declare_parameter("original_way_path", "tool/cav1p3.csv");
         this->declare_parameter("inside_way_path", "tool/cav1p3_inside.csv");
         this->declare_parameter("k_gain", 2.0);
@@ -55,25 +55,21 @@ public:
         forward_step_ = this->get_parameter("forward_step").as_int(); 
         warmup_steps_target_ = this->get_parameter("warmup_steps").as_int();
 
-        // 경로 파일 로딩
+        // 경로 로딩
         load_waypoints(original_csv_path_, waypoints_original_);
         load_waypoints(inside_csv_path_, waypoints_inside_);
         
         current_waypoints_ = &waypoints_original_;
         is_inside_path_active_ = false;
 
-        // [중요] Subscriber: 위치 정보
-        // 하드웨어 드라이버가 쏘는 이름(Ego_pose)을 그대로 받습니다.
-        // 브릿지는 이 데이터를 퍼서 관제탑으로 보냅니다. 
+        // [중요] 위치 구독 (Best Effort)
         sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
             "Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
-        // [중요] Publisher: 속도/조향 명령
-        // 하드웨어 드라이버가 받는 이름(cmd_vel)으로 쏩니다.
+        // [중요] 제어 명령 발행 (Reliable 10 필수!)
         pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
 
-        // [중요] 관제탑 명령 수신 (브릿지 통과)
-        // 브릿지 설정에서 /CAV_XX/cmd_stop -> /cmd_stop 으로 리매핑해서 줘야 함
+        // 관제탑 명령 수신
         sub_stop_cmd_ = this->create_subscription<std_msgs::msg::Bool>(
             "cmd_stop", qos_profile, 
             [this](const std_msgs::msg::Bool::SharedPtr msg) {
@@ -81,19 +77,14 @@ public:
                 if (this->stop_signal_) this->publish_stop_command();
             });
 
-        // 내부 로직용 (브릿지 안 탐, 로컬 판단)
         sub_change_way_ = this->create_subscription<std_msgs::msg::Bool>(
             "change_waypoint", qos_profile,
             std::bind(&StanleyTrackerNode::callback_change_waypoint, this, _1));
 
-        // [중요] 관제탑 정보 수신 (브릿지 통과)
-        // 관제탑(Main)이 쏘는 /CAV_XX/hv_vel -> 브릿지가 /hv_vel 로 리매핑해서 줘야 함
         sub_hv_vel_ = this->create_subscription<std_msgs::msg::Float32>(
             "hv_vel", qos_profile,
             [this](const std_msgs::msg::Float32::SharedPtr msg) { this->hv_vel_ = msg->data; });
 
-        // [중요] 관제탑 정보 수신 (브릿지 통과)
-        // 관제탑(Main)이 쏘는 /CAV_XX/is_roundabout -> 브릿지가 /is_roundabout 로 리매핑해서 줘야 함
         sub_is_roundabout_ = this->create_subscription<std_msgs::msg::Bool>(
             "is_roundabout", qos_profile,
             [this](const std_msgs::msg::Bool::SharedPtr msg) { this->is_roundabout_ = msg->data; });
@@ -148,7 +139,6 @@ private:
     }
 
     void pose_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
-        // 1. 초기 웜업
         if (current_warmup_count_ < warmup_steps_target_) {
             current_warmup_count_++;
             publish_stop_command(); 
@@ -158,7 +148,6 @@ private:
             return; 
         }
 
-        // 2. 비상 정지 체크
         if (stop_signal_) {
             publish_stop_command();
             return; 
@@ -169,7 +158,6 @@ private:
             return;
         }
 
-        // --- Stanley Logic ---
         double center_x = msg->pose.position.x;
         double center_y = msg->pose.position.y;
         double current_yaw = msg->pose.orientation.z;
@@ -247,14 +235,11 @@ private:
         steer_angle *= steer_gain_;
         steer_angle = std::max(-max_steer_, std::min(max_steer_, steer_angle));
 
-        // [최종 메시지]
         auto msg_out = geometry_msgs::msg::Twist();
-        
-        // 기존 코드 유지 (Yaw Rate 계산)
         double yaw_rate = (final_speed / wheelbase_) * std::tan(steer_angle);
 
         msg_out.linear.x = final_speed;
-        msg_out.angular.z = yaw_rate; // 조향각이 아닌 Yaw Rate로 출력 (기존 유지)
+        msg_out.angular.z = yaw_rate; 
 
         pub_cmd_vel_->publish(msg_out);
     }

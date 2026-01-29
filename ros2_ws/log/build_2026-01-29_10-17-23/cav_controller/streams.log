@@ -1,0 +1,19 @@
+[1.401s] Invoking command in '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller': PYTHONPATH=/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hy/Mobility_Challenge/ros2_ws/build/cav_controller/build --no-deps symlink_data
+[1.884s] running develop
+[2.140s] running egg_info
+[2.142s] writing cav_controller.egg-info/PKG-INFO
+[2.143s] writing dependency_links to cav_controller.egg-info/dependency_links.txt
+[2.144s] writing entry points to cav_controller.egg-info/entry_points.txt
+[2.145s] writing requirements to cav_controller.egg-info/requires.txt
+[2.146s] writing top-level names to cav_controller.egg-info/top_level.txt
+[2.219s] reading manifest file 'cav_controller.egg-info/SOURCES.txt'
+[2.221s] writing manifest file 'cav_controller.egg-info/SOURCES.txt'
+[2.224s] running build_ext
+[2.225s] Creating /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages/cav-controller.egg-link (link to .)
+[2.227s] Installing echo_pose script to /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/cav_controller
+[2.228s] Installing p1_drive script to /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/cav_controller
+[2.228s] Installing run_drive script to /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/cav_controller
+[2.229s] 
+[2.229s] Installed /home/hy/Mobility_Challenge/ros2_ws/build/cav_controller
+[2.229s] running symlink_data
+[2.305s] Invoked command in '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller' returned '0': PYTHONPATH=/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hy/Mobility_Challenge/ros2_ws/build/cav_controller/build --no-deps symlink_data
