@@ -233,16 +233,6 @@ private:
                     }
                 }
             }
-        );
-
-        // 발행 (Publisher): 브릿지로 보낼 명령
-        // Topic 이름: /CAV_XX/cmd_stop (도메인 브릿지가 이걸 잡아서 차량의 /cmd_stop으로 쏴줌)
-        if (is_cav) {
-            std::string base_topic = "/" + id; // ex: /CAV_01
-            v.pub_stop = create_publisher<std_msgs::msg::Bool>(base_topic + "/cmd_stop", qos);
-            v.pub_change_way = create_publisher<std_msgs::msg::Bool>(base_topic + "/change_waypoint", qos);
-            v.pub_is_roundabout = create_publisher<std_msgs::msg::Bool>(base_topic + "/is_roundabout", qos);
-            v.pub_hv_vel = create_publisher<std_msgs::msg::Float32>(base_topic + "/hv_vel", qos);
         }
     }
 
@@ -428,32 +418,7 @@ private:
                 if (my_cav.role == "cav1" && !am_i_top) return true;
                 if (my_cav.role == "cav2" && am_i_right) return true;
             }
-            return false;
-        };
-
-        if (is_blocked_by_hv_check(my_cav)) return true;
-
-        for (const auto& [tid, target] : vehicles_) {
-            if (tid == my_cav.id || !target.is_cav || !target.active) continue;
-            bool is_pair = ((my_cav.id == "CAV_01" && tid == "CAV_04") ||
-                            (my_cav.id == "CAV_04" && tid == "CAV_01") ||
-                            (my_cav.id == "CAV_02" && tid == "CAV_03") ||
-                            (my_cav.id == "CAV_03" && tid == "CAV_02"));
-            double t_dist_sq = (target.pos - round_center_).dist_Sq();
-            if (t_dist_sq > round_app_r_sq_ || t_dist_sq <= r_sq || !is_approaching(target, round_center_)) continue;
-            if (is_blocked_by_hv_check(target)) continue;
-            if (is_pair) continue;
-            if (t_dist_sq < dist_sq - 0.01) return true;
-            if (std::abs(t_dist_sq - dist_sq) <= 0.01 && tid < my_cav.id) return true;
         }
-        return false;
-    }
-
-    void process_roundabout_path_decision(Vehicle& my_cav, const std::string& zone, const std::string& my_id) {
-        double dist_sq = (my_cav.pos - round_center_).dist_Sq();
-        if (dist_sq <= round_app_r_sq_ * 1.1 &&
-            dist_sq > (round_radius_ * round_radius_) &&
-            !my_cav.has_entered_roundabout) {
 
         int count_top = 0, count_bottom = 0;
         for (const auto& [id, v] : vehicles_) {
@@ -463,15 +428,6 @@ private:
                 if (v.pos.y > fourway_center_.y) count_top++;
                 else count_bottom++;
             }
-            else if (my_cav.id == "CAV_02" && vehicles_.count("CAV_03") && vehicles_["CAV_03"].active &&
-                     (vehicles_["CAV_03"].pos - round_center_).dist_Sq() <= 2.5*2.5) {
-                go_inside = true;
-            }
-            
-            std_msgs::msg::Bool way_msg;
-            way_msg.data = go_inside;
-            my_cav.pub_change_way->publish(way_msg);
-            my_cav.has_entered_roundabout = true;
         }
         return am_i_top ? (count_top >= 2) : (count_bottom >= 2);
     }

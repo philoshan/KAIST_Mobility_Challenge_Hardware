@@ -1,14 +1,8 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
-<<<<<<< HEAD
 #include <geometry_msgs/msg/twist.hpp>
 #include <std_msgs/msg/bool.hpp>
 #include <std_msgs/msg/float32.hpp>
-=======
-#include <geometry_msgs/msg/twist.hpp> 
-#include <std_msgs/msg/bool.hpp> 
-#include <std_msgs/msg/float32.hpp> 
->>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
 
 #include <fstream>
 #include <sstream>
@@ -35,6 +29,10 @@ public:
         auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
         qos_profile.best_effort();
         qos_profile.durability_volatile();
+
+        auto qos_profile_sensor = rclcpp::QoS(rclcpp::KeepLast(10));
+        qos_profile_sensor.best_effort();
+        qos_profile_sensor.durability_volatile();
 
         // 2. 파라미터 설정 (Launch 파일의 'parameters'와 매칭)
         this->declare_parameter("original_way_path", "");
@@ -157,11 +155,7 @@ private:
 
         if (current_waypoints_->empty()) return;
 
-<<<<<<< HEAD
         // --- Stanley Logic (시뮬레이션 버전 유지) ---
-=======
-        // --- Stanley Logic ---
->>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         double center_x = msg->pose.position.x;
         double center_y = msg->pose.position.y;
         
@@ -217,12 +211,7 @@ private:
         double steer_angle = heading_error + std::atan2(k_gain_ * cte, std::max(final_speed, 0.1));
         steer_angle = std::clamp(normalize_angle(steer_angle) * steer_gain_, -max_steer_, max_steer_);
 
-<<<<<<< HEAD
         // Publish (Yaw Rate 기반)
-=======
-        // [변경] Twist 메시지 생성 및 발행 (v, w 계산)
-        // w = (v / L) * tan(delta) 공식을 사용하여 조향각을 각속도로 변환
->>>>>>> a61f35df3e42efd3f2f80f4a12e7ec9aed34c6f3
         auto msg_out = geometry_msgs::msg::Twist();
         msg_out.linear.x = final_speed;
         msg_out.angular.z = (final_speed / wheelbase_) * std::tan(steer_angle);
