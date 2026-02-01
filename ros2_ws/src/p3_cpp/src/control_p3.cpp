@@ -34,9 +34,9 @@ public:
         qos_profile_sensor.best_effort();
         qos_profile_sensor.durability_volatile();
 
-        // 2. 파라미터 설정 (Launch 파일의 'parameters'와 매칭)
-        this->declare_parameter("original_way_path", "");
-        this->declare_parameter("inside_way_path", "");
+        // 2. 주행 관련 파라미터 설정 (Launch 파일의 'parameters'와 매칭)
+        this->declare_parameter("original_way_path", "/ros2_ws/src/p3_cpp/tool/cav1p3.csv");
+        this->declare_parameter("inside_way_path", "/ros2_ws/src/p3_cpp/tool/cav1p3_inside.csv");
         this->declare_parameter("k_gain", 1.2);
         this->declare_parameter("max_steer", 0.56);
         this->declare_parameter("target_speed", 0.5);
@@ -45,6 +45,7 @@ public:
         this->declare_parameter("steer_gain", 1.0);
         this->declare_parameter("forward_step", 8);
         this->declare_parameter("warmup_steps", 10);    
+        
         // 3. 파라미터 로드
         original_csv_path_ = this->get_parameter("original_way_path").as_string();
         inside_csv_path_ = this->get_parameter("inside_way_path").as_string();
@@ -63,12 +64,15 @@ public:
         current_waypoints_ = &waypoints_original_;
         is_inside_path_active_ = false;
 
-        // 5. 통신 설정 (런치 파일의 remappings 적용을 위해 상대 경로 사용)
+        // 5. 통신 설정 
+        // (1) 절대 경로: 네임스페이스 영향 안 받음 (시스템 전역 토픽)
         sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
-            "Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
+            "/Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
-        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
+        pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
 
+        // (2) 상대 경로: Launch 파일의 네임스페이스(예: cav1)가 자동으로 앞에 붙음
+        // 실제 구독 토픽: /cav1/cmd_stop
         sub_stop_cmd_ = this->create_subscription<std_msgs::msg::Bool>(
             "cmd_stop", qos_profile_sensor, 
             [this](const std_msgs::msg::Bool::SharedPtr msg) {
@@ -76,19 +80,22 @@ public:
                 if (this->stop_signal_) this->publish_stop_command();
             });
 
+        // 실제 구독 토픽: /cav1/change_waypoint
         sub_change_way_ = this->create_subscription<std_msgs::msg::Bool>(
             "change_waypoint", qos_profile_sensor,
             std::bind(&StanleyTrackerNode::callback_change_waypoint, this, _1));
 
+        // 실제 구독 토픽: /cav1/hv_vel
         sub_hv_vel_ = this->create_subscription<std_msgs::msg::Float32>(
             "hv_vel", qos_profile_sensor,
             [this](const std_msgs::msg::Float32::SharedPtr msg) { this->hv_vel_ = msg->data; });
 
+        // 실제 구독 토픽: /cav1/is_roundabout
         sub_is_roundabout_ = this->create_subscription<std_msgs::msg::Bool>(
             "is_roundabout", qos_profile_sensor,
             [this](const std_msgs::msg::Bool::SharedPtr msg) { this->is_roundabout_ = msg->data; });
 
-        RCLCPP_INFO(this->get_logger(), "Stanley Tracker Node Initialized with ID-based paths.");
+        RCLCPP_INFO(this->get_logger(), "Stanley Tracker Node Initialized. Namespace: %s", this->get_namespace());
     }
 
 private:
@@ -160,7 +167,7 @@ private:
         double center_y = msg->pose.position.y;
         
         double current_yaw = msg->pose.orientation.z; 
-       
+        
 
         double front_x = center_x + center_to_front_ * std::cos(current_yaw);
         double front_y = center_y + center_to_front_ * std::sin(current_yaw);
@@ -218,7 +225,7 @@ private:
         pub_cmd_vel_->publish(msg_out);
     }
 
-    // 멤버 변수 생략 (기존과 동일)
+    // 멤버 변수
     rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub_pose_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_cmd_vel_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_stop_cmd_;

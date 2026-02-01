@@ -6,26 +6,27 @@ from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Pyth
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
-
 def generate_launch_description():
     
     # 1. 인자 선언
     
     # (1) ID 및 역할 관련 인자
-    # id: 물리적 장치 ID (ROS_DOMAIN_ID, Namespace, Bridge 설정용)
+    # id: 물리적 장치 ID (실제 통신용 DOMAIN ID 설정에 사용)
+    # 예: 대회 당일 랜덤으로 배정받는 숫자 (12, 34 등)
     id_arg = DeclareLaunchArgument(
         'id', default_value='01',
-        description='Physical CAV ID (e.g., 01, 12) - Matches ROS_DOMAIN_ID and node namespace'
+        description='Physical CAV ID (Sets ROS_DOMAIN_ID)'
     )
     
-    # role: 논리적 역할 (CSV 경로 파일 선택용)
-    # 예: 실제 차는 12번이지만 1번 차량의 경로(cav01p3.csv)를 따라가고 싶을 때 사용
+    # role: 논리적 역할 (네임스페이스 및 CSV 경로 파일 선택용)
+    # 예: cav1, cav2, cav3, cav4 (관제탑에서 정해준 역할)
+    # 이 값을 'cav1' 처럼 입력받도록 설정 (숫자만 입력받는 경우라면 아래 로직 수정 필요)
     role_arg = DeclareLaunchArgument(
-        'role', default_value='01',
-        description='Logical Role ID (e.g., 01, 02) - Determines which CSV path file to load'
+        'role', default_value='cav1',
+        description='Logical Role Name (e.g., cav1, cav2) - Sets Namespace and CSV path'
     )
 
-    # (2) 제어 파라미터 인자 (실행 시 튜닝 가능하도록 노출)
+    # (2) 제어 파라미터 인자
     k_gain_arg = DeclareLaunchArgument('k_gain', default_value='1.2')
     max_steer_arg = DeclareLaunchArgument('max_steer', default_value='0.56')
     target_speed_arg = DeclareLaunchArgument('target_speed', default_value='0.5')
@@ -37,7 +38,7 @@ def generate_launch_description():
 
     # LaunchConfiguration 변수 매핑
     cav_id = LaunchConfiguration('id')
-    role_id = LaunchConfiguration('role')
+    role_name = LaunchConfiguration('role')
     
     k_gain = LaunchConfiguration('k_gain')
     max_steer = LaunchConfiguration('max_steer')
@@ -49,8 +50,8 @@ def generate_launch_description():
     warmup_steps = LaunchConfiguration('warmup_steps')
 
 
-    # 2. Domain ID 설정 (제어 노드용)
-    # 물리적 ID(cav_id)를 따름
+    # 2. Domain ID 설정 (물리적 ID 사용)
+    # 실제 장비의 통신 채널을 맞추기 위함
     set_domain_id = SetEnvironmentVariable(
         name='ROS_DOMAIN_ID',
         value=cav_id
@@ -58,11 +59,14 @@ def generate_launch_description():
 
 
     # 3. 경로 동적 생성 (Role 기반)
-    # 중요: 경로는 역할(role_id)에 따라 결정됨
-    # 예: role:=01 -> cav01p3.csv 로드
+    # 예: role:='cav1' -> cav1p3.csv 로드 (역할 이름이 파일명에 포함된다고 가정)
+    # 만약 파일명이 cav01p3.csv 처럼 숫자라면, role 입력시 '01'로 받거나 여기서 변환 로직 필요.
+    # 여기서는 role 입력값이 'cav1'이면 -> 'cav1p3.csv'를 찾는 로직으로 작성됨.
     
-    original_filename = PythonExpression(["'cav' + '", role_id, "' + 'p3.csv'"])
-    inside_filename = PythonExpression(["'cav' + '", role_id, "' + 'p3_inside.csv'"])
+    # PythonExpression을 사용하여 문자열 조합
+    # 파일명이 'cav1p3.csv' 형태라면 role_name 그대로 사용
+    original_filename = PythonExpression(["'", role_name, "' + 'p3.csv'"])
+    inside_filename = PythonExpression(["'", role_name, "' + 'p3_inside.csv'"])
 
     original_path = PathJoinSubstitution([
         FindPackageShare('p3_cpp'), 'tool', original_filename
@@ -72,26 +76,17 @@ def generate_launch_description():
     ])
 
 
-    # (2) Bridge YAML 파일 경로 (물리적 ID 기준)
-    # 통신 포트나 장비 설정은 물리적 장치(cav_id)를 따라야 함
-    bridge_filename = PythonExpression(["'bridge_' + '", cav_id, "' + '.yaml'"])
-    bridge_config_path = PathJoinSubstitution([
-        FindPackageShare('p3_cpp'), 'config', bridge_filename
-    ])
-
-
     # 4. 노드 설정
-    
     # [Node 1] Stanley Controller (제어기)
     control_node = Node(
         package='p3_cpp',
         executable='control_p3',
-        name=['stanley_controller_', cav_id],
-        namespace=['CAV_', cav_id], # 네임스페이스는 물리적 ID 사용
+        name=['stanley_controller_', role_name], # 이름도 역할 기반으로 (디버깅 용이)
+        namespace=role_name,                     # [핵심] 네임스페이스를 역할(cav1 등)로 설정
         output='screen',
         parameters=[{
-            'original_way_path': original_path, # 역할에 따른 경로
-            'inside_way_path': inside_path,     # 역할에 따른 경로
+            'original_way_path': original_path, 
+            'inside_way_path': inside_path,     
             'k_gain': k_gain,
             'max_steer': max_steer,
             'target_speed': target_speed,
@@ -101,23 +96,13 @@ def generate_launch_description():
             'forward_step': forward_step,
             'warmup_steps': warmup_steps
         }],
-        # 관제탑과 통신하기 위해 전역 토픽 이름으로 리매핑
+        # 리매핑 설정
+        # 1. /Ego_pose, /cmd_vel: 시뮬레이터 절대 토픽이므로 그대로 둠
+
         remappings=[
             ('Ego_pose', '/Ego_pose'), 
-            ('cmd_vel', '/cmd_vel'),
-            ('cmd_stop', '/cmd_stop')
+            ('cmd_vel', '/cmd_vel') # 필요시 주석 해제 (보통 로컬 cmd_vel 사용)
         ]
-    )
-
-
-    # [Node 2] Domain Bridge (통신 브릿지)
-    # 해당 차량의 물리적 ID에 맞는 YAML 파일을 로드하여 실행
-    bridge_node = Node(
-        package='domain_bridge',
-        executable='domain_bridge',
-        name=['domain_bridge_', cav_id],
-        output='screen',
-        arguments=[bridge_config_path]
     )
 
 
@@ -130,6 +115,5 @@ def generate_launch_description():
         
         # Actions
         set_domain_id,
-        control_node,
-        bridge_node
+        control_node
     ])
