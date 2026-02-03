@@ -52,18 +52,20 @@ namespace Geo {
     }
 }
 
-// 차량의 상태 정보(ID, 위치, 속도, 활성 여부 등)와 ROS 통신 객체(Publisher/Subscriber)를 관리하는 구조체
+// 차량의 상태 정보(ID, 역할, 위치, 속도, 활성 여부 등)와 ROS 통신 객체(Publisher/Subscriber)를 관리하는 구조체
 struct Vehicle {
-    std::string id;       // 실제 물리적 ID (예: CAV_12)
-    std::string role;     // 논리적 역할 (예: cav1, cav2, cav3, cav4)
+    std::string id;       
+    std::string role;     
     bool is_cav;
     Geo::Vec2 pos{0.0, 0.0};
     double z = 0.0;
-    bool active = false;
-    bool is_stopped = false; // 현재 정지 상태인가
-    bool forced_stop = false; // 다른 cav에 의해 강제로 정지되었는가
-    std::string stop_cause = ""; // 내 차량을 멈추게 한 다른 차량은 누구인가
-    bool has_entered_roundabout = false; // 회전교차로 내부에 들어갔는가
+    
+    bool active = false; 
+    
+    bool is_stopped = false; 
+    bool forced_stop = false; 
+    std::string stop_cause = ""; 
+    bool has_entered_roundabout = false; 
 
     // hv 속도 계산용 변수
     Geo::Vec2 last_pos{0.0, 0.0};
@@ -84,17 +86,16 @@ class MainTrafficController : public rclcpp::Node {
 public:
     // 노드를 초기화하고 차량 크기, 도로 구역 설정, 타이머(차량 발견 및 제어 루프)를 생성하는 생성자
     MainTrafficController() : Node("main_traffic_controller") {
-        // [변경] 역할 매핑을 위한 파라미터 선언 (기본값은 기존 ID 유지)
+        // --- 역할/도메인용 파라미터 (첫 번째 코드에서 가져온 부분) ---
         this->declare_parameter("role_cav1", "CAV_01");
         this->declare_parameter("role_cav2", "CAV_02");
         this->declare_parameter("role_cav3", "CAV_03");
         this->declare_parameter("role_cav4", "CAV_04");
 
-        // 차량 정보 (길이 0.37m, 폭 0.18m) -> 앞 0.185, 뒤 0.185, 좌우 0.09
+        // 차량 정보
         car_info = {0.185, 0.185, 0.09, 0.09};
         front_padding_ = 0.8;
         side_padding_ = 0.8;
-
         // 충돌 감지 범위 : 이 범위 안에 my_cav외의 다른 차량이 있을 경우 충돌 감지 로직 실행
         approach_range_sq_ = 2.5 * 2.5;
 
@@ -117,14 +118,14 @@ public:
         // 타이머
         tmr_discovery_ = create_wall_timer(
             std::chrono::seconds(1),
-            std::bind(&MainTrafficController::discover_vehicles, this)
+            std::bind(&MainTrafficController::init_configured_vehicles, this)
         );
         tmr_control_ = create_wall_timer(
             std::chrono::milliseconds(20),
             std::bind(&MainTrafficController::control_loop, this)
         );
 
-        RCLCPP_INFO(get_logger(), "Controller Started: Ready to assign roles from parameters.");
+        RCLCPP_INFO(get_logger(), "Controller Started. HV Detection Fix Applied.");
     }
 
 private:
@@ -145,12 +146,12 @@ private:
     double round_app_r_sq_, round_radius_;
     double threeway_box_x_min_, threeway_box_x_max_, threeway_1_y_min_, threeway_1_y_max_, threeway_2_y_min_, threeway_2_y_max_;
 
-    // [추가] 역할(role)을 통해 실제 등록된 차량의 ID를 찾는 헬퍼 함수
+    // --- 첫 번째 코드의 역할 조회 유틸 ---
     std::string get_id_by_role(const std::string& role_name) {
         for (const auto& [id, v] : vehicles_) {
             if (v.role == role_name) return id;
         }
-        return ""; // 해당 역할을 맡은 차량이 없음
+        return ""; 
     }
 
     // 차량 정지상황 발생 시 conflict_info에 멈춘 차량 - 원인 차량 추가
@@ -162,6 +163,7 @@ private:
     // 차량 정지상황 해소 시 conflict_info에서 제거
     void clear_conflict_status(const std::string& stopped_cav) {
         if (conflict_info_.count(stopped_cav)) {
+            // [로그 제거됨] 충돌 해소 로그 삭제
             conflict_info_.erase(stopped_cav);
         }
     }
@@ -190,47 +192,35 @@ private:
         return world_corners;
     }
 
-    // 현재 활성화된 ROS 토픽을 주기적으로 스캔하여 새로운 CAV 또는 HV 차량을 감지하고 등록하는 함수
-    void discover_vehicles() {
-        // 파라미터 업데이트 (실시간 변경 반영을 원할 경우 여기에 배치, 고정이라면 생성자에서 읽어도 됨)
-        std::string role_map[4];
-        role_map[0] = this->get_parameter("role_cav1").as_string();
-        role_map[1] = this->get_parameter("role_cav2").as_string();
-        role_map[2] = this->get_parameter("role_cav3").as_string();
-        role_map[3] = this->get_parameter("role_cav4").as_string();
+    // --- 첫 번째 코드 기반: 파라미터로 주어진 CAV role을 사용해 차량 등록 ---
+    void init_configured_vehicles() {
+        std::string role_ids[4];
+        role_ids[0] = this->get_parameter("role_cav1").as_string();
+        role_ids[1] = this->get_parameter("role_cav2").as_string();
+        role_ids[2] = this->get_parameter("role_cav3").as_string();
+        role_ids[3] = this->get_parameter("role_cav4").as_string();
 
+        std::string roles[4] = {"cav1", "cav2", "cav3", "cav4"};
+
+        for (int i = 0; i < 4; i++) {
+            std::string id = role_ids[i];
+            if (id.empty()) continue;
+            if (vehicles_.count(id)) continue;
+
+            std::string topic_name = "/" + id; 
+            register_vehicle(id, topic_name, true, roles[i]);
+        }
+
+        // HV는 기존 discover_vehicles 로직 없이 첫 번째 코드 방식(토픽 이름 스캔) 사용
         auto topic_map = this->get_topic_names_and_types();
         for (const auto& [name, types] : topic_map) {
-            if (name.empty() || name[0] != '/') continue;
-            std::string id = "";
-            bool is_cav = false;
-            std::string assigned_role = "";
-
-            if (name.size() > 7) continue;
-            if (name.substr(1, 4) == "CAV_") {
-                std::string num_str = name.substr(5, 2);
-                try { id = "CAV_" + num_str; is_cav = true; } catch (...) { continue; }
-            } else if (name.substr(1, 3) == "HV_") {
-                std::string num_str = name.substr(4, 2);
-                try { id = "HV_" + num_str; is_cav = false; } catch (...) { continue; }
-            }
-
-            if (!id.empty()) {
-                // 역할 할당 로직
-                if (id == role_map[0]) assigned_role = "cav1";
-                else if (id == role_map[1]) assigned_role = "cav2";
-                else if (id == role_map[2]) assigned_role = "cav3";
-                else if (id == role_map[3]) assigned_role = "cav4";
-                
-                // 아직 등록되지 않은 차량이면 등록
+            if (name.find("HV_") != std::string::npos) {
+                if (name.find("cmd") != std::string::npos) continue;
+                if (name.find("vel") != std::string::npos) continue;
+                size_t pos = name.find("HV_");
+                std::string id = name.substr(pos, 5); 
                 if (!vehicles_.count(id)) {
-                    register_vehicle(id, name, is_cav, assigned_role);
-                } else {
-                    // 이미 등록되었더라도 역할이 변경되었는지 확인 (동적 파라미터 변경 대응)
-                    if (vehicles_[id].role != assigned_role) {
-                        vehicles_[id].role = assigned_role;
-                        // RCLCPP_INFO(get_logger(), "Updated Role for %s: %s", id.c_str(), assigned_role.c_str());
-                    }
+                    register_vehicle(id, "/" + id, false, "");
                 }
             }
         }
@@ -241,15 +231,16 @@ private:
         Vehicle v; 
         v.id = id; 
         v.is_cav = is_cav;
-        v.role = role; // [변경] 역할 지정
+        v.role = role;
         v.last_time = this->now();
+        v.active = false; 
 
+        // [중요] 구독 QoS: SystemDefaultsQoS (Reliable)
         v.sub = create_subscription<geometry_msgs::msg::PoseStamped>(
-            topic, rclcpp::SensorDataQoS(),
+            topic, rclcpp::SystemDefaultsQoS(),
             [this, id](const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
                 if (vehicles_.count(id)) {
                     Vehicle& veh = vehicles_[id];
-                    
                     double prev_x = veh.last_pos.x;
                     double prev_y = veh.last_pos.y;
                     rclcpp::Time prev_time = veh.last_time;
@@ -261,9 +252,8 @@ private:
                     veh.last_pos = veh.pos;
                     veh.last_time = msg->header.stamp;
 
-                    // [HV_19 속도 계산 및 도메인별 pub 로직] -> HV_19는 특수 목적 차량으로 보이므로 id 고정 유지 또는 필요시 파라미터화 가능
-                    // 여기서는 기존 코드 유지 (HV_19)
-                    if (id == "HV_19") {
+                    // [HV 속도 계산 및 도메인별 pub 로직] (두 번째 코드의 HV_19 전용 부분을 일반화한 첫 번째 코드 버전 유지)
+                    if (id.find("HV") != std::string::npos) { 
                         double dt = (veh.last_time - prev_time).seconds();
                         if (dt > 0.001) { 
                             double dx = veh.pos.x - prev_x;
@@ -273,17 +263,13 @@ private:
 
                             // 이동 평균 필터
                             hv_vel_buffer_.push_back(vel);
-                            if (hv_vel_buffer_.size() > vel_buffer_size_) {
-                                hv_vel_buffer_.pop_front();
-                            }
-
+                            if (hv_vel_buffer_.size() > vel_buffer_size_) hv_vel_buffer_.pop_front();
                             double sum = 0.0;
-                            for (double v : hv_vel_buffer_) sum += v;
+                            for (double val : hv_vel_buffer_) sum += val;
                             double avg_vel = sum / hv_vel_buffer_.size();
 
-                            // /hv_vel 메시지 생성
                             std_msgs::msg::Float32 vel_msg;
-                            vel_msg.data = static_cast<float>(avg_vel - 0.05); // 회전 교차로 내부 cav는 충돌 감지로직 사용 안함. -> 충돌 예방을 위해 실제 hv 속도값보다 더 작게 줌
+                            vel_msg.data = static_cast<float>(avg_vel - 0.05); 
                             
                             for (auto& [target_id, target_v] : vehicles_) {
                                 if (target_v.is_cav && target_v.active && target_v.pub_hv_vel) {
@@ -296,15 +282,19 @@ private:
             }
         );
 
-        // 각 CAV에 발행할 토픽 생성 (토픽 이름은 물리적 ID 기준)
-        if (is_cav) {
-            v.pub_stop = create_publisher<std_msgs::msg::Bool>("/" + id + "/cmd_stop", rclcpp::SensorDataQoS());
-            v.pub_change_way = create_publisher<std_msgs::msg::Bool>("/" + id + "/change_waypoint", rclcpp::SensorDataQoS());
-            v.pub_is_roundabout = create_publisher<std_msgs::msg::Bool>("/" + id + "/is_roundabout", rclcpp::SensorDataQoS());
-            v.pub_hv_vel = create_publisher<std_msgs::msg::Float32>("/" + id + "/hv_vel", rclcpp::SensorDataQoS());
+        // 각 CAV에 발행할 토픽 생성
+        if (is_cav && !role.empty()) {
+            v.pub_stop = create_publisher<std_msgs::msg::Bool>("/" + role + "/cmd_stop", rclcpp::SensorDataQoS());
+            v.pub_change_way = create_publisher<std_msgs::msg::Bool>("/" + role + "/change_waypoint", rclcpp::SensorDataQoS());
+            v.pub_is_roundabout = create_publisher<std_msgs::msg::Bool>("/" + role + "/is_roundabout", rclcpp::SensorDataQoS());
+            v.pub_hv_vel = create_publisher<std_msgs::msg::Float32>("/" + role + "/hv_vel", rclcpp::SensorDataQoS());
+            
+            RCLCPP_INFO(get_logger(), "Configured CAV: %s -> Role: %s", id.c_str(), role.c_str());
+        } else {
+            RCLCPP_INFO(get_logger(), "Registered Vehicle: %s (No Role or HV)", id.c_str());
         }
+        
         vehicles_[id] = std::move(v);
-        RCLCPP_INFO(get_logger(), "Registered Vehicle: %s as %s", id.c_str(), role.empty() ? "No Role" : role.c_str());
     }
 
     // 삼지교차로 (threeway) 로직
@@ -315,15 +305,11 @@ private:
     }
 
     bool check_threeway_conflict(const Vehicle& my_cav, const std::string& tid, bool is_next_lane, bool is_full, std::string& temp_log) {
-        // [변경] tid의 역할(role)을 확인
         std::string target_role = vehicles_[tid].role;
-
         if (target_role == "cav3" || target_role == "cav4") {
-            // cav3 or cav4와 cav1이 충돌하는 경우
             if (my_cav.role == "cav1" && is_next_lane) {
                 temp_log = "threeway_NEXT_LANE";
                 return true;
-            // cav3 or cav4와 cav2가 충돌하는 경우
             } else if (my_cav.role == "cav2" && is_full && !is_next_lane) {
                 temp_log = "threeway_VERTICAL";
                 return true;
@@ -366,15 +352,11 @@ private:
         bool am_i_top = (my_cav.pos.y > fourway_center_.y); // 위쪽 : true, 아래쪽 : false
         bool am_i_right = (my_cav.pos.x > fourway_center_.x); // 오른쪽 : true, 왼쪽 : false
 
-    
         if (my_cav.role == "cav1" || my_cav.role == "cav2") {
-            // 경우 1. CAV1 or CAV2가 my_cav인 경우 : 서로를 target으로 지정
             std::string tid = "";
             if (my_cav.role == "cav1") tid = get_id_by_role("cav2");
             else tid = get_id_by_role("cav1");
-
-            // [변경] tid가 존재하고 활성 상태인지 확인
-            if (!tid.empty() && vehicles_.count(tid) && vehicles_.at(tid).active) {
+            if (!tid.empty() && vehicles_.count(tid) && vehicles_.at(tid).active) { 
                 const auto& target = vehicles_.at(tid);
                 bool target_inside = (target.pos.x >= x_min && target.pos.x <= x_max &&
                                       target.pos.y >= y_min && target.pos.y <= y_max);
@@ -384,25 +366,22 @@ private:
                     bool target_is_right = (target.pos.x > fourway_center_.x);
                     bool target_approaching = is_approaching(target, fourway_center_);
                     
-                    // cav1이 정지해야하는 경우 : 상/하 교차점
                     if (my_cav.role == "cav1"){
                         if (am_i_top && !target_is_right && target_approaching) return true;
                         else if (!am_i_top && target_is_right && target_approaching) return true;
                     }
-                    // cav2가 정지해야하는 경우 : 좌/우 교차점
                     else{
                         if(!am_i_right && !target_is_top && target_approaching) return true;
                         else if (am_i_right && target_is_right && target_approaching) return true;
                     }
+                    
                 }
             }
 
-            // 경우 2. CAV_03 or CAV_04가 직진하는 상황에서 CAV_01, CAV_02가 대기
-            // [변경] check 함수 내부에서 role 기반 검색으로 변경
             auto is_role_in_box = [&](const std::string& role_name) {
-                std::string tid = get_id_by_role(role_name);
-                if (!tid.empty() && vehicles_.count(tid) && vehicles_.at(tid).active) {
-                    const auto& tv = vehicles_.at(tid);
+                std::string tid2 = get_id_by_role(role_name);
+                if (!tid2.empty() && vehicles_.count(tid2) && vehicles_.at(tid2).active) { 
+                    const auto& tv = vehicles_.at(tid2);
                     bool in_rect = (tv.pos.x >= x_min && tv.pos.x <= x_max &&
                                     tv.pos.y >= y_min && tv.pos.y <= y_max);
                     return in_rect;
@@ -440,7 +419,7 @@ private:
         int count = 0;
         double r_sq = round_radius_ * round_radius_;
         for (const auto& [id, v] : vehicles_) {
-            if (v.is_cav && v.active &&
+            if (v.is_cav && v.active && 
                 (v.pos - round_center_).dist_Sq() <= r_sq) count++;
         }
         return count;
@@ -463,7 +442,12 @@ private:
             double v_angle = std::atan2(v.pos.y - round_center_.y, v.pos.x - round_center_.x);
 
             for (const auto& [tid, target] : vehicles_) {
-                if (tid == v.id || !target.active || target.is_cav) continue;
+                if (tid == v.id) continue;
+                // [수정] HV는 active 상태가 아닐 수도 있으므로, 위치가 (0,0)이 아니면 유효한 것으로 간주
+                // 혹은 target.active 체크를 target.is_cav인 경우에만 엄격하게 적용
+                if (target.is_cav && !target.active) continue; 
+                if (!target.is_cav && target.pos.dist_Sq() < 0.1) continue; // HV인데 위치가 0,0이면 무효
+
                 if ((target.pos - round_center_).dist_Sq() <= r_sq){
                     double t_angle = std::atan2(target.pos.y - round_center_.y, target.pos.x - round_center_.x);
                     double diff = t_angle - v_angle;
@@ -479,20 +463,21 @@ private:
         if (is_blocked_by_hv_check(my_cav)) return true;
 
         for (const auto& [tid, target] : vehicles_) {
-            if (tid == my_cav.id || !target.is_cav || !target.active) continue;
-            // [변경] Pair 확인 로직 role 기반으로 변경
-            // Pairs: (cav1, cav4), (cav2, cav3)
+            if (tid == my_cav.id || !target.is_cav || !target.active) continue; 
             bool is_pair = ((my_cav.role == "cav1" && target.role == "cav4") ||
                             (my_cav.role == "cav4" && target.role == "cav1") ||
                             (my_cav.role == "cav2" && target.role == "cav3") ||
                             (my_cav.role == "cav3" && target.role == "cav2"));
             
             double t_dist_sq = (target.pos - round_center_).dist_Sq();
-            if (t_dist_sq > round_app_r_sq_ || t_dist_sq <= r_sq || !is_approaching(target, round_center_)) continue;
+            if (t_dist_sq > round_app_r_sq_) continue;
+            if (t_dist_sq > r_sq && !is_approaching(target, round_center_)) continue;
+
             if (is_blocked_by_hv_check(target)) continue;
             if (is_pair) continue;
+            
             if (t_dist_sq < dist_sq - 0.01) return true;
-            if (std::abs(t_dist_sq - dist_sq) <= 0.01 && tid < my_cav.id) return true; // ID 비교는 문자열 순서(데드락 방지) 그대로 유지
+            if (std::abs(t_dist_sq - dist_sq) <= 0.01 && tid < my_cav.id) return true; 
         }
         return false;
     }
@@ -505,19 +490,18 @@ private:
             !my_cav.has_entered_roundabout) {
 
             bool go_inside = false;
-            // [변경] 역할 기반 체크
             std::string cav4_id = get_id_by_role("cav4");
             std::string cav3_id = get_id_by_role("cav3");
 
             if (my_cav.role == "cav1" && !cav4_id.empty() &&
                 vehicles_.count(cav4_id) &&
-                vehicles_[cav4_id].active &&
+                vehicles_[cav4_id].active && 
                 (vehicles_[cav4_id].pos - round_center_).dist_Sq() <= 2.5*2.5) {
                 go_inside = true;
             }
             else if (my_cav.role == "cav2" && !cav3_id.empty() &&
                      vehicles_.count(cav3_id) &&
-                     vehicles_[cav3_id].active &&
+                     vehicles_[cav3_id].active && 
                      (vehicles_[cav3_id].pos - round_center_).dist_Sq() <= 2.5*2.5) {
                 go_inside = true;
             }
@@ -573,7 +557,6 @@ private:
             auto target_box = get_vehicle_corners(target, 0.0, 0.0);
             auto full_box = get_vehicle_corners(my_cav, front_padding_, side_padding_);
             auto front_box = get_vehicle_corners(my_cav, front_padding_, 0.1);
-
             bool is_full = Geo::check_obb_intersection(full_box, target_box); // my_cav 정면+측면 충돌 감지
             bool is_front = Geo::check_obb_intersection(front_box, target_box); // my_cav 정면 충돌 감지
 
@@ -614,6 +597,7 @@ private:
     }
 
     // 메인 제어 루프 (control_loop)
+
     void handle_safe_zone_recovery(Vehicle& my_cav, const std::string& my_id) {
         if (my_cav.is_stopped) {
             std_msgs::msg::Bool msg; msg.data = false; my_cav.pub_stop->publish(msg);
@@ -630,7 +614,15 @@ private:
         if (vehicles_.empty()) return;
 
         for (auto& [my_id, my_cav] : vehicles_) {
-            if (!my_cav.is_cav || !my_cav.active) continue;
+            if (!my_cav.is_cav) continue;
+
+            if (!my_cav.active) {
+                if (my_cav.pub_stop) {
+                    std_msgs::msg::Bool msg; msg.data = false; 
+                    my_cav.pub_stop->publish(msg);
+                }
+                continue; 
+            }
 
             // 회전 교차로 내부는 hv 속도에 맞춰 cav속도를 조절해야함 -> cav가 회전교차로 내부에 있다면 cav제어노드로 토픽 발행
             double dist_from_center = std::sqrt((my_cav.pos - round_center_).dist_Sq());
@@ -690,6 +682,7 @@ private:
                 clear_conflict_status(my_id);
             }
 
+            // [로그 로직 제거됨] 상태 변경 시 충돌 원인 업데이트만 수행
             if (my_cav.is_stopped != my_cav_stop) {
                 if (my_cav_stop) {
                     update_conflict_status(my_id, cause_id);

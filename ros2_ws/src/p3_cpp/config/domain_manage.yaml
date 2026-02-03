@@ -56,16 +56,16 @@ topics:
   # 4. CAV 04 
   /cav4/cmd_stop:
     type: std_msgs/msg/Bool
-    to_domain: 4
+    to_domain: 10
 
   /cav4/change_waypoint:
     type: std_msgs/msg/Bool
-    to_domain: 4
+    to_domain: 10
 
   /cav4/hv_vel:
     type: std_msgs/msg/Float32
-    to_domain: 4
+    to_domain: 10
 
   /cav4/is_roundabout:
     type: std_msgs/msg/Bool
-    to_domain: 4
+    to_domain: 10
