@@ -1,0 +1,534 @@
+[0.000000] (-) TimerEvent: {}
+[0.000589] (cav_controller) JobQueued: {'identifier': 'cav_controller', 'dependencies': OrderedDict()}
+[0.000792] (domain_bridge) JobQueued: {'identifier': 'domain_bridge', 'dependencies': OrderedDict()}
+[0.001238] (simulator_launch) JobQueued: {'identifier': 'simulator_launch', 'dependencies': OrderedDict()}
+[0.001513] (p3_cpp) JobQueued: {'identifier': 'p3_cpp', 'dependencies': OrderedDict([('domain_bridge', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge')])}
+[0.001760] (domain_bridge) JobStarted: {'identifier': 'domain_bridge'}
+[0.045779] (cav_controller) JobStarted: {'identifier': 'cav_controller'}
+[0.062436] (simulator_launch) JobStarted: {'identifier': 'simulator_launch'}
+[0.078237] (domain_bridge) JobProgress: {'identifier': 'domain_bridge', 'progress': 'cmake'}
+[0.079993] (domain_bridge) JobProgress: {'identifier': 'domain_bridge', 'progress': 'build'}
+[0.081541] (domain_bridge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge', '--', '-j4', '-l4'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_CLIENT', '192.168.11.116 57771 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install:/home/hy/Mobility_Challenge/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '27'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge'), ('SSH_CONNECTION', '192.168.11.116 57771 192.168.11.138 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages:/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[0.099517] (-) TimerEvent: {}
+[0.200289] (-) TimerEvent: {}
+[0.301190] (-) TimerEvent: {}
+[0.401878] (-) TimerEvent: {}
+[0.502567] (-) TimerEvent: {}
+[0.604529] (-) TimerEvent: {}
+[0.619816] (domain_bridge) StdoutLine: {'line': b'[  4%] Built target domain_bridge__rosidl_generator_c\n'}
+[0.620572] (domain_bridge) StdoutLine: {'line': b'[  6%] Built target domain_bridge__cpp\n'}
+[0.620816] (domain_bridge) StdoutLine: {'line': b'[  9%] Built target gmock_main\n'}
+[0.621001] (domain_bridge) StdoutLine: {'line': b'[ 13%] Built target gmock\n'}
+[0.621173] (domain_bridge) StdoutLine: {'line': b'[ 18%] Built target domain_bridge__rosidl_typesupport_cpp\n'}
+[0.621338] (domain_bridge) StdoutLine: {'line': b'[ 23%] Built target domain_bridge__rosidl_typesupport_fastrtps_cpp\n'}
+[0.621496] (domain_bridge) StdoutLine: {'line': b'[ 27%] Built target domain_bridge__rosidl_typesupport_introspection_cpp\n'}
+[0.621646] (domain_bridge) StdoutLine: {'line': b'[ 32%] Built target domain_bridge__rosidl_typesupport_introspection_c\n'}
+[0.621791] (domain_bridge) StdoutLine: {'line': b'[ 36%] Built target domain_bridge__rosidl_typesupport_fastrtps_c\n'}
+[0.621939] (domain_bridge) StdoutLine: {'line': b'[ 41%] Built target domain_bridge__rosidl_typesupport_c\n'}
+[0.622085] (domain_bridge) StdoutLine: {'line': b'[ 41%] Built target domain_bridge\n'}
+[0.622229] (domain_bridge) StdoutLine: {'line': b'[ 43%] Built target domain_bridge__py\n'}
+[0.622368] (domain_bridge) StdoutLine: {'line': b'[ 60%] Built target domain_bridge_lib\n'}
+[0.622787] (domain_bridge) StdoutLine: {'line': b'[ 63%] Built target domain_bridge__python\n'}
+[0.622943] (domain_bridge) StdoutLine: {'line': b'[ 66%] Built target domain_bridge_exec\n'}
+[0.623093] (domain_bridge) StdoutLine: {'line': b'[ 75%] Built target test_domain_bridge\n'}
+[0.623241] (domain_bridge) StdoutLine: {'line': b'[ 75%] Built target test_parse_domain_bridge_yaml_config\n'}
+[0.623385] (domain_bridge) StdoutLine: {'line': b'[ 75%] Built target test_domain_bridge_services__rmw_fastrtps_cpp\n'}
+[0.623527] (domain_bridge) StdoutLine: {'line': b'[ 81%] Built target test_qos_matching__rmw_fastrtps_cpp\n'}
+[0.623668] (domain_bridge) StdoutLine: {'line': b'[ 81%] Built target test_qos_matching__rmw_cyclonedds_cpp\n'}
+[0.623811] (domain_bridge) StdoutLine: {'line': b'[ 84%] Built target test_domain_bridge_end_to_end__rmw_fastrtps_cpp\n'}
+[0.630716] (simulator_launch) JobProgress: {'identifier': 'simulator_launch', 'progress': 'cmake'}
+[0.631111] (simulator_launch) JobProgress: {'identifier': 'simulator_launch', 'progress': 'build'}
+[0.631235] (simulator_launch) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch', '--', '-j4', '-l4'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_CLIENT', '192.168.11.116 57771 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install:/home/hy/Mobility_Challenge/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '27'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch'), ('SSH_CONNECTION', '192.168.11.116 57771 192.168.11.138 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages:/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[0.634364] (domain_bridge) StdoutLine: {'line': b'[ 87%] Built target test_domain_bridge_end_to_end__rmw_cyclonedds_cpp\n'}
+[0.668151] (domain_bridge) StdoutLine: {'line': b'[ 90%] Built target domain_bridge__rosidl_typesupport_introspection_c__pyext\n'}
+[0.669584] (domain_bridge) StdoutLine: {'line': b'[ 93%] Built target test_domain_bridge_services__rmw_cyclonedds_cpp\n'}
+[0.675983] (domain_bridge) StdoutLine: {'line': b'[ 96%] Built target domain_bridge__rosidl_typesupport_c__pyext\n'}
+[0.682036] (domain_bridge) StdoutLine: {'line': b'[100%] Built target domain_bridge__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.704692] (-) TimerEvent: {}
+[0.707652] (domain_bridge) CommandEnded: {'returncode': 0}
+[0.709647] (domain_bridge) JobProgress: {'identifier': 'domain_bridge', 'progress': 'install'}
+[0.733741] (domain_bridge) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_CLIENT', '192.168.11.116 57771 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install:/home/hy/Mobility_Challenge/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '27'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/domain_bridge'), ('SSH_CONNECTION', '192.168.11.116 57771 192.168.11.138 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages:/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[0.743629] (simulator_launch) CommandEnded: {'returncode': 0}
+[0.745249] (simulator_launch) JobProgress: {'identifier': 'simulator_launch', 'progress': 'install'}
+[0.745857] (simulator_launch) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_CLIENT', '192.168.11.116 57771 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install:/home/hy/Mobility_Challenge/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '27'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/simulator_launch'), ('SSH_CONNECTION', '192.168.11.116 57771 192.168.11.138 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages:/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[0.758302] (domain_bridge) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.759529] (domain_bridge) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.760403] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/ament_index/resource_index/rosidl_interfaces/domain_bridge\n'}
+[0.761472] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/compressed_msg.h\n'}
+[0.762257] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__functions.h\n'}
+[0.762932] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__struct.h\n'}
+[0.763886] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__type_support.h\n'}
+[0.764117] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.764299] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/environment/library_path.sh\n'}
+[0.765563] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/environment/library_path.dsv\n'}
+[0.765852] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[0.766150] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.766984] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_fastrtps_c.so\n'}
+[0.768237] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.768595] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.769422] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.770523] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_introspection_c.h\n'}
+[0.770823] (simulator_launch) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.771185] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.771547] (simulator_launch) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.771928] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/compressed_msg.hpp\n'}
+[0.772306] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__builder.hpp\n'}
+[0.775591] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/launch/simulator_launch.py\n'}
+[0.776402] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__struct.hpp\n'}
+[0.777283] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__traits.hpp\n'}
+[0.778030] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/ament_index/resource_index/package_run_dependencies/simulator_launch\n'}
+[0.778324] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__type_support.hpp\n'}
+[0.779365] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/ament_index/resource_index/parent_prefix_path/simulator_launch\n'}
+[0.779562] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.779911] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.sh\n'}
+[0.780109] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/ament_prefix_path.dsv\n'}
+[0.780358] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/path.sh\n'}
+[0.780522] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/msg/detail/compressed_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.781260] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/environment/path.dsv\n'}
+[0.781545] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.bash\n'}
+[0.781723] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/environment/pythonpath.sh\n'}
+[0.781961] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.sh\n'}
+[0.782123] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/environment/pythonpath.dsv\n'}
+[0.782290] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.zsh\n'}
+[0.782537] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/local_setup.dsv\n'}
+[0.782800] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/__init__.py\n'}
+[0.782971] (simulator_launch) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/package.dsv\n'}
+[0.783126] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/msg/__init__.py\n'}
+[0.783279] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/msg/_compressed_msg.py\n'}
+[0.783433] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/domain_bridge_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[0.783685] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/domain_bridge_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[0.784004] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages/domain_bridge/domain_bridge_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[0.784309] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/libdomain_bridge__python.so\n'}
+[0.784473] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/msg/CompressedMsg.idl\n'}
+[0.784714] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/msg/CompressedMsg.msg\n'}
+[0.785766] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/compress_messages.hpp\n'}
+[0.786111] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/domain_bridge.hpp\n'}
+[0.786526] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/domain_bridge_config.hpp\n'}
+[0.787328] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/domain_bridge_options.hpp\n'}
+[0.788098] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/parse_domain_bridge_yaml_config.hpp\n'}
+[0.788871] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/process_cmd_line_arguments.hpp\n'}
+[0.789648] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/qos_options.hpp\n'}
+[0.798473] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/service_bridge_impl.inc\n'}
+[0.798832] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/service_bridge_options.hpp\n'}
+[0.799453] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/topic_bridge.hpp\n'}
+[0.800411] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/topic_bridge_options.hpp\n'}
+[0.800653] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/utils.hpp\n'}
+[0.801731] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/include/domain_bridge/visibility_control.hpp\n'}
+[0.801948] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/domain_bridge/domain_bridge\n'}
+[0.802171] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/examples/example_bridge_config.yaml\n'}
+[0.802344] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/launch/domain_bridge.launch.xml\n'}
+[0.802542] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/ament_index/resource_index/package_run_dependencies/domain_bridge\n'}
+[0.802695] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/ament_index/resource_index/parent_prefix_path/domain_bridge\n'}
+[0.802839] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/environment/ament_prefix_path.sh\n'}
+[0.802982] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/environment/ament_prefix_path.dsv\n'}
+[0.803122] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/environment/path.sh\n'}
+[0.803260] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/environment/path.dsv\n'}
+[0.803398] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/local_setup.bash\n'}
+[0.803537] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/local_setup.sh\n'}
+[0.803672] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/local_setup.zsh\n'}
+[0.803812] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/local_setup.dsv\n'}
+[0.803947] (domain_bridge) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/package.dsv\n'}
+[0.807210] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/ament_index/resource_index/packages/simulator_launch\n'}
+[0.807591] (-) TimerEvent: {}
+[0.808313] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig.cmake\n'}
+[0.808571] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/cmake/simulator_launchConfig-version.cmake\n'}
+[0.808757] (simulator_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch/share/simulator_launch/package.xml\n'}
+[0.812887] (simulator_launch) CommandEnded: {'returncode': 0}
+[0.823026] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/ament_index/resource_index/packages/domain_bridge\n'}
+[0.823489] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/rosidl_cmake-extras.cmake\n'}
+[0.823719] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.824044] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.824386] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.824920] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.825493] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.825982] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.826717] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridgeConfig.cmake\n'}
+[0.827034] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridgeConfig-version.cmake\n'}
+[0.827456] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/package.xml\n'}
+[0.828127] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/libdomain_bridge__rosidl_generator_c.so\n'}
+[0.829097] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_c.so\n'}
+[0.829662] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_c.so\n'}
+[0.831126] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_introspection_cpp.so\n'}
+[0.831359] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/libdomain_bridge__rosidl_typesupport_cpp.so\n'}
+[0.858522] (simulator_launch) JobEnded: {'identifier': 'simulator_launch', 'rc': 0}
+[0.907758] (-) TimerEvent: {}
+[0.915748] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/libdomain_bridge.so\n'}
+[0.917141] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_generator_cExport.cmake\n'}
+[0.917560] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.917857] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.918059] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.918322] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cExport.cmake\n'}
+[0.918563] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.918831] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_generator_cppExport.cmake\n'}
+[0.919074] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.919305] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.919533] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cppExport.cmake\n'}
+[0.919758] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/domain_bridge__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.919980] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/export_domain_bridgeExport.cmake\n'}
+[0.920209] (domain_bridge) StdoutLine: {'line': b'-- Up-to-date: /home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/share/domain_bridge/cmake/export_domain_bridgeExport-noconfig.cmake\n'}
+[0.924730] (domain_bridge) CommandEnded: {'returncode': 0}
+[0.968557] (domain_bridge) JobEnded: {'identifier': 'domain_bridge', 'rc': 0}
+[0.970930] (p3_cpp) JobStarted: {'identifier': 'p3_cpp'}
+[0.989320] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'cmake'}
+[0.990905] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'build'}
+[0.991505] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp', '--', '-j4', '-l4'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_CLIENT', '192.168.11.116 57771 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install:/home/hy/Mobility_Challenge/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '27'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp'), ('SSH_CONNECTION', '192.168.11.116 57771 192.168.11.138 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages:/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[1.007874] (-) TimerEvent: {}
+[1.081446] (p3_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target control_p3\x1b[0m\n'}
+[1.108029] (-) TimerEvent: {}
+[1.139483] (p3_cpp) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/control_p3.dir/src/control_p3.cpp.o\x1b[0m\n'}
+[1.151144] (p3_cpp) StdoutLine: {'line': b'[ 75%] Built target main_p3\n'}
+[1.208214] (-) TimerEvent: {}
+[1.308931] (-) TimerEvent: {}
+[1.409594] (-) TimerEvent: {}
+[1.413902] (cav_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller/build', '--no-deps', 'symlink_data'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'hy', 'SSH_CLIENT': '192.168.11.116 57771 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/hy', 'OLDPWD': '/home/hy/Mobility_Challenge', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install:/home/hy/Mobility_Challenge/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'hy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '27', 'AMENT_PREFIX_PATH': '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller', 'SSH_CONNECTION': '192.168.11.116 57771 192.168.11.138 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages:/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge'}, 'shell': False}
+[1.509771] (-) TimerEvent: {}
+[1.610493] (-) TimerEvent: {}
+[1.711140] (-) TimerEvent: {}
+[1.811790] (-) TimerEvent: {}
+[1.878836] (cav_controller) StdoutLine: {'line': b'running develop\n'}
+[1.911931] (-) TimerEvent: {}
+[2.012611] (-) TimerEvent: {}
+[2.113306] (-) TimerEvent: {}
+[2.118524] (cav_controller) StdoutLine: {'line': b'running egg_info\n'}
+[2.119382] (cav_controller) StdoutLine: {'line': b'writing cav_controller.egg-info/PKG-INFO\n'}
+[2.120248] (cav_controller) StdoutLine: {'line': b'writing dependency_links to cav_controller.egg-info/dependency_links.txt\n'}
+[2.120523] (cav_controller) StdoutLine: {'line': b'writing entry points to cav_controller.egg-info/entry_points.txt\n'}
+[2.121317] (cav_controller) StdoutLine: {'line': b'writing requirements to cav_controller.egg-info/requires.txt\n'}
+[2.121565] (cav_controller) StdoutLine: {'line': b'writing top-level names to cav_controller.egg-info/top_level.txt\n'}
+[2.186279] (cav_controller) StdoutLine: {'line': b"reading manifest file 'cav_controller.egg-info/SOURCES.txt'\n"}
+[2.188062] (cav_controller) StdoutLine: {'line': b"writing manifest file 'cav_controller.egg-info/SOURCES.txt'\n"}
+[2.191388] (cav_controller) StdoutLine: {'line': b'running build_ext\n'}
+[2.192175] (cav_controller) StdoutLine: {'line': b'Creating /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages/cav-controller.egg-link (link to .)\n'}
+[2.194434] (cav_controller) StdoutLine: {'line': b'Installing echo_pose script to /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/cav_controller\n'}
+[2.194953] (cav_controller) StdoutLine: {'line': b'Installing p1_drive script to /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/cav_controller\n'}
+[2.195305] (cav_controller) StdoutLine: {'line': b'Installing run_drive script to /home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/cav_controller\n'}
+[2.195886] (cav_controller) StdoutLine: {'line': b'\n'}
+[2.196163] (cav_controller) StdoutLine: {'line': b'Installed /home/hy/Mobility_Challenge/ros2_ws/build/cav_controller\n'}
+[2.196332] (cav_controller) StdoutLine: {'line': b'running symlink_data\n'}
+[2.213465] (-) TimerEvent: {}
+[2.266737] (cav_controller) CommandEnded: {'returncode': 0}
+[2.287084] (cav_controller) JobEnded: {'identifier': 'cav_controller', 'rc': 0}
+[2.313624] (-) TimerEvent: {}
+[2.414279] (-) TimerEvent: {}
+[2.515002] (-) TimerEvent: {}
+[2.615740] (-) TimerEvent: {}
+[2.716456] (-) TimerEvent: {}
+[2.817177] (-) TimerEvent: {}
+[2.917896] (-) TimerEvent: {}
+[3.018620] (-) TimerEvent: {}
+[3.119346] (-) TimerEvent: {}
+[3.220047] (-) TimerEvent: {}
+[3.320755] (-) TimerEvent: {}
+[3.421452] (-) TimerEvent: {}
+[3.522143] (-) TimerEvent: {}
+[3.622883] (-) TimerEvent: {}
+[3.723637] (-) TimerEvent: {}
+[3.824369] (-) TimerEvent: {}
+[3.925138] (-) TimerEvent: {}
+[4.025859] (-) TimerEvent: {}
+[4.126600] (-) TimerEvent: {}
+[4.227329] (-) TimerEvent: {}
+[4.328049] (-) TimerEvent: {}
+[4.428767] (-) TimerEvent: {}
+[4.529494] (-) TimerEvent: {}
+[4.630206] (-) TimerEvent: {}
+[4.730942] (-) TimerEvent: {}
+[4.831668] (-) TimerEvent: {}
+[4.932415] (-) TimerEvent: {}
+[5.033144] (-) TimerEvent: {}
+[5.133863] (-) TimerEvent: {}
+[5.234577] (-) TimerEvent: {}
+[5.335326] (-) TimerEvent: {}
+[5.436063] (-) TimerEvent: {}
+[5.536789] (-) TimerEvent: {}
+[5.637510] (-) TimerEvent: {}
+[5.738246] (-) TimerEvent: {}
+[5.839077] (-) TimerEvent: {}
+[5.939823] (-) TimerEvent: {}
+[6.040554] (-) TimerEvent: {}
+[6.141279] (-) TimerEvent: {}
+[6.242013] (-) TimerEvent: {}
+[6.342759] (-) TimerEvent: {}
+[6.443512] (-) TimerEvent: {}
+[6.544248] (-) TimerEvent: {}
+[6.644969] (-) TimerEvent: {}
+[6.745711] (-) TimerEvent: {}
+[6.846474] (-) TimerEvent: {}
+[6.947187] (-) TimerEvent: {}
+[7.047915] (-) TimerEvent: {}
+[7.148648] (-) TimerEvent: {}
+[7.249370] (-) TimerEvent: {}
+[7.350109] (-) TimerEvent: {}
+[7.450870] (-) TimerEvent: {}
+[7.551588] (-) TimerEvent: {}
+[7.652338] (-) TimerEvent: {}
+[7.753068] (-) TimerEvent: {}
+[7.853797] (-) TimerEvent: {}
+[7.954535] (-) TimerEvent: {}
+[8.055233] (-) TimerEvent: {}
+[8.155934] (-) TimerEvent: {}
+[8.256638] (-) TimerEvent: {}
+[8.357367] (-) TimerEvent: {}
+[8.458087] (-) TimerEvent: {}
+[8.558850] (-) TimerEvent: {}
+[8.659577] (-) TimerEvent: {}
+[8.760308] (-) TimerEvent: {}
+[8.861067] (-) TimerEvent: {}
+[8.961853] (-) TimerEvent: {}
+[9.062602] (-) TimerEvent: {}
+[9.163326] (-) TimerEvent: {}
+[9.264052] (-) TimerEvent: {}
+[9.364772] (-) TimerEvent: {}
+[9.465498] (-) TimerEvent: {}
+[9.566259] (-) TimerEvent: {}
+[9.667055] (-) TimerEvent: {}
+[9.767790] (-) TimerEvent: {}
+[9.868527] (-) TimerEvent: {}
+[9.969273] (-) TimerEvent: {}
+[10.070008] (-) TimerEvent: {}
+[10.170755] (-) TimerEvent: {}
+[10.271484] (-) TimerEvent: {}
+[10.372207] (-) TimerEvent: {}
+[10.472925] (-) TimerEvent: {}
+[10.573677] (-) TimerEvent: {}
+[10.674442] (-) TimerEvent: {}
+[10.775165] (-) TimerEvent: {}
+[10.875873] (-) TimerEvent: {}
+[10.976579] (-) TimerEvent: {}
+[11.077256] (-) TimerEvent: {}
+[11.177966] (-) TimerEvent: {}
+[11.278713] (-) TimerEvent: {}
+[11.379428] (-) TimerEvent: {}
+[11.480197] (-) TimerEvent: {}
+[11.580931] (-) TimerEvent: {}
+[11.681660] (-) TimerEvent: {}
+[11.782422] (-) TimerEvent: {}
+[11.883121] (-) TimerEvent: {}
+[11.983920] (-) TimerEvent: {}
+[12.084723] (-) TimerEvent: {}
+[12.185414] (-) TimerEvent: {}
+[12.286125] (-) TimerEvent: {}
+[12.386849] (-) TimerEvent: {}
+[12.487549] (-) TimerEvent: {}
+[12.588271] (-) TimerEvent: {}
+[12.688958] (-) TimerEvent: {}
+[12.789658] (-) TimerEvent: {}
+[12.890356] (-) TimerEvent: {}
+[12.991067] (-) TimerEvent: {}
+[13.091753] (-) TimerEvent: {}
+[13.192429] (-) TimerEvent: {}
+[13.293110] (-) TimerEvent: {}
+[13.393792] (-) TimerEvent: {}
+[13.494492] (-) TimerEvent: {}
+[13.595161] (-) TimerEvent: {}
+[13.695855] (-) TimerEvent: {}
+[13.796518] (-) TimerEvent: {}
+[13.897324] (-) TimerEvent: {}
+[13.998023] (-) TimerEvent: {}
+[14.098740] (-) TimerEvent: {}
+[14.199443] (-) TimerEvent: {}
+[14.300115] (-) TimerEvent: {}
+[14.400781] (-) TimerEvent: {}
+[14.501571] (-) TimerEvent: {}
+[14.602270] (-) TimerEvent: {}
+[14.702996] (-) TimerEvent: {}
+[14.803693] (-) TimerEvent: {}
+[14.904402] (-) TimerEvent: {}
+[15.005114] (-) TimerEvent: {}
+[15.105820] (-) TimerEvent: {}
+[15.206520] (-) TimerEvent: {}
+[15.307206] (-) TimerEvent: {}
+[15.407903] (-) TimerEvent: {}
+[15.508606] (-) TimerEvent: {}
+[15.609307] (-) TimerEvent: {}
+[15.709984] (-) TimerEvent: {}
+[15.810684] (-) TimerEvent: {}
+[15.911353] (-) TimerEvent: {}
+[16.012036] (-) TimerEvent: {}
+[16.112733] (-) TimerEvent: {}
+[16.213426] (-) TimerEvent: {}
+[16.314094] (-) TimerEvent: {}
+[16.414795] (-) TimerEvent: {}
+[16.515445] (-) TimerEvent: {}
+[16.616095] (-) TimerEvent: {}
+[16.716751] (-) TimerEvent: {}
+[16.817435] (-) TimerEvent: {}
+[16.918122] (-) TimerEvent: {}
+[17.018849] (-) TimerEvent: {}
+[17.119545] (-) TimerEvent: {}
+[17.220240] (-) TimerEvent: {}
+[17.320919] (-) TimerEvent: {}
+[17.421627] (-) TimerEvent: {}
+[17.522342] (-) TimerEvent: {}
+[17.623075] (-) TimerEvent: {}
+[17.723753] (-) TimerEvent: {}
+[17.824450] (-) TimerEvent: {}
+[17.925152] (-) TimerEvent: {}
+[18.025864] (-) TimerEvent: {}
+[18.126624] (-) TimerEvent: {}
+[18.227325] (-) TimerEvent: {}
+[18.328034] (-) TimerEvent: {}
+[18.428716] (-) TimerEvent: {}
+[18.529393] (-) TimerEvent: {}
+[18.630081] (-) TimerEvent: {}
+[18.730779] (-) TimerEvent: {}
+[18.831456] (-) TimerEvent: {}
+[18.932153] (-) TimerEvent: {}
+[19.032918] (-) TimerEvent: {}
+[19.133665] (-) TimerEvent: {}
+[19.234444] (-) TimerEvent: {}
+[19.335242] (-) TimerEvent: {}
+[19.402637] (p3_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable control_p3\x1b[0m\n'}
+[19.435408] (-) TimerEvent: {}
+[19.536094] (-) TimerEvent: {}
+[19.636850] (-) TimerEvent: {}
+[19.737600] (-) TimerEvent: {}
+[19.838348] (-) TimerEvent: {}
+[19.939110] (-) TimerEvent: {}
+[20.039857] (-) TimerEvent: {}
+[20.140584] (-) TimerEvent: {}
+[20.241271] (-) TimerEvent: {}
+[20.255031] (p3_cpp) StdoutLine: {'line': b'[100%] Built target control_p3\n'}
+[20.277166] (p3_cpp) CommandEnded: {'returncode': 0}
+[20.279584] (p3_cpp) JobProgress: {'identifier': 'p3_cpp', 'progress': 'install'}
+[20.280453] (p3_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp'], 'cwd': '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hy'), ('SSH_CLIENT', '192.168.11.116 57771 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/hy'), ('OLDPWD', '/home/hy/Mobility_Challenge'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install:/home/hy/Mobility_Challenge/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'hy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '27'), ('AMENT_PREFIX_PATH', '/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/hy/Mobility_Challenge/ros2_ws/build/p3_cpp'), ('SSH_CONNECTION', '192.168.11.116 57771 192.168.11.138 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge/lib/python3.8/site-packages:/home/hy/Mobility_Challenge/ros2_ws/build/cav_controller:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/hy/Mobility_Challenge/ros2_ws/install/domain_bridge:/home/hy/Mobility_Challenge/sdk/KAIST_Mobility_Challenge_SDK/examples/Driver_ROS2/install/kmc_hardware_driver_node:/home/hy/Mobility_Challenge/ros2_ws/install/simulator_launch:/home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp:/home/hy/Mobility_Challenge/ros2_ws/install/cav_controller:/opt/ros/foxy')]), 'shell': False}
+[20.302542] (p3_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.303616] (p3_cpp) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[20.304672] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/lib/p3_cpp/control_p3\n'}
+[20.305105] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/lib/p3_cpp/main_p3\n'}
+[20.306077] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/launch/control.launch.py\n'}
+[20.306441] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/launch/main.launch.py\n'}
+[20.308700] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/Readme.md\n'}
+[20.309037] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav1p1.csv\n'}
+[20.309373] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav1p3.csv\n'}
+[20.309717] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav1p3_inside.csv\n'}
+[20.310043] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav2p3.csv\n'}
+[20.310367] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav2p3_inside.csv\n'}
+[20.310757] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav3p3.csv\n'}
+[20.311096] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav3p3_inside.csv\n'}
+[20.311416] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav4p3.csv\n'}
+[20.311735] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/cav4p3_inside.csv\n'}
+[20.312052] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/csv_to_json.py\n'}
+[20.312374] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/node_info.png\n'}
+[20.312698] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/p1_1.csv\n'}
+[20.313017] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/p1_2.csv\n'}
+[20.313339] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/path_generator.py\n'}
+[20.313676] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/10_13.csv\n'}
+[20.314006] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/11_16.csv\n'}
+[20.314338] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/12_15.csv\n'}
+[20.314740] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/13_14.csv\n'}
+[20.315060] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/14_17.csv\n'}
+[20.315390] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/15_18.csv\n'}
+[20.315719] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/15_60.csv\n'}
+[20.316049] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/16_19.csv\n'}
+[20.316380] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/16_61.csv\n'}
+[20.316708] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/17_20.csv\n'}
+[20.317041] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/18_21.csv\n'}
+[20.317372] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/19_22.csv\n'}
+[20.317703] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/1_3.csv\n'}
+[20.318033] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/20_23.csv\n'}
+[20.318363] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/21_24.csv\n'}
+[20.318717] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/21_51.csv\n'}
+[20.319046] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/22_25.csv\n'}
+[20.319382] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/22_50.csv\n'}
+[20.319710] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/23_26.csv\n'}
+[20.320037] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/24_27.csv\n'}
+[20.320364] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/24_37.csv\n'}
+[20.320688] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/25_28.csv\n'}
+[20.321015] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/25_36.csv\n'}
+[20.321343] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/26_29.csv\n'}
+[20.321666] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/27_30.csv\n'}
+[20.321995] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/27_31.csv\n'}
+[20.322323] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/28_31.csv\n'}
+[20.322681] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/28_32.csv\n'}
+[20.323027] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/29_2.csv\n'}
+[20.323357] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/2_4.csv\n'}
+[20.323687] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/30_1.csv\n'}
+[20.324019] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/31_1.csv\n'}
+[20.324342] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/32_5.csv\n'}
+[20.324693] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/33_31.csv\n'}
+[20.325015] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/34_27.csv\n'}
+[20.325346] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/35_28.csv\n'}
+[20.325672] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/36_38.csv\n'}
+[20.325994] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/37_38.csv\n'}
+[20.326322] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/37_39.csv\n'}
+[20.326688] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/38_41.csv\n'}
+[20.327016] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/38_48.csv\n'}
+[20.327342] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/38_49.csv\n'}
+[20.327669] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/39_40.csv\n'}
+[20.327997] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/39_49.csv\n'}
+[20.328327] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/3_33.csv\n'}
+[20.328654] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/3_6.csv\n'}
+[20.328980] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/3_7.csv\n'}
+[20.329307] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/40_43.csv\n'}
+[20.329635] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/40_63.csv\n'}
+[20.329962] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/41_42.csv\n'}
+[20.330293] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/41_43.csv\n'}
+[20.330692] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/41_62.csv\n'}
+[20.331024] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/42_8.csv\n'}
+[20.331352] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/43_9.csv\n'}
+[20.331689] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/44_63.csv\n'}
+[20.332015] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/45_62.csv\n'}
+[20.332343] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/46_40.csv\n'}
+[20.332670] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/46_41.csv\n'}
+[20.332999] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/47_41.csv\n'}
+[20.333328] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/48_53.csv\n'}
+[20.333654] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/48_58.csv\n'}
+[20.333982] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/49_55.csv\n'}
+[20.334310] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/49_59.csv\n'}
+[20.334670] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/4_7.csv\n'}
+[20.334995] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/50_48.csv\n'}
+[20.335324] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/50_54.csv\n'}
+[20.335659] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/51_46.csv\n'}
+[20.335983] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/51_55.csv\n'}
+[20.336311] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/52_24.csv\n'}
+[20.336636] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/53_25.csv\n'}
+[20.336967] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/54_11.csv\n'}
+[20.337292] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/55_12.csv\n'}
+[20.337617] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/56_52.csv\n'}
+[20.337945] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/56_59.csv\n'}
+[20.338269] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/57_47.csv\n'}
+[20.338628] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/57_53.csv\n'}
+[20.338961] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/58_19.csv\n'}
+[20.339290] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/59_18.csv\n'}
+[20.339619] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/5_45.csv\n'}
+[20.339948] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/5_8.csv\n'}
+[20.340274] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/60_46.csv\n'}
+[20.340598] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/60_52.csv\n'}
+[20.340925] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/61_47.csv\n'}
+[20.341250] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/61_54.csv\n'}
+[20.341406] (-) TimerEvent: {}
+[20.341949] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/62_35.csv\n'}
+[20.342155] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/62_38.csv\n'}
+[20.342399] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/63_34.csv\n'}
+[20.342604] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/63_39.csv\n'}
+[20.342904] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/6_44.csv\n'}
+[20.343229] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/6_9.csv\n'}
+[20.343554] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/7_10.csv\n'}
+[20.343885] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/7_9.csv\n'}
+[20.344213] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/8_11.csv\n'}
+[20.344537] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/8_57.csv\n'}
+[20.344859] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/9_12.csv\n'}
+[20.345185] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/tool/waypoint/9_56.csv\n'}
+[20.345901] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/config/domain_1.yaml\n'}
+[20.346234] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/config/domain_2.yaml\n'}
+[20.346592] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/config/domain_3.yaml\n'}
+[20.346921] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/config/domain_4.yaml\n'}
+[20.347499] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/ament_index/resource_index/package_run_dependencies/p3_cpp\n'}
+[20.348091] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/ament_index/resource_index/parent_prefix_path/p3_cpp\n'}
+[20.348602] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.sh\n'}
+[20.349099] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/environment/ament_prefix_path.dsv\n'}
+[20.349608] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/environment/path.sh\n'}
+[20.350107] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/environment/path.dsv\n'}
+[20.350630] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.bash\n'}
+[20.351123] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.sh\n'}
+[20.351610] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.zsh\n'}
+[20.352095] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/local_setup.dsv\n'}
+[20.352488] (p3_cpp) StdoutLine: {'line': b'-- Symlinking: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/package.dsv\n'}
+[20.370899] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/ament_index/resource_index/packages/p3_cpp\n'}
+[20.371353] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig.cmake\n'}
+[20.371663] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/cmake/p3_cppConfig-version.cmake\n'}
+[20.372171] (p3_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/hy/Mobility_Challenge/ros2_ws/install/p3_cpp/share/p3_cpp/package.xml\n'}
+[20.375823] (p3_cpp) CommandEnded: {'returncode': 0}
+[20.408099] (p3_cpp) JobEnded: {'identifier': 'p3_cpp', 'rc': 0}
+[20.410115] (-) EventReactorShutdown: {}
