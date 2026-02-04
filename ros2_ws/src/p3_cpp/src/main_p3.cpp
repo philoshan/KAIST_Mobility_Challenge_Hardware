@@ -107,8 +107,8 @@ public:
 
         // 회전교차로 관련 변수
         round_center_ = {1.667, 0.0};
-        round_app_r_sq_ = 1.8 * 1.8;
-        round_radius_ = 1.4;
+        round_app_r_sq_ = 2.0 * 2.0; //1.8 * 1.8
+        round_radius_ = 1.6;
 
         // 삼지교차로 관련 변수 중심 x : -2.3
         threeway_box_x_min_ = -3.7; threeway_box_x_max_ = -1.2;
