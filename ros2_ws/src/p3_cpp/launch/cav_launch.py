@@ -27,13 +27,13 @@ def generate_launch_description():
     )
 
     # (2) 제어 파라미터 인자
-    k_gain_arg = DeclareLaunchArgument('k_gain', default_value='1.0')
+    k_gain_arg = DeclareLaunchArgument('k_gain', default_value='0.7')
     max_steer_arg = DeclareLaunchArgument('max_steer', default_value='0.56')
     target_speed_arg = DeclareLaunchArgument('target_speed', default_value='1.0')
     center_to_front_arg = DeclareLaunchArgument('center_to_front', default_value='0.1055')
     wheelbase_arg = DeclareLaunchArgument('wheelbase', default_value='0.211')
     steer_gain_arg = DeclareLaunchArgument('steer_gain', default_value='1.0')
-    forward_step_arg = DeclareLaunchArgument('forward_step', default_value='8')
+    forward_step_arg = DeclareLaunchArgument('forward_step', default_value='4')
     warmup_steps_arg = DeclareLaunchArgument('warmup_steps', default_value='10')
 
     # LaunchConfiguration 변수 매핑

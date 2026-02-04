@@ -39,11 +39,11 @@ public:
         this->declare_parameter("inside_way_path", "/ros2_ws/src/p3_cpp/tool/cav1p3_inside.csv");
         this->declare_parameter("k_gain", 1.0);
         this->declare_parameter("max_steer", 0.56);
-        this->declare_parameter("target_speed", 1.7);
+        this->declare_parameter("target_speed", 1.0);
         this->declare_parameter("center_to_front", 0.1055);
         this->declare_parameter("wheelbase", 0.211);
         this->declare_parameter("steer_gain", 1.0);
-        this->declare_parameter("forward_step", 7);
+        this->declare_parameter("forward_step", 5);
         this->declare_parameter("warmup_steps", 10);    
         
         // 3. 파라미터 로드

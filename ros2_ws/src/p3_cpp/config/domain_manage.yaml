@@ -5,53 +5,53 @@ topics:
   # 1. CAV 01
   /cav1/cmd_stop:
     type: std_msgs/msg/Bool
-    to_domain: 1
+    to_domain: 4
 
   /cav1/change_waypoint:
     type: std_msgs/msg/Bool
-    to_domain: 1
+    to_domain: 4
 
   /cav1/hv_vel:
     type: std_msgs/msg/Float32
-    to_domain: 1
+    to_domain: 4
 
   /cav1/is_roundabout:
     type: std_msgs/msg/Bool
-    to_domain: 1
+    to_domain: 4
 
   # 2. CAV 02 
   /cav2/cmd_stop:
     type: std_msgs/msg/Bool
-    to_domain: 2
+    to_domain: 27
 
   /cav2/change_waypoint:
     type: std_msgs/msg/Bool
-    to_domain: 2
+    to_domain: 27
 
   /cav2/hv_vel:
     type: std_msgs/msg/Float32
-    to_domain: 2
+    to_domain: 27
 
   /cav2/is_roundabout:
     type: std_msgs/msg/Bool
-    to_domain: 2
+    to_domain: 27
 
   # 3. CAV 03 
   /cav3/cmd_stop:
     type: std_msgs/msg/Bool
-    to_domain: 3
+    to_domain: 8
 
   /cav3/change_waypoint:
     type: std_msgs/msg/Bool
-    to_domain: 3
+    to_domain: 8
 
   /cav3/hv_vel:
     type: std_msgs/msg/Float32
-    to_domain: 3
+    to_domain: 8
 
   /cav3/is_roundabout:
     type: std_msgs/msg/Bool
-    to_domain: 3
+    to_domain: 8
 
   # 4. CAV 04 
   /cav4/cmd_stop:

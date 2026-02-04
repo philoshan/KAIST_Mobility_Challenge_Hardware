@@ -28,9 +28,9 @@ def generate_launch_description():
         output='screen',
 
         parameters=[{
-            'role_cav1': 'CAV_99',  # 현재 테스트 중인 5번 차량을 cav1으로 지정
-            'role_cav2': 'CAV_98',  # (필요시 수정)
-            'role_cav3': 'CAV_97',  # (필요시 수정)
+            'role_cav1': 'CAV_04',  # 현재 테스트 중인 5번 차량을 cav1으로 지정
+            'role_cav2': 'CAV_27',  # (필요시 수정)
+            'role_cav3': 'CAV_08',  # (필요시 수정)
             'role_cav4': 'CAV_10'   # (필요시 수정)
         }]
     )

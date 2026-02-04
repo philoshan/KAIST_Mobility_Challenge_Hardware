@@ -94,8 +94,8 @@ public:
 
         // 차량 정보
         car_info = {0.185, 0.185, 0.09, 0.09};
-        front_padding_ = 1.0;//0.8->1.0 수정
-        side_padding_ = 1.0;//0.8->1.0 수정
+        front_padding_ = 1.2;//0.8->1.0 수정
+        side_padding_ = 1.2;//0.8->1.0 수정
         // 충돌 감지 범위 : 이 범위 안에 my_cav외의 다른 차량이 있을 경우 충돌 감지 로직 실행
         approach_range_sq_ = 2.5 * 2.5;
 
@@ -106,14 +106,14 @@ public:
         fourway_box_half_len_ = fourway_len_ / 2.0;
 
         // 회전교차로 관련 변수
-        round_center_ = {1.667, 0.0};
+        round_center_ = {1.5, 0.0}; //1.667, 0.0
         round_app_r_sq_ = 2.0 * 2.0; //1.8 * 1.8
-        round_radius_ = 1.6;
+        round_radius_ = 1.25; 
 
         // 삼지교차로 관련 변수 중심 x : -2.3
-        threeway_box_x_min_ = -3.7; threeway_box_x_max_ = -1.2;
-        threeway_1_y_min_ = 1.0;    threeway_1_y_max_ = 3.0;
-        threeway_2_y_min_ = -3.0;   threeway_2_y_max_ = -1.0;
+        threeway_box_x_min_ = -3.6; threeway_box_x_max_ = -1.1;
+        threeway_1_y_min_ = 0.8;    threeway_1_y_max_ = 3.0;
+        threeway_2_y_min_ = -3.0;   threeway_2_y_max_ = -0.8;
 
         // 타이머
         tmr_discovery_ = create_wall_timer(
@@ -436,8 +436,8 @@ private:
         if (cavs_inside >= 2) return true;
 
         auto is_blocked_by_hv_check = [&](const Vehicle& v) -> bool {
-            double default_check_left = 2.1 / round_radius_;
-            double default_check_right = 0.4 / round_radius_;
+            double default_check_left = 2.1 / round_radius_; 
+            double default_check_right = 0.4 / round_radius_; 
             if (v.is_stopped && v.stop_cause == "ROUND_YIELD") default_check_left += 0.5;
             double v_angle = std::atan2(v.pos.y - round_center_.y, v.pos.x - round_center_.x);
 
