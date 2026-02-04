@@ -94,8 +94,8 @@ public:
 
         // 차량 정보
         car_info = {0.185, 0.185, 0.09, 0.09};
-        front_padding_ = 0.8;
-        side_padding_ = 0.8;
+        front_padding_ = 1.0;//0.8->1.0 수정
+        side_padding_ = 1.0;//0.8->1.0 수정
         // 충돌 감지 범위 : 이 범위 안에 my_cav외의 다른 차량이 있을 경우 충돌 감지 로직 실행
         approach_range_sq_ = 2.5 * 2.5;
 

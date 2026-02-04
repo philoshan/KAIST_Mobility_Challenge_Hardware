@@ -25,7 +25,7 @@ public:
     StanleyTrackerNode()
     : Node("stanley_tracker_node")
     {
-        // 1. QoS 설정 (시뮬레이션에서 검증된 설정 유지)
+        // 1. QoS 설정
         auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
         qos_profile.best_effort();
         qos_profile.durability_volatile();
@@ -34,16 +34,16 @@ public:
         qos_profile_sensor.best_effort();
         qos_profile_sensor.durability_volatile();
 
-        // 2. 주행 관련 파라미터 설정 (Launch 파일의 'parameters'와 매칭)
+        // 2. 파라미터 선언
         this->declare_parameter("original_way_path", "/ros2_ws/src/p3_cpp/tool/cav1p3.csv");
         this->declare_parameter("inside_way_path", "/ros2_ws/src/p3_cpp/tool/cav1p3_inside.csv");
-        this->declare_parameter("k_gain", 1.2);
+        this->declare_parameter("k_gain", 1.0);
         this->declare_parameter("max_steer", 0.56);
-        this->declare_parameter("target_speed", 0.5);
+        this->declare_parameter("target_speed", 1.7);
         this->declare_parameter("center_to_front", 0.1055);
         this->declare_parameter("wheelbase", 0.211);
         this->declare_parameter("steer_gain", 1.0);
-        this->declare_parameter("forward_step", 8);
+        this->declare_parameter("forward_step", 7);
         this->declare_parameter("warmup_steps", 10);    
         
         // 3. 파라미터 로드
@@ -65,14 +65,11 @@ public:
         is_inside_path_active_ = false;
 
         // 5. 통신 설정 
-        // (1) 절대 경로: 네임스페이스 영향 안 받음 (시스템 전역 토픽)
         sub_pose_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
             "/Ego_pose", qos_profile, std::bind(&StanleyTrackerNode::pose_callback, this, _1));
         
         pub_cmd_vel_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
 
-        // (2) 상대 경로: Launch 파일의 네임스페이스(예: cav1)가 자동으로 앞에 붙음
-        // 실제 구독 토픽: /cav1/cmd_stop
         sub_stop_cmd_ = this->create_subscription<std_msgs::msg::Bool>(
             "cmd_stop", qos_profile_sensor, 
             [this](const std_msgs::msg::Bool::SharedPtr msg) {
@@ -80,26 +77,22 @@ public:
                 if (this->stop_signal_) this->publish_stop_command();
             });
 
-        // 실제 구독 토픽: /cav1/change_waypoint
         sub_change_way_ = this->create_subscription<std_msgs::msg::Bool>(
             "change_waypoint", qos_profile_sensor,
             std::bind(&StanleyTrackerNode::callback_change_waypoint, this, _1));
 
-        // 실제 구독 토픽: /cav1/hv_vel
         sub_hv_vel_ = this->create_subscription<std_msgs::msg::Float32>(
             "hv_vel", qos_profile_sensor,
             [this](const std_msgs::msg::Float32::SharedPtr msg) { this->hv_vel_ = msg->data; });
 
-        // 실제 구독 토픽: /cav1/is_roundabout
         sub_is_roundabout_ = this->create_subscription<std_msgs::msg::Bool>(
             "is_roundabout", qos_profile_sensor,
             [this](const std_msgs::msg::Bool::SharedPtr msg) { this->is_roundabout_ = msg->data; });
 
-        RCLCPP_INFO(this->get_logger(), "Stanley Tracker Node Initialized. Namespace: %s", this->get_namespace());
+        RCLCPP_INFO(this->get_logger(), "Stanley Tracker Node Initialized with Stabilized Logic.");
     }
 
 private:
-    // [검증 로직] CSV 로더
     void load_waypoints(const std::string& path, std::vector<Point>& target_vector) {
         if (path.empty()) return;
         std::ifstream file(path);
@@ -146,15 +139,39 @@ private:
         pub_cmd_vel_->publish(stop_msg);
     }
 
+    // [수정됨] 곡률 계산 시 더 넓은 범위를 사용하여 노이즈 무시
+    double calculate_curvature_radius(int current_idx) {
+        if (current_waypoints_->size() < 25) return std::numeric_limits<double>::max(); 
+
+        // [중요 수정 포인트] 간격을 5, 10에서 -> 10, 20으로 넓힘
+        // 이렇게 하면 미세한 지그재그(노이즈)는 무시하고 큰 흐름만 봅니다.
+        int idx1 = current_idx;
+        int idx2 = (current_idx + 10) % current_waypoints_->size();
+        int idx3 = (current_idx + 20) % current_waypoints_->size();
+
+        Point p1 = (*current_waypoints_)[idx1];
+        Point p2 = (*current_waypoints_)[idx2];
+        Point p3 = (*current_waypoints_)[idx3];
+
+        double a = std::hypot(p1.x - p2.x, p1.y - p2.y);
+        double b = std::hypot(p2.x - p3.x, p2.y - p3.y);
+        double c = std::hypot(p3.x - p1.x, p3.y - p1.y);
+
+        double area = 0.5 * std::abs(p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y));
+
+        if (area < 1e-6) return std::numeric_limits<double>::max();
+
+        double radius = (a * b * c) / (4.0 * area);
+        return radius;
+    }
+
     void pose_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
-        // 1. 초기 웜업
         if (current_warmup_count_ < warmup_steps_target_) {
             current_warmup_count_++;
             publish_stop_command(); 
             return; 
         }
 
-        // 2. 비상 정지 체크
         if (stop_signal_) {
             publish_stop_command();
             return; 
@@ -162,12 +179,9 @@ private:
 
         if (current_waypoints_->empty()) return;
 
-        // --- Stanley Logic (시뮬레이션 버전 유지) ---
         double center_x = msg->pose.position.x;
         double center_y = msg->pose.position.y;
-        
         double current_yaw = msg->pose.orientation.z; 
-        
 
         double front_x = center_x + center_to_front_ * std::cos(current_yaw);
         double front_y = center_y + center_to_front_ * std::sin(current_yaw);
@@ -185,7 +199,6 @@ private:
             }
         }
 
-        // Inside path finish check
         if (is_inside_path_active_ && nearest_idx >= (int)current_waypoints_->size() - 5) { 
             is_inside_path_active_ = false;
             current_waypoints_ = &waypoints_original_;
@@ -193,7 +206,23 @@ private:
             return; 
         }
 
-        // CTE & Heading Error 계산
+        // =========================================================
+        // [유지] 곡률 제어 + (0,0) 반경 3m 예외 처리
+        // =========================================================
+        double curvature_radius = calculate_curvature_radius(nearest_idx);
+        double current_target_speed = target_speed_; 
+
+        double current_wp_x = (*current_waypoints_)[nearest_idx].x;
+        double current_wp_y = (*current_waypoints_)[nearest_idx].y;
+
+        double dist_from_origin = std::hypot(current_wp_x, current_wp_y);
+
+        if (curvature_radius < 1.0 && dist_from_origin > 2.0) {
+            current_target_speed = 0.9;
+        }
+        // =========================================================
+
+        // CTE & Heading Error
         int next_nearest_idx = (nearest_idx + 1) % current_waypoints_->size();
         double map_x = (*current_waypoints_)[nearest_idx].x;
         double map_y = (*current_waypoints_)[nearest_idx].y;
@@ -214,18 +243,19 @@ private:
         double heading_error = normalize_angle(path_yaw - current_yaw);
 
         // Velocity & Steering
-        double final_speed = is_roundabout_ ? std::max((double)hv_vel_, 0.0) : target_speed_;
+        double final_speed = is_roundabout_ ? std::max((double)hv_vel_, 0.0) : current_target_speed;
+        
         double steer_angle = heading_error + std::atan2(k_gain_ * cte, std::max(final_speed, 0.1));
         steer_angle = std::clamp(normalize_angle(steer_angle) * steer_gain_, -max_steer_, max_steer_);
 
-        // Publish (Yaw Rate 기반)
+        // Publish
         auto msg_out = geometry_msgs::msg::Twist();
         msg_out.linear.x = final_speed;
         msg_out.angular.z = (final_speed / wheelbase_) * std::tan(steer_angle);
         pub_cmd_vel_->publish(msg_out);
     }
 
-    // 멤버 변수
+    // 멤버 변수 (그대로 유지)
     rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub_pose_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_cmd_vel_;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_stop_cmd_;
