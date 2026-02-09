@@ -39,19 +39,19 @@ topics:
   # 3. CAV 03 
   /cav3/cmd_stop:
     type: std_msgs/msg/Bool
-    to_domain: 8
+    to_domain: 13
 
   /cav3/change_waypoint:
     type: std_msgs/msg/Bool
-    to_domain: 8
+    to_domain: 13
 
   /cav3/hv_vel:
     type: std_msgs/msg/Float32
-    to_domain: 8
+    to_domain: 13
 
   /cav3/is_roundabout:
     type: std_msgs/msg/Bool
-    to_domain: 8
+    to_domain: 13
 
   # 4. CAV 04 
   /cav4/cmd_stop:

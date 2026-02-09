@@ -134,7 +134,7 @@ private:
 
     void publish_stop_command() {
         auto stop_msg = geometry_msgs::msg::Twist();
-        stop_msg.linear.x = 0.0;  
+        stop_msg.linear.x = 0.001;  
         stop_msg.angular.z = 0.0; 
         pub_cmd_vel_->publish(stop_msg);
     }

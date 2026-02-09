@@ -14,7 +14,7 @@ def generate_launch_description():
     # id: 물리적 장치 ID (실제 통신용 DOMAIN ID 설정에 사용)
     # 예: 대회 당일 랜덤으로 배정받는 숫자 (12, 34 등)
     id_arg = DeclareLaunchArgument(
-        'id', default_value='10',
+        'id', default_value='03',
         description='Physical CAV ID (Sets ROS_DOMAIN_ID)'
     )
     
@@ -22,18 +22,18 @@ def generate_launch_description():
     # 예: cav1, cav2, cav3, cav4 (관제탑에서 정해준 역할)
     # 이 값을 'cav1' 처럼 입력받도록 설정 (숫자만 입력받는 경우라면 아래 로직 수정 필요)
     role_arg = DeclareLaunchArgument(
-        'role', default_value='cav4',
+        'role', default_value='cav3',
         description='Logical Role Name (e.g., cav1, cav2) - Sets Namespace and CSV path'
     )
 
     # (2) 제어 파라미터 인자
-    k_gain_arg = DeclareLaunchArgument('k_gain', default_value='0.7')
+    k_gain_arg = DeclareLaunchArgument('k_gain', default_value='0.3')
     max_steer_arg = DeclareLaunchArgument('max_steer', default_value='0.56')
     target_speed_arg = DeclareLaunchArgument('target_speed', default_value='1.0')
     center_to_front_arg = DeclareLaunchArgument('center_to_front', default_value='0.1055')
     wheelbase_arg = DeclareLaunchArgument('wheelbase', default_value='0.211')
-    steer_gain_arg = DeclareLaunchArgument('steer_gain', default_value='1.0')
-    forward_step_arg = DeclareLaunchArgument('forward_step', default_value='4')
+    steer_gain_arg = DeclareLaunchArgument('steer_gain', default_value='0.8')
+    forward_step_arg = DeclareLaunchArgument('forward_step', default_value='8')
     warmup_steps_arg = DeclareLaunchArgument('warmup_steps', default_value='10')
 
     # LaunchConfiguration 변수 매핑
